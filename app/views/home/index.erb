@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+
+	
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>pagePiling.js plugin</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	<link rel="stylesheet" type="text/css" href="../jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="../jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4'],
+			    sectionsColor: ['#f5f5f5', '#afeeee', '#f8f8ff', '#87cefa'],
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+
+
+			/*
+		    * Internal use of the demo website
+		    */
+		    $('#showExamples').click(function(e){
+				e.stopPropagation();
+				e.preventDefault();
+				$('#examplesList').toggle();
+			});
+
+			$('html').click(function(){
+				$('#examplesList').hide();
+			});
+	    });
+    </script>
+
+
+    <style>
+    /* Section 1
+	 * --------------------------------------- */
+	#section1 h1{
+		color: #444;
+		font-size: 85px;
+	}
+	#section1 p{
+		color: gray;
+	font-size: 25px;
+	}
+	#section1 img{
+		margin: 20px 0;
+		opacity: 0.7;
+	}
+
+	/* Section 2
+	 * --------------------------------------- */
+	#section2 h1{
+		color: white;
+	font-size: 60px;
+	}
+	#section2 p{
+	    color: white;
+	font-size: 25px;
+	}
+
+	#section2 #colors{
+		right: 60px;
+		bottom: 0;
+		position: absolute;
+		height: 413px;
+		width: 258px;
+		background-image: url(imgs/colors.gif);
+		background-repeat: no-repeat;
+	}
+
+	/* Section 3
+	 * --------------------------------------- */
+		#section3 h1{
+		color: #444;]
+	}
+
+	#section3 #colors{
+		left: 60px;
+		bottom: 0;
+	}
+	#section3 p{
+		color: #a9a9a9;
+		
+	}
+
+	#colors2,
+	#colors3{
+		position: absolute;
+		height: 300px;
+		width: 450px;
+		z-index: 1;
+		background-repeat: no-repeat;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	#colors2{
+		background-image: url(imgs/medal.jpg);
+		top:0;
+	}
+	#colors3{
+		background-image: url(imgs/colors3.gif);
+		bottom:0;
+	}
+
+	/* Section 4
+	 * --------------------------------------- */
+		#section4 h1{
+		color: #444;
+	}
+	 #section4 p{
+		opacity: 0.6;
+	}
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	#pp-nav.custom .pp-tooltip{
+		color: #e0ffff;
+	}
+	#markup{
+		display: block;
+		width: 450px;
+		margin: 20px auto;
+		text-align: left;
+	}
+	
+	
+
+    #s{
+    	opacity:0.8;
+    }
+    
+     opa {
+        padding: 30px;
+        background-image: url( "lego-200x200.png" );
+      }
+     opa2 {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgba( 255, 255, 255, 0.3 );
+      
+      }
+      
+      
+   
+</style>
+
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Game School</a></li>
+		<li data-menuanchor="page2"><a href="#page2">introduce</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Schedule</a></li>
+		<li data-menuanchor="page4"><a href="#page4">Apply</a></li>
+	</ul>
+
+
+	<div id="pagepiling">
+	    <div class="section" id="section1" style="background-image:url('http://static4.businessinsider.com/image/52d571e269bedd7002d4ec36/the-14-most-beautiful-and-iconic-american-college-quads.jpg'); background-size:cover;  ">
+	    	
+	    	<h1>Game School</h1>
+			<p>Game School 에 오신걸 환영합니다.</p> 
+			<p>평택대학교 게임 매칭 사이트입니다.</p> 
+			
+			<img src="imgs/game.png" alt="pagePiling" />
+			
+
+	    </div>
+	    <div class="section" id="section2" style="background-image:url('http://www.khgames.co.kr/news/photo/201311/67987_12453_1524.jpg'); background-size:cover; ">
+	    	<div class="intro"  background-color: "white"; style="font-weight: 500; line-height:55spx;">
+	    	 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <center>
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="imgs/lol1.jpg" alt="Chania" style="width:720px; height:380px; " >
+              <p>League Of Legend  </p>
+    </div>
+
+    <div class="item">
+      <img src="imgs/sudden.jpg" alt="Chania" style="width:720px; height:380px;">
+             <p>Sudden Attack </p>
+    </div>
+
+    <div class="item">
+      <img src="http://www.gametoc.co.kr/news/photo/201406/18681_38042_1935.jpg" alt="Flower" style="width:720px; height:380px;">
+             <p>FIFA OnLine </p>
+    </div>
+
+    <div class="item">
+      <img src="imgs/vstable.jpg" alt="Flower" style="width:720px; height:380px; opacity:0.9">
+             <p> 16강 과별 대항전 </p>
+    </div>
+  </div>
+ 
+</center>
+
+</div>
+	    	 
+	    	   <br><br><br><br><br>
+	    		<p>학교,과별로 게임대회를 하고싶으신가요? </p>
+	    		<p>저희 Game School 를 찾아주세요.</p> 
+	    		<p>간단한 친선게임부터 토너먼트 대회 에 상금까지! </p> 
+	    		<p>지금 바로 신청하세요! </p>
+	    		
+
+	    	</div>
+	    </div>
+	    <div class="section" id="section3" style="background-image:url(''); background-size:cover; ">
+	    	<div class="intro">
+	    		<img src="https://page1-ysj6326-1.c9.io/imgs/일정이미지.jpg" style="width:1000px; height:900 ;">
+	    		<p></p>
+	    	
+	    		
+	    	</div>
+	    </div>
+	    <div class="section" id="section4" style="background-image:url('https://www.dogdrip.net/files/attach/images/34239192/529/164/047/1e8f6aa9135a1c9df9382017efb122b4.jpg'); background-size:cover;">
+	    	<div class="intro">
+	    		<br><br>
+	    		<div style="font-weight: 750; line-height:630px;">
+                 <img src="https://page1-ysj6326-1.c9.io/imgs/만든이파포.jpg" style="width:60%; height:60%">
+                 	
+                 	
+                </div>
+	    	
+	    <opa>
+      <opa2><a href="https://page1-ysj6326-1.c9.io/home/participation"><font color="black">대회신청</font></a></opa2>
+    </opa>
+                
+               
+            </a>
+    
+	    		<p>
+	    		</p>
+	    		
+	    	</div>
+	    </div>
+	</div>
+
+</body>
+</html>

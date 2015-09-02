@@ -1,0 +1,43 @@
+<center>
+<table style="text-align :center; width: 80%;">
+<tr>
+    <th>이 름</th>
+    <th>학 과</th>
+    <th>학 번</th>
+    <th>이메일</th>
+    <th>카카오톡</th>
+    <th>연락처</th>
+    <th>참가게임</th>
+    <th>팀 명</th>
+</tr>
+<% @user_list.each do |x| %>
+    
+    <tr>
+        <td><%= x.name %></td>
+        <td><%= x.major %></td>
+        <td><%= x.hakbun %></td>
+        <td><%= x.email %></td>
+        <td><%= x.kakao %></td>
+        <td><%= x.phone_num %></td>
+        <td><%= x.game%></td>
+        <td><%= x.team_name%></td>
+    </tr>
+    
+<% end %>
+</table>
+
+</center>
+
+<form action="">
+    <div style="margin-right: 10%; text-align: right;">
+        게임 종류 :
+        <select name="select_game" id="select_game">
+          <option value="all">전 체</option>
+          <option value="lol">리그 오브 레전드</option>
+          <option value="hearthstone">하스스톤</option>
+          <option value="fifa">피파 온라인</option>
+        </select>
+    
+    <input type="submit" value="보기">
+    </div>
+</form>
