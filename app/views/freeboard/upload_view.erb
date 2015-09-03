@@ -1,0 +1,83 @@
+
+    <div class="container">
+        <div container>
+            <div class="row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="jumbotron" style="width:600px height:600px">
+                        <center><h1>제목 : <%= @one_fb.fb_title %></h1></center>
+                        <a href="/freeboard/delete?id=<%= @one_fb.id %>">삭제쓰</a>&nbsp;
+                        <a href="/freeboard/modify?id=<%= @one_fb.id %>">수정쓰</a>
+                        <br><br>
+                        <center><p class="lead">내용 : <%= @one_fb.fb_content %></p></center><br><br>
+                        
+                        <center>
+                            -- 댓글 --            <br><br>
+                            
+                            
+                            <% @one_fb.replies.each do |r| %>
+                             
+                                <div class="<%= r.id %>">  
+                                
+                                    <p style="text-align:center">이름 : <%= r.rp_name %><br>내용 : <%= r.rp_content %> </p>
+                                    
+                                </div>
+                                <div class="<%= r.id %>" style="display :none">
+                                    
+                                    <form action="/freeboard/reply_modify">
+                                        <textarea name="rp_content"></textarea>
+                                        <input type="submit" value='확인'></button>
+                                        <input type="hidden" name="rp_id" value="<%= r.id %>">
+                                        
+                                    </form>
+                                </div>
+                              
+                                <form  action="reply_delete">
+                                    <input type="hidden" name="rp_id" value="<%= r.id %>">
+                                    <input type="submit" value="삭제">
+                                </form>
+                                
+                                
+                                <button href="#" id="update_button<%= r.id %>">수정</button>
+                                
+                            
+                                <script>
+                                
+                                    $(function(){
+                                        $("#update_button<%= r.id%>").click(function(){
+                                            //수정 버튼 클릭했을때
+                                         
+                                        <% if current_user.name == r.rp_name %>
+                                            
+                                            $(".<%= r.id %>" ).show();
+                                            
+                                        <% else %>
+                                            
+                                            
+                                        
+                                        <% end %>
+                                            
+                                            });
+                                    });
+                                </script>
+                            <% end %>
+                  
+                            <form action="/freeboard/reply_write" method="POST">
+                                <% if user_signed_in? %>
+                                    작성자 : <%= current_user.name %> 
+                                <% end %><br>
+                                <textarea type="text" name="rp_content"  placeholder="Content"></textarea><br>
+                                <input type="hidden" name="freeboard_id" value="<%= @one_fb.id %>">
+                                <input type="hidden" name="rp_name" value="<%= current_user.name %>">
+                                <input type="hidden" name="rp_hakbun" value="<%= current_user.hakbun %>">
+                                <input type="submit" value="댓글달기">
+                            </form>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
