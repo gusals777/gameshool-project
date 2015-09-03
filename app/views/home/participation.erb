@@ -1,116 +1,118 @@
-<head>
-    <title>참가 신청</title>
+<html>    
+    <head>
+        <title>참가 신청</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
     
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-
- <br><br>
- <div class="row">
-  <div class="col-lg-12 col-sm-12 col-md-12"><center><img src="https://page1-ysj6326-1.c9.io/imgs/고고고.PNG" style="width:1000; height:120;"></center>
- </div>
- 
- <body style="background-image:url('http://img.ruliweb.daum.net/data/news15/04m/03/apl/ruliweb_hearthstone05.jpg'); background-size:cover;">
-<div class="row" style="margin-top: 10%;">
-    <div class="col-lg-offset-2 col-lg-5 col-sm-12 col-md-12">
- <center><img src="https://page1-ysj6326-1.c9.io/imgs/참여신청.PNG" style="width:600px; height:400px;"></center>
+     <br><br>
+     <div class="row">
+      <div class="col-lg-12 col-sm-12 col-md-12"><center><img src="https://page1-ysj6326-1.c9.io/imgs/고고고.PNG" style="width:1000; height:120;"></center>
      </div>
-
-     <div class="col-lg-5 col-sm-12 col-md-12" style="padding: 5% 0px 0px 2%;">
-    <%= form_tag("/home/participation_process", method: "post") do %>
-        <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:name, "이름: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;<input type="text" name="name" required>
-        </p>
-        <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:major, "학과: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;<%= select_tag(:major, options_for_select([['신학과', '신학과'], 
-                                                    ['도시및부동산개발학과', '도시및부동산개발학과'],
-                                                    ['행정학과','행정학과'],
-                                                    ['사회복지학과','사회복지학과'],
-                                                    ['아동청소년복지학과','아동청소년복지학과'],
-                                                    ['재활복지학과','재활복지학과'],
-                                                    ['다문화가족복지전공(연계전공)','다문화가족복지전공(연계전공)'],
-                                                    ['경영학과','경영학과'],
-                                                    ['무역ㆍ물류학과','무역ㆍ물류학과'],
-                                                    ['광고홍보학과','광고홍보학과'],
-                                                    ['미국학과','미국학과'],
-                                                    ['중국학과','중국학과'],
-                                                    ['일본학과','일본학과'],
-                                                    ['컴퓨터학과','컴퓨터학과'],
-                                                    ['정보통신학과','정보통신학과'],
-                                                    ['데이터정보학과','데이터정보학과'],
-                                                    ['음악학과','음악학과'],
-                                                    ['실용음악학과','실용음악학과'],
-                                                    ['방송연예학과','방송연예학과'],
-                                                    ['시각디자인학과','시각디자인학과'],
-                                                    ['영상디자인학과','영상디자인학과'],
-                                                    ['패션디자인및브랜딩학과','패션디자인및브랜딩학과'],
-                                                    ['간호학과','간호학과'],
-                                                    ['환경융합시스템학과','환경융합시스템학과'],
-                                                    ['교양학부','교양학부']])) %>
-        </p>
-        <p>
-       &nbsp;&nbsp; &nbsp;<%= label_tag(:hakbun, "학번: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="hakbun" required>
-        </p>
-        <p>
-        &nbsp;&nbsp;&nbsp;<%= label_tag(:email, "이메일: ") %>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="email" name="email" required>
-        </p>
-        <p>
-        &nbsp;&nbsp;&nbsp;<%= label_tag(:kakao, "카톡 ID: ") %>&nbsp;&nbsp;&nbsp;
-        <input type="text" name="kakao" required>
-        </p>
-        <p>
-        &nbsp;&nbsp;&nbsp;<%= label_tag(:phone_num, "연락처: ") %>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="phone_num" required>
-        </p>
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;<label for="game">게임 : </label>
-            <input id="game_select" name="game" type="radio" value="fifa" checked />
-            <label for="game">피파 온라인</label>
-            <input id="game_select" name="game" type="radio" value="lol" />
-            <label for="game">리그 오브 레전드</label>
-            <input id="game_select" name="game" type="radio" value="hearthstone" />
-            <label for="game">하스스톤</label>
-        </p>
-        
-        <div id="lol_view" class="desc" style="display: none">
+     
+     <body style="background-image:url('http://img.ruliweb.daum.net/data/news15/04m/03/apl/ruliweb_hearthstone05.jpg'); background-size:cover;">
+    <div class="row" style="margin-top: 10%;">
+        <div class="col-lg-offset-2 col-lg-5 col-sm-12 col-md-12">
+     <center><img src="https://page1-ysj6326-1.c9.io/imgs/참여신청.PNG" style="width:600px; height:400px;"></center>
+         </div>
+    
+         <div class="col-lg-5 col-sm-12 col-md-12" style="padding: 5% 0px 0px 2%;">
+        <%= form_tag("/home/participation_process", method: "post") do %>
             <p>
-               &nbsp;&nbsp;&nbsp; <%= label_tag(:team_name, "팀명: ") %>
-                <input type="text" name="team_name" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:name, "이름: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;<input type="text" name="name" required>
             </p>
+            <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:major, "학과: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;<%= select_tag(:major, options_for_select([['신학과', '신학과'], 
+                                                        ['도시및부동산개발학과', '도시및부동산개발학과'],
+                                                        ['행정학과','행정학과'],
+                                                        ['사회복지학과','사회복지학과'],
+                                                        ['아동청소년복지학과','아동청소년복지학과'],
+                                                        ['재활복지학과','재활복지학과'],
+                                                        ['다문화가족복지전공(연계전공)','다문화가족복지전공(연계전공)'],
+                                                        ['경영학과','경영학과'],
+                                                        ['무역ㆍ물류학과','무역ㆍ물류학과'],
+                                                        ['광고홍보학과','광고홍보학과'],
+                                                        ['미국학과','미국학과'],
+                                                        ['중국학과','중국학과'],
+                                                        ['일본학과','일본학과'],
+                                                        ['컴퓨터학과','컴퓨터학과'],
+                                                        ['정보통신학과','정보통신학과'],
+                                                        ['데이터정보학과','데이터정보학과'],
+                                                        ['음악학과','음악학과'],
+                                                        ['실용음악학과','실용음악학과'],
+                                                        ['방송연예학과','방송연예학과'],
+                                                        ['시각디자인학과','시각디자인학과'],
+                                                        ['영상디자인학과','영상디자인학과'],
+                                                        ['패션디자인및브랜딩학과','패션디자인및브랜딩학과'],
+                                                        ['간호학과','간호학과'],
+                                                        ['환경융합시스템학과','환경융합시스템학과'],
+                                                        ['교양학부','교양학부']])) %>
+            </p>
+            <p>
+           &nbsp;&nbsp; &nbsp;<%= label_tag(:hakbun, "학번: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="hakbun" required>
+            </p>
+            <p>
+            &nbsp;&nbsp;&nbsp;<%= label_tag(:email, "이메일: ") %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="email" name="email" required>
+            </p>
+            <p>
+            &nbsp;&nbsp;&nbsp;<%= label_tag(:kakao, "카톡 ID: ") %>&nbsp;&nbsp;&nbsp;
+            <input type="text" name="kakao" required>
+            </p>
+            <p>
+            &nbsp;&nbsp;&nbsp;<%= label_tag(:phone_num, "연락처: ") %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="phone_num" required>
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<label for="game">게임 : </label>
+                <input id="game_select" name="game" type="radio" value="fifa" checked />
+                <label for="game">피파 온라인</label>
+                <input id="game_select" name="game" type="radio" value="lol" />
+                <label for="game">리그 오브 레전드</label>
+                <input id="game_select" name="game" type="radio" value="hearthstone" />
+                <label for="game">하스스톤</label>
+            </p>
+            
+            <div id="lol_view" class="desc" style="display: none">
+                <p>
+                   &nbsp;&nbsp;&nbsp; <%= label_tag(:team_name, "팀명: ") %>
+                    <input type="text" name="team_name" required>
+                </p>
+            </div>
+            
+            <p style="padding-left: 15%">
+            <%= submit_tag("참가신청") %>&nbsp;&nbsp;<%= submit_tag("뒤로가기") %>
+            </p>
+            
+        <% end %>
         </div>
-        
-        <p style="padding-left: 15%">
-        <%= submit_tag("참가신청") %>&nbsp;&nbsp;<%= submit_tag("뒤로가기") %>
-        </p>
-        
-    <% end %>
     </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-
-<script>
-$(function(){
-  $("input[name$='game']").click(function(){
-      var temp = $(this).val();
-      
-      if (temp == "lol"){
-          $("#lol_view").show(1000);
-      }else{
-          $("div.desc").hide(1000);   
-      }
-  });
-});
-</script>
-
-</body>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    
+    <script>
+    $(function(){
+      $("input[name$='game']").click(function(){
+          var temp = $(this).val();
+          
+          if (temp == "lol"){
+              $("#lol_view").show(1000);
+          }else{
+              $("div.desc").hide(1000);   
+          }
+      });
+    });
+    </script>
+    
+    </body>
+<html>
