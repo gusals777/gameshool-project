@@ -1,0 +1,80 @@
+
+<br>
+<br><br><br>
+<br><br>
+<br>
+
+
+<div class="container">
+        <table class="table table-condensed" id="data">
+         
+         <thead> 
+             <tr>
+                <th style="text-align :center">nom</th>
+                <th style="text-align :center">글쓴이</th>
+                <th style="text-align :center">제&nbsp;&nbsp;&nbsp;목</th>
+                <th style="text-align :center">작성일</th>
+              
+              </tr>
+         </thead> 
+                 
+            <% @fb_all.reverse_each do |a| %>
+                 
+                
+                    <tr>
+                            <td  style="text-align :center"><%= a.id %></td>
+                        
+                            <td  style="text-align :center"><%= a.fb_name %></td>
+                         
+                        <% if user_signed_in? %>
+                            <td  style="text-align :center"><a href="/freeboard/upload_view?id=<%= a.id %>"><%= a.fb_title %>(<%= a.replies.count %>)</a></td>
+                        <% else %>    
+                            <td  style="text-align :center"><a href="/freeboard/warning"><%= a.fb_title %>(<%= a.replies.count %>)</a></td>
+                        <% end %>
+                            <td  style="text-align :center"><%=a.created_at.in_time_zone("Seoul")%></td>
+                    </tr>
+                  
+                  
+                
+            <% end %>
+             
+         
+         
+         
+        </table>
+        
+        <% if user_signed_in? %>
+            <p align="right"><a href="/freeboard/upload">작성하기</a></p>
+        <% else %>
+            <p align="right"><a href="/freeboard/warning">작성하기</a></p>
+        <% end %>
+        
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#data').after('<div id="nav"></div>');
+            var rowsShown = 5;
+            var rowsTotal = $('#data tbody tr').length;
+            var numPages = rowsTotal/rowsShown;
+            for(i = 0;i < numPages;i++) {
+                var pageNum = i + 1;
+                $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+            }
+            $('#data tbody tr').hide();
+            $('#data tbody tr').slice(0, rowsShown).show();
+            $('#nav a:first').addClass('active');
+            $('#nav a').bind('click', function(){
+ 
+                $('#nav a').removeClass('active');
+                $(this).addClass('active');
+                var currPage = $(this).attr('rel');
+                var startItem = currPage * rowsShown;
+                var endItem = startItem + rowsShown;
+                $('#data tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
+                        css('display','table-row').animate({opacity:1}, 300);
+            });
+        });
+    </script>
