@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20150903051820) do
 
+  create_table "freeboards", force: :cascade do |t|
+    t.string   "fb_name"
+    t.string   "fb_title"
+    t.text     "fb_content"
+    t.string   "fb_password"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "game_applies", force: :cascade do |t|
     t.string   "name",       default: "", null: false
     t.string   "major",      default: "", null: false
@@ -26,7 +35,22 @@ ActiveRecord::Schema.define(version: 20150903051820) do
     t.datetime "updated_at",              null: false
   end
 
+  create_table "replies", force: :cascade do |t|
+    t.integer  "freeboard_id"
+    t.string   "rp_name"
+    t.string   "rp_content"
+    t.integer  "rp_hakbun"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "users", force: :cascade do |t|
+    t.string   "name",                   default: "", null: false
+    t.string   "major",                  default: "", null: false
+    t.integer  "hakbun",                              null: false
+    t.string   "kakao",                  default: "", null: false
+    t.string   "phone_num",              default: "", null: false
+    t.string   "team_name",              default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

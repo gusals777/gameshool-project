@@ -11,19 +11,19 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
-    
-     <br><br>
-     <div class="row">
-      <div class="col-lg-12 col-sm-12 col-md-12"><center><img src="https://page1-ysj6326-1.c9.io/imgs/고고고.PNG" style="width:1000; height:120;"></center>
-     </div>
      
      <body style="background-image:url('http://img.ruliweb.daum.net/data/news15/04m/03/apl/ruliweb_hearthstone05.jpg'); background-size:cover;">
+    <br><br>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-12"><center><img src="https://page1-ysj6326-1.c9.io/imgs/고고고.PNG" style="width:1000; height:120;"></center>
+    </div>
     <div class="row" style="margin-top: 10%;">
         <div class="col-lg-offset-2 col-lg-5 col-sm-12 col-md-12">
      <center><img src="https://page1-ysj6326-1.c9.io/imgs/참여신청.PNG" style="width:600px; height:400px;"></center>
          </div>
     
          <div class="col-lg-5 col-sm-12 col-md-12" style="padding: 5% 0px 0px 2%;">
+           
         <%= form_tag("/home/participation_process", method: "post") do %>
             <p>
             &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:name, "이름: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -93,11 +93,11 @@
             <p style="padding-left: 15%">
             <%= submit_tag("참가신청") %>&nbsp;&nbsp;<%= submit_tag("뒤로가기") %>
             </p>
-            gddtgdg
+            
         <% end %>
         </div>
     </div>
-    
+         
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     
     <script>
