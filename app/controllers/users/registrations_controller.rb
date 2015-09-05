@@ -59,8 +59,9 @@ before_filter :configure_account_update_params, only: [:update]
   end
 
   # The path used after sign up.
+  protected
   def after_sign_up_path_for(resource)
-    signed_in_root_path(resource)
+    stored_location_for(resource) || "/home/participation"
   end
 
   # The path used after sign up for inactive accounts.
