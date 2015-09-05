@@ -3,12 +3,16 @@ class FreeboardController < ApplicationController
     # 게시판 홈
     def freeboards
        @fb_all = Freeboard.all
+       
+       render layout: false
     end
     # 게시판 홈 끝
     
     
     # 글쓰기 페이지
     def upload
+        
+        render layout: false
     end
     # 글쓰기 페이지 끝
     
@@ -22,10 +26,9 @@ class FreeboardController < ApplicationController
         fb_update.fb_content = params[:user_content]
         fb_update.fb_password = params[:user_passowrd]
         fb_update.save
-        
-        
            
         redirect_to '/freeboard/freeboards'
+        
     end
     # 글 작성 처리하는 페이지 끝
     
@@ -33,6 +36,8 @@ class FreeboardController < ApplicationController
     def modify
         
         @id = params[:id]
+        
+        render layout: false
         
     end
     # 수정 페이지 끝
@@ -54,11 +59,12 @@ class FreeboardController < ApplicationController
             fb_modify.save
                 
             redirect_to '/freeboard/freeboards'
-             
         else
              
             redirect_to :back
         end 
+        
+        render layout: false
     end
     # 글 수정 처리 끝
     
@@ -66,6 +72,8 @@ class FreeboardController < ApplicationController
     # 삭제 페이지
     def delete
         @id = params[:id]
+        
+        render layout: false
     end
     # 삭제 페이지 끝
     
@@ -87,6 +95,8 @@ class FreeboardController < ApplicationController
              
             redirect_to :back
         end
+        
+        render layout: false
     end
     # 게시글 삭제 액션 페이지 끝
     
@@ -96,7 +106,7 @@ class FreeboardController < ApplicationController
         @one_fb = Freeboard.find(params[:id])
         @id = params[:id]
         
-       
+       render layout: false
     end
     # 게시판에 등록한 글 페이지 끝
     
@@ -112,7 +122,6 @@ class FreeboardController < ApplicationController
         fb_reply.save
       
         redirect_to :back
-        
     end
     # 게시판 리플 처리 페이지 끝
     
@@ -155,7 +164,7 @@ class FreeboardController < ApplicationController
             redirect_to :back
         end
         
-        
+        render layout: false
     end
     # 리플 수정 
     
@@ -164,6 +173,7 @@ class FreeboardController < ApplicationController
     # 비 로그인시 경고출력
     def warning
         
+        render layout: false
     end
     # 비 로그인시 경고출 끝
     

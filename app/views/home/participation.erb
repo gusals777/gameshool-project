@@ -26,12 +26,12 @@
            
         <%= form_tag("/home/participation_process", method: "post") do %>
             <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:name, "이름: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;<input type="text" name="name" required>
+            <%=label_tag(:name, "이름: ") %>
+            <input type="text" name="name" required>
             </p>
             <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;<%= label_tag(:major, "학과: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;<%= select_tag(:major, options_for_select([['신학과', '신학과'], 
+            <%= label_tag(:major, "학과: ") %>
+            <%= select_tag(:major, options_for_select([['신학과', '신학과'], 
                                                         ['도시및부동산개발학과', '도시및부동산개발학과'],
                                                         ['행정학과','행정학과'],
                                                         ['사회복지학과','사회복지학과'],
@@ -58,23 +58,23 @@
                                                         ['교양학부','교양학부']])) %>
             </p>
             <p>
-           &nbsp;&nbsp; &nbsp;<%= label_tag(:hakbun, "학번: ") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= label_tag(:hakbun, "학번: ") %>
             <input type="text" name="hakbun" required>
             </p>
             <p>
-            &nbsp;&nbsp;&nbsp;<%= label_tag(:email, "이메일: ") %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= label_tag(:email, "이메일: ") %>
             <input type="email" name="email" required>
             </p>
             <p>
-            &nbsp;&nbsp;&nbsp;<%= label_tag(:kakao, "카톡 ID: ") %>&nbsp;&nbsp;&nbsp;
+            <%= label_tag(:kakao, "카톡 ID: ") %>
             <input type="text" name="kakao" required>
             </p>
             <p>
-            &nbsp;&nbsp;&nbsp;<%= label_tag(:phone_num, "연락처: ") %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= label_tag(:phone_num, "연락처: ") %>
             <input type="text" name="phone_num" required>
             </p>
             <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;<label for="game">게임 : </label>
+                <label for="game">게임 : </label>
                 <input id="game_select" name="game" type="radio" value="fifa" checked />
                 <label for="game">피파 온라인</label>
                 <input id="game_select" name="game" type="radio" value="lol" />
@@ -85,13 +85,13 @@
             
             <div id="lol_view" class="desc" style="display: none">
                 <p>
-                   &nbsp;&nbsp;&nbsp; <%= label_tag(:team_name, "팀명: ") %>
+                   <%= label_tag(:team_name, "팀명: ") %>
                     <input type="text" name="team_name" required>
                 </p>
             </div>
             
             <p style="padding-left: 15%">
-            <%= submit_tag("참가신청") %>&nbsp;&nbsp;<%= submit_tag("뒤로가기") %>
+            <%= submit_tag("참가신청") %>
             </p>
             
         <% end %>

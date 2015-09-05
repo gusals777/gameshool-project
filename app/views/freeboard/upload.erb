@@ -1,3 +1,8 @@
+<html>
+<head></head>
+
+<body>
+
 <br>
 <br>
 <br>
@@ -6,7 +11,7 @@
 <br>
 
 <h1>게시글 등록</h1><br>
-<form action="/freeboard/write" method="POST">
+<%= form_tag("/freeboard/write", method: "post") do %>
     
     <% if user_signed_in? %>
         이름 : <%= current_user.name %> 
@@ -27,4 +32,6 @@
 
     <input type="submit" value="확인">
 
-</form>
+<% end %>
+</body>
+</html>
