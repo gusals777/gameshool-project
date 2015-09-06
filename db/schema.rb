@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150903051820) do
+ActiveRecord::Schema.define(version: 20150906080856) do
 
   create_table "freeboards", force: :cascade do |t|
     t.string   "fb_name"
@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 20150903051820) do
     t.string   "rp_name"
     t.string   "rp_content"
     t.integer  "rp_hakbun"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "teamlists", force: :cascade do |t|
+    t.string   "kind_of_game"
+    t.string   "team_name"
+    t.string   "member_name"
+    t.string   "game_id"
+    t.string   "tear"
+    t.text     "comment"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
