@@ -35,6 +35,7 @@ class FreeboardController < ApplicationController
         
         @id = params[:id]
         
+        @one_fb = Freeboard.find(@id)
         
     end
     # 수정 페이지 끝

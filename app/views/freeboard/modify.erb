@@ -7,19 +7,18 @@
 <br>
 
 <h1>수정 페이지</h1>
-    <form action="/freeboard/update" method="POST">
-        
-            <input type="text" name="md_name" placeholder="Name">
-        <br>
-            <input type="text" name="md_title" placeholder="Title">
-        <br>
-        <br>
-            <textarea type="text" name="md_content"  placeholder="Content"></textarea>
-        <br>
-            <input type="password" name="md_passowrd" placeholder="Pw"> <font>비밀번호 입력해</p></font>
-        <br>
-            <input type="submit" value="확인">
-            <input type='hidden' name='id' value='<%= @id %>'>
-        
+<%= form_tag("/freeboard/update", method: "post") do %>
     
-    </form>
+      <p> 이름 : <%= @one_fb.fb_name %></p> 
+    <br>
+        <input type="text" name="md_title" placeholder="Title">
+    <br>
+    <br>
+        <textarea type="text" name="md_content"  placeholder="Content"></textarea>
+    <br>
+        <p><input type="password" name="md_passowrd" placeholder="Pw"> 비밀번호 입력해 </p>
+    <br>
+        <input type="submit" value="확인">
+        <input type='hidden' name='id' value='<%= @id %>'>
+    
+<% end %>

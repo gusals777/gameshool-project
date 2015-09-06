@@ -5,8 +5,7 @@
 <br>
 <br>
 <h1>삭제 페이지</h1>
-    <form action="/freeboard/delete_action" method="POST">
-    
+    <%= form_tag("/freeboard/delete_action", method: "post") do %>
         
         <br>
         <input type="password" name="del_passowrd" placeholder="Pw"> <font>비밀번호 입력해</p></font>
@@ -16,4 +15,4 @@
         <input type='hidden' name='id' value='<%= @id %>'>
         
     
-    </form>
+    <% end %>
