@@ -4,6 +4,8 @@ class FreeboardController < ApplicationController
     def freeboards
        @fb_all = Freeboard.all
        
+       render layout: false
+       
     end
     # 게시판 홈 끝
     
