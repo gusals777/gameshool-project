@@ -1,4 +1,7 @@
 
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<body>
     <div class="container">
         <div container>
             <div class="row">
@@ -26,15 +29,13 @@
                                 </div>
                                 <div class="<%= r.id %>" style="display :none">
                                     
-                                    <form action="/freeboard/reply_modify">
                                         <textarea name="rp_content"></textarea>
                                         <input type="submit" value='확인'></button>
                                         <input type="hidden" name="rp_id" value="<%= r.id %>">
                                         
-                                    </form>
                                 </div>
-                              
-                                <form  action="reply_delete">
+                                
+                                <form  action="/freeboard/reply_delete" method="GET">
                                     <input type="hidden" name="rp_id" value="<%= r.id %>">
                                     <input type="submit" value="삭제">
                                 </form>
@@ -64,7 +65,7 @@
                                 </script>
                             <% end %>
                   
-                            <form action="/freeboard/reply_write" method="POST">
+                            <%= form_tag("/freeboard/reply_write", method: "post") do %>
                                 <% if user_signed_in? %>
                                     작성자 : <%= current_user.name %> 
                                 <% end %><br>
@@ -73,11 +74,12 @@
                                 <input type="hidden" name="rp_name" value="<%= current_user.name %>">
                                 <input type="hidden" name="rp_hakbun" value="<%= current_user.hakbun %>">
                                 <input type="submit" value="댓글달기">
-                            </form>
+                            <% end %>
                         </center>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 

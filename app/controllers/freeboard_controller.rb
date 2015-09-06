@@ -3,12 +3,14 @@ class FreeboardController < ApplicationController
     # 게시판 홈
     def freeboards
        @fb_all = Freeboard.all
+       
     end
     # 게시판 홈 끝
     
     
     # 글쓰기 페이지
     def upload
+        
     end
     # 글쓰기 페이지 끝
     
@@ -22,10 +24,9 @@ class FreeboardController < ApplicationController
         fb_update.fb_content = params[:user_content]
         fb_update.fb_password = params[:user_passowrd]
         fb_update.save
-        
-        
            
         redirect_to '/freeboard/freeboards'
+        
     end
     # 글 작성 처리하는 페이지 끝
     
@@ -33,6 +34,7 @@ class FreeboardController < ApplicationController
     def modify
         
         @id = params[:id]
+        
         
     end
     # 수정 페이지 끝
@@ -54,11 +56,11 @@ class FreeboardController < ApplicationController
             fb_modify.save
                 
             redirect_to '/freeboard/freeboards'
-             
         else
              
             redirect_to :back
         end 
+        
     end
     # 글 수정 처리 끝
     
@@ -66,6 +68,7 @@ class FreeboardController < ApplicationController
     # 삭제 페이지
     def delete
         @id = params[:id]
+        
     end
     # 삭제 페이지 끝
     
@@ -87,6 +90,7 @@ class FreeboardController < ApplicationController
              
             redirect_to :back
         end
+        
     end
     # 게시글 삭제 액션 페이지 끝
     
@@ -96,7 +100,6 @@ class FreeboardController < ApplicationController
         @one_fb = Freeboard.find(params[:id])
         @id = params[:id]
         
-       
     end
     # 게시판에 등록한 글 페이지 끝
     
@@ -112,7 +115,6 @@ class FreeboardController < ApplicationController
         fb_reply.save
       
         redirect_to :back
-        
     end
     # 게시판 리플 처리 페이지 끝
     
@@ -154,7 +156,6 @@ class FreeboardController < ApplicationController
             
             redirect_to :back
         end
-        
         
     end
     # 리플 수정 
