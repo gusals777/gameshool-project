@@ -11,15 +11,59 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
-     
-     <body style="background-image:url('http://img.ruliweb.daum.net/data/news15/04m/03/apl/ruliweb_hearthstone05.jpg'); background-size:cover;">
-    <br><br>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-md-12"><center><img src="https://page1-ysj6326-1.c9.io/imgs/고고고.PNG" style="width:1000; height:120;"></center>
+
+    
+    <div class="container">
+ <div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"></li>
+        <li role="presentation"></li>
+      </ul>
+    </nav>
+   
+  </div>
+  <!-- 배너 -->
+ 
+    <img src="http://www.afreeca.com/event/pfh/images/tournament2.gif" width="100%">
+    <h1>Game School 8강 토너먼트 대회</h1>
+    <p class="lead">2015년 10월 1일부터 10일까지 8강 토너먼트가 진행 됩니다.<br>많은 관심과 참여 부탁드립니다.</p>
+ 
+  
+  <!-- 배너끝 -->
+
+
+
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h3>롤</h3>
+      <img src="http://cfile21.uf.tistory.com/image/2718713B52366D3009C5FA" class="img-thumbnail" width="400">
     </div>
+    <div class="col-lg-6">
+      <h3>피파</h3>
+      <img src="http://file.gamedonga.co.kr/files/2013/09/26/fifa14.jpg" class="img-thumbnail" width="400">
+    </div>
+    <div class="col-lg-6">
+      <h3>서든</h3>
+      <img src="http://storage.sa.nexon.com/league/news/20150208172030_86402d2ffc.jpg" class="img-thumbnail" width="400">
+    </div>
+    <div class="col-lg-6">
+      <h3>하스스톤</h3>
+      <img src="http://i1.daumcdn.net/thumb/R750x0/?fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F233E4A4C55700EB21A0CD7" class="img-thumbnail" width="400">
+    </div
+  </div>
+
+</div> <!-- /container -->
+        <body style="background-image:url('http://cfile2.uf.tistory.com/image/141C141B49F8780094DA9E'); background-size:cover;">
+        
+    <center>
+        <%= form_tag("/home/participation_process", method: "post") do %>
+     
+    <br><br>
+  
     <div class="row" style="margin-top: 10%;">
         <div class="col-lg-offset-2 col-lg-5 col-sm-12 col-md-12">
-     <center><img src="https://page1-ysj6326-1.c9.io/imgs/참여신청.PNG" style="width:600px; height:400px;"></center>
+    
          </div>
     
          <div class="col-lg-5 col-sm-12 col-md-12" style="padding: 5% 0px 0px 2%;">
@@ -57,6 +101,8 @@
                                                         ['환경융합시스템학과','환경융합시스템학과'],
                                                         ['교양학부','교양학부']])) %>
             </p>
+            
+
             <p>
             <%= label_tag(:hakbun, "학번: ") %>
             <input type="text" name="hakbun" required>
@@ -91,13 +137,18 @@
             </div>
             
             <p style="padding-left: 15%">
-            <%= submit_tag("참가신청") %>
+
+     <%= submit_tag("참가신청") %> &nbsp; &nbsp;<%= submit_tag("뒤로가기") %>
             </p>
+            
+        <% end %>
+    </center>
             
         <% end %>
         </div>
     </div>
          
+
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     
     <script>
@@ -113,6 +164,5 @@
       });
     });
     </script>
-    
-    </body>
+  </body>
 </html>
