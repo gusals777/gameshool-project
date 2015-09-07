@@ -50,7 +50,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/game_page/main">GameSchool</a>
+                <ul class="nav navbar-nav navbar-left">
+                    
+                    <li>
+                        <a href="/game_page/main"><font size="3px"><font1>GameSchool</font1></font></a>
+                    </li>
+                    <% if user_signed_in? %>
+                    <li>
+                        <a href="#"><font size="3px"><font1><%= current_user.name %>님</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/edit"><font size="3px"><font1>회원정보수정</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_out"><font size="3px"><font1>로그아웃</font1></font></a>
+                    </li>
+                    <% else %>
+                    <li>
+                        <a href="/users/sign_in"><font size="3px"><font1>로그인</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_up"><font size="3px"><font1>회원가입</font1></font></a>
+                    </li>
+                    <% end %>
+                </ul>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
