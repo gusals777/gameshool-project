@@ -1,38 +1,56 @@
+<style>
+.jumbotron
+{ min-height: 300px;
+  width: 300px;
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  }
+ 
+</style>
+<center>
+<body style="background-image:url('http://www.ucorean.com/files/attach/images/3959561/691/787/008/peaceful_summer_day-1920x1080.jpg'); background-size:cover;">
+ <br><br><br><br>
+ 
+
+<div class="container">
+<div class="jumbotron">
+
 <h2>회원 가입</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :email, "이메일" %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :name, "이름" %><br />
     <%= f.text_field :name, autofocus: true %>
   </div>
   
   <div class="field">
-    <%= f.label :major %><br />
+    <%= f.label :major,"전공" %><br />
     <%= f.text_field :major, autofocus: true %>
   </div>
   
   <div class="field">
-    <%= f.label :hakbun %><br />
+    <%= f.label :hakbun,"학번" %><br />
     <%= f.text_field :hakbun, autofocus: true %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "비밀번호" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> 글자 이상)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "비밀번호 확인" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
@@ -42,3 +60,9 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+
+
+</div>
+</body>
+</center>

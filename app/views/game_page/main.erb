@@ -50,7 +50,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/game_page/main">GameSchool</a>
+                <ul class="nav navbar-nav navbar-left">
+                    
+                    <li>
+                        <a href="/game_page/main"><font size="3px"><font1>GameSchool</font1></font></a>
+                    </li>
+                    <% if user_signed_in? %>
+                    <li>
+                        <a href="#"><font size="3px"><font1><%= current_user.name %>님</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/edit"><font size="3px"><font1>회원정보수정</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_out"><font size="3px"><font1>로그아웃</font1></font></a>
+                    </li>
+                    <% else %>
+                    <li>
+                        <a href="/users/sign_in"><font size="3px"><font1>로그인</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_up"><font size="3px"><font1>회원가입</font1></font></a>
+                    </li>
+                    <% end %>
+                </ul>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -106,18 +129,14 @@
   
   <div class="container">
   <h2>오늘의 매치!</h2>
-  <div class="panel panel-info">
-    <div class="panel-heading"><font2>Match</font2></div>
-    <div class="panel-body" style="font-family: 'Hanna', serif;">Panel Content</div>
-   
-  </div>
+  
 </div>
 </div></center>
 <br><br><br><br>
     
 
    <div class="row">
-    <div class="col-sm-3 col-md-3"></div>
+    <div class="col-sm-2 col-md-2"></div>
   <div class="col-sm-4 col-md-2">
     <div class="thumbnail"  style="height:500px">
       <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="...">
@@ -130,7 +149,7 @@
     </div>
      <center><p><a href="#" class="btn btn-primary" role="button"><font2>Detail</font2></a></center>
   </div>
-  
+  <div class="col-sm-1 col-md-1"></div>
  
   <div class="col-sm-4 col-md-2">
     <div class="thumbnail"  style="height:500px">
@@ -144,6 +163,7 @@
     </div>
     <center><p><a href="#" class="btn btn-primary" role="button"><font2>Detail</font2></a></center>
   </div>
+  <div class="col-sm-10 col-md-1"></div>
   
    <div class="col-sm-4 col-md-2">
     <div class="thumbnail" style="height:500px">
@@ -160,10 +180,10 @@
     </div>
      <center><p><a href="#" class="btn btn-primary" role="button"><font2>Detail</font2></a></center>
   </div>
-<div class="col-sm-3 col-md-3"></div>
+<div class="col-sm-2 col-md-2"></div>
 </div>
 
-9월6일 메인페이지 썸네일
+
   <br><br><br><br>
   
   
