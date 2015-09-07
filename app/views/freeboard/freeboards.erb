@@ -1,16 +1,64 @@
+<style>
+.jumbotron
+{ min-height: 650px; 
+  color:white;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  }
 
+</style>
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+ <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<body style="background-image:url('http://www.ucorean.com/files/attach/images/3959561/691/787/008/peaceful_summer_day-1920x1080.jpg'); background-size:100%;"><br>
+
+ <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><font1>GameSchool</font1></a>
+            </div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                
+                    <li >
+                        <a href="/game_page/main"><font size="4px"><font1>Home</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/home/participation"><font size="4px"><font1>팀 등록</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="about.html"><font size="4px"><font1>대전신청</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="contact.html" ><font size="4px"><font1>랭킹보기</font1></font></a>
+                    </li>
+                     <li>
+                        <a href="contact.html" ><font size="4px"><font1>대진표</font1></font></a>
+                    </li>
+                </ul>
+            </div>
 <br>
-<br><br><br>
 <br><br>
-<br>
+
 
 
 <div class="container">
-        <table class="table table-condensed" id="data">
+<font size="10px" color="white">GameSchool</font>
+ <div class="jumbotron" style="width:600px height:600px">
+         <font1><h1>FreeBoard</h1></font1><br><br><br>
+        <table class="table table-condensed" id="data" style="padding-top:1px; padding-bottom:1px; background:rgba(40,40,40,0.7); align:center">
          
          <thead> 
              <tr>
-                <th style="text-align :center">nom</th>
+                <th style="text-align :center">Number</th>
                 <th style="text-align :center">글쓴이</th>
                 <th style="text-align :center">제&nbsp;&nbsp;&nbsp;목</th>
                 <th style="text-align :center">작성일</th>
@@ -51,12 +99,13 @@
         
 
 </div>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $('#data').after('<div id="nav"></div>');
-            var rowsShown = 5;
+            var rowsShown = 10;
             var rowsTotal = $('#data tbody tr').length;
             var numPages = rowsTotal/rowsShown;
             for(i = 0;i < numPages;i++) {
@@ -78,3 +127,5 @@
             });
         });
     </script>
+    
+    </body>
