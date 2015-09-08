@@ -5,10 +5,8 @@
 <button id="addteam_button">팀등록 하기</button>
 
 <div class="container">
-  <form action="/freematch/team_list_write" mathod="POST">
   
-  
- 
+  <%= form_tag("/freematch/team_list_write", method: "post") do %>
   
     <div style="display :none" id="kind_of_game">
     
@@ -23,24 +21,21 @@
       </div>
      
       <div>
-        <input type="radio" id="radio03" name="radio" value="hasstone">
+        <input type="radio" id="radio03" name="radio" value="hearthstone">
         <label for="radio03">하스스톤</label><br>
       </div>
     
     </div>
   
-  
-
-
     <!-- 롤 팀 등록 -->
- 
     <div style="display :none" id="lol_team_introduce">
    
         
-      팀명 : <input type="text" name="team_name" placeholder="팀명"><br>
+      팀명 : <input type="text" name="lol_team_name" placeholder="팀명"><br>
       팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br> 
-      ID : <input type="text" name="lol_leader_game_id" placeholder="ID">
-      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="leader_tear">
+      학과 : <%= current_user.major %><input type="hidden" name="lol_major" value="<%= current_user.major %>"><br>
+      ID : <input type="text" name="lol_leader_id" placeholder="ID">
+      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_leader_tear">
       	<option value="">계급</option>
      		<option value="브론즈">브론즈</option>
      		<option value="실버">실버</option>
@@ -52,8 +47,8 @@
       </select>
       <br>
       
-      팀원 1 : <input type="text" name="member_name1" placeholder="팀원 1"> ID : <input type="text" name="game_id1" placeholder="ID">
-      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="tear1">
+      팀원 1 : <input type="text" name="lol_member_name_1" placeholder="팀원 1"> ID : <input type="text" name="lol_user_id_1" placeholder="ID">
+      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_1">
       	<option value="">계급</option>
      		<option value="브론즈">브론즈</option>
      		<option value="실버">실버</option>
@@ -66,8 +61,8 @@
       <br>
       
      
-      팀원 2 : <input type="text" name="member_name2" placeholder="팀원 2"> ID : <input type="text" name="game_id2" placeholder="ID">
-      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="tear2">
+      팀원 2 : <input type="text" name="lol_member_name_2" placeholder="팀원 2"> ID : <input type="text" name="lol_user_id_2" placeholder="ID">
+      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_2">
         <option value="">계급</option>
      		<option value="브론즈">브론즈</option>
      		<option value="실버">실버</option>
@@ -80,8 +75,8 @@
       <br>
     
   
-      팀원 3 : <input type="text" name="member_name3" placeholder="팀원 3"> ID : <input type="text" name="game_id3" placeholder="ID">
-      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="tear3">
+      팀원 3 : <input type="text" name="lol_member_name_3" placeholder="팀원 3"> ID : <input type="text" name="lol_user_id_3" placeholder="ID">
+      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_3">
       	<option value="">계급</option>
      		<option value="브론즈">브론즈</option>
      		<option value="실버">실버</option>
@@ -94,8 +89,8 @@
       <br>
       
       
-      팀원 4 : <input type="text" name="member_name4" placeholder="팀원 4"> ID : <input type="text" name="game_id4" placeholder="ID">
-      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="tear4">
+      팀원 4 : <input type="text" name="lol_member_name_4" placeholder="팀원 4"> ID : <input type="text" name="lol_user_id_4" placeholder="ID">
+      <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_4">
         <option value="">계급</option>
      		<option value="브론즈">브론즈</option>
      		<option value="실버">실버</option>
@@ -107,7 +102,7 @@
       </select>
       <br>
       
-      <textarea name="team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
+      <textarea name="lol_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
       <input type="submit" value="완료">
       
       
@@ -117,33 +112,33 @@
 
 
 
-<!-- 피파 팀 등록 -->
 
+
+    <!-- 피파 팀 등록 -->  
+    <div style="display :none" id="fifa_team_introduce">
+      이름 : <%= current_user.name %><input type="hidden" name="fifa_user_name" value="<%= current_user.name %>"><br>
+      학과 : <%= current_user.major %><input type="hidden" name="fifa_major" value="<%= current_user.major %>"><br> 
+      피파 id : <input type="text" name="fifa_game_id" placeholder="게임 id"><br>
+      계급 : <input type="text" name="fifa_tear" placeholder="계급"><br>
+      
+      <textarea name="fifa_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
+      <input type="submit" value="완료">
+    </div>
   
-  <div style="display :none" id="fifa_team_introduce">
-    이름 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br>
-    학과 : <%= current_user.major %><br>
-    피파 id : <input type="text" name="fifa_game_id" placeholder="게임 id"><br>
-    계급 : <input type="text" name="fifa_tear" placeholder="계급"><br>
+  
+  
+    <!-- 하스 팀 등록 -->
+    <div style="display :none" id="hearthstone_team_introduce">
+      이름 : <%= current_user.name %><input type="hidden" name="hearthstone_user_name" value="<%= current_user.name %>"><br>
+      학과 : <%= current_user.major %><input type="hidden" name="hearthstone_major" value="<%= current_user.major %>"><br>
+      하스 id : <input type="text" name="hearthstone_game_id" placeholder="게임 id"><br>
+      계급 : <input type="text" name="hearthstone_tear" placeholder="계급"><br>
+      
+      <textarea name="hearthstone_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
+      <input type="submit" value="완료">
+    </div>
     
-    <textarea name="team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
-    <input type="submit" value="완료">
-  </div>
-
-
-
-  <!-- 하스 팀 등록 -->
-  <div style="display :none" id="hasstone_team_introduce">
-    이름 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br>
-    학과 : <%= current_user.major %><br>
-    하스 id : <input type="text" name="hasstone_game_id" placeholder="게임 id"><br>
-    계급 : <input type="text" name="hasstone_tear" placeholder="계급"><br>
-    
-    <textarea name="team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
-    <input type="submit" value="완료">
-  </div>
-
-  </form>
+  <% end %>
 </div>
 
 
@@ -160,21 +155,21 @@
         //롤을 클릭했뜰때
           $("#lol_team_introduce" ).show();
           $("#fifa_team_introduce" ).hide();
-          $("#hasstone_team_introduce" ).hide();
+          $("#hearthstone_team_introduce" ).hide();
         });
           
         $("#radio02").click(function(){
         //피파을 클릭했뜰때
           $("#lol_team_introduce" ).hide();
           $("#fifa_team_introduce" ).show();
-          $("#hasstone_team_introduce" ).hide();
+          $("#hearthstone_team_introduce" ).hide();
         });
           
         $("#radio03").click(function(){
         //하스스톤을 클릭했뜰때
           $("#lol_team_introduce" ).hide();
           $("#fifa_team_introduce" ).hide();
-          $("#hasstone_team_introduce" ).show();
+          $("#hearthstone_team_introduce" ).show();
         });
         
         });

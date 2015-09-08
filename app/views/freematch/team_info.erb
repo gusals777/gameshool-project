@@ -1,0 +1,119 @@
+<h1> 각 팀의 정보가 출력되는 page</h1>
+
+<h1>예시) </h1><br>
+
+
+<% if @teamlists.kind_of_game == "lol" %>
+
+  <h1>팀명 : <%= @teamlists.lol_team_name %> </h1>
+  
+  <table class="table">
+    <tr>
+      <th>게임종류</th>
+      <th>분류</th>
+      <th>이름</th>
+      <th>학과</th>
+      <th>계급</th>
+      <th>게임 ID</th>
+    </tr>
+    <tr>
+      <th><%= @teamlists.kind_of_game %></th>
+      <th>팀장</th>
+      <th><%= @teamlists.leader_name %></th>
+      <th><%= @teamlists.lol_major %></th>
+      <th><%= @teamlists.lol_leader_tear %></th>
+      <th><%= @teamlists.lol_leader_id %></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>팀원</th>
+      <th><%= @teamlists.lol_member_name_1 %></th>
+      <th>정보통신학과</th>
+      <th><%= @teamlists.lol_tear_user_1 %></th>
+      <th><%= @teamlists.lol_user_id_1 %></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>팀원</th>
+      <th><%= @teamlists.lol_member_name_2 %></th>
+      <th>정보통신학과</th>
+      <th><%= @teamlists.lol_tear_user_2 %></th>
+      <th><%= @teamlists.lol_user_id_2 %></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>팀원</th>
+      <th><%= @teamlists.lol_member_name_3 %></th>
+      <th>정보통신학과</th>
+      <th><%= @teamlists.lol_tear_user_3 %></th>
+      <th><%= @teamlists.lol_user_id_3 %></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>팀원</th>
+      <th><%= @teamlists.lol_member_name_4 %></th>
+      <th>정보통신학과</th>
+      <th><%= @teamlists.lol_tear_user_4 %></th>
+      <th><%= @teamlists.lol_user_id_4 %></th>
+    </tr>
+  </table>
+  <br>
+  
+  <h1> 팀 설명 : <%= @teamlists.comment %></h1>
+  <br>
+  
+  
+  <% elsif @teamlists.kind_of_game == "fifa" %>
+
+    <table class="table">
+      <tr>
+        <th>게임종류</th>
+        <th>분류</th>
+        <th>이름</th>
+        <th>학과</th>
+        <th>계급</th>
+        <th>게임 ID</th>
+      </tr>
+      <tr>
+        <th><%= @teamlists.kind_of_game %></th>
+        <th>팀장</th>
+        <th><%= @teamlists.fifa_user_name %></th>
+        <th><%= @teamlists.fifa_major %></th>
+        <th><%= @teamlists.tear %></th>
+        <th><%= @teamlists.game_id %></th>
+      </tr>
+     
+    </table>
+    <br>
+    
+    <h1> 팀 설명 : <%= @teamlists.comment %></h1>
+    <br>
+  <% else %>
+  
+    <table class="table">
+      <tr>
+        <th>게임종류</th>
+        <th>분류</th>
+        <th>이름</th>
+        <th>학과</th>
+        <th>계급</th>
+        <th>게임 ID</th>
+      </tr>
+      <tr>
+        <th><%= @teamlists.kind_of_game %></th>
+        <th>팀장</th>
+        <th><%= @teamlists.hearthstone_user_name %></th>
+        <th><%= @teamlists.hearthstone_major %></th>
+        <th><%= @teamlists.tear %></th>
+        <th><%= @teamlists.game_id %></th>
+      </tr>
+     
+    </table>
+    <br>
+    
+    <h1> 팀 설명 : <%= @teamlists.comment %></h1>
+    <br>
+  
+  <% end %>
+
+<button><a href="/freematch/team_list">팀리스트로 가기</a></button>

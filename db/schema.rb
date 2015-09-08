@@ -46,14 +46,32 @@ ActiveRecord::Schema.define(version: 20150906080856) do
 
   create_table "teamlists", force: :cascade do |t|
     t.string   "kind_of_game"
-    t.string   "team_name"
-    t.string   "member_name"
     t.string   "game_id"
     t.string   "tear"
     t.text     "comment"
-    t.integer  "team_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "hearthstone_major"
+    t.string   "hearthstone_user_name"
+    t.string   "fifa_major"
+    t.string   "fifa_user_name"
+    t.string   "lol_team_name"
+    t.string   "lol_major"
+    t.string   "lol_leader_id"
+    t.string   "lol_user_id_1"
+    t.string   "lol_user_id_2"
+    t.string   "lol_user_id_3"
+    t.string   "lol_user_id_4"
+    t.string   "lol_leader_tear"
+    t.string   "lol_tear_user_1"
+    t.string   "lol_tear_user_2"
+    t.string   "lol_tear_user_3"
+    t.string   "lol_tear_user_4"
+    t.string   "leader_name"
+    t.string   "lol_member_name_1"
+    t.string   "lol_member_name_2"
+    t.string   "lol_member_name_3"
+    t.string   "lol_member_name_4"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "users", force: :cascade do |t|
