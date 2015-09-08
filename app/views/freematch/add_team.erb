@@ -41,16 +41,9 @@
   <center><h5><font1><font color="white">Choose Game</font></font1><h5></center>
   <div style="padding-top:1px; padding-bottom:1px; background:rgba(240,240,240,0.4); align:center">
   
-<h3><font1><center>팀등록</center></font1></h3>
-
-<center><button type="button" class="btn btn-primary" id="addteam_button">Click</button></center>
-=======
-<h1>팀등록 page</h1>
-                                                                
-                                                               
+<h1>팀등록 page</h1>                 
                                                                 
 <button id="addteam_button">팀등록 하기</button>
->>>>>>> d4b0f7621b117f0e16de01f91588e41dffd3a41c
 
 <div class="container">
   <form action="/freematch/team_list_write" mathod="POST">
@@ -75,19 +68,14 @@
         <label for="radio03">하스스톤</label><br>
       </div>
     </div>
-<<<<<<< HEAD
+    </div> <!-- contaniner end -->
     </div>
-    </div>
-    </div>
+  </div>
     
     
      <div class="col-md-2"></div>
 </div>
 </div>
-=======
-  
-  
->>>>>>> d4b0f7621b117f0e16de01f91588e41dffd3a41c
 
 </div>
 
@@ -100,18 +88,11 @@
      <div class="col-md-8">
      <div style="padding-top:1px; padding-bottom:1px; background:rgba(240,240,240,0.4); align:center">
     <div style="display :none" id="lol_team_introduce">
-<<<<<<< HEAD
      
         *<font2>정확한 자료를 입력해주세요</font2>*<br>
       <font3>&nbsp;&nbsp;팀명 :&nbsp;&nbsp;</font3> <input type="text" name="team_name" placeholder="팀명"><br>
       <font3>&nbsp;&nbsp;팀장 :&nbsp;&nbsp;</font3> <input type="text" name="" placeholder="팀장"> ID : <input type="text" name="leader_game_id" placeholder="ID">
-=======
-   
-        
-      팀명 : <input type="text" name="team_name" placeholder="팀명"><br>
-      팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br> 
-      ID : <input type="text" name="lol_leader_game_id" placeholder="ID">
->>>>>>> d4b0f7621b117f0e16de01f91588e41dffd3a41c
+
       <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="leader_tear">
       	<option value=""><font3>계급</font3></option>
      		<option value="브론즈">브론즈</option>
@@ -192,18 +173,11 @@
 
   
   <div style="display :none" id="fifa_team_introduce">
-<<<<<<< HEAD
   *<font2>정확한 자료를 입력해주세요</font2>*<br>
     <font3>&nbsp;&nbsp;이름 :</font3> <input type="text" name="" placeholder="이름"><br>
     <font3>&nbsp;&nbsp;학과 :</font3> <input type="text" name="" placeholder="학과"><br>
     <font3>&nbsp;&nbsp;등급 :</font3> <input type="text" name="game_id" placeholder="게임 id"><br>
     <font3>&nbsp;&nbsp;계급 :</font3> <input type="text" name="" placeholder="계급"><br>
-=======
-    이름 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br>
-    학과 : <%= current_user.major %><br>
-    피파 id : <input type="text" name="fifa_game_id" placeholder="게임 id"><br>
-    계급 : <input type="text" name="fifa_tear" placeholder="계급"><br>
->>>>>>> d4b0f7621b117f0e16de01f91588e41dffd3a41c
     
     &nbsp;&nbsp;<textarea name="team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
     &nbsp;&nbsp;<center><input id="round" type="submit" value="참가하기"/></center><br>
@@ -213,18 +187,11 @@
 
   <!-- 하스 팀 등록 -->
   <div style="display :none" id="hasstone_team_introduce">
-<<<<<<< HEAD
      *<font2>정확한 자료를 입력해주세요</font2>*<br>
     <font3>&nbsp;&nbsp;이름 :</font3> <input type="text" name="" placeholder="이름"><br>
     <font3>&nbsp;&nbsp;학과 :</font3> <input type="text" name="" placeholder="학과"><br>
     <font3>&nbsp;&nbsp;ID&nbsp;&nbsp;&nbsp;&nbsp;:</font3> <input type="text" name="game_id" placeholder="게임 id"><br>
     <font3>&nbsp;&nbsp;계급</font3> : <input type="text" name="" placeholder="계급"><br>
-=======
-    이름 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br>
-    학과 : <%= current_user.major %><br>
-    하스 id : <input type="text" name="hasstone_game_id" placeholder="게임 id"><br>
-    계급 : <input type="text" name="hasstone_tear" placeholder="계급"><br>
->>>>>>> d4b0f7621b117f0e16de01f91588e41dffd3a41c
     
     &nbsp;&nbsp;<textarea name="team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
     &nbsp;&nbsp;<center><input id="round" type="submit" value="참가하기"/></center><br>
@@ -278,10 +245,6 @@
         });
         });
       
-    
-  
 </script>
-<<<<<<< HEAD
 </body>
-=======
->>>>>>> d4b0f7621b117f0e16de01f91588e41dffd3a41c
+
