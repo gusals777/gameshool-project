@@ -1,6 +1,23 @@
 
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <style>
+
+ body {
+              padding:0;
+              margin:0;
+ 
+              background-image: url('http://www.ucorean.com/files/attach/images/3959561/691/787/008/peaceful_summer_day-1920x1080.jpg');
+              width: 100%; 
+              height: 100%; 
+              overflow: hidden; 
+              background-position: 0 0; 
+              background-repeat: no-repeat; 
+              background-attachment: fixed; 
+              background-size: cover;
+              position: relative;
+              overflow-y: auto; 
+          }
+
 .jumbotron
 { min-height: 650px; 
 color:black;
@@ -9,7 +26,7 @@ background: rgba(255, 255, 255, 0.5);
 }
     </style>
 
-<body style="background-image:url('http://www.ucorean.com/files/attach/images/3959561/691/787/008/peaceful_summer_day-1920x1080.jpg'); background-size:cover;">
+<body>
 
 
         <%=render :partial =>"game_page/fixed_bar" %><br><br><br><br>
@@ -90,7 +107,7 @@ background: rgba(255, 255, 255, 0.5);
                                     작성자 : <%= current_user.name %> 
                                 <% end %><br>
                                 
-                                <textarea type="text" name="rp_content"  placeholder="리플을 달아주세요" rows="4" cols="59"></textarea><br>
+                                <textarea type="text" name="rp_content"  placeholder="리플을 달아주세요" rows="4" cols="40"></textarea><br>
                                 <input type="hidden" name="freeboard_id" value="<%= @one_fb.id %>">
                                 <input type="hidden" name="rp_name" value="<%= current_user.name %>">
                                 <input type="hidden" name="rp_hakbun" value="<%= current_user.hakbun %>">
