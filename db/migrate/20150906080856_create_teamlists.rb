@@ -9,6 +9,7 @@ class CreateTeamlists < ActiveRecord::Migration
       t.string :game_id
       t.string :tear
       t.text :comment
+      t.integer :team_id
       
 
       t.timestamps null: false

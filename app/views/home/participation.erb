@@ -11,15 +11,23 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
+
+    
+  
+</div> <!-- /container -->
+        <body style="background-image:url('http://cfile2.uf.tistory.com/image/141C141B49F8780094DA9E'); background-size:90%;">
+        
+
+          <%= form_tag("/home/participation_process", method: "post") do %>
      
-     <body style="background-image:url('http://img.ruliweb.daum.net/data/news15/04m/03/apl/ruliweb_hearthstone05.jpg'); background-size:cover;">
     <br><br>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-md-12"><center><img src="https://page1-ysj6326-1.c9.io/imgs/고고고.PNG" style="width:1000; height:120;"></center>
-    </div>
+  <center>
     <div class="row" style="margin-top: 10%;">
+       <img src="http://imgnews.naver.net/image/144/2014/05/02/l_2014050202000109100024931_59_20140502173503.jpg?type=w540"style="width:500px; height:300px; opacity:0.9" >
+    <img src="http://file.gamedonga.co.kr/files/2014/08/07/2_2.jpg"style="width:500; height:300px; opacity:0.9" >
+    <img src="http://cfile1.uf.tistory.com/image/243083505354D56404E72B"style="width:500; height:300px; opacity:0.9">
         <div class="col-lg-offset-2 col-lg-5 col-sm-12 col-md-12">
-     <center><img src="https://page1-ysj6326-1.c9.io/imgs/참여신청.PNG" style="width:600px; height:400px;"></center>
+   
          </div>
     
          <div class="col-lg-5 col-sm-12 col-md-12" style="padding: 5% 0px 0px 2%;">
@@ -57,6 +65,8 @@
                                                         ['환경융합시스템학과','환경융합시스템학과'],
                                                         ['교양학부','교양학부']])) %>
             </p>
+            
+
             <p>
             <%= label_tag(:hakbun, "학번: ") %>
             <input type="text" name="hakbun" required>
@@ -86,18 +96,50 @@
             <div id="lol_view" class="desc" style="display: none">
                 <p>
                    <%= label_tag(:team_name, "팀명: ") %>
-                    <input type="text" name="team_name" required>
+                    <input type="text" name="team_name" >
                 </p>
             </div>
-            
+<style>
+  input#round{
+width:80px; /*same as the height*/
+height:80px; /*same as the width*/
+background-color:gray;
+border:1px solid gray; /*same colour as the background*/
+color:white;
+font-size:17px;
+/*set the border-radius at half the size of the width and height*/
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+/*give the button a small drop shadow*/
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+/***NOW STYLE THE BUTTON'S HOVER STATE***/
+input#round:hover{
+background:#778899;
+border:1px solid #778899;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+-moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+</style>            
             <p style="padding-left: 15%">
-            <%= submit_tag("참가신청") %>
+<input id="round" type="submit" value="참가신청" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="round" type="submit" value="뒤로가기" />
+   
             </p>
+            
+        <% end %>
+ 
             
         <% end %>
         </div>
     </div>
          
+
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     
     <script>
@@ -113,6 +155,6 @@
       });
     });
     </script>
-    
-    </body>
+    </center>
+  </body>
 </html>

@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150906080856) do
     t.string   "game_id"
     t.string   "tear"
     t.text     "comment"
+    t.integer  "team_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
