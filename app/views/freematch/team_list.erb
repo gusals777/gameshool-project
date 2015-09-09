@@ -4,45 +4,38 @@
 <h1>롤 팀</h1>
 
 
-<% @aaa.each do |a| %>
+<% @teamlists.each do |a| %>
 
   <% if a.kind_of_game == "lol" %>
 
-    <p> 팀명 : <%= a.team_name %> <br> 
-        계급 : <%= a.tear %> <br>
-        게임종류 : <%= a.kind_of_game %> <br> 
-        게임ID : <%= a.game_id %> <br>
-        팀원 : <%= a.member_name %></p><br>
+    <p> 팀명 : <a href="/freematch/team_info/<%= a.id %>"><%= a.lol_team_name %></a> <br> 
+    
   <% end %>
 <% end %>
 
 
 
-
 <h1>피파 팀</h1>
-<% @aaa.each do |a| %>
+<% @teamlists.each do |a| %>
 
   <% if a.kind_of_game == "fifa" %>
 
-    <p> 이름 : <%= a.member_name %> <br>
-        구단가치 : <%= a.tear %> <br>
-        게임종류 : <%= a.kind_of_game %> <br>
-        게임ID : <%= a.game_id %> </p> <br>
-        
+    <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.fifa_user_name %></a> <br>
+     
   <% end %>
 <% end %>
 
 
 
 <h1>하스 팀</h1>
-<% @aaa.each do |a| %>
+<% @teamlists.each do |a| %>
 
-  <% if a.kind_of_game == "hasstone" %>
+  <% if a.kind_of_game == "hearthstone" %>
 
-    <p> 이름 : <%= a.member_name %> <br> 
-        등급 : <%= a.tear %> <br> 
-        게임종류 : <%= a.kind_of_game %>  <br>
-        게임 ID : <%= a.game_id %> </p> <br> 
+    <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.hearthstone_user_name %></a> <br> 
         
   <% end %>
 <% end %>
+<br>
+
+<button><a href="/freematch/add_team">팀등록 페이지 가기</a></button>
