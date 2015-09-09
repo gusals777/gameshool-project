@@ -2,8 +2,6 @@
 <h1>팀등록 page</h1>                 
                                                                 
 <button id="addteam_button">팀등록 하기</button>
-
-<div class="container">
   
   <%= form_tag("/freematch/team_list_write", method: "post") do %>
   
@@ -24,7 +22,6 @@
         <label for="radio03">하스스톤</label><br>
       </div>
     </div>
-  </div> <!-- contaniner end -->
     <!-- 롤 팀 등록 -->
     <div style="display :none" id="lol_team_introduce">
    
@@ -122,8 +119,6 @@
     </div>
     
   <% end %>
-</div>
-
 
 
 <script>
