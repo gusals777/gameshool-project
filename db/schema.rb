@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20150906080856) do
     t.string   "game_id"
     t.string   "tear"
     t.text     "comment"
-
     t.string   "hearthstone_major"
     t.string   "hearthstone_user_name"
     t.string   "fifa_major"

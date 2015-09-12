@@ -23,22 +23,22 @@
   
   <div class="field">
     <%= f.label :email, "이메일" %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, required: true %>
   </div>
   
   <div class="field">
     <%= f.label :name, "이름" %><br />
-    <%= f.text_field :name, autofocus: true %>
+    <%= f.text_field :name, autofocus: true, required: true %>
   </div>
   
   <div class="field">
     <%= f.label :major,"전공" %><br />
-    <%= f.text_field :major, autofocus: true %>
+    <%= f.text_field :major, autofocus: true, required: true %>
   </div>
   
   <div class="field">
     <%= f.label :hakbun,"학번" %><br />
-    <%= f.text_field :hakbun, autofocus: true %>
+    <%= f.text_field :hakbun, autofocus: true, required: true %>
   </div>
 
   <div class="field">
@@ -46,12 +46,12 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> 글자 이상)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", required: true %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation, "비밀번호 확인" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", required: true %>
   </div>
 
   <div class="actions">
