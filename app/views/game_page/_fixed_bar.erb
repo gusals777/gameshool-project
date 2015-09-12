@@ -1,68 +1,97 @@
-   
-   <style>
-   #layer_fixed
-{
-    
-   
-    width:100%;
-   
-    
-    position:fixed;
-    top:0px;
-    left:0px;
-}
-   </style>
-  
-   
-   
-   
-   <div id="layer_fixed">
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-   
-     <ul class="nav navbar-nav navbar-left">
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>평택대학교 게임 스쿨에 오신 걸 환영합니다.</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<title>GameSchool</title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+ 
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav navbar-left">
+                    
+                    <li>
+                        <a href="/game_page/main"><font size="3px"><font1>GameSchool</font1></font></a>
+                    </li>
+                    <% if user_signed_in? %>
+                    <li>
+                        <a href="#"><font size="3px"><font1><%= current_user.name %>님</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/edit"><font size="3px"><font1>회원정보수정</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_out"><font size="3px"><font1>로그아웃</font1></font></a>
+                    </li>
+                    <% else %>
+                    <li>
+                        <a href="/users/sign_in"><font size="3px"><font1>로그인</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_up"><font size="3px"><font1>회원가입</font1></font></a>
+                    </li>
+                    <% end %>
+                </ul>
+            </div>
             
-                <li >
-                    <a href="/game_page/main"><font size="4px"><font1>GameSchool</font1></font></a>
-                </li>
-                <% if user_signed_in? %>
-                <li>
-                    <a href="#"><font size="4px"><font1><%= current_user.name %>님</font1></font></a>
-                </li>
-                <li>
-                    <a href="/users/edit"><font size="4px"><font1>회원정보수정</font1></font></a>
-                </li>
-                <li>
-                    <a href="/users/sign_out"><font size="4px"><font1>로그아웃</font1></font></a>
-                </li>
-                <% else %>
-                <li>
-                    <a href="/users/sign_in"><font size="4px"><font1>로그인</font1></font></a>
-                </li>
-                <li>
-                    <a href="/users/sign_up"><font size="4px"><font1>회원가입</font1></font></a>
-                </li>
-                <% end %>
-            
-            </ul>
-           
-            <ul class="nav navbar-nav navbar-right">
-            
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
                 
-                <li>
-                    <a href="/home/participation"><font size="4px"><font1>팀 등록</font1></font></a>
-                </li>
-                <li>
-                    <a href="about.html"><font size="4px"><font1>대전신청</font1></font></a>
-                </li>
-                <li>
-                    <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>
-                </li>
-                <li>
-                    <a href="contact.html" ><font size="4px"><font1>랭킹보기</font1></font></a>
-                </li>
-                 <li>
-                    <a href="contact.html" ><font size="4px"><font1>대진표</font1></font></a>
-                </li>
-            </ul>
+                    <li >
+                        <a href="/game_page/main"><font size="4px"><font1>Home</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="http://gsbranch3-leebyeongho1.c9.io/freematch/add_team"><font size="4px"><font1>팀 등록</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="#"><font size="4px"><font1>대전신청</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="#" ><font size="4px"><font1>랭킹보기</font1></font></a>
+                    </li>
+                     <li>
+                        <a href="#" ><font size="4px"><font1>대진표</font1></font></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        </div>
+        <!-- /.container -->
+    </nav>

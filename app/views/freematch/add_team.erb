@@ -1,28 +1,100 @@
 
-<h1>팀등록 page</h1>                 
-                                                                
-<button id="addteam_button">팀등록 하기</button>
-  
-  <%= form_tag("/freematch/team_list_write", method: "post") do %>
-  
-    <div style="display :none" id="kind_of_game">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="https://gsbranch3-leebyeongho1.c9.io/css/fmstylesheet.css">
+    <!-- 폰트링크 -->
     
-      <div>
-        <input type="radio" id="radio01" name="radio" value="lol">
-        <label for="radio01">롤</label><br>
-      </div>
-      
-      <div>
-        <input type="radio" id="radio02" name="radio" value="fifa">
-        <label for="radio02">피파</label><br>
-      </div>
-     
-      <div>
-        <input type="radio" id="radio03" name="radio" value="hearthstone">
-        <label for="radio03">하스스톤</label><br>
-      </div>
+    <style>
+    
+    .jumbotron
+  { min-height: 200px;
+    width:250px;
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
+  }
+  
+      .jumbotron2
+  { min-height: 500px;
+    width:850px;
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  }
+ 
+    </style>
+ 
+
+<body  style="background-image:url('http://i.imgur.com/IzHe0k5.jpg');">
+
+ <%=render :partial =>"game_page/fixed_bar" %>
+  <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/imgs/boot1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                        <h1><font1>팀 등록</font1></h1>
+                        <hr>
+                        <span class="subheading"><font1>참가하는 팀의 정보를 작성 해주세요.</font1></span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <%= form_tag("/freematch/team_list_write", method: "post") do %>
+    
+  <div class="row">
+  <div class="col-md-3"><center></center></div>
+  <div class="col-md-2">
+  <div class="jumbotron">
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div style="padding-bottom:1px; background:rgba(80,80,75,0.5); align:center">
+<center><font1><a href="/freematch/team_list"><font color="black">Team list</font></a></font1></center>
+</div>
+<div style="padding-bottom:1px; background:rgba(80,80,75,0.5); align:center">               
+<center><h1><font3><font size="20px">팀 등록</font></font3></h1></center>                 
+                     
+
+</div><!-- padding 닫혀지는 div --><br><br>
+
+<center><input type="button" id="addteam_button" class="btn btn-primary" value="Start"></button></center>
+
+<div style="display :none" id="kind_of_game">
+    
+    <div>
+      <input type="radio" id="radio01" name="radio" value="lol">
+      <label for="radio01">League Of Legend</label><br>
     </div>
+    
+    <div>
+      <input type="radio" id="radio02" name="radio" value="fifa">
+      <label for="radio02">Fifa Online 3</label><br>
+    </div>
+   
+    <div>
+      <input type="radio" id="radio03" name="radio" value="hearthstone">
+      <label for="radio03">Hearth stone</label><br>
+    </div>
+  </div>
+</div><!-- md-8 닫는 div-->
+</div><!-- 팀등록 페이지 첫 class row 닫는 div -->
+</div><!-- 첫 점보트론 닫는 div -->
+</div><!-- col_md 4의 div -->
+
+    <div class="col-md-3">
+    
     <!-- 롤 팀 등록 -->
+    <div class="jumbotron2">
+
+    <div class="col-md-2"><font3><font size="20px" color="white">Detail</font></font3></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+  
     <div style="display :none" id="lol_team_introduce">
    
         
@@ -118,6 +190,9 @@
       <input type="submit" value="완료">
     </div>
     
+  </div>
+  </div>
+  </div><!-- col-md-3 값 -->
   <% end %>
 
 

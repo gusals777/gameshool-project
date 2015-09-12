@@ -1,40 +1,117 @@
-<h1>팀 리스트 page</h1>
-
-
-<h1>롤 팀</h1>
-
-
-<% @teamlists.each do |a| %>
-
-  <% if a.kind_of_game == "lol" %>
-
-    <p> 팀명 : <a href="/freematch/team_info/<%= a.id %>"><%= a.lol_team_name %></a> <br> 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="https://gsbranch3-leebyeongho1.c9.io/css/fmstylesheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
-  <% end %>
-<% end %>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+<style>
 
+</style>
 
-<h1>피파 팀</h1>
-<% @teamlists.each do |a| %>
+<body>
 
-  <% if a.kind_of_game == "fifa" %>
-
-    <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.fifa_user_name %></a> <br>
-     
-  <% end %>
-<% end %>
-
-
-
-<h1>하스 팀</h1>
-<% @teamlists.each do |a| %>
-
-  <% if a.kind_of_game == "hearthstone" %>
-
-    <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.hearthstone_user_name %></a> <br> 
+ <%=render :partial =>"game_page/fixed_bar" %>
+  <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/imgs/boot1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                        <h1><font1>팀 리스트</font1></h1>
+                        <hr>
+                        <span class="subheading"><font1>현제 등록된 팀을 확인할수 있어요!</font1></span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<div class="row">
+<div class="col-sm-2 col-md-2"></div>
+  <div class="col-sm-6 col-md-2">
+    <div class="thumbnail" style="width:250px; height:600px">
+      <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="...">
+      <div class="caption">
+      
+            <h3>Team List</h3>
+              
+              
+              <h4>LoL 팀 리스트</h4>
+              <br>
+              
+              <% @teamlists.each do |a| %>
+              
+                <% if a.kind_of_game == "lol" %>
+              
+                  <p> 팀명 : <a href="/freematch/team_info/<%= a.id %>"><%= a.lol_team_name %></a> <br> 
+                  
+                <% end %>
+              <% end %>
+            
+      </div>
+    </div>
+  </div>
+  
+   <div class="col-sm-6 col-md-2">
+    <div class="thumbnail" style="width:250px; height:600px">
+      <img src="http://static.news.zumst.com/images/22/2014/01/16/20140116_1389838318..jpg;"  alt="...">
+      <div class="caption">
+      <h3>Team List</h3>
+           <h4>피파온라인 팀 리스트</h4><br>
+            <% @teamlists.each do |a| %>
+            
+              <% if a.kind_of_game == "fifa" %>
+            
+                <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.fifa_user_name %></a> <br>
+                 
+              <% end %>
+            <% end %>
+            
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-sm-6 col-md-2">
+    <div class="thumbnail" style="width:250px; height:600px">
+      <img src="http://cfile2.uf.tistory.com/image/251C82395491195914FEE7" alt="...">
+      <div class="caption">
+      
+         <h3>Team List</h3>
+        <h4>하스스톤 팀 리스트</h4><br>
+        <% @teamlists.each do |a| %>
         
-  <% end %>
-<% end %>
-<
-<a href="/freematch/add_team">팀등록 페이지 가기</a>
+          <% if a.kind_of_game == "hearthstone" %>
+        
+            <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.hearthstone_user_name %></a> <br> 
+                
+          <% end %>
+        <% end %>
+            
+      </div>
+    </div>
+  </div>
+  
+   <div class="col-sm-6 col-md-2">
+    <div class="thumbnail" style="width:250px; height:600px">
+      <img src="http://www.sbclife.net/Articles/2013/09/images/SLA13.jpg" alt="...">
+      <div class="caption">
+      
+         
+       
+        <a href="/freematch/add_team">팀등록 페이지 가기</a>
+            
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+</body>

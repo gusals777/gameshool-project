@@ -1,11 +1,77 @@
-<h1> 각 팀의 정보가 출력되는 page</h1>
 
-<h1>예시) </h1><br>
+     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="https://gsbranch3-leebyeongho1.c9.io/css/fmstylesheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+              padding:0;
+              margin:0;
+ 
+              background-image: url('');
+              width: 100%; 
+              height: 100%; 
+              overflow: hidden; 
+              background-position: 0 0; 
+              background-repeat: no-repeat; 
+              background-attachment: fixed; 
+              background-size: cover;
+              position: relative;
+              overflow-y: auto; 
+          }
+font3{
+          font-family: 'Hanna', serif;
+          font-size:28px;
+      }
+font4{
+    font-family: 'Hanna', serif;
+    font-size:15px;
+}
+
+</style>
+
+
+
+<body >
+
+
+<%=render :partial =>"game_page/fixed_bar" %>
+  <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/imgs/boot1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                        <h1><font1>팀 정보</font1></h1>
+                        <hr>
+                        <span class="subheading"><font1>현재 팀의 대한 정보들 입니다.</font1></span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+<div class="thumbnail"  style="height:750px">
+    <img src="https://gsbranch3-leebyeongho1.c9.io/imgs/TeamInfo이미지.PNG">
+     <div style="padding-top:1px; padding-bottom:1px; background:white; align:center">
+
+<br>
 
 
 <% if @teamlists.kind_of_game == "lol" %>
 
-  <h1>팀명 : <%= @teamlists.lol_team_name %> </h1>
+  팀명&nbsp;&nbsp;&nbsp;<%= @teamlists.lol_team_name %>
   
   <table class="table">
     <tr>
@@ -58,9 +124,14 @@
     </tr>
   </table>
   <br>
-  
-  <h1> 팀 설명 : <%= @teamlists.comment %></h1>
-  <br>
+ 
+  <center><h1><font3>소개</font3></h1><br>
+ 
+  <font4><%= @teamlists.comment %></font4>
+  </center>
+ 
+
+
   
   
   <% elsif @teamlists.kind_of_game == "fifa" %>
@@ -85,9 +156,11 @@
      
     </table>
     <br>
+   <center><h1><font3>소개</font3></h1><br>
     
-    <h1> 팀 설명 : <%= @teamlists.comment %></h1>
-    <br>
+     <font4><%= @teamlists.comment %></font4></center>
+  
+
   <% else %>
   
     <table class="table">
@@ -110,10 +183,18 @@
      
     </table>
     <br>
+    <center><h1><font3>소개</font3></h1><br>
+  
+   <font4><%= @teamlists.comment %></font4></center>
     
-    <h1> 팀 설명 : <%= @teamlists.comment %></h1>
-    <br>
+
   
   <% end %>
+</div>
 
-<button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+  
+  </div>
+  </div>
+  <center><button type="button" class="btn btn-primary"><a href="/freematch/team_list"><font color="white">팀리스트로 가기</font></a></button></center><br><br>
+
+</body>
