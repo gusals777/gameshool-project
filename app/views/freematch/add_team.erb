@@ -1,7 +1,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
-    <link rel="stylesheet" type="text/css" href="https://gsbranch3-leebyeongho1.c9.io/css/fmstylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
     <!-- 폰트링크 -->
     
     <style>
@@ -22,11 +22,95 @@
   background: #ffffff;
   background: rgba(255, 255, 255, 0.1);
   }
+  
+<style type="text/css">
+.form-style-2{
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-2-heading{
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.form-style-2 label{
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+.form-style-2 span.required{
+    color:red;
+}
+.form-style-2 .tel-number-field{
+    width: 40px;
+    text-align: center;
+}
+.form-style-2 input.input-field{
+    width: 48%;
+    
+}
+
+.form-style-2 input.input-field, 
+.form-style-2 .tel-number-field, 
+.form-style-2 .textarea-field, 
+ .form-style-2 .select-field{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+.form-style-2 .input-field:focus, 
+.form-style-2 .tel-number-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+    border: 1px solid #0C0;
+}
+.form-style-2 .textarea-field{
+    height:100px;
+    width: 55%;
+}
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #FF8500;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.form-style-2 input[type=submit]:hover,
+.form-style-2 input[type=button]:hover{
+    background: #EA7B00;
+    color: #fff;
+}
+</style>
  
     </style>
  
 
-<body  style="background-image:url('http://i.imgur.com/IzHe0k5.jpg');">
+<body>
 
  <%=render :partial =>"game_page/fixed_bar" %>
   <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/imgs/boot1.jpg')">
@@ -45,7 +129,7 @@
         </div>
     </header>
 
-  <%= form_tag("/freematch/team_list_write", method: "post") do %>
+  <%= form_tag("/freematch/team_list_write", method: "post", :class => "form-style-2") do %>
     
   <div class="row">
   <div class="col-md-3"><center></center></div>
@@ -92,8 +176,8 @@
     <!-- 롤 팀 등록 -->
     <div class="jumbotron2">
 
-    <div class="col-md-2"><font3><font size="20px" color="white">Detail</font></font3></div>
-    <div class="col-md-1"></div>
+    <div class="col-md-2"><font3><font size="5px" color="black">Start를<br>눌러주세요</font></font3></div>
+    
     <div class="col-md-8">
   
     <div style="display :none" id="lol_team_introduce">
@@ -194,6 +278,7 @@
   </div>
   </div>
   </div><!-- col-md-3 값 -->
+  <div class="col-md-1"></div>
   <% end %>
 
 
