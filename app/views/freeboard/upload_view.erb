@@ -85,49 +85,48 @@ background: rgba(255, 255, 255, 0.7s);
                             
                             <% @one_fb.replies.each do |r| %>
                              
-                                <div class="<%= r.id %>">  
-                                
-                                    <p style="text-align:center"><h6>이름 : <%= r.rp_name %><br>내용 : <%= r.rp_content %> 
-                                    </h6> </p>
-                                    
-                                </div>
-                                <div class="<%= r.id %>" style="display :none">
-                                    
-                                        <textarea name="rp_content"></textarea>
-                                        <input type="submit" value='확인'></button>
-                                        <input type="hidden" name="rp_id" value="<%= r.id %>">
-                                        
-                                </div>
-                                
-                                <form  action="/freeboard/reply_delete" method="GET">
-                                    <input type="hidden" name="rp_id" value="<%= r.id %>">
-                                    <input type="submit" value="삭제">
-                                    
-                                </form>
-                                
-                                
-                                <button href="#" id="update_button<%= r.id %>">수정</button>
-                                
-                            
-                                <script>
-                                
-                                    $(function(){
-                                        $("#update_button<%= r.id%>").click(function(){
-                                            //수정 버튼 클릭했을때
+                                <div class="reply_<%= r.id %>">  
+                                    <div>
+                                        <h6 style="text-align: center;">이름 : <%= r.rp_name %><br>내용 : 
+                                        <span id="rp_content_<%= r.id%>"><%= r.rp_content %></span></h6> 
                                          
-                                        <% if current_user.name == r.rp_name %>
-                                            
+                                        <input type="submit" value="삭제">
+                                        <button class="update_button_<%= r.id %>">수정</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="<%= r.id %>" style="display :none">
+                                    <textarea name="rp_content" class="rp_modify_<%= r.id %>"></textarea>
+                                    <button class="modify_confirm_<%= r.id %>">확인</button>
+                                </div>
+                                
+                                <script>
+                            
+                                $(function(){
+                                    //수정 버튼 클릭했을때
+                                    $(".update_button_<%= r.id %>").click(
+                                        function(){
                                             $(".<%= r.id %>" ).show();
-                                            
-                                        <% else %>
-                                            
-                                            
-                                        
-                                        <% end %>
-                                            
+                                            $(".rp_modify_<%= r.id %>").val("<%= r.rp_content %>");
+                                        } 
+                                    );
+                                    
+                                    $(".modify_confirm_<%= r.id %>").click(function(){
+                                        $.ajax({
+                                                data: { content: $(".rp_modify_<%= r.id %>").val(),
+                                                        rp_id: <%= r.id %>},
+                                                url: "/freeboard/reply_modify",
+                                                success: function(){
+                                                    var txt = $(".rp_modify_<%= r.id %>").val();
+                                                    $(".rp_content_<%= r.id %>").val(txt);
+                                                    $(".<%= r.id %>").hide();
+                                                    location.reload();
+                                                }
                                             });
-                                    });
-                                </script>
+                                        }
+                                    ); 
+                                });
+                            </script>
                             <% end %>
                   
                           <br><br>

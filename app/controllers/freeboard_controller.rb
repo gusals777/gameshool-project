@@ -143,22 +143,12 @@ class FreeboardController < ApplicationController
     
     # 리플 수정
     def reply_modify
-        #공 지 !
-        #수정 버튼을 누르면 content 부분에 수정할수 있게 그 부분만 바꿔줘야 하는 코드를 작성해야함!!
         
-        reply_update = Reply.find(params[:rp_id])
+        @one_reply = Reply.find(params[:rp_id])
+        @one_reply.rp_content = params[:content]
+        @one_reply.save
         
-        
-        
-        if reply_update.rp_hakbun == current_user.hakbun
-            
-            reply_update.rp_content = params[:rp_content]
-            reply_update.save
-            redirect_to :back
-        else
-            
-            redirect_to :back
-        end
+        render :text => ""
         
     end
     # 리플 수정 
