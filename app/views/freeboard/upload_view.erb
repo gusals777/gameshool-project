@@ -68,7 +68,7 @@ background: rgba(255, 255, 255, 0.7s);
                 </div>
                 <div class="col-md-6">
                 
-                    <div class="jumbotron">
+                    <div class="jumbotron" style="text-align: center">
                    <h2>Freeboard</h2><br><br>
                    TITLE
                     <div style="padding-top:1px; padding-bottom:1px; background:white; align:center">
@@ -81,18 +81,19 @@ background: rgba(255, 255, 255, 0.7s);
                         
                         <center>
                             
-                            </div>
+                            </div><br>
                             
                             <% @one_fb.replies.each do |r| %>
                              
-                                <div class="reply_<%= r.id %>">  
-                                    <div>
-                                        <h6 style="text-align: center;">이름 : <%= r.rp_name %><br>내용 : 
-                                        <span id="rp_content_<%= r.id%>"><%= r.rp_content %></span></h6> 
-                                         
-                                        <input type="submit" value="삭제">
+                                <div class="reply_<%= r.id %>" style="text-align: left">  
+                                    <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><%=r.created_at.in_time_zone("Seoul")%></i><br>내용 : 
+                                    <span id="rp_content_<%= r.id%>"><%= r.rp_content %></span> 
+                                    
+                                    <% if current_user %>
+                                        <button class="delete_button_<%= r.id %>">삭제</button>
                                         <button class="update_button_<%= r.id %>">수정</button>
-                                    </div>
+                                    <% end %>
+                                    </p>
                                 </div>
                                 
                                 <div class="<%= r.id %>" style="display :none">
@@ -111,6 +112,19 @@ background: rgba(255, 255, 255, 0.7s);
                                         } 
                                     );
                                     
+                                    $(".delete_button_<%= r.id %>").click(
+                                        function(){
+                                            $.ajax({
+                                                data: { rp_id: <%= r.id %> },
+                                                url: "/freeboard/reply_delete",
+                                                success: function(){
+                                                    alert("댓글 삭제가 완료되었습니다.");
+                                                    location.reload();
+                                                }
+                                            });
+                                        } 
+                                    );
+                                    
                                     $(".modify_confirm_<%= r.id %>").click(function(){
                                         $.ajax({
                                                 data: { content: $(".rp_modify_<%= r.id %>").val(),
@@ -120,6 +134,7 @@ background: rgba(255, 255, 255, 0.7s);
                                                     var txt = $(".rp_modify_<%= r.id %>").val();
                                                     $(".rp_content_<%= r.id %>").val(txt);
                                                     $(".<%= r.id %>").hide();
+                                                    alert("댓글 수정이 완료되었습니다.");
                                                     location.reload();
                                                 }
                                             });
@@ -129,22 +144,21 @@ background: rgba(255, 255, 255, 0.7s);
                             </script>
                             <% end %>
                   
-                          <br><br>
+                          <br>
                             <%= form_tag("/freeboard/reply_write", method: "post") do %>
                                 <% if user_signed_in? %>
                                     작성자 : <%= current_user.name %> 
                                 <% end %><br>
                                 
-                                <textarea type="text" name="rp_content"  placeholder="리플을 달아주세요" rows="4" cols="40"></textarea><br>
+                                <textarea type="text" name="rp_content"  placeholder="리플을 달아주세요" rows="3" cols="30"></textarea><br>
                                 <input type="hidden" name="freeboard_id" value="<%= @one_fb.id %>">
                                 <input type="hidden" name="rp_name" value="<%= current_user.name %>">
                                 <input type="hidden" name="rp_hakbun" value="<%= current_user.hakbun %>">
                                 <input type="submit" value="댓글달기"><br>
                                 
-                               
+                            <% end %>
                                 <a href="/freeboard/delete?id=<%= @one_fb.id %>">삭제쓰</a>&nbsp;
                                 <a href="/freeboard/modify?id=<%= @one_fb.id %>">수정쓰</a>
-                            <% end %>
                         </center>
                     </div>
                 </div>

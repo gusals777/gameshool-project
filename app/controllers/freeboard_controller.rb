@@ -124,19 +124,10 @@ class FreeboardController < ApplicationController
     # 리플 삭제
     def reply_delete
        
-        rp_delete = Reply.find(params[:rp_id])
+        @one_reply = Reply.find(params[:rp_id])
+        @one_reply.destroy
         
-
-
-        if rp_delete.rp_hakbun == current_user.hakbun
-            
-            
-            rp_delete.destroy
-            redirect_to :back
-        else
-            
-            redirect_to :back
-        end
+        render :text => ""
     end
     # 리플 삭제 끝
     
