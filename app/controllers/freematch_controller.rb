@@ -76,5 +76,14 @@ class FreematchController < ApplicationController
     
     end
     
+    def rank
+      render layout: false
+    end
+    
+    def loldetailrank
+    end
+    
+   
+    
  
 end

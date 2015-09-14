@@ -1,6 +1,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
-    <link rel="stylesheet" type="text/css" href="https://gsbranch3-leebyeongho1.c9.io/css/fmstylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
@@ -37,21 +37,20 @@
 <div class="col-sm-2 col-md-2"></div>
   <div class="col-sm-6 col-md-2">
     <div class="thumbnail" style="width:250px; height:600px">
-      <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="...">
+      <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="..."  style="width:300px">
       <div class="caption">
       
-            <h3>Team List</h3>
+            <h3><font style="font-style:normal;">Team List</font></h3>
               
               
-              <h4>LoL 팀 리스트</h4>
+              <h4><font style="font-style:normal;">LoL 팀 리스트</font></h4>
               <br>
               
               <% @teamlists.each do |a| %>
               
                 <% if a.kind_of_game == "lol" %>
               
-                  <p> 팀명 : <a href="/freematch/team_info/<%= a.id %>"><%= a.lol_team_name %></a> <br> 
-                  
+                  <p><font style="font-style:normal;"><font1>팀명 : <a href="/freematch/team_info/<%= a.id %>" style="text-decoration:none"><%= a.lol_team_name %></a></font1></font> <br> 
                 <% end %>
               <% end %>
             
@@ -61,7 +60,7 @@
   
    <div class="col-sm-6 col-md-2">
     <div class="thumbnail" style="width:250px; height:600px">
-      <img src="http://static.news.zumst.com/images/22/2014/01/16/20140116_1389838318..jpg;"  alt="...">
+      <img src="http://static.news.zumst.com/images/22/2014/01/16/20140116_1389838318..jpg;"  alt="..."  style="width:230px">
       <div class="caption">
       <h3>Team List</h3>
            <h4>피파온라인 팀 리스트</h4><br>
@@ -69,7 +68,7 @@
             
               <% if a.kind_of_game == "fifa" %>
             
-                <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.fifa_user_name %></a> <br>
+                <p><font style="font-style:normal;"><font1>이름 : <a href="/freematch/team_info/<%= a.id %>" style="text-decoration:none"><%= a.fifa_user_name %></a></font1></font> <br>
                  
               <% end %>
             <% end %>
@@ -80,7 +79,7 @@
   
     <div class="col-sm-6 col-md-2">
     <div class="thumbnail" style="width:250px; height:600px">
-      <img src="http://cfile2.uf.tistory.com/image/251C82395491195914FEE7" alt="...">
+      <img src="http://cfile2.uf.tistory.com/image/251C82395491195914FEE7" alt="..." style="width:300px">
       <div class="caption">
       
          <h3>Team List</h3>
@@ -89,7 +88,7 @@
         
           <% if a.kind_of_game == "hearthstone" %>
         
-            <p> 이름 : <a href="/freematch/team_info/<%= a.id %>"><%= a.hearthstone_user_name %></a> <br> 
+            <p><font style="font-style:normal;"><font1> 이름 : <a href="/freematch/team_info/<%= a.id %>" style="text-decoration:none"><%= a.hearthstone_user_name %></a></font1></font> <br> 
                 
           <% end %>
         <% end %>

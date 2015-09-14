@@ -33,175 +33,120 @@
     
    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
-   <link rel="stylesheet" type="text/css" href="https://gsbranch3-leebyeongho1.c9.io/css/gamepagestylesheet.css">
+   <link rel="stylesheet" type="text/css" href="/css/gamepagestylesheet.css">
 
 </head>
 
 <body style="background-image:url('');">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <ul class="nav navbar-nav navbar-left">
-                    
-                    <li>
-                        <a href="/game_page/main"><font size="3px"><font1>GameSchool</font1></font></a>
-                    </li>
-                    <% if user_signed_in? %>
-                    <li>
-                        <a href="#"><font size="3px"><font1><%= current_user.name %>님</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="/users/edit"><font size="3px"><font1>회원정보수정</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="/users/sign_out"><font size="3px"><font1>로그아웃</font1></font></a>
-                    </li>
-                    <% else %>
-                    <li>
-                        <a href="/users/sign_in"><font size="3px"><font1>로그인</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="/users/sign_up"><font size="3px"><font1>회원가입</font1></font></a>
-                    </li>
-                    <% end %>
-                </ul>
-            </div>
-            
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right" style="padding-bottom:1px; background:rgba(80,80,80,0.7); align:center">
-                
-                    <li >
-                        <a href="/game_page/main"><font size="4px"><font1>Home</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="http://gsbranch3-leebyeongho1.c9.io/freematch/add_team"><font size="4px"><font1>팀 등록</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="#"><font size="4px"><font1>대전신청</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>
-                    </li>
-                    <li>
-                        <a href="#" ><font size="4px"><font1>랭킹보기</font1></font></a>
-                    </li>
-                     <li>
-                        <a href="#" ><font size="4px"><font1>대진표</font1></font></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+ <%=render :partial =>"game_page/fixed_bar" %>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-   <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/img/main_back.jpg')">
+    <header class="intro-header" style="background-image: url('/img/main_back.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                      <div class="site-heading">
-                     
-                        <h1>Welcome To GameSchool</h1>
+                       
+                        <h1><font1>Welcome To GameSchool</font1></h1>
                         <hr>
-                        <span class="subheading">아래에 자세한 내용을 확인해주세요</span>
-                     
+                        <span class="subheading"><font1>아래의 자세한 정보를 확인해 주세요.</font1></span>
+                      
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    
-     <center>
-    <div class="row">
-  <div class="col-xs-18 col-md-12"></div>
+
   
   <div class="container">
-  <h2>오늘의 매치!</h2>
-  
-</div>
-</div></center>
-<br><br><br><br>
-    
 
-   <div class="row">
-    <div class="col-sm-2 col-md-2"></div>
-  <div class="col-sm-4 col-md-2">
-    <div class="thumbnail"  style="height:500px">
-      <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="...">
-      <div class="caption">
-        <h3>공지사항</h3>
-         <font1 style="align:left">1.일단 완성하자</font1><br>
-        <font1>2.화이팅</font1><br>
-       
-      </div>
-    </div>
-     <center><p><a href="#" class="btn btn-primary" role="button"><font2>Detail</font2></a></center>
-  </div>
-  <div class="col-sm-1 col-md-1"></div>
- 
-  <div class="col-sm-4 col-md-2">
-    <div class="thumbnail"  style="height:500px">
-      <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="...">
-      <div class="caption">
-        <h3>New Team</h3>
-        <font1>1.병빠기와 아이들</font1><br>
-        <font1>2.TIP+</font1><br>
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"><font2>GameSchool</font2>
+                    <small>TIP+</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+               
+                    <img class="img-responsive" src="http://cfile25.uf.tistory.com/image/162E5A4C50B36D822B636E" alt="">
+              
+            </div>
+            <div class="col-md-5">
+                <h3>공지사항</h3>
+                <h4>내용을 확인해주세요</h4>
+                    <h5>1.완성하자</54>
+                    <h5>2.화이팅이다</54> <br><br><br>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+               
+                    <center><img class="img-responsive" src="https://ilahoud.files.wordpress.com/2011/01/team.png" alt="" style="width:550px"></center>
+               
+            </div>
+            <div class="col-md-5">
+                <h3>New Team</h3>
+                <h4>새로 올라온 팀 입니다!</h4>
+                    <h5>1.완성하자</54>
+                    <h5>2.화이팅이다</54> <br><br><br>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+               
+                    <center><img class="img-responsive" src="/imgs/vs.png" alt="" style=":width:700px">></center>
+               
+            </div>
+            <div class="col-md-5">
+                <h3>오늘의 매치</h3>
+                <h4>일정을 확인 해주세요!</h4>
+                     <h5>1.이병호vs극수극태</54>
+                    <h5>2.수원vs범계</54> <br><br><br>
+              
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
         
-      </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Made By TIP+</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
     </div>
-    <center><p><a href="#" class="btn btn-primary" role="button"><font2>Detail</font2></a></center>
-  </div>
-  <div class="col-sm-10 col-md-1"></div>
-  
-   <div class="col-sm-4 col-md-2">
-    <div class="thumbnail" style="height:500px">
-      <img src="http://news.cdn.leagueoflegends.com/public/images/gnr/img/Wallpaper_Gnar.jpg" alt="...">
-      <div class="caption">
-        <h3>TOP 5 Team</h3>
-        <font2>1.이병호</font2><br>
-        <font2>2.TIP+</font2><br>
-         <font1>3.병빠기와 아이들</font1><br>
-          <font1>4.극수극태</font1><br>
-           <font1>5.JUST</font1><br>
-       
-      </div>
-    </div>
-     <center><p><a href="#" class="btn btn-primary" role="button"><font2>Detail</font2></a></center>
-  </div>
-<div class="col-sm-2 col-md-2"></div>
-</div>
+    <!-- /.container -->
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-  <br><br><br><br>
-  
-  
-    
-    
-
-   
-   
-
-   
-    
-    <!-- Footer -->
-    <footer>
-        
-                    <p class="copyright text-muted">완성하자</p>
-             
-    </footer>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
