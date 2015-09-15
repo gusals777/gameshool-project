@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906080856) do
+ActiveRecord::Schema.define(version: 20150913110056) do
+
+  create_table "fightsubscriptions", force: :cascade do |t|
+    t.text     "lol_subscription_team_name", default: "", null: false
+    t.integer  "teamlist_id",                             null: false
+    t.integer  "lol_add_tema_name_id",                    null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+  end
 
   create_table "freeboards", force: :cascade do |t|
     t.string   "fb_name"
@@ -45,33 +53,34 @@ ActiveRecord::Schema.define(version: 20150906080856) do
   end
 
   create_table "teamlists", force: :cascade do |t|
-    t.string   "kind_of_game"
-    t.string   "game_id"
-    t.string   "tear"
-    t.text     "comment"
-    t.string   "hearthstone_major"
-    t.string   "hearthstone_user_name"
-    t.string   "fifa_major"
-    t.string   "fifa_user_name"
-    t.string   "lol_team_name"
-    t.string   "lol_major"
-    t.string   "lol_leader_id"
-    t.string   "lol_user_id_1"
-    t.string   "lol_user_id_2"
-    t.string   "lol_user_id_3"
-    t.string   "lol_user_id_4"
-    t.string   "lol_leader_tear"
-    t.string   "lol_tear_user_1"
-    t.string   "lol_tear_user_2"
-    t.string   "lol_tear_user_3"
-    t.string   "lol_tear_user_4"
-    t.string   "leader_name"
-    t.string   "lol_member_name_1"
-    t.string   "lol_member_name_2"
-    t.string   "lol_member_name_3"
-    t.string   "lol_member_name_4"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.string   "kind_of_game",          default: "", null: false
+    t.string   "game_id",               default: "", null: false
+    t.string   "tear",                  default: "", null: false
+    t.text     "comment",               default: "", null: false
+    t.string   "hearthstone_major",     default: "", null: false
+    t.string   "hearthstone_user_name", default: "", null: false
+    t.string   "fifa_major",            default: "", null: false
+    t.string   "fifa_user_name",        default: "", null: false
+    t.string   "lol_team_name",         default: "", null: false
+    t.string   "lol_major",             default: "", null: false
+    t.integer  "lol_current_user_id",                null: false
+    t.string   "lol_leader_id",         default: "", null: false
+    t.string   "lol_user_id_1",         default: "", null: false
+    t.string   "lol_user_id_2",         default: "", null: false
+    t.string   "lol_user_id_3",         default: "", null: false
+    t.string   "lol_user_id_4",         default: "", null: false
+    t.string   "lol_leader_tear",       default: "", null: false
+    t.string   "lol_tear_user_1",       default: "", null: false
+    t.string   "lol_tear_user_2",       default: "", null: false
+    t.string   "lol_tear_user_3",       default: "", null: false
+    t.string   "lol_tear_user_4",       default: "", null: false
+    t.string   "leader_name",           default: "", null: false
+    t.string   "lol_member_name_1",     default: "", null: false
+    t.string   "lol_member_name_2",     default: "", null: false
+    t.string   "lol_member_name_3",     default: "", null: false
+    t.string   "lol_member_name_4",     default: "", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "users", force: :cascade do |t|

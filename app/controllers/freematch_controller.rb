@@ -5,7 +5,12 @@ class FreematchController < ApplicationController
     end
     
     def add_team
-       
+      
+        @ccc = Teamlist.where(:lol_current_user_id => current_user.id).take
+        
+        @bbb = Teamlist.all
+        
+      
     end
     
     def team_list
@@ -43,6 +48,9 @@ class FreematchController < ApplicationController
         
       # 롤 팀명 
         @teamlists.lol_team_name = params[:lol_team_name]
+        @teamlists.lol_current_user_id = params[:lol_current_user_id]
+        
+        
         
       # LoL Game Id DB
         @teamlists.lol_leader_id = params[:lol_leader_id]
@@ -66,6 +74,7 @@ class FreematchController < ApplicationController
         @teamlists.lol_member_name_4 = params[:lol_member_name_4]
         @teamlists.save
         
+        
         redirect_to '/freematch/team_list'
         
     end
@@ -73,8 +82,32 @@ class FreematchController < ApplicationController
     def team_info
         
         @teamlists = Teamlist.find(params[:id])
-    
+        
+        @subscription_name = Fightsubscription.all
+        
+       
+        
+        @aaa = Teamlist.where(:lol_current_user_id => current_user.id).take
+        @bbb = Fightsubscription.where(:lol_add_tema_name_id => current_user.id).take
+        
     end
+    
+
+
+   # 대결신청 시 신청팀 저장 시킴
+    def subscription_write
+      
+      
+        subscription = Fightsubscription.new
+        subscription.lol_subscription_team_name = params[:content]
+        subscription.teamlist_id = params[:teamlist_id]
+        subscription.lol_add_tema_name_id = params[:lol_add_tema_name_id]
+        subscription.save
+        
+       render :text =>""
+        
+    end
+   # 대결신청 시 신청팀 저장 시킴 끝 
     
     def rank
       render layout: false

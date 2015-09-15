@@ -69,6 +69,8 @@ font4{
 <br>
 
 
+
+
 <% if @teamlists.kind_of_game == "lol" %>
 
   팀명&nbsp;&nbsp;&nbsp;<%= @teamlists.lol_team_name %>
@@ -130,7 +132,15 @@ font4{
   <font4><%= @teamlists.comment %></font4>
   </center>
  
+  <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+  <input type="hidden" id="lol_subscription_team_name" value="<%= @aaa.lol_team_name %>">
+  <input type="hidden" id="teamlist_id" value="<%= @teamlists.id %>">
+  <input type="hidden" id="lol_add_tema_name_id" value="<%= @aaa.id %>">
   
+<!-- 롤 대결신청 출력 -->
+  
+  <button id="fight_lol">대결 신청!!!!!!</button><br>
+ 
     <% @teamlists.fightsubscriptions.each do |s| %>
       팀명 : <a href="/freematch/team_info/<%= s.lol_add_tema_name_id %>"><%= s.lol_subscription_team_name %></a><button>수락</button><br>
     <% end %>
@@ -138,7 +148,8 @@ font4{
     $(document).ready(function(){
       $("#fight_lol").click(function(){
       //롤팀에서 대결신청 버튼 클릭했을때
-      // 오류 :: 다른 팀명의 3개의 팀만 신청가능 . 하지만 그 3개의 팀이 각각 여러번 대결을 신청할 수있음.
+      // 오류 :: 다른 팀명의 3개의 팀만 신청가능 . 하지만 그 3개의 팀이 각각 여러번 팀을 신청할 수있음.
+
         if (<%= @subscription_name.distinct.count(:lol_subscription_team_name) <= 3 %>) {
               
           $.ajax({
@@ -165,7 +176,14 @@ font4{
    
   </script>
   
-  <% elsif @teamlists.kind_of_game == "fifa" %>
+      
+  
+   
+<!-- 롤 대결신청 출력 끝 -->
+
+
+  
+<% elsif @teamlists.kind_of_game == "fifa" %>
 
     <table class="table">
       <tr>
@@ -188,11 +206,14 @@ font4{
     </table>
     <br>
    <center><h1><font3>소개</font3></h1><br>
-    
-     <font4><%= @teamlists.comment %></font4></center>
-  
 
-  <% else %>
+    <h1> 팀 설명 : <font4><%= @teamlists.comment %></font4></h1></center>
+    <br>
+    <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+    <button id="fight_fifa">대결 신청!!!!!!</button>
+    
+    
+<% else %>
   
     <table class="table">
       <tr>
@@ -217,9 +238,12 @@ font4{
     <center><h1><font3>소개</font3></h1><br>
   
    <font4><%= @teamlists.comment %></font4></center>
-    
 
-  
+  <h1> 팀 설명 : <%= @teamlists.comment %></h1>
+    <br>
+    <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+    <button id="fight_hearthstone">대결 신청!!!!!!</button>
+    
   <% end %>
 </div>
 

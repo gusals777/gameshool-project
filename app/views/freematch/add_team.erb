@@ -4,7 +4,9 @@
     <link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
     <!-- 폰트링크 -->
     
-    <style>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<style>
     
     .jumbotron
   { min-height: 200px;
@@ -13,7 +15,6 @@
   background: #ffffff;
   background: rgba(255, 255, 255, 0.3);
   }
-
   
       .jumbotron2
   { min-height: 500px;
@@ -171,7 +172,6 @@
 </div><!-- 첫 점보트론 닫는 div -->
 </div><!-- col_md 4의 div -->
 
-    <div class="col-md-3">
     
     <!-- 롤 팀 등록 -->
     <div class="jumbotron2">
@@ -181,11 +181,13 @@
     <div class="col-md-8">
   
     <div style="display :none" id="lol_team_introduce">
-   
+     
         
       팀명 : <input type="text" name="lol_team_name" placeholder="팀명"><br>
       팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br> 
       학과 : <%= current_user.major %><input type="hidden" name="lol_major" value="<%= current_user.major %>"><br>
+                                      <input type="hidden" name="lol_current_user_id" value="<%= current_user.id %>">
+                                    
       ID : <input type="text" name="lol_leader_id" placeholder="ID">
       <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_leader_tear">
       	<option value="">계급</option>
@@ -248,8 +250,8 @@
       <br>
 
       <textarea name="lol_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
-      <input type="submit" value="완료">
-    </div>
+      <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
+    </div><!-- 롤팀 등록 div 끝-->
   
     <!-- 피파 팀 등록 -->  
     <div style="display :none" id="fifa_team_introduce">
@@ -259,7 +261,7 @@
       계급 : <input type="text" name="fifa_tear" placeholder="계급"><br>
       
       <textarea name="fifa_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
-      <input type="submit" value="완료">
+      <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
     </div>
   
   
@@ -272,15 +274,14 @@
       계급 : <input type="text" name="hearthstone_tear" placeholder="계급"><br>
       
       <textarea name="hearthstone_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
-      <input type="submit" value="완료">
+      <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
     </div>
     
   </div>
   </div>
   </div><!-- col-md-3 값 -->
   <div class="col-md-1"></div>
-  <% end %>
-
+<% end %> <!-- form 태그 end 끝-->
 
 <script>
   $(function(){
@@ -289,13 +290,29 @@
    
       $("#kind_of_game" ).show();
       //게임종류를 보여줌
-      
+        
+    });
+    
         $("#radio01").click(function(){
         //롤을 클릭했뜰때
-          $("#lol_team_introduce" ).show();
-          $("#fifa_team_introduce" ).hide();
-          $("#hearthstone_team_introduce" ).hide();
+          
+          if (<%= @ccc.nil? %>){
+             
+           
+            $("#lol_team_introduce" ).show();
+            $("#fifa_team_introduce" ).hide();
+            $("#hearthstone_team_introduce").hide();
+          }
+           
+          else{
+    
+            alert("이미 팀을 등록하셨습니다.");
+          }
+       
+          
         });
+        
+       
           
         $("#radio02").click(function(){
         //피파을 클릭했뜰때
@@ -310,9 +327,6 @@
           $("#fifa_team_introduce" ).hide();
           $("#hearthstone_team_introduce" ).show();
         });
-        
-        });
-        });
+    });
       
 </script>
-
