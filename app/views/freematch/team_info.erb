@@ -124,15 +124,46 @@ font4{
     </tr>
   </table>
   <br>
- 
+  
   <center><h1><font3>소개</font3></h1><br>
  
   <font4><%= @teamlists.comment %></font4>
   </center>
  
-
-
   
+    <% @teamlists.fightsubscriptions.each do |s| %>
+      팀명 : <a href="/freematch/team_info/<%= s.lol_add_tema_name_id %>"><%= s.lol_subscription_team_name %></a><button>수락</button><br>
+    <% end %>
+  <script>
+    $(document).ready(function(){
+      $("#fight_lol").click(function(){
+      //롤팀에서 대결신청 버튼 클릭했을때
+      // 오류 :: 다른 팀명의 3개의 팀만 신청가능 . 하지만 그 3개의 팀이 각각 여러번 대결을 신청할 수있음.
+        if (<%= @subscription_name.distinct.count(:lol_subscription_team_name) <= 3 %>) {
+              
+          $.ajax({
+            data: {
+              content: $("#lol_subscription_team_name").val(),
+              teamlist_id : $("#teamlist_id").val(),
+              lol_add_tema_name_id : $("#lol_add_tema_name_id").val()
+            },
+            url: "/freematch/subscription_write",
+            success: function(){
+       
+              alert("대결을 신청하셨습니다.");
+              location.reload();
+            }
+        });
+        }
+       
+        else{
+          alert("팀은 3개까지만 신청가능합니다. 이미 신청팀이 가득 찼습니다.");
+        }
+          
+      });
+    });
+   
+  </script>
   
   <% elsif @teamlists.kind_of_game == "fifa" %>
 
