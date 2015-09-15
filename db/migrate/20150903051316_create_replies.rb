@@ -5,7 +5,7 @@ class CreateReplies < ActiveRecord::Migration
         t.integer :freeboard_id
         t.string :rp_name
         t.string :rp_content
-        t.integer :rp_hakbun
+        t.string :rp_hakbun
 
       t.timestamps null: false
     end

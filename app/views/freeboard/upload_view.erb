@@ -89,7 +89,7 @@ background: rgba(255, 255, 255, 0.7s);
                                     <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><%=r.created_at.in_time_zone("Seoul")%></i><br>내용 : 
                                     <span id="rp_content_<%= r.id%>"><%= r.rp_content %></span> 
                                     
-                                    <% if current_user %>
+                                    <% if current_user.hakbun == r.rp_hakbun %>
                                         <button class="delete_button_<%= r.id %>">삭제</button>
                                         <button class="update_button_<%= r.id %>">수정</button>
                                     <% end %>
@@ -118,8 +118,8 @@ background: rgba(255, 255, 255, 0.7s);
                                                 data: { rp_id: <%= r.id %> },
                                                 url: "/freeboard/reply_delete",
                                                 success: function(){
-                                                    alert("댓글 삭제가 완료되었습니다.");
                                                     location.reload();
+                                                    alert("댓글 삭제가 완료되었습니다.");
                                                 }
                                             });
                                         } 
@@ -134,8 +134,8 @@ background: rgba(255, 255, 255, 0.7s);
                                                     var txt = $(".rp_modify_<%= r.id %>").val();
                                                     $(".rp_content_<%= r.id %>").val(txt);
                                                     $(".<%= r.id %>").hide();
-                                                    alert("댓글 수정이 완료되었습니다.");
                                                     location.reload();
+                                                    alert("댓글 수정이 완료되었습니다.");
                                                 }
                                             });
                                         }

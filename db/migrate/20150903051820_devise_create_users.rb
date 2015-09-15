@@ -5,10 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## 내가 추가한 것들...
       t.string  :name,                null: false, default: ""
       t.string  :major,               null: false, default: ""
-      t.integer :hakbun,              null: false, default: ""
-      t.string  :kakao,               null: false, default: ""
-      t.string  :phone_num,           null: false, default: ""
-      t.string  :team_name,           null: false, default: ""
+      t.string  :hakbun,              null: false, default: ""
       
       ## Database authenticatable
       t.string :email,              null: false, default: ""
