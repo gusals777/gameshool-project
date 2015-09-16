@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TeamlistTest < ActiveSupport::TestCase
+class FightsubscriptionHearthstoneTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
