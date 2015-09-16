@@ -1,15 +1,14 @@
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+<link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
-    <link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
 
@@ -36,221 +35,305 @@ font4{
     font-family: 'Hanna', serif;
     font-size:15px;
 }
-
 </style>
 
-
-
-<body >
-
-
-<%=render :partial =>"game_page/fixed_bar" %>
+<body>
+  <%=render :partial =>"game_page/fixed_bar" %>
   <header class="intro-header" style="background-image: url('/imgs/boot1.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                     <div class="site-heading">
-                       
-                        <h1><font1>팀 정보</font1></h1>
-                        <hr>
-                        <span class="subheading"><font1>현재 팀의 대한 정보들 입니다.</font1></span>
-                      
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+             
+            <h1><font1>팀 정보</font1></h1>
+            <hr>
+            <span class="subheading"><font1>현재 팀의 대한 정보들 입니다.</font1></span>
+            
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-<div class="container">
-<div class="thumbnail"  style="height:750px">
-    <img src="https://gsbranch3-leebyeongho1.c9.io/imgs/TeamInfo이미지.PNG">
-     <div style="padding-top:1px; padding-bottom:1px; background:white; align:center">
+  <div class="container">
+    <div class="thumbnail"  style="height:750px">
+      <img src="https://gsbranch3-leebyeongho1.c9.io/imgs/TeamInfo이미지.PNG">
+      <div style="padding-top:1px; padding-bottom:1px; background:white; align:center"><br>
 
-<br>
-
-
-
-
-<% if @teamlists.kind_of_game == "lol" %>
-
-  팀명&nbsp;&nbsp;&nbsp;<%= @teamlists.lol_team_name %>
-  
-  <table class="table">
-    <tr >
-      <th>게임종류</th>
-      <th>분류</th>
-      <th>이름</th>
-      <th>학과</th>
-      <th>계급</th>
-      <th>게임 ID</th>
-    </tr>
-    <tr class="info">
-      <th><%= @teamlists.kind_of_game %></th>
-      <th>팀장</th>
-      <th><%= @teamlists.leader_name %></th>
-      <th><%= @teamlists.lol_major %></th>
-      <th><%= @teamlists.lol_leader_tear %></th>
-      <th><%= @teamlists.lol_leader_id %></th>
-    </tr>
-    <tr class="info">
-      <th></th>
-      <th>팀원</th>
-      <th><%= @teamlists.lol_member_name_1 %></th>
-      <th>정보통신학과</th>
-      <th><%= @teamlists.lol_tear_user_1 %></th>
-      <th><%= @teamlists.lol_user_id_1 %></th>
-    </tr>
-    <tr class="info">
-      <th></th>
-      <th>팀원</th>
-      <th><%= @teamlists.lol_member_name_2 %></th>
-      <th>정보통신학과</th>
-      <th><%= @teamlists.lol_tear_user_2 %></th>
-      <th><%= @teamlists.lol_user_id_2 %></th>
-    </tr>
-    <tr class="info">
-      <th></th>
-      <th>팀원</th>
-      <th><%= @teamlists.lol_member_name_3 %></th>
-      <th>정보통신학과</th>
-      <th><%= @teamlists.lol_tear_user_3 %></th>
-      <th><%= @teamlists.lol_user_id_3 %></th>
-    </tr>
-    <tr class="info">
-      <th></th>
-      <th>팀원</th>
-      <th><%= @teamlists.lol_member_name_4 %></th>
-      <th>정보통신학과</th>
-      <th><%= @teamlists.lol_tear_user_4 %></th>
-      <th><%= @teamlists.lol_user_id_4 %></th>
-    </tr>
-  </table>
-  <br>
-  
-  <center><h1><font3>소개</font3></h1><br>
- 
-  <font4><%= @teamlists.comment %></font4>
-  </center>
- 
-  <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
-  <input type="hidden" id="lol_subscription_team_name" value="<%= @aaa.lol_team_name %>">
-  <input type="hidden" id="teamlist_id" value="<%= @teamlists.id %>">
-  <input type="hidden" id="lol_add_tema_name_id" value="<%= @aaa.id %>">
-  
-<!-- 롤 대결신청 출력 -->
-  
-  <button id="fight_lol">대결 신청!!!!!!</button><br>
- 
-    <% @teamlists.fightsubscriptions.each do |s| %>
-      팀명 : <a href="/freematch/team_info/<%= s.lol_add_tema_name_id %>"><%= s.lol_subscription_team_name %></a><button>수락</button><br>
-    <% end %>
-  <script>
-    $(document).ready(function(){
-      $("#fight_lol").click(function(){
-      //롤팀에서 대결신청 버튼 클릭했을때
-      // 오류 :: 다른 팀명의 3개의 팀만 신청가능 . 하지만 그 3개의 팀이 각각 여러번 팀을 신청할 수있음.
-
-        if (<%= @subscription_name.distinct.count(:lol_subscription_team_name) <= 3 %>) {
-              
-          $.ajax({
-            data: {
-              content: $("#lol_subscription_team_name").val(),
-              teamlist_id : $("#teamlist_id").val(),
-              lol_add_tema_name_id : $("#lol_add_tema_name_id").val()
-            },
-            url: "/freematch/subscription_write",
-            success: function(){
-       
-              alert("대결을 신청하셨습니다.");
-              location.reload();
-            }
-        });
-        }
-       
-        else{
-          alert("팀은 3개까지만 신청가능합니다. 이미 신청팀이 가득 찼습니다.");
-        }
+        <% if @kind_of_game == "lol" %>
+          팀명&nbsp;&nbsp;&nbsp;<%= @teamlists_lol.lol_team_name %> 
           
-      });
-    });
-   
-  </script>
-  
-      
-  
-   
-<!-- 롤 대결신청 출력 끝 -->
-
-
-  
-<% elsif @teamlists.kind_of_game == "fifa" %>
-
-    <table class="table">
-      <tr>
-        <th>게임종류</th>
-        <th>분류</th>
-        <th>이름</th>
-        <th>학과</th>
-        <th>계급</th>
-        <th>게임 ID</th>
-      </tr>
-      <tr class="info">
-        <th><%= @teamlists.kind_of_game %></th>
-        <th>팀장</th>
-        <th><%= @teamlists.fifa_user_name %></th>
-        <th><%= @teamlists.fifa_major %></th>
-        <th><%= @teamlists.tear %></th>
-        <th><%= @teamlists.game_id %></th>
-      </tr>
-     
-    </table>
-    <br>
-   <center><h1><font3>소개</font3></h1><br>
-
-    <h1> 팀 설명 : <font4><%= @teamlists.comment %></font4></h1></center>
-    <br>
-    <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
-    <button id="fight_fifa">대결 신청!!!!!!</button>
-    
-    
-<% else %>
-  
-    <table class="table">
-      <tr>
-        <th>게임종류</th>
-        <th>분류</th>
-        <th>이름</th>
-        <th>학과</th>
-        <th>계급</th>
-        <th>게임 ID</th>
-      </tr>
-      <tr>
-        <th class="info"><%= @teamlists.kind_of_game %></th>
-        <th class="info">팀장</th>
-        <th class="info"><%= @teamlists.hearthstone_user_name %></th>
-        <th class="info"><%= @teamlists.hearthstone_major %></th>
-        <th class="info"><%= @teamlists.tear %></th>
-        <th class="info"><%= @teamlists.game_id %></th>
-      </tr>
-     
-    </table>
-    <br>
-    <center><h1><font3>소개</font3></h1><br>
-  
-   <font4><%= @teamlists.comment %></font4></center>
-
-  <h1> 팀 설명 : <%= @teamlists.comment %></h1>
-    <br>
-    <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
-    <button id="fight_hearthstone">대결 신청!!!!!!</button>
-    
-  <% end %>
-</div>
-
-  
-  </div>
+          <table class="table">
+            <tr >
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @teamlists_lol.leader_name %></th>
+              <th><%= @teamlists_lol.lol_major %></th>
+              <th><%= @teamlists_lol.lol_leader_tear %></th>
+              <th><%= @teamlists_lol.lol_leader_id %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_1 %></th>
+              <th>정보통신학과</th>
+              <th><%= @teamlists_lol.lol_tear_user_1 %></th>
+              <th><%= @teamlists_lol.lol_user_id_1 %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_2 %></th>
+              <th>정보통신학과</th>
+              <th><%= @teamlists_lol.lol_tear_user_2 %></th>
+              <th><%= @teamlists_lol.lol_user_id_2 %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_3 %></th>
+              <th>정보통신학과</th>
+              <th><%= @teamlists_lol.lol_tear_user_3 %></th>
+              <th><%= @teamlists_lol.lol_user_id_3 %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_4 %></th>
+              <th>정보통신학과</th>
+              <th><%= @teamlists_lol.lol_tear_user_4 %></th>
+              <th><%= @teamlists_lol.lol_user_id_4 %></th>
+            </tr>
+          </table>
+          <br>
+          
+          <center><h1><font3>소개</font3></h1><br>
+         
+          <font4><%= @teamlists_lol.comment %></font4>
+          </center>
+          
+          <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+          <!--<input type="hidden" id="lol_subscription_team_name" value="<= @lol_subscription_user.lol_team_name %>">-->
+          <!--<input type="hidden" id="teamlist_id" value="<= @teamlists_lol.id %>">-->
+          <!--<input type="hidden" id="lol_add_team_name_id" value="<= @lol_subscription_user.id %>">-->
+          
+        <!-- 롤 대결신청 출력 -->
+          
+          <button id="fight_lol">대결 신청!!!!!!</button>
+          
+          <%= form_tag("/freematch/delete_team", method: "post") do %>
+            <input type="submit" value="팀삭제">
+            <input type='hidden' name='id' value='<%= @id %>'>
+          <% end %>
+          
+          <br>
+          
+          <% @teamlists_lol.fightsubscriptions.each do |s| %>
+            팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
+                   <a href="/freematch/matching_success/<%= s.lol_add_team_name_id %>"><button id="lol_matching_success">수락</button></a><br>
+          <% end %>
+          
+          <script>
+            $(document).ready(function(){
+              $("#fight_lol").click(function(){
+        
+                if (<%= @lol_subscription_user.nil? %>) {
+                  alert("리그 오브 레전드 팀을 등록하고 대결 신청해주세요.");
+                }
+                else if (<%= @lol_subscription_check.nil? == false %>){
+                  alert("이미 대결 신청을 하셨습니다."); 
+                }
+                else if (<%= @teamlists_lol.fightsubscriptions.count >= 3 %>){
+                  alert("더 이상 대결 신청을 할 수 없습니다."); 
+                }
+                else{
+                  $.ajax({
+                    data: {
+                      kind_of_game : "<%= @kind_of_game %>",
+                      current_user_id : <%= current_user.id %>,
+                      teamlist_id : <%= @teamlists_lol.id %>
+                    },
+                    url: "/freematch/subscription_write",
+                    success: function(){
+               
+                      alert("대결을 신청하셨습니다.");
+                      location.reload();
+                    }
+                  }); 
+                } 
+              });
+                
+              // $("#lol_matching_success").click(function(){
+              //   $.ajax({
+              //     data: {
+                    
+                    
+              //     },
+              //     url: "/freematch/matching_success",
+              //       success: function(){
+               
+              //         alert("성공");
+                      
+              //       }
+                  
+              //   });
+              // });
+                
+              });
+          </script>
+        <!-- 롤 대결신청 출력 끝 -->
+          
+        <% elsif @kind_of_game == "fifa" %>
+        
+          <table class="table">
+            <tr>
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @teamlists_fifa.fifa_user_name %></th>
+              <th><%= @teamlists_fifa.fifa_major %></th>
+              <th><%= @teamlists_fifa.tear %></th>
+              <th><%= @teamlists_fifa.game_id %></th>
+            </tr>
+          </table>
+          <br>
+          <center><h1><font3>소개</font3></h1><br>
+        
+          <h1> 팀 설명 : <font4><%= @teamlists_fifa.comment %></font4></h1></center>
+          <br>
+          <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+            
+        <!-- 피파 대결신청 출력 -->    
+          <button id="fight_fifa">대결 신청!!!!!!</button>
+          <button>팀 삭제</button><br>
+          
+          <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
+            이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
+                   <a href="/freematch/matching_success/<%= s.fifa_add_team_name_id %>"><button id="fifa_matching_success">수락</button></a><br>
+          <% end %>
+            
+        <!-- 피파 대결신청 출력 끝 -->
+        <script>
+          $(document).ready(function(){
+            $("#fight_fifa").click(function(){
+              
+              if (<%= @fifa_subscription_user.fifa_current_user_id == current_user.id %>){
+                alert("본인 팀에 대결 신청하시려고?");
+              }
+              else if (<%= @fifa_subscription_user.nil? %>) {
+                alert("피파 온라인 팀을 등록하고 대결 신청해주세요.");
+              }
+              else if (<%= @fifa_subscription_check.nil? == false %>){
+                alert("이미 대결 신청을 하셨습니다."); 
+              }
+              else if (<%= @teamlists_fifa.fightsubscription_fifas.count >= 3 %>){
+                alert("더 이상 대결 신청을 할 수 없습니다."); 
+              }
+              else{
+                $.ajax({
+                  data: { 
+                    kind_of_game : "<%= @kind_of_game %>",
+                    current_user_id : <%= current_user.id %>,
+                    teamlist_id : <%= @teamlists_fifa.id %>
+                  },
+                  url: "/freematch/subscription_write",
+                  success: function(){
+             
+                    alert("대결을 신청하셨습니다.");
+                    location.reload();
+                  }
+                }); 
+              } 
+            });
+              
+            });
+        </script>  
+        
+          
+        <% else %>
+          
+          <table class="table">
+            <tr>
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr>
+              <th class="info"><%= @kind_of_game %></th>
+              <th class="info">팀장</th>
+              <th class="info"><%= @teamlists_hearthstone.hearthstone_user_name %></th>
+              <th class="info"><%= @teamlists_hearthstone.hearthstone_major %></th>
+              <th class="info"><%= @teamlists_hearthstone.tear %></th>
+              <th class="info"><%= @teamlists_hearthstone.game_id %></th>
+            </tr>
+          </table>
+          <br>
+          <center><h1><font3>소개</font3></h1><br>
+          <font4><%= @teamlists_hearthstone.comment %></font4></center>
+          <h1> 팀 설명 : <%= @teamlists_hearthstone.comment %></h1><br>
+          
+          <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
+          <button id="fight_hearthstone">대결 신청!!!!!!</button>
+          <button>팀 삭제</button><br>
+          
+          <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
+            이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
+                   <a href="/freematch/matching_success/<%= s.hearthstone_add_team_name_id %>"><button id="hearthstone_matching_success">수락</button></a><br>
+          <% end %>
+          
+          <script>
+            $(document).ready(function(){
+              $("#fight_hearthstone").click(function(){
+                if (<%= @hearthstone_subscription_user.nil? %>) {
+                  alert("피파 온라인 팀을 등록하고 대결 신청해주세요.");
+                }
+                else if (<%= @hearthstone_subscription_check.nil? == false %>){
+                  alert("이미 대결 신청을 하셨습니다."); 
+                }
+                else if (<%= @teamlists_hearthstone.fightsubscription_hearthstones.count >= 3 %>){
+                  alert("더 이상 대결 신청을 할 수 없습니다."); 
+                }
+                else{
+                  $.ajax({
+                    data: { 
+                      kind_of_game : "<%= @kind_of_game %>",
+                      current_user_id : <%= current_user.id %>,
+                      teamlist_id : <%= @teamlists_hearthstone.id %>
+                    },
+                    url: "/freematch/subscription_write",
+                    success: function(){
+               
+                      alert("대결을 신청하셨습니다.");
+                      location.reload();
+                    }
+                  }); 
+                } 
+              });
+                
+              });
+          </script>   
+        <% end %>
+      </div>
+    </div>
   </div>
   <center><button type="button" class="btn btn-primary"><a href="/freematch/team_list"><font color="white">팀리스트로 가기</font></a></button></center><br><br>
-
 </body>
 

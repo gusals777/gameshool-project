@@ -25,7 +25,7 @@
                        
                         <h1><font1>팀 리스트</font1></h1>
                         <hr>
-                        <span class="subheading"><font1>현제 등록된 팀을 확인할수 있어요!</font1></span>
+                        <span class="subheading"><font1>현재 등록된 팀을 확인할수 있어요!</font1></span>
                       
                     </div>
                 </div>
@@ -46,58 +46,47 @@
               <h4><font style="font-style:normal;">LoL 팀 리스트</font></h4>
               <br>
               
-              <% @teamlists.each do |a| %>
+              <% @teamlists_lol.each do |a| %>
               
-                <% if a.kind_of_game == "lol" %>
-              
-                  <p><font style="font-style:normal;"><font1>팀명 : <a href="/freematch/team_info/<%= a.id %>" style="text-decoration:none"><%= a.lol_team_name %></a></font1></font> <br> 
-                <% end %>
+                  <p><font style="font-style:normal;"><font1>팀명 : <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><%= a.lol_team_name %></a></font1></font> <br> 
               <% end %>
             
       </div>
     </div>
   </div>
   
-   <div class="col-sm-6 col-md-2">
+  <div class="col-sm-6 col-md-2">
     <div class="thumbnail" style="width:250px; height:600px">
       <img src="http://static.news.zumst.com/images/22/2014/01/16/20140116_1389838318..jpg;"  alt="..."  style="width:230px">
       <div class="caption">
       <h3>Team List</h3>
            <h4>피파온라인 팀 리스트</h4><br>
-            <% @teamlists.each do |a| %>
+            <% @teamlists_fifa.each do |a| %>
             
-              <% if a.kind_of_game == "fifa" %>
-            
-                <p><font style="font-style:normal;"><font1>이름 : <a href="/freematch/team_info/<%= a.id %>" style="text-decoration:none"><%= a.fifa_user_name %></a></font1></font> <br>
+                <p><font style="font-style:normal;"><font1>이름 : <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><%= a.fifa_user_name %></a></font1></font> <br>
                  
               <% end %>
-            <% end %>
+         
             
       </div>
     </div>
   </div>
   
-    <div class="col-sm-6 col-md-2">
+  <div class="col-sm-6 col-md-2">
     <div class="thumbnail" style="width:250px; height:600px">
       <img src="http://cfile2.uf.tistory.com/image/251C82395491195914FEE7" alt="..." style="width:300px">
       <div class="caption">
       
          <h3>Team List</h3>
         <h4>하스스톤 팀 리스트</h4><br>
-        <% @teamlists.each do |a| %>
-        
-          <% if a.kind_of_game == "hearthstone" %>
-        
-            <p><font style="font-style:normal;"><font1> 이름 : <a href="/freematch/team_info/<%= a.id %>" style="text-decoration:none"><%= a.hearthstone_user_name %></a></font1></font> <br> 
-                
+          <% @teamlists_hearthstone.each do |a| %>
+            <p><font style="font-style:normal;"><font1> 이름 : <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><%= a.hearthstone_user_name %></a></font1></font> <br> 
           <% end %>
-        <% end %>
-            
       </div>
     </div>
   </div>
   
-   <div class="col-sm-6 col-md-2">
+  <div class="col-sm-6 col-md-2">
     <div class="thumbnail" style="width:250px; height:600px">
       <img src="http://www.sbclife.net/Articles/2013/09/images/SLA13.jpg" alt="...">
       <div class="caption">
