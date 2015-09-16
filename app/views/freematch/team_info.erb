@@ -234,7 +234,7 @@ font4{
           $(document).ready(function(){
             $("#fight_fifa").click(function(){
               
-              if (<%= @fifa_subscription_user.fifa_current_user_id == current_user.id %>){
+              if (<%= @teamlists_fifa.fifa_current_user_id == current_user.id %>){
                 alert("본인 팀에 대결 신청하시려고?");
               }
               else if (<%= @fifa_subscription_user.nil? %>) {
