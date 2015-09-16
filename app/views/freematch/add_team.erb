@@ -105,32 +105,36 @@
     color: #fff;
 }
 </style>
-</style>
+
  
 
 <body>
-  <%=render :partial =>"game_page/fixed_bar" %>
-  <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/imgs/boot1.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="site-heading">
-   
-            <h1><font1>팀 등록</font1></h1>
-            <hr>
-            <span class="subheading"><font1>참가하는 팀의 정보를 작성 해주세요.</font1></span>
-            
-          </div>
+
+
+ <%=render :partial =>"game_page/fixed_bar" %>
+  <header class="intro-header" style="background-image: url('/imgs/boot1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                        <h1><font1>팀 등록</font1></h1><h4>아래의 START를 눌러주세요<h4>
+                        <hr>
+                        <span class="subheading"><font1>참가하는 팀의 정보를 작성 해주세요.</font1></span>
+                      
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
+
+
 
 
   <%= form_tag("/freematch/team_list_write", method: "post", :class => "form-style-2") do %>
     
     <div class="row">
-      <div class="col-md-3"><center></center>
+      <div class="col-md-2"><center></center>
       </div>
       <div class="col-md-2">
         <div class="jumbotron">
@@ -144,6 +148,7 @@
               <center><h1><font3><font size="20px">팀 등록</font></font3></h1></center>                
             </div><!-- padding 닫혀지는 div -->
             <br><br>
+
   
             <center><input type="button" id="addteam_button" class="btn btn-primary" value="Start"></button></center>
   
@@ -171,10 +176,10 @@
 
     
     <!-- 롤 팀 등록 -->
-      <div class="jumbotron2">
-        <div class="col-md-2"><font3><font size="5px" color="black">Start를<br>눌러주세요</font></font3>
+       
+        <div class="col-md-1"><font3><font size="5px" color="black"></font></font3>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <div style="display :none" id="lol_team_introduce">
           
             팀명 : <input type="text" name="lol_team_name" placeholder="팀명"><br>
@@ -247,6 +252,7 @@
             <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
           </div><!-- 롤팀 등록 div 끝-->
       
+
           <!-- 피파 팀 등록 -->  
           <div style="display :none" id="fifa_team_introduce">
             이름 : <%= current_user.name %><input type="hidden" name="fifa_user_name" value="<%= current_user.name %>"><br>
@@ -274,10 +280,11 @@
           </div>
         
         </div>
-      </div>
+
     </div><!-- row 끝 -->
   <div class="col-md-1"></div>
   <% end %> <!-- form 태그 end 끝-->
+
 
 <script>
   $(function(){

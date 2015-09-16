@@ -44,16 +44,16 @@ background: rgba(255, 255, 255, 0.7s);
 
 
          <%=render :partial =>"game_page/fixed_bar" %>
-  <header class="intro-header" style="background-image: url('/imgs/배경1.jpg')">
+   <header class="intro-header" style="background-image: url('/imgs/boot1.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                      <div class="site-heading">
-                       
-                        <h1><font1>View</font1></h1>
+                     
+                        <h1>View</h1>
                         <hr>
-                        <span class="subheading"><font1>작성한 정보를 볼수있습니다.</font1></span>
-                      
+                        <span class="subheading">작성한 내용를 볼수있습니다.</span>
+                     
                     </div>
                 </div>
             </div>
@@ -86,13 +86,15 @@ background: rgba(255, 255, 255, 0.7s);
                             <% @one_fb.replies.each do |r| %>
                              
                                 <div class="reply_<%= r.id %>" style="text-align: left">  
-                                    <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><%=r.created_at.in_time_zone("Seoul")%></i><br>내용 : 
-                                    <span id="rp_content_<%= r.id%>"><%= r.rp_content %></span> 
+                                    <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><font size="2px"><%=r.created_at.in_time_zone("Seoul")%></font></i><br>
+                                    <span id="rp_content_<%= r.id%>"><font size="2px"><%= r.rp_content %></font></span> 
                                     
+                                    <span class="navbar-right">
                                     <% if current_user.hakbun == r.rp_hakbun %>
-                                        <button class="delete_button_<%= r.id %>">삭제</button>
-                                        <button class="update_button_<%= r.id %>">수정</button>
+                                        <button class="delete_button_<%= r.id %>"><font size="2px">삭제</font></button>
+                                        <button class="update_button_<%= r.id %>"><font size="2px">수정</font></button>
                                     <% end %>
+                                    </span>
                                     </p>
                                 </div>
                                 
@@ -157,8 +159,9 @@ background: rgba(255, 255, 255, 0.7s);
                                 <input type="submit" value="댓글달기"><br>
                                 
                             <% end %>
-                                <a href="/freeboard/delete?id=<%= @one_fb.id %>">삭제쓰</a>&nbsp;
-                                <a href="/freeboard/modify?id=<%= @one_fb.id %>">수정쓰</a>
+                            <br>
+                                <button type="button" class="btn btn-info"><a href="/freeboard/delete?id=<%= @one_fb.id %>"><font color="white">삭제</font></a></button>&nbsp;
+                                <button type="button" class="btn btn-info"><a href="/freeboard/modify?id=<%= @one_fb.id %>"><font color="white">수정</font></a></button>
                         </center>
                     </div>
                 </div>

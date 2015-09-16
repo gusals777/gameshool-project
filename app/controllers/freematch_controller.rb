@@ -188,6 +188,7 @@ class FreematchController < ApplicationController
     end
     
 
+
    def matching_success
      
      
@@ -200,6 +201,11 @@ class FreematchController < ApplicationController
       
    end
    
+
+    def daejin
+    end
+    
+
    
     
  
