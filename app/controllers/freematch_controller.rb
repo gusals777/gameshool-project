@@ -116,6 +116,9 @@ class FreematchController < ApplicationController
     def loldetailrank
     end
     
+    def daejin
+    end
+    
    
     
  

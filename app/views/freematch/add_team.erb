@@ -114,7 +114,7 @@
 <body>
 
  <%=render :partial =>"game_page/fixed_bar" %>
-  <header class="intro-header" style="background-image: url('https://gsbranch3-leebyeongho1.c9.io/imgs/boot1.jpg')">
+  <header class="intro-header" style="background-image: url('/imgs/boot1.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -133,6 +133,7 @@
   <%= form_tag("/freematch/team_list_write", method: "post", :class => "form-style-2") do %>
     
   <div class="row">
+  
   <div class="col-md-3"><center></center></div>
   <div class="col-md-2">
   <div class="jumbotron">
@@ -174,11 +175,12 @@
 
     
     <!-- 롤 팀 등록 -->
-    <div class="jumbotron2">
+   
 
-    <div class="col-md-2"><font3><font size="5px" color="black">Start를<br>눌러주세요</font></font3></div>
+    <div class="col-md-1"><font3><font size="5px" color="black">Start를<br>눌러주세요</font></font3></div>
     
-    <div class="col-md-8">
+    <div class="col-md-4">
+     <div class="jumbotron2">
   
     <div style="display :none" id="lol_team_introduce">
      
@@ -278,10 +280,13 @@
     </div>
     
   </div>
-  </div>
+
   </div><!-- col-md-3 값 -->
   <div class="col-md-1"></div>
+
 <% end %> <!-- form 태그 end 끝-->
+ </div>
+
 
 <script>
   $(function(){
