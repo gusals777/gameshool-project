@@ -25,7 +25,6 @@
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
  
  <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -73,10 +72,18 @@
                         <a href="/game_page/main"><font size="4px"><font1>Home</font1></font></a>
                     </li>
                     <li>
-                        <a href="/freematch/add_team"><font size="4px"><font1>팀 등록</font1></font></a>
+                        <% if user_signed_in? %>
+                            <a href="/freematch/add_team"><font size="4px"><font1>팀 등록</font1></font></a>
+                        <% else %>    
+                            <a href="/freeboard/warning"><font size="4px"><font1>팀 등록</font1></font></a>
+                        <% end %>
                     </li>
                     <li>
-                        <a href="/freematch/team_list"><font size="4px"><font1>대전신청</font1></font></a>
+                        <% if user_signed_in? %>
+                            <a href="/freematch/team_list"><font size="4px"><font1>대전신청</font1></font></a>
+                        <% else %>
+                            <a href="/freeboard/warning"><font size="4px"><font1>대전신청</font1></font></a>
+                        <% end %>
                     </li>
                     <li>
                         <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>

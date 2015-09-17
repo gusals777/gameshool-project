@@ -92,10 +92,16 @@ class FreematchController < ApplicationController
           
           @teamlists = TeamlistLol.new
           
+        # 롤 소개멘트
+          @teamlists.comment = params[:lol_team_comment]
+          
         # 롤 학과
           @teamlists.lol_major = params[:lol_major]
-          @teamlists.comment = params[:lol_team_comment]
-        
+          @teamlists.lol_member_major_1 = params[:lol_member_major_1]
+          @teamlists.lol_member_major_2 = params[:lol_member_major_2]
+          @teamlists.lol_member_major_3 = params[:lol_member_major_3]
+          @teamlists.lol_member_major_4 = params[:lol_member_major_4]
+          
         # 롤 팀명 
           @teamlists.lol_team_name = params[:lol_team_name]
           @teamlists.lol_current_user_id = params[:lol_current_user_id]
@@ -221,12 +227,13 @@ class FreematchController < ApplicationController
         @opposing_team.save
         
         
-        @whichgame_id = Whichgame.new
-        @whichgame_id.lol_whichgame_opposing_id = @opposing_team.id
-        @whichgame_id.lol_whichgame_opposing_teamname = @opposing_team.lol_team_name
-        @whichgame_id.lol_whichgame_my_id = @my_lol_team.id
-        @whichgame_id.lol_whichgame_my_teamname = @my_lol_team.lol_team_name
-        @whichgame_id.save
+        @whichgame_lol = Whichgame.new
+        @whichgame_lol.lol_whichgame_opposing_id = @opposing_team.id
+        @whichgame_lol.lol_whichgame_opposing_teamname = @opposing_team.lol_team_name
+        @whichgame_lol.lol_whichgame_my_id = @my_lol_team.id
+        @whichgame_lol.lol_whichgame_my_teamname = @my_lol_team.lol_team_name
+        @whichgame_lol.save
+        
         
       elsif @kind_of_game == "fifa"
       
@@ -243,6 +250,13 @@ class FreematchController < ApplicationController
         @opposing_team.fifa_opposing_team = @my_fifa_team.fifa_user_name
         @opposing_team.save
         
+        @whichgame_fifa = WhichgameFifa.new
+        @whichgame_fifa.fifa_whichgame_opposing_id = @opposing_team.id
+        @whichgame_fifa.fifa_whichgame_opposing_teamname = @opposing_team.fifa_user_name
+        @whichgame_fifa.fifa_whichgame_my_id = @my_fifa_team.id
+        @whichgame_fifa.fifa_whichgame_my_teamname = @my_fifa_team.fifa_user_name
+        @whichgame_fifa.save
+        
       else
         
         @hearthstone_add_team_name_id = params[:hearthstone_add_team_name_id]
@@ -258,7 +272,15 @@ class FreematchController < ApplicationController
         @opposing_team.hearthstone_opposing_team = @my_hearthstone_team.hearthstone_user_name
         @opposing_team.save
         
+        @whichgame_hearthstone = WhichgameHearthstone.new
+        @whichgame_hearthstone.hearthstone_whichgame_opposing_id = @opposing_team.id
+        @whichgame_hearthstone.hearthstone_whichgame_opposing_teamname = @opposing_team.hearthstone_user_name
+        @whichgame_hearthstone.hearthstone_whichgame_my_id = @my_hearthstone_team.id
+        @whichgame_hearthstone.hearthstone_whichgame_my_teamname = @my_hearthstone_team.hearthstone_user_name
+        @whichgame_hearthstone.save
+        
       end
+      
       redirect_to "/freematch/team_list"
     end
     
@@ -266,10 +288,20 @@ class FreematchController < ApplicationController
     end
     
     def whichgame
-      @aaa = Whichgame.all
+      @kind_of_game = params[:kind_of_game]
+       
+      @whichgame_lol = Whichgame.all
+      @whichgame_fifa = WhichgameFifa.all
+      @whichgame_hearthstone = WhichgameHearthstone.all
     end
     
     def whichgame_info
+      
+      @kind_of_game = params[:kind_of_game]
+      
+      @whichgame_lol = Whichgame.all
+      @whichgame_fifa = WhichgameFifa.all
+      @whichgame_hearthstone = WhichgameHearthstone.all
     end
     
 end

@@ -171,24 +171,24 @@ nav.vertical {
         <a href="#">TEAM LIST</a>
         <div>
           <ul>
-            <li><a href="#">전체보기</a></li>
-            <li><a href="#">리그 오브 레전드</a></li>
-            <li><a href="#">피파온라인3</a></li>
-            <li><a href="#">하스 스톤</a></li>
+            <li id="all_game_button"><a href="#">전체보기</a></li>
+            <li id="lol_button"><a href="#">리그 오브 레전드</a></li>
+            <li id="fifa_button"><a href="#">피파온라인3</a></li>
+            <li id="hearthstone_button"><a href="#">하스 스톤</a></li>
           </ul>
         </div>
       </li>
       <li>
         <a>TIP / GameSchool</a>
-       
+        
   </nav>
  
 </div>
 </div>
 <div class="col-md-7">
 &nbsp;
-<div class="scroll">
 
+<div class="scroll all_game_view">
 <div>
 <% @teamlists_lol.each do |a| %>
   <div class="item">
@@ -214,7 +214,8 @@ nav.vertical {
          <font2><font color="bluc" size="4px"><%= a.fifa_opposing_team %>님</font>과 대결중</font2>
       <% end %><br>
      
-      <font style="font-style:normal;"><font2>피파온라인3 ID : <%= a.fifa_user_name %></font2></font><br>
+      <font style="font-style:normal;"><font2>이름 : <%= a.fifa_user_name %></font2></font><br>
+
       <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
     <p>
   </div>    
@@ -235,10 +236,88 @@ nav.vertical {
       </p> 
     </div>  
   <% end %>
+</div>      
 </div>
-      
+
+<div class="lol_view" style="display: none">
+<% @teamlists_lol.sample(@teamlists_lol.size).each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary" style="width:250px; height:150px" >
+      <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br><br>
+      <% if a.lol_whichgame == true %>
+         <%= a.lol_opposing_team %>팀과 대결중
+      <% end %>
+      <font style="font-style:normal;"><font2>LOL 팀명 : <%= a.lol_team_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    </p>
+  </div>     
+<% end %>
 </div>
+
+<div class="fifa_view" style="display: none"> 
+<% @teamlists_fifa.sample(@teamlists_fifa.size).each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary"  style="width:250px; height:150px">
+      <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br><br>
+      <% if a.fifa_whichgame == true %>
+         <%= a.fifa_opposing_team %>님과 대결중 
+      <% end %>
+      <font style="font-style:normal;"><font> 이름 : <%= a.fifa_user_name %></font2></font><br>
+      <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    <p>
+  </div>    
+<% end %>
+</div>
+
+<div class="hearthstone_view" style="display: none"> 
+  <% @teamlists_hearthstone.sample(@teamlists_hearthstone.size).each do |a| %>
+    <div class="item">             
+      <p class="panel panel-primary"  style="width:250px; height:150px">
+        <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br><br>
+        <% if a.hearthstone_whichgame == true %>
+           <%= a.hearthstone_opposing_team %>팀과 대결중
+        <% end %>
+        <font style="font-style:normal;"><font2> 이름 :<%= a.hearthstone_user_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+      </p> 
+    </div>  
+  <% end %>
+</div>
+
 </div>
 <br><br>
+
+<!-- 게임 종류에 따라 팀리스트 보이게 하는 자바 스크립트 -->
+<script>
+  $(function(){
+    $("#all_game_button").click(function(){
+      $(".all_game_view").show();
+      $(".lol_view").hide();
+      $(".fifa_view").hide();
+      $(".hearthstone_view").hide();
+    });
+  
+    $("#lol_button").click(function(){
+      $(".all_game_view").hide();
+      $(".lol_view").show();
+      $(".fifa_view").hide();
+      $(".hearthstone_view").hide();
+    });
+  
+    $("#fifa_button").click(function(){
+      $(".all_game_view").hide();
+      $(".lol_view").hide();
+      $(".fifa_view").show();
+      $(".hearthstone_view").hide();
+    });
+  
+    $("#hearthstone_button").click(function(){
+      $(".all_game_view").hide();
+      $(".lol_view").hide();
+      $(".fifa_view").hide();
+      $(".hearthstone_view").show();
+    });
+  });
+</script>
 </body>
 

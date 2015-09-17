@@ -10,7 +10,7 @@ class CreateTeamlistLols < ActiveRecord::Migration
           t.string :lol_opposing_team      , null: false, default: ""      #게임중 앞에 내팀과 상대팀 이름을 표시해줄 컬럼
 
           t.string :lol_team_name          , null: false, default: ""      #lol 팀명 
-          t.string :lol_major              , null: false, default: ""      #lol_major
+          
           t.integer :lol_current_user_id   , null: false, default: ""
           t.text :comment,                null: false, default: ""         #팀등록 소개
         
@@ -34,6 +34,14 @@ class CreateTeamlistLols < ActiveRecord::Migration
           t.string :lol_member_name_2     , null: false, default: ""
           t.string :lol_member_name_3     , null: false, default: ""
           t.string :lol_member_name_4     , null: false, default: ""
+          
+        #롤 팀원 학과
+        
+          t.string :lol_major              , null: false, default: ""      #lol_major  leader
+          t.string :lol_member_major_1    , null: false, default: ""       #lol_major  member1
+          t.string :lol_member_major_2     , null: false, default: ""      #lol_major  member2
+          t.string :lol_member_major_3     , null: false, default: ""      #lol_major  member3
+          t.string :lol_member_major_4     , null: false, default: ""      #lol_major  member4
 
       #------롤 DB 공간------끝
         

@@ -1,8 +1,244 @@
-<% @aaa.each do |which| %>
 
-<% @bbb = TeamlistLol.find(which.lol_whichgame_my_id) %>
-     <% @ccc = TeamlistLol.find(which.lol_whichgame_opposing_id) %>     
-     <%= which.lol_whichgame_my_teamname %> vs <%= which.lol_whichgame_opposing_teamname %>
-     <a href="/freematch/whichgame_info">자세히 보기</a><br>
-     
-     <% end %>
+<h1>대결성사 자세히보기찡</h1>
+
+<% if @kind_of_game == "lol" %>
+  <% @whichgame_lol.each do |which| %>
+      
+       <% @bbb = TeamlistLol.find(which.lol_whichgame_my_id) %>
+       <% @ccc = TeamlistLol.find(which.lol_whichgame_opposing_id) %>     
+      <div class="row"> 
+        <div class="col-md-5">
+         <table class="table">
+              <tr >
+                <th>게임종류</th>
+                <th>분류</th>
+                <th>이름</th>
+                <th>학과</th>
+                <th>계급</th>
+                <th>게임 ID</th>
+              </tr>
+              <tr class="info">
+                <th><%= @kind_of_game %></th>
+                <th>팀장</th>
+                <th><%= @bbb.leader_name %></th>
+                <th><%= @bbb.lol_major %></th>
+                <th><%= @bbb.lol_leader_tear %></th>
+                <th><%= @bbb.lol_leader_id %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @bbb.lol_member_name_1 %></th>
+                <th><%= @bbb.lol_member_major_1 %></th>
+                <th><%= @bbb.lol_tear_user_1 %></th>
+                <th><%= @bbb.lol_user_id_1 %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @bbb.lol_member_name_2 %></th>
+                <th><%= @bbb.lol_member_major_2 %></th>
+                <th><%= @bbb.lol_tear_user_2 %></th>
+                <th><%= @bbb.lol_user_id_2 %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @bbb.lol_member_name_3 %></th>
+                <th><%= @bbb.lol_member_major_3 %></th>
+                <th><%= @bbb.lol_tear_user_3 %></th>
+                <th><%= @bbb.lol_user_id_3 %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @bbb.lol_member_name_4 %></th>
+                <th><%= @bbb.lol_member_major_4 %></th>
+                <th><%= @bbb.lol_tear_user_4 %></th>
+                <th><%= @bbb.lol_user_id_4 %></th>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="col-md-2" style="text-align: center">
+          
+             <h1>VS</h1>
+          
+          </div>
+          
+          <div class="col-md-5">
+         <table class="table">
+              <tr >
+                <th>게임종류</th>
+                <th>분류</th>
+                <th>이름</th>
+                <th>학과</th>
+                <th>계급</th>
+                <th>게임 ID</th>
+              </tr>
+              <tr class="info">
+                <th><%= @kind_of_game %></th>
+                <th>팀장</th>
+                <th><%= @ccc.leader_name %></th>
+                <th><%= @ccc.lol_major %></th>
+                <th><%= @ccc.lol_leader_tear %></th>
+                <th><%= @ccc.lol_leader_id %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @ccc.lol_member_name_1 %></th>
+                <th><%= @ccc.lol_member_major_1 %></th>
+                <th><%= @ccc.lol_tear_user_1 %></th>
+                <th><%= @ccc.lol_user_id_1 %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @ccc.lol_member_name_2 %></th>
+                <th><%= @ccc.lol_member_major_2 %></th>
+                <th><%= @ccc.lol_tear_user_2 %></th>
+                <th><%= @ccc.lol_user_id_2 %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @ccc.lol_member_name_3 %></th>
+                <th><%= @ccc.lol_member_major_3 %></th>
+                <th><%= @ccc.lol_tear_user_3 %></th>
+                <th><%= @ccc.lol_user_id_3 %></th>
+              </tr>
+              <tr class="info">
+                <th></th>
+                <th>팀원</th>
+                <th><%= @ccc.lol_member_name_4 %></th>
+                <th><%= @ccc.lol_member_major_4 %></th>
+                <th><%= @ccc.lol_tear_user_4 %></th>
+                <th><%= @ccc.lol_user_id_4 %></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+       
+  <% end %>
+
+
+<% elsif @kind_of_game == "fifa" %>
+
+    <% @whichgame_fifa.each do |which| %>
+      
+      <% @bbb = TeamlistFifa.find(which.fifa_whichgame_my_id) %>
+      <% @ccc = TeamlistFifa.find(which.fifa_whichgame_opposing_id) %>     
+    <div class="row"> 
+      <div class="col-md-5">
+       <table class="table">
+            <tr>
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @bbb.fifa_user_name %></th>
+              <th><%= @bbb.fifa_major %></th>
+              <th><%= @bbb.tear %></th>
+              <th><%= @bbb.game_id %></th>
+            </tr>
+          
+          </table>
+        </div>
+        
+        <div class="col-md-2" style="text-align: center">
+        
+           <h1>VS</h1>
+        
+        </div>
+        
+        <div class="col-md-5">
+          <table class="table">
+            <tr >
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @ccc.fifa_user_name %></th>
+              <th><%= @ccc.fifa_major %></th>
+              <th><%= @ccc.tear %></th>
+              <th><%= @ccc.game_id %></th>
+            </tr>
+           
+          </table>
+        </div>
+      </div>
+    <% end %>
+  
+<% else %>
+
+    <% @whichgame_hearthstone.each do |which| %>
+      
+      <% @bbb = TeamlistHearthstone.find(which.hearthstone_whichgame_my_id) %>
+      <% @ccc = TeamlistHearthstone.find(which.hearthstone_whichgame_opposing_id) %>     
+    <div class="row"> 
+      <div class="col-md-5">
+       <table class="table">
+            <tr>
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @bbb.hearthstone_user_name %></th>
+              <th><%= @bbb.hearthstone_major %></th>
+              <th><%= @bbb.tear %></th>
+              <th><%= @bbb.game_id %></th>
+            </tr>
+          
+          </table>
+        </div>
+        
+        <div class="col-md-2" style="text-align: center">
+        
+           <h1>VS</h1>
+        
+        </div>
+        
+        <div class="col-md-5">
+          <table class="table">
+            <tr >
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @ccc.hearthstone_user_name %></th>
+              <th><%= @ccc.hearthstone_major %></th>
+              <th><%= @ccc.tear %></th>
+              <th><%= @ccc.game_id %></th>
+            </tr>
+           
+          </table>
+        </div>
+      </div>
+    <% end %>
+
+<% end %>
