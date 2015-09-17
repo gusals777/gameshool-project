@@ -11,7 +11,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
-
 body {
               padding:0;
               margin:0;
@@ -121,12 +120,10 @@ font4{
           </center>
           
           <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
-          <!--<input type="hidden" id="lol_subscription_team_name" value="<= @lol_subscription_user.lol_team_name %>">-->
-          <!--<input type="hidden" id="teamlist_id" value="<= @teamlists_lol.id %>">-->
-          <!--<input type="hidden" id="lol_add_team_name_id" value="<= @lol_subscription_user.id %>">-->
+          
           
         <!-- 롤 대결신청 출력 -->
-          
+         
           <button id="fight_lol">대결 신청!!!!!!</button>
           
           <%= form_tag("/freematch/delete_team", method: "post") do %>
@@ -138,7 +135,7 @@ font4{
           
           <% @teamlists_lol.fightsubscriptions.each do |s| %>
             팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
-                   <a href="/freematch/matching_success/<%= s.lol_add_team_name_id %>"><button id="lol_matching_success">수락</button></a><br>
+                   <%= s.lol_add_team_name_id %><a href="/freematch/matching_success?teamlist_lol_id=<%=s.teamlist_lol_id%>&lol_add_team_name_id=<%=s.lol_add_team_name_id%>"><button id="lol_matching_success">수락</button></a><br>
           <% end %>
           
           <script>
@@ -169,25 +166,8 @@ font4{
                     }
                   }); 
                 } 
-              });
-                
-              // $("#lol_matching_success").click(function(){
-              //   $.ajax({
-              //     data: {
-                    
-                    
-              //     },
-              //     url: "/freematch/matching_success",
-              //       success: function(){
-               
-              //         alert("성공");
-                      
-              //       }
-                  
-              //   });
-              // });
-                
-              });
+              });      
+            });
           </script>
         <!-- 롤 대결신청 출력 끝 -->
           
@@ -303,7 +283,7 @@ font4{
             $(document).ready(function(){
               $("#fight_hearthstone").click(function(){
                 if (<%= @hearthstone_subscription_user.nil? %>) {
-                  alert("피파 온라인 팀을 등록하고 대결 신청해주세요.");
+                  alert("하스스톤 팀을 등록하고 대결 신청해주세요.");
                 }
                 else if (<%= @hearthstone_subscription_check.nil? == false %>){
                   alert("이미 대결 신청을 하셨습니다."); 
@@ -336,4 +316,3 @@ font4{
   </div>
   <center><button type="button" class="btn btn-primary"><a href="/freematch/team_list"><font color="white">팀리스트로 가기</font></a></button></center><br><br>
 </body>
-

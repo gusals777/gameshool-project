@@ -1,7 +1,7 @@
 class CreateFightsubscriptions < ActiveRecord::Migration
   def change
     create_table :fightsubscriptions do |t|
-      
+          
           t.text :lol_subscription_team_name,         null: false, default: ""   #롤 대전 신청한 팀들의 팀명
           
           t.integer :teamlist_lol_id,                 null: false, default: ""

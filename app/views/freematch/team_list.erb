@@ -43,14 +43,18 @@
             <h3><font style="font-style:normal;">Team List</font></h3>
               
               
-              <h4><font style="font-style:normal;">LoL 팀 리스트</font></h4>
-              <br>
-              
-              <% @teamlists_lol.each do |a| %>
-              
-                  <p><font style="font-style:normal;"><font1>팀명 : <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><%= a.lol_team_name %></a></font1></font> <br> 
-              <% end %>
+            <h4><font style="font-style:normal;">LoL 팀 리스트</font></h4>
+            <br>
             
+            <% @teamlists_lol.each do |a| %>
+              <font style="font-style:normal;"><font1>팀명 : <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><%= a.lol_team_name %></a></font1></font> 
+              
+            <% end %>
+            
+            <!-- 여따가 게임중이라는 버튼을 박아야함. whichgame 이 true 일때ㅜ 출력-->
+            
+             
+             
       </div>
     </div>
   </div>

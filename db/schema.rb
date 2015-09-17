@@ -91,27 +91,28 @@ ActiveRecord::Schema.define(version: 20150916084825) do
   end
 
   create_table "teamlist_lols", force: :cascade do |t|
-    t.string   "lol_team_name",       default: "", null: false
-    t.string   "lol_major",           default: "", null: false
-    t.integer  "lol_current_user_id",              null: false
-    t.text     "comment",             default: "", null: false
-    t.string   "lol_leader_id",       default: "", null: false
-    t.string   "lol_user_id_1",       default: "", null: false
-    t.string   "lol_user_id_2",       default: "", null: false
-    t.string   "lol_user_id_3",       default: "", null: false
-    t.string   "lol_user_id_4",       default: "", null: false
-    t.string   "lol_leader_tear",     default: "", null: false
-    t.string   "lol_tear_user_1",     default: "", null: false
-    t.string   "lol_tear_user_2",     default: "", null: false
-    t.string   "lol_tear_user_3",     default: "", null: false
-    t.string   "lol_tear_user_4",     default: "", null: false
-    t.string   "leader_name",         default: "", null: false
-    t.string   "lol_member_name_1",   default: "", null: false
-    t.string   "lol_member_name_2",   default: "", null: false
-    t.string   "lol_member_name_3",   default: "", null: false
-    t.string   "lol_member_name_4",   default: "", null: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.boolean  "lol_whichgame",       default: false, null: false
+    t.string   "lol_team_name",       default: "",    null: false
+    t.string   "lol_major",           default: "",    null: false
+    t.integer  "lol_current_user_id",                 null: false
+    t.text     "comment",             default: "",    null: false
+    t.string   "lol_leader_id",       default: "",    null: false
+    t.string   "lol_user_id_1",       default: "",    null: false
+    t.string   "lol_user_id_2",       default: "",    null: false
+    t.string   "lol_user_id_3",       default: "",    null: false
+    t.string   "lol_user_id_4",       default: "",    null: false
+    t.string   "lol_leader_tear",     default: "",    null: false
+    t.string   "lol_tear_user_1",     default: "",    null: false
+    t.string   "lol_tear_user_2",     default: "",    null: false
+    t.string   "lol_tear_user_3",     default: "",    null: false
+    t.string   "lol_tear_user_4",     default: "",    null: false
+    t.string   "leader_name",         default: "",    null: false
+    t.string   "lol_member_name_1",   default: "",    null: false
+    t.string   "lol_member_name_2",   default: "",    null: false
+    t.string   "lol_member_name_3",   default: "",    null: false
+    t.string   "lol_member_name_4",   default: "",    null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -139,6 +140,7 @@ ActiveRecord::Schema.define(version: 20150916084825) do
     t.boolean  "lol_whichgame",        default: false, null: false
     t.integer  "lol_whichgame_id",                     null: false
     t.integer  "lol_add_team_name_id",                 null: false
+    t.integer  "lol_opposingteam",                     null: false
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
   end

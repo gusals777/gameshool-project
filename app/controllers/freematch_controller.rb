@@ -32,6 +32,12 @@ class FreematchController < ApplicationController
         @teamlists_fifa = TeamlistFifa.all
         @teamlists_lol = TeamlistLol.all
         @teamlists_hearthstone = TeamlistHearthstone.all
+        
+        
+        @bbb = TeamlistLol.where(:lol_current_user_id => params[:lol_whichgame_id]).take
+        
+                  
+       
     end
     
     def team_list_write
@@ -72,7 +78,7 @@ class FreematchController < ApplicationController
           
         # 롤 학과
           @teamlists.lol_major = params[:lol_major]
-        
+          @teamlists.comment = params[:lol_team_comment]
         
         # 롤 팀명 
           @teamlists.lol_team_name = params[:lol_team_name]
@@ -107,7 +113,7 @@ class FreematchController < ApplicationController
     end
     
     def team_info
-      
+       
         @id = params[:id]
         @kind_of_game = params[:kind_of_game]
         
@@ -135,9 +141,9 @@ class FreematchController < ApplicationController
           @hearthstone_subscription_check = @teamlists_hearthstone.fightsubscription_hearthstones.where(:hearthstone_add_team_name_id => current_user.id).take
         end
         
-        @aaa = TeamlistLol.where(:lol_current_user_id => current_user.id).take
+       
         
-        # @subscription_name = Fightsubscription.all
+     
        
         
     end
@@ -188,19 +194,20 @@ class FreematchController < ApplicationController
     end
     
 
-   def matching_success
-     
-     
-    
-    
-      @lol_my_team = Fightsubscription.where(:lol_add_team_name_id => current_user.id).take
-      @lol_opposingteam = Fightsubscription.find(params[:id])
+    def matching_success
       
+      @teamlist_lol_id = params[:teamlist_lol_id]
+      @lol_add_team_name_id = params[:lol_add_team_name_id]
       
-      
-   end
-   
-   
+      @my_lol_team = TeamlistLol.find(@teamlist_lol_id)
+      @opposing_team = TeamlistLol.find(@lol_add_team_name_id)
     
- 
+      @my_lol_team.lol_whichgame = true
+      @my_lol_team.save
+      
+      @opposing_team.lol_whichgame = true
+      @opposing_team.save
+        
+      redirect_to "/freematch/team_list"
+    end
 end

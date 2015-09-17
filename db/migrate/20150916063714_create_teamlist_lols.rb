@@ -4,6 +4,9 @@ class CreateTeamlistLols < ActiveRecord::Migration
       
           
           #------롤 DB 공간------
+          
+        
+          t.boolean :lol_whichgame,         null: false, default: false
         
           t.string :lol_team_name          , null: false, default: ""      #lol 팀명 
            
