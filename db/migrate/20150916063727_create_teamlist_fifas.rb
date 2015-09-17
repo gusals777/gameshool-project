@@ -10,8 +10,8 @@ class CreateTeamlistFifas < ActiveRecord::Migration
       t.boolean :fifa_whichgame,         null: false, default: false    #게임중 표시 컬럼
       t.string :fifa_opposing_team,      null: false, default: ""      #게임중 앞에 내팀과 상대팀 이름을 표시해줄 컬럼
       
-      t.string :fifa_major,             null: false, default: "" #fifa_major
-      t.string :fifa_user_name,         null: false, default: "" #피파 유저 이름
+      t.string :fifa_major,             null: false, default: ""       #fifa_major
+      t.string :fifa_user_name,         null: false, default: ""       #피파 유저 이름
 
       t.timestamps null: false
     end

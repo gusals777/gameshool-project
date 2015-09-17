@@ -149,10 +149,7 @@
             </div><!-- padding 닫혀지는 div -->
             <br><br>
 
-  
-            <center><input type="button" id="addteam_button" class="btn btn-primary" value="Start"></button></center>
-  
-            <div style="display :none" id="kind_of_game">
+            <div id="kind_of_game">
               
               <div>
                 <input type="radio" id="radio01" name="radio" value="lol">
@@ -180,12 +177,16 @@
         <div class="col-md-1"><font3><font size="5px" color="black"></font></font3>
         </div>
         <div class="col-md-7">
-          <div style="display :none" id="lol_team_introduce">
-          
-            팀명 : <input type="text" name="lol_team_name" placeholder="팀명"><br>
-            팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"><br> 
-            학과 : <%= current_user.major %><input type="hidden" name="lol_major" value="<%= current_user.major %>"><br>
-                                            <input type="hidden" name="lol_current_user_id" value="<%= current_user.id %>">
+          <div id="lol_team_introduce">
+            <h1> 리그 오브 레전드 팀 등록 </h1>
+            <p>
+            팀명 : <input type="text" name="lol_team_name" placeholder="팀명">
+            </p>
+            <p>
+            팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"> 
+            
+            <input type="hidden" name="lol_major" value="<%= current_user.major %>">
+            <input type="hidden" name="lol_current_user_id" value="<%= current_user.id %>">
                                           
             ID : <input type="text" name="lol_leader_id" placeholder="ID">
             <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_leader_tear">
@@ -198,8 +199,13 @@
            		<option value="마스터">마스터</option>
            		<option value="챌린저">챌린저</option>
             </select>
-            <br>
+            
+            학과 : <%= current_user.major %>
+            </p>
+            <p>
             팀원 1 : <input type="text" name="lol_member_name_1" placeholder="팀원 1"> ID : <input type="text" name="lol_user_id_1" placeholder="ID">
+                     <input type="hidden" name="lol_member_major_1" value="<%= current_user.major %>">
+                                                        
             <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_1">
             	<option value="">계급</option>
            		<option value="브론즈">브론즈</option>
@@ -210,8 +216,38 @@
            		<option value="마스터">마스터</option>
            		<option value="챌린저">챌린저</option>
             </select>
-            <br>
+            
+            학과 :  <select name="lol_member_major_1">
+                      <option value="신학과">신학과</option>
+                      <option value="도시및부동산개발학과">도시및부동산개발학과</option>
+                      <option value="행정학과">행정학과</option>
+                      <option value="사회복지학과">사회복지학과</option>
+                      <option value="아동청소년복지학과">아동청소년복지학과</option>
+                      <option value="재활복지학과">재활복지학과</option>
+                      <option value="다문화가족복지전공(연계전공)">다문화가족복지전공(연계전공)</option>
+                      <option value="경영학과">경영학과</option>
+                      <option value="무역ㆍ물류학과">무역ㆍ물류학과</option>
+                      <option value="광고홍보학과">광고홍보학과</option>
+                      <option value="미국학과">미국학과</option>
+                      <option value="중국학과">중국학과</option>
+                      <option value="일본학과">일본학과</option>
+                      <option value="컴퓨터학과">컴퓨터학과</option>
+                      <option value="정보통신학과">정보통신학과</option>
+                      <option value="데이터정보학과">데이터정보학과</option>
+                      <option value="음악학과">음악학과</option>
+                      <option value="실용음악학과">실용음악학과</option>
+                      <option value="방송연예학과">방송연예학과</option>
+                      <option value="시각디자인학과">시각디자인학과</option>
+                      <option value="영상디자인학과">영상디자인학과</option>
+                      <option value="패션디자인및브랜딩학과">패션디자인및브랜딩학과</option>
+                      <option value="간호학과">간호학과</option>
+                      <option value="환경융합시스템학과">환경융합시스템학과</option>
+                      <option value="교양학부">교양학부</option>
+                    </select>
+            </p>
+            <p>
             팀원 2 : <input type="text" name="lol_member_name_2" placeholder="팀원 2"> ID : <input type="text" name="lol_user_id_2" placeholder="ID">
+                     <input type="hidden" name="lol_member_major_2" value="<%= current_user.major %>">
             <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_2">
               <option value="">계급</option>
            		<option value="브론즈">브론즈</option>
@@ -222,8 +258,38 @@
            		<option value="마스터">마스터</option>
            		<option value="챌린저">챌린저</option>
             </select>
-            <br>
+            
+            학과 :  <select name="lol_member_major_2">
+                      <option value="신학과">신학과</option>
+                      <option value="도시및부동산개발학과">도시및부동산개발학과</option>
+                      <option value="행정학과">행정학과</option>
+                      <option value="사회복지학과">사회복지학과</option>
+                      <option value="아동청소년복지학과">아동청소년복지학과</option>
+                      <option value="재활복지학과">재활복지학과</option>
+                      <option value="다문화가족복지전공(연계전공)">다문화가족복지전공(연계전공)</option>
+                      <option value="경영학과">경영학과</option>
+                      <option value="무역ㆍ물류학과">무역ㆍ물류학과</option>
+                      <option value="광고홍보학과">광고홍보학과</option>
+                      <option value="미국학과">미국학과</option>
+                      <option value="중국학과">중국학과</option>
+                      <option value="일본학과">일본학과</option>
+                      <option value="컴퓨터학과">컴퓨터학과</option>
+                      <option value="정보통신학과">정보통신학과</option>
+                      <option value="데이터정보학과">데이터정보학과</option>
+                      <option value="음악학과">음악학과</option>
+                      <option value="실용음악학과">실용음악학과</option>
+                      <option value="방송연예학과">방송연예학과</option>
+                      <option value="시각디자인학과">시각디자인학과</option>
+                      <option value="영상디자인학과">영상디자인학과</option>
+                      <option value="패션디자인및브랜딩학과">패션디자인및브랜딩학과</option>
+                      <option value="간호학과">간호학과</option>
+                      <option value="환경융합시스템학과">환경융합시스템학과</option>
+                      <option value="교양학부">교양학부</option>
+                    </select>
+            </p>
+            <p>
             팀원 3 : <input type="text" name="lol_member_name_3" placeholder="팀원 3"> ID : <input type="text" name="lol_user_id_3" placeholder="ID">
+                     <input type="hidden" name="lol_member_major_3" value="<%= current_user.major %>">
             <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_3">
             	<option value="">계급</option>
            		<option value="브론즈">브론즈</option>
@@ -234,8 +300,38 @@
            		<option value="마스터">마스터</option>
            		<option value="챌린저">챌린저</option>
             </select>
-            <br>
+            
+            학과 :  <select name="lol_member_major_3">
+                      <option value="신학과">신학과</option>
+                      <option value="도시및부동산개발학과">도시및부동산개발학과</option>
+                      <option value="행정학과">행정학과</option>
+                      <option value="사회복지학과">사회복지학과</option>
+                      <option value="아동청소년복지학과">아동청소년복지학과</option>
+                      <option value="재활복지학과">재활복지학과</option>
+                      <option value="다문화가족복지전공(연계전공)">다문화가족복지전공(연계전공)</option>
+                      <option value="경영학과">경영학과</option>
+                      <option value="무역ㆍ물류학과">무역ㆍ물류학과</option>
+                      <option value="광고홍보학과">광고홍보학과</option>
+                      <option value="미국학과">미국학과</option>
+                      <option value="중국학과">중국학과</option>
+                      <option value="일본학과">일본학과</option>
+                      <option value="컴퓨터학과">컴퓨터학과</option>
+                      <option value="정보통신학과">정보통신학과</option>
+                      <option value="데이터정보학과">데이터정보학과</option>
+                      <option value="음악학과">음악학과</option>
+                      <option value="실용음악학과">실용음악학과</option>
+                      <option value="방송연예학과">방송연예학과</option>
+                      <option value="시각디자인학과">시각디자인학과</option>
+                      <option value="영상디자인학과">영상디자인학과</option>
+                      <option value="패션디자인및브랜딩학과">패션디자인및브랜딩학과</option>
+                      <option value="간호학과">간호학과</option>
+                      <option value="환경융합시스템학과">환경융합시스템학과</option>
+                      <option value="교양학부">교양학부</option>
+                    </select>
+            </p>
+            <p>
             팀원 4 : <input type="text" name="lol_member_name_4" placeholder="팀원 4"> ID : <input type="text" name="lol_user_id_4" placeholder="ID">
+                     <input type="hidden" name="lol_member_major_4" value="<%= current_user.major %>">
             <select id="mm" title="계급" class="sel" onchange="checkBirthday('check')" name="lol_tear_user_4">
               <option value="">계급</option>
            		<option value="브론즈">브론즈</option>
@@ -246,7 +342,35 @@
            		<option value="마스터">마스터</option>
            		<option value="챌린저">챌린저</option>
             </select>
-            <br>
+            
+            학과 :  <select name="lol_member_major_4">
+                      <option value="신학과">신학과</option>
+                      <option value="도시및부동산개발학과">도시및부동산개발학과</option>
+                      <option value="행정학과">행정학과</option>
+                      <option value="사회복지학과">사회복지학과</option>
+                      <option value="아동청소년복지학과">아동청소년복지학과</option>
+                      <option value="재활복지학과">재활복지학과</option>
+                      <option value="다문화가족복지전공(연계전공)">다문화가족복지전공(연계전공)</option>
+                      <option value="경영학과">경영학과</option>
+                      <option value="무역ㆍ물류학과">무역ㆍ물류학과</option>
+                      <option value="광고홍보학과">광고홍보학과</option>
+                      <option value="미국학과">미국학과</option>
+                      <option value="중국학과">중국학과</option>
+                      <option value="일본학과">일본학과</option>
+                      <option value="컴퓨터학과">컴퓨터학과</option>
+                      <option value="정보통신학과">정보통신학과</option>
+                      <option value="데이터정보학과">데이터정보학과</option>
+                      <option value="음악학과">음악학과</option>
+                      <option value="실용음악학과">실용음악학과</option>
+                      <option value="방송연예학과">방송연예학과</option>
+                      <option value="시각디자인학과">시각디자인학과</option>
+                      <option value="영상디자인학과">영상디자인학과</option>
+                      <option value="패션디자인및브랜딩학과">패션디자인및브랜딩학과</option>
+                      <option value="간호학과">간호학과</option>
+                      <option value="환경융합시스템학과">환경융합시스템학과</option>
+                      <option value="교양학부">교양학부</option>
+                    </select>
+            </p>
       
             <textarea name="lol_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
             <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
@@ -255,28 +379,31 @@
 
           <!-- 피파 팀 등록 -->  
           <div style="display :none" id="fifa_team_introduce">
-            이름 : <%= current_user.name %><input type="hidden" name="fifa_user_name" value="<%= current_user.name %>"><br>
-            학과 : <%= current_user.major %><input type="hidden" name="fifa_major" value="<%= current_user.major %>"><br> 
-            피파 id : <input type="text" name="fifa_game_id" placeholder="게임 id"><br>
-            계급 : <input type="text" name="fifa_tear" placeholder="계급"><br>
-            
+            <h1> 피파 온라인3 팀 등록 </h1>
+            <p>이름 : <%= current_user.name %><input type="hidden" name="fifa_user_name" value="<%= current_user.name %>"></p>
+            <p>학과 : <%= current_user.major %><input type="hidden" name="fifa_major" value="<%= current_user.major %>"></p> 
+            <p>피파 id : <input type="text" name="fifa_game_id" placeholder="게임 id"></p>
+            <p>계급 : <input type="text" name="fifa_tear" placeholder="계급"></p>
+            <p>
             <textarea name="fifa_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
             <input type="hidden" name="fifa_current_user_id" value="<%= current_user.id %>">
             <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
+            </p>
           </div>
       
       
       
           <!-- 하스 팀 등록 -->
           <div style="display :none" id="hearthstone_team_introduce">
-            이름. : <%= current_user.name %><input type="hidden" name="hearthstone_user_name" value="<%= current_user.name %>"><br>
-            학과 : <%= current_user.major %><input type="hidden" name="hearthstone_major" value="<%= current_user.major %>"><br>
-            하스 id : <input type="text" name="hearthstone_game_id" placeholder="게임 id"><br>
-            계급 : <input type="text" name="hearthstone_tear" placeholder="계급"><br>
-            
+          <h1> 하스스톤 팀 등록 </h1>
+          <p>이름 : <%= current_user.name %><input type="hidden" name="hearthstone_user_name" value="<%= current_user.name %>"></p>
+          <p>학과 : <%= current_user.major %><input type="hidden" name="hearthstone_major" value="<%= current_user.major %>"></p>
+          <p>하스 id : <input type="text" name="hearthstone_game_id" placeholder="게임 id"></p>
+          <p>계급 : <input type="text" name="hearthstone_tear" placeholder="계급"></p>
+          <p>  
             <textarea name="hearthstone_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
             <input type="hidden" name="hearthstone_current_user_id" value="<%= current_user.id %>">
-            <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
+            <input type="submit" value="완료" onClick="this.style.visibility='hidden'"></p>
           </div>
         
         </div>
@@ -288,12 +415,6 @@
 
 <script>
   $(function(){
-    $("#addteam_button").click(function(){
-    //팀등록하기 버튼 클릭했을때
-    
-      $("#kind_of_game" ).show();
-      //게임종류를 보여줌
-    });
     
     $("#radio01").click(function(){
     //롤을 클릭했뜰때

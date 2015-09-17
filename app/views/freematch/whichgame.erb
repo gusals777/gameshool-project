@@ -1,9 +1,22 @@
-<% @aaa.each do |which| %>
-    
-     <% @bbb = TeamlistLol.find(which.lol_whichgame_my_id) %>
-     <% @ccc = TeamlistLol.find(which.lol_whichgame_opposing_id) %>     
-     <%= @bbb.leader_name %> vs <%= @ccc.leader_name %>
-     
-<% end %>
 
+<h1>대결성사찡</h1>
 
+    롤
+   <% @whichgame_lol.each do |which| %>
+   
+        <%= which.lol_whichgame_my_teamname %> vs <%= which.lol_whichgame_opposing_teamname %>
+        <a href="/freematch/whichgame_info?kind_of_game=lol">자세히 보기</a><br>
+   <% end %>
+
+  피파
+   <% @whichgame_fifa.each do |which| %>
+   
+        <%= which.fifa_whichgame_my_teamname %> vs <%= which.fifa_whichgame_opposing_teamname %>
+        <a href="/freematch/whichgame_info?kind_of_game=fifa">자세히 보기</a><br>
+   <% end %>
+
+   <% @whichgame_hearthstone.each do |which| %>
+   하스스톤
+        <%= which.hearthstone_whichgame_my_teamname %> vs <%= which.hearthstone_whichgame_opposing_teamname %>
+        <a href="/freematch/whichgame_info?kind_of_game=hearthstone">자세히 보기</a><br>
+   <% end %>
