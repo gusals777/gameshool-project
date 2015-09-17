@@ -12,6 +12,13 @@ class CreateTeamlistFifas < ActiveRecord::Migration
       
       t.string :fifa_major,             null: false, default: ""       #fifa_major
       t.string :fifa_user_name,         null: false, default: ""       #피파 유저 이름
+      
+      #피파 랭크
+      t.integer :fifa_total_game       , null: false, default: 0   #피파 총 경기수
+      t.integer :fifa_victory          , null: false, default: 0   #피파 승수
+      t.integer :fifa_lose             , null: false, default: 0   #피파 패수  
+      t.integer :fifa_winner_point     , null: false, default: 0   #피파 승점  
+      t.integer :fifa_winning_rate     , null: false, default: 0   #피파 승률
 
       t.timestamps null: false
     end
