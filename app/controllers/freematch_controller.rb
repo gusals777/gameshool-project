@@ -47,6 +47,12 @@ class FreematchController < ApplicationController
         @teamlists_fifa = TeamlistFifa.all
         @teamlists_lol = TeamlistLol.all
         @teamlists_hearthstone = TeamlistHearthstone.all
+        
+        
+        @bbb = TeamlistLol.where(:lol_current_user_id => params[:lol_whichgame_id]).take
+        
+                  
+       
     end
     
     def team_list_write
@@ -68,57 +74,57 @@ class FreematchController < ApplicationController
         
       elsif params[:radio] == "hearthstone"
 
-        @teamlists = TeamlistHearthstone.new
+
+          @teamlists = TeamlistHearthstone.new
+          
+        # 하스스톤 학과, 이름
+          @teamlists.hearthstone_major = params[:hearthstone_major]
+          @teamlists.hearthstone_user_name = params[:hearthstone_user_name]
+          @teamlists.hearthstone_current_user_id = params[:hearthstone_current_user_id]
+          
+          @teamlists.game_id = params[:hearthstone_game_id]
+          @teamlists.tear = params[:hearthstone_tear]
+          @teamlists.comment = params[:hearthstone_team_comment]
         
-      # 하스스톤 학과, 이름
-        @teamlists.hearthstone_major = params[:hearthstone_major]
-        @teamlists.hearthstone_user_name = params[:hearthstone_user_name]
-        @teamlists.hearthstone_current_user_id = params[:hearthstone_current_user_id]
-        
-        @teamlists.game_id = params[:hearthstone_game_id]
-        @teamlists.tear = params[:hearthstone_tear]
-        @teamlists.comment = params[:hearthstone_team_comment]
-      
-        @teamlists.save
-        
+          @teamlists.save
+          
       else
+          
+          @teamlists = TeamlistLol.new
+          
+        # 롤 학과
+          @teamlists.lol_major = params[:lol_major]
+          @teamlists.comment = params[:lol_team_comment]
         
-        @teamlists = TeamlistLol.new
+        # 롤 팀명 
+          @teamlists.lol_team_name = params[:lol_team_name]
+          @teamlists.lol_current_user_id = params[:lol_current_user_id]
+          
+        # LoL Game Id DB
+          @teamlists.lol_leader_id = params[:lol_leader_id]
+          @teamlists.lol_user_id_1 = params[:lol_user_id_1]
+          @teamlists.lol_user_id_2 = params[:lol_user_id_2]
+          @teamlists.lol_user_id_3 = params[:lol_user_id_3]
+          @teamlists.lol_user_id_4 = params[:lol_user_id_4]
+          
+        # LoL user Tear
+          @teamlists.lol_leader_tear = params[:lol_leader_tear]
+          @teamlists.lol_tear_user_1 = params[:lol_tear_user_1]
+          @teamlists.lol_tear_user_2 = params[:lol_tear_user_2]
+          @teamlists.lol_tear_user_3 = params[:lol_tear_user_3]
+          @teamlists.lol_tear_user_4 = params[:lol_tear_user_4]
+          
+        # LoL  user name
+          @teamlists.leader_name = params[:leader_name]
+          @teamlists.lol_member_name_1 = params[:lol_member_name_1]
+          @teamlists.lol_member_name_2 = params[:lol_member_name_2]
+          @teamlists.lol_member_name_3 = params[:lol_member_name_3]
+          @teamlists.lol_member_name_4 = params[:lol_member_name_4]
         
-      # 롤 학과
-        @teamlists.lol_major = params[:lol_major]
-      
-      
-      # 롤 팀명 
-        @teamlists.lol_team_name = params[:lol_team_name]
-        @teamlists.lol_current_user_id = params[:lol_current_user_id]
-        
-      # LoL Game Id DB
-        @teamlists.lol_leader_id = params[:lol_leader_id]
-        @teamlists.lol_user_id_1 = params[:lol_user_id_1]
-        @teamlists.lol_user_id_2 = params[:lol_user_id_2]
-        @teamlists.lol_user_id_3 = params[:lol_user_id_3]
-        @teamlists.lol_user_id_4 = params[:lol_user_id_4]
-        
-      # LoL user Tear
-        @teamlists.lol_leader_tear = params[:lol_leader_tear]
-        @teamlists.lol_tear_user_1 = params[:lol_tear_user_1]
-        @teamlists.lol_tear_user_2 = params[:lol_tear_user_2]
-        @teamlists.lol_tear_user_3 = params[:lol_tear_user_3]
-        @teamlists.lol_tear_user_4 = params[:lol_tear_user_4]
-        
-      # LoL  user name
-        @teamlists.leader_name = params[:leader_name]
-        @teamlists.lol_member_name_1 = params[:lol_member_name_1]
-        @teamlists.lol_member_name_2 = params[:lol_member_name_2]
-        @teamlists.lol_member_name_3 = params[:lol_member_name_3]
-        @teamlists.lol_member_name_4 = params[:lol_member_name_4]
-      
-        @teamlists.save
+          @teamlists.save
       end
       
-      redirect_to '/freematch/team_list'
-        
+        redirect_to '/freematch/team_list'
     end
     
     def team_info
@@ -148,7 +154,6 @@ class FreematchController < ApplicationController
       
         @hearthstone_subscription_check = @teamlists_hearthstone.fightsubscription_hearthstones.where(:hearthstone_add_team_name_id => current_user.id).take
       end
-        
     end
     
 
@@ -196,33 +201,22 @@ class FreematchController < ApplicationController
     def loldetailrank
     end
     
-
-
-   def matching_success
-     
+    def matching_success
      
     
-    
-      @lol_my_team = Fightsubscription.where(:lol_add_team_name_id => current_user.id).take
-      @lol_opposingteam = Fightsubscription.find(params[:id])
-      
-      
-      
-   end
-   
+     
+      @my_lol_team = TeamlistLol.find(@teamlist_lol_id)
+      @opposing_team = TeamlistLol.find(@lol_add_team_name_id)
 
+      @my_lol_team.lol_whichgame = true
+      @my_lol_team.save
+      
+      @opposing_team.lol_whichgame = true
+      @opposing_team.save
+        
+      redirect_to "/freematch/team_list"
+    end
+    
     def daejin
     end
-    
-    def team_list2
-        
-        @teamlists_fifa = TeamlistFifa.all
-        @teamlists_lol = TeamlistLol.all
-        @teamlists_hearthstone = TeamlistHearthstone.all
-    end
-    
-
-   
-    
- 
 end

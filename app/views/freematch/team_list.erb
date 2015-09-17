@@ -161,15 +161,6 @@ nav.vertical {
         </div>
     </header>
 
-
-
-
-
-
-
-
-
-
 <div class="row">
 
 <div class="col-md-3">
@@ -197,60 +188,42 @@ nav.vertical {
 <div class="col-md-7">
 <div class="scroll">
 
-
-
- <div><% @teamlists_lol.each do |a| %></div>
-  
+<div>
+<% @teamlists_lol.each do |a| %>
   <div class="item">
-      
-              
-                  <p class="panel panel-primary" style="width:250px; height:150px" >
-                  <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br><br>
-                  <font style="font-style:normal;"><font2>LOL 팀명 : <%= a.lol_team_name %></font2></font><br>
-                  <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><font color="#134F76"><font2>팀 보기</font2></font></a>
-                  
-                  </p>
-                  
-              <% end %>
-            
-  </div>
-  
-
-
-
-
- <div> <% @teamlists_fifa.each do |a| %></div>
-  
-  <div class="item">
-      
-             
-                  <p class="panel panel-primary"  style="width:250px; height:150px">
-                  <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br><br>
-                  <font style="font-style:normal;"><font2>피파온라인3 ID : <%= a.fifa_user_name %></font2></font><br>
-                  <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>팀 보기</font2></font></a>
-                  <p>
-              <% end %>
-            
-  </div>
-  
-
-
-
-
- <div> <% @teamlists_hearthstone.each do |a| %></div>
-  
-  <div class="item">
-      
-              
-                  <p class="panel panel-primary"  style="width:250px; height:150px">
-                   <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br><br>
-                  <font style="font-style:normal;"><font2> 이름 :<%= a.hearthstone_user_name %></font2></font><br>
-                   <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><font color="#134F76"><font2>팀 보기</font2></font></a>
-                  <p> 
-              <% end %>
-            
-  </div>
+    <p class="panel panel-primary" style="width:250px; height:150px" >
+      <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br><br>
+      <font style="font-style:normal;"><font2>LOL 팀명 : <%= a.lol_team_name %></font2></font><br>
+      <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    </p>
+  </div>     
+<% end %>
 </div>
+
+<div> 
+<% @teamlists_fifa.each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary"  style="width:250px; height:150px">
+      <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br><br>
+      <font style="font-style:normal;"><font2>피파온라인3 ID : <%= a.fifa_user_name %></font2></font><br>
+      <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    <p>
+  </div>    
+<% end %>
+</div>
+
+<div> 
+  <% @teamlists_hearthstone.each do |a| %>
+    <div class="item">             
+      <p class="panel panel-primary"  style="width:250px; height:150px">
+        <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br><br>
+        <font style="font-style:normal;"><font2> 이름 :<%= a.hearthstone_user_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+      </p> 
+    </div>  
+  <% end %>
+</div>
+      
 </div>
 </div>
 <br><br>
