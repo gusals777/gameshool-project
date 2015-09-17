@@ -53,7 +53,7 @@ body {
 
 div.wrapper {
   margin: 20px auto;
-  width: 350px;
+  width: 300px;
 }
 
 p {
@@ -193,10 +193,11 @@ nav.vertical {
 <% @teamlists_lol.each do |a| %>
   <div class="item">
     <p class="panel panel-primary" style="width:250px; height:150px" >
-      <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br><br>
-      <% if a.lol_whichgame == true %>
-         <%= a.lol_opposing_team %>팀과 대결중
-      <% end %>
+      <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br>
+       <% if a.lol_whichgame == true %>
+         <font2><font color="bluc" size="4px"><%= a.lol_opposing_team %>팀</font>과 대결중</font2>
+      <% end %><br>
+     
       <font style="font-style:normal;"><font2>LOL 팀명 : <%= a.lol_team_name %></font2></font><br>
         <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
     </p>
@@ -208,10 +209,11 @@ nav.vertical {
 <% @teamlists_fifa.each do |a| %>
   <div class="item">
     <p class="panel panel-primary"  style="width:250px; height:150px">
-      <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br><br>
-      <% if a.fifa_whichgame == true %>
-         <%= a.fifa_opposing_team %>님과 대결중
-      <% end %>
+      <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br>
+       <% if a.fifa_whichgame == true %>
+         <font2><font color="bluc" size="4px"><%= a.fifa_opposing_team %>님</font>과 대결중</font2>
+      <% end %><br>
+     
       <font style="font-style:normal;"><font2>피파온라인3 ID : <%= a.fifa_user_name %></font2></font><br>
       <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
     <p>
@@ -223,10 +225,11 @@ nav.vertical {
   <% @teamlists_hearthstone.each do |a| %>
     <div class="item">             
       <p class="panel panel-primary"  style="width:250px; height:150px">
-        <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br><br>
+        <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br>
         <% if a.hearthstone_whichgame == true %>
-           <%= a.hearthstone_opposing_team %>팀과 대결중
-        <% end %>
+           <font2><font color="bluc" size="4px"><%= a.hearthstone_opposing_team %>팀</font>과 대결중</font2>
+        <% end %><br>
+        
         <font style="font-style:normal;"><font2> 이름 :<%= a.hearthstone_user_name %></font2></font><br>
         <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
       </p> 

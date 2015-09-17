@@ -290,7 +290,7 @@ font4{
                 <% end %>
               <% end %>
             <% else %>
-              <%= @teamlists_lol.lol_opposing_team %> 님과 대결중!!!!
+              <font1>현제&nbsp;<font color="bluc" size="4px"><%= @teamlists_lol.lol_opposing_team %> 님</font>과 대결중!!!!<br></font1>
               <a href="#">대결 정보 보러 가기</a>
             <% end %>  
           </div>
@@ -377,7 +377,7 @@ font4{
               <% end %>
           <% end %>    
         <% else %>
-          <%= @teamlists_fifa.fifa_opposing_team %> 님과 대결중!!!!
+          <font2>현제<font color="bluc" size="4px"><%= @teamlists_fifa.fifa_opposing_team %> 님</font>과 대결중</font2><br>
           <a href="#">대결 정보 보러 가기</a>
         <% end %>
           
@@ -467,7 +467,7 @@ font4{
               <% end %>
             <% end %>
           <% else %>
-            <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중!!!!
+          <font2>현제 <font color="bluc" size="4px"> <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중</font></font2><br>
             <a href="#">대결 정보 보러 가기</a>
           <% end %>
           
