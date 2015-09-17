@@ -205,6 +205,13 @@ class FreematchController < ApplicationController
     def daejin
     end
     
+    def team_list2
+        
+        @teamlists_fifa = TeamlistFifa.all
+        @teamlists_lol = TeamlistLol.all
+        @teamlists_hearthstone = TeamlistHearthstone.all
+    end
+    
 
    
     
