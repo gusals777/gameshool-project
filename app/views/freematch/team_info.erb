@@ -11,10 +11,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
+
+
 body {
               padding:0;
               margin:0;
- 
+               text-align: left;
               background-image: url('');
               width: 100%; 
               height: 100%; 
@@ -34,6 +36,159 @@ font4{
     font-family: 'Hanna', serif;
     font-size:15px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+  	-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+
+	ul {
+		margin: 30px auto;
+	
+	}
+
+	li2 {
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+
+	@-moz-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-webkit-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-o-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	.round {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 30px;		
+		text-decoration: none;		
+		text-align: center;
+		font-size: 25px;		
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+		letter-spacing: -.065em;
+		font-family: "Hammersmith One", sans-serif;		
+		-webkit-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+		border-radius: 300px;
+		z-index: 1;
+		border-width: 4px;
+		border-style: solid;
+	}
+
+	.round:hover {
+		width: 130%;
+		height: 130%;
+		left: -15%;
+		top: -15%;
+		font-size: 33px;
+		padding-top: 38px;
+		-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		z-index: 2;
+		border-size: 10px;
+		-webkit-transform: rotate(-360deg);
+		-moz-transform: rotate(-360deg);
+		-o-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+
+	a.red {
+		background-color: rgba(239,57,50,1);
+		color: rgba(133,32,28,1);
+		border-color: rgba(133,32,28,.2);
+	}
+
+	a.red:hover {
+		color: rgba(239,57,50,1);
+	}
+
+	a.green {
+		background-color: rgba(1,151,171,1);
+		color: rgba(0,63,71,1);
+		border-color: rgba(0,63,71,.2);
+	}
+
+	a.green:hover {
+		color: rgba(1,151,171,1);
+	}
+
+	a.yellow {
+		background-color: rgba(252,227,1,1);
+		color: rgba(153,38,0,1);
+		border-color: rgba(153,38,0,.2);
+	}
+
+	a.yellow:hover {
+		color: rgba(252,227,1,1);
+	}
+
+	.round span.round {
+		display: block;
+		opacity: 0;
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+		font-size: 1px;
+		border: none;
+		padding: 40% 20% 0 20%;
+		color: #fff;
+	}
+
+	.round span:hover {
+		opacity: .85;
+		font-size: 16px;
+		-webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+	}
+
+	.green span {
+		background: rgba(0,63,71,.7);		
+	}
+
+	.red span {
+		background: rgba(133,32,28,.7);		
+	}
+
+	.yellow span {
+		background: rgba(161,145,0,.7);	
+
+	}
+	
 </style>
 
 <body>
@@ -57,12 +212,12 @@ font4{
 
 
   <div class="container">
-    <div class="thumbnail"  style="height:750px">
+    <div class="thumbnail"  style="height:800px">
       <img src="/imgs/TeamInfo이미지.PNG">
       <div style="padding-top:1px; padding-bottom:1px; background:white; align:center"><br>
 
         <% if @kind_of_game == "lol" %>
-          팀명&nbsp;&nbsp;&nbsp;<%= @teamlists_lol.lol_team_name %> 
+          <font2>팀명</font2>&nbsp;&nbsp;&nbsp;<%= @teamlists_lol.lol_team_name %> 
           
           <table class="table">
             <tr >
@@ -116,18 +271,20 @@ font4{
           </table>
           <br>
           
-          <center><h1><font3>소개</font3></h1><br>
+          <center><h1><font3>소개</font3></h1> <br>
          
           <font4><%= @teamlists_lol.comment %></font4>
+      
           </center>
           
           <div>
-            <a href="/freematch/team_list"><button>팀리스트로 가기</button></a>
+           
             
-            <button id="fight_lol">대결 신청!!!!!!</button>
+            <button id="fight_lol" type="button" class="btn btn-primary">대결 신청</button>
             
             <% if @teamlists_lol.lol_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
+              
                 <input type="submit" value="팀삭제">
                 <input type='hidden' name='teamlist_id' value=<%= @teamlists_lol.id %>>
                 <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
@@ -196,12 +353,11 @@ font4{
           <br>
           <center><h1><font3>소개</font3></h1><br>
         
-          <h1> 팀 설명 : <font4><%= @teamlists_fifa.comment %></font4></h1></center>
+          <font4><%= @teamlists_fifa.comment %></font4></center>
           <br>
-          <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
             
         <!-- 피파 대결신청 출력 -->    
-          <button id="fight_fifa">대결 신청!!!!!!</button>
+          <button id="fight_fifa" type="button" class="btn btn-primary">대결 신청</button>
           <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
             <%= form_tag("/freematch/delete_team", method: "get") do %>
               <input type="submit" value="팀삭제">
@@ -209,7 +365,7 @@ font4{
               <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
             <% end %>
           <% end %>
-          
+          <br><br>
           <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
             이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
                    <a href="/freematch/matching_success/<%= s.fifa_add_team_name_id %>"><button id="fifa_matching_success">수락</button></a><br>
@@ -277,8 +433,8 @@ font4{
           <font4><%= @teamlists_hearthstone.comment %></font4></center>
           <h1> 팀 설명 : <%= @teamlists_hearthstone.comment %></h1><br>
          
-          <button><a href="/freematch/team_list">팀리스트로 가기</a></button>
-          <button id="fight_hearthstone">대결 신청!!!!!!</button>
+          
+          <button id="fight_hearthstone" type="button" class="btn btn-primary" >대결 신청</button>
           
           <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
             <%= form_tag("/freematch/delete_team", method: "get") do %>
@@ -327,5 +483,10 @@ font4{
       </div>
     </div>
   </div>
-  <center><button type="button" class="btn btn-primary"><a href="/freematch/team_list"><font color="white">팀리스트로 가기</font></a></button></center><br><br>
+  
+  <ul>
+  <center><li2><a href="/freematch/team_list" class="round green"><font size="3px" color="white">팀 리스트</font><span class="round">팀 리스트로 돌아 갑니다.</span></a></li2></center>
+   <br>
+</ul> 
+  
 </body>
