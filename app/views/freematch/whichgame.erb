@@ -1,0 +1,9 @@
+<% @aaa.each do |which| %>
+    
+     <% @bbb = TeamlistLol.find(which.lol_whichgame_my_id) %>
+     <% @ccc = TeamlistLol.find(which.lol_whichgame_opposing_id) %>     
+     <%= @bbb.leader_name %> vs <%= @ccc.leader_name %>
+     
+<% end %>
+
+

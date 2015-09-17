@@ -69,29 +69,34 @@ ActiveRecord::Schema.define(version: 20150916084825) do
   end
 
   create_table "teamlist_fifas", force: :cascade do |t|
-    t.string   "game_id",              default: "", null: false
-    t.string   "tear",                 default: "", null: false
-    t.text     "comment",              default: "", null: false
-    t.integer  "fifa_current_user_id",              null: false
-    t.string   "fifa_major",           default: "", null: false
-    t.string   "fifa_user_name",       default: "", null: false
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.string   "game_id",              default: "",    null: false
+    t.string   "tear",                 default: "",    null: false
+    t.text     "comment",              default: "",    null: false
+    t.integer  "fifa_current_user_id",                 null: false
+    t.boolean  "fifa_whichgame",       default: false, null: false
+    t.string   "fifa_opposing_team",   default: "",    null: false
+    t.string   "fifa_major",           default: "",    null: false
+    t.string   "fifa_user_name",       default: "",    null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "teamlist_hearthstones", force: :cascade do |t|
-    t.string   "game_id",                     default: "", null: false
-    t.string   "tear",                        default: "", null: false
-    t.text     "comment",                     default: "", null: false
-    t.integer  "hearthstone_current_user_id",              null: false
-    t.string   "hearthstone_major",           default: "", null: false
-    t.string   "hearthstone_user_name",       default: "", null: false
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.string   "game_id",                     default: "",    null: false
+    t.string   "tear",                        default: "",    null: false
+    t.text     "comment",                     default: "",    null: false
+    t.integer  "hearthstone_current_user_id",                 null: false
+    t.boolean  "hearthstone_whichgame",       default: false, null: false
+    t.string   "hearthstone_opposing_team",   default: "",    null: false
+    t.string   "hearthstone_major",           default: "",    null: false
+    t.string   "hearthstone_user_name",       default: "",    null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   create_table "teamlist_lols", force: :cascade do |t|
     t.boolean  "lol_whichgame",       default: false, null: false
+    t.string   "lol_opposing_team",   default: "",    null: false
     t.string   "lol_team_name",       default: "",    null: false
     t.string   "lol_major",           default: "",    null: false
     t.integer  "lol_current_user_id",                 null: false
@@ -137,12 +142,12 @@ ActiveRecord::Schema.define(version: 20150916084825) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "whichgames", force: :cascade do |t|
-    t.boolean  "lol_whichgame",        default: false, null: false
-    t.integer  "lol_whichgame_id",                     null: false
-    t.integer  "lol_add_team_name_id",                 null: false
-    t.integer  "lol_opposingteam",                     null: false
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.integer  "lol_whichgame_my_id",                          null: false
+    t.integer  "lol_whichgame_opposing_id",                    null: false
+    t.string   "lol_whichgame_my_teamname",       default: "", null: false
+    t.string   "lol_whichgame_opposing_teamname", default: "", null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
 end

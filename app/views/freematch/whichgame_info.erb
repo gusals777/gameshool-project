@@ -1,0 +1,8 @@
+<% @aaa.each do |which| %>
+
+<% @bbb = TeamlistLol.find(which.lol_whichgame_my_id) %>
+     <% @ccc = TeamlistLol.find(which.lol_whichgame_opposing_id) %>     
+     <%= which.lol_whichgame_my_teamname %> vs <%= which.lol_whichgame_opposing_teamname %>
+     <a href="/freematch/whichgame_info">자세히 보기</a><br>
+     
+     <% end %>
