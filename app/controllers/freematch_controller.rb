@@ -202,21 +202,74 @@ class FreematchController < ApplicationController
     end
     
     def matching_success
-     
-    
-     
-      @my_lol_team = TeamlistLol.find(@teamlist_lol_id)
-      @opposing_team = TeamlistLol.find(@lol_add_team_name_id)
-
-      @my_lol_team.lol_whichgame = true
-      @my_lol_team.save
+      @kind_of_game = params[:kind_of_game]
       
-      @opposing_team.lol_whichgame = true
-      @opposing_team.save
+      if @kind_of_game == "lol"
         
+        @lol_add_team_name_id = params[:lol_add_team_name_id]
+       
+        @my_lol_team = TeamlistLol.where(:lol_current_user_id => current_user.id).take
+        @opposing_team = TeamlistLol.where(:lol_current_user_id => @lol_add_team_name_id).take
+  
+        @my_lol_team.lol_whichgame = true
+        @my_lol_team.lol_opposing_team = @opposing_team.lol_team_name
+        
+        @my_lol_team.save
+        
+        @opposing_team.lol_whichgame = true
+        @opposing_team.lol_opposing_team = @my_lol_team.lol_team_name
+        @opposing_team.save
+        
+        
+        @whichgame_id = Whichgame.new
+        @whichgame_id.lol_whichgame_opposing_id = @opposing_team.id
+        @whichgame_id.lol_whichgame_opposing_teamname = @opposing_team.lol_team_name
+        @whichgame_id.lol_whichgame_my_id = @my_lol_team.id
+        @whichgame_id.lol_whichgame_my_teamname = @my_lol_team.lol_team_name
+        @whichgame_id.save
+        
+      elsif @kind_of_game == "fifa"
+      
+        @fifa_add_team_name_id = params[:fifa_add_team_name_id]
+       
+        @my_fifa_team = TeamlistFifa.where(:fifa_current_user_id => current_user.id).take
+        @opposing_team = TeamlistFifa.where(:fifa_current_user_id => @fifa_add_team_name_id).take
+  
+        @my_fifa_team.fifa_whichgame = true
+        @my_fifa_team.fifa_opposing_team = @opposing_team.fifa_user_name
+        @my_fifa_team.save
+        
+        @opposing_team.fifa_whichgame = true
+        @opposing_team.fifa_opposing_team = @my_fifa_team.fifa_user_name
+        @opposing_team.save
+        
+      else
+        
+        @hearthstone_add_team_name_id = params[:hearthstone_add_team_name_id]
+       
+        @my_hearthstone_team = TeamlistHearthstone.where(:hearthstone_current_user_id => current_user.id).take
+        @opposing_team = TeamlistHearthstone.where(:hearthstone_current_user_id => @hearthstone_add_team_name_id).take
+  
+        @my_hearthstone_team.hearthstone_whichgame = true
+        @my_hearthstone_team.hearthstone_opposing_team = @opposing_team.hearthstone_user_name
+        @my_hearthstone_team.save
+        
+        @opposing_team.hearthstone_whichgame = true
+        @opposing_team.hearthstone_opposing_team = @my_hearthstone_team.hearthstone_user_name
+        @opposing_team.save
+        
+      end
       redirect_to "/freematch/team_list"
     end
     
     def daejin
     end
+    
+    def whichgame
+      @aaa = Whichgame.all
+    end
+    
+    def whichgame_info
+    end
+    
 end

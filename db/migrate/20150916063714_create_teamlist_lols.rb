@@ -5,14 +5,13 @@ class CreateTeamlistLols < ActiveRecord::Migration
           
           #------롤 DB 공간------
           
-        
-          t.boolean :lol_whichgame,         null: false, default: false
-        
-          t.string :lol_team_name          , null: false, default: ""      #lol 팀명 
-           
-          t.string :lol_major              , null: false, default: ""     #lol_major
-          t.integer :lol_current_user_id   , null: false, default: ""
           
+          t.boolean :lol_whichgame,         null: false, default: false    #게임중 표시 컬럼
+          t.string :lol_opposing_team      , null: false, default: ""      #게임중 앞에 내팀과 상대팀 이름을 표시해줄 컬럼
+
+          t.string :lol_team_name          , null: false, default: ""      #lol 팀명 
+          t.string :lol_major              , null: false, default: ""      #lol_major
+          t.integer :lol_current_user_id   , null: false, default: ""
           t.text :comment,                null: false, default: ""         #팀등록 소개
         
         #Game ID

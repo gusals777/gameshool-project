@@ -278,24 +278,31 @@ font4{
           </center>
           
           <div>
-           
-            
-            <button id="fight_lol" type="button" class="btn btn-primary">대결 신청</button>
-            
-            <% if @teamlists_lol.lol_current_user_id == current_user.id %>
-              <%= form_tag("/freematch/delete_team", method: "get") do %>
+  
+            <% if @teamlists_lol.lol_whichgame == false %>
+              <button id="fight_lol" type="button" class="btn btn-primary">대결 신청</button>
               
-                <input type="submit" value="팀삭제">
-                <input type='hidden' name='teamlist_id' value=<%= @teamlists_lol.id %>>
-                <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+              <% if @teamlists_lol.lol_current_user_id == current_user.id %>
+                <%= form_tag("/freematch/delete_team", method: "get") do %>
+                  <input type="submit" value="팀삭제">
+                  <input type='hidden' name='teamlist_id' value=<%= @teamlists_lol.id %>>
+                  <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+                <% end %>
               <% end %>
-            <% end %>
+            <% else %>
+              <%= @teamlists_lol.lol_opposing_team %> 님과 대결중!!!!
+              <a href="#">대결 정보 보러 가기</a>
+            <% end %>  
           </div>
           <br>
-          
-          <% @teamlists_lol.fightsubscriptions.each do |s| %>
-            팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
-                   <%= s.lol_add_team_name_id %><a href="/freematch/matching_success?teamlist_lol_id=<%=s.teamlist_lol_id%>&lol_add_team_name_id=<%=s.lol_add_team_name_id%>"><button id="lol_matching_success">수락</button></a><br>
+          <% if @teamlists_lol.lol_whichgame == false %>
+            <% @teamlists_lol.fightsubscriptions.each do |s| %>
+              팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
+                     <%= s.lol_add_team_name_id %>
+                       <% if @teamlists_lol.lol_current_user_id == current_user.id %>
+                         <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success">수락</button></a><br>
+                       <% end %>
+            <% end %>           
           <% end %>
           
           <script>
@@ -310,6 +317,9 @@ font4{
                 }
                 else if (<%= @teamlists_lol.fightsubscriptions.count >= 3 %>){
                   alert("더 이상 대결 신청을 할 수 없습니다."); 
+                }
+                else if (<%= @teamlists_lol.lol_whichgame == true %>){
+                  alert("현재 대결 중입니다.");
                 }
                 else{
                   $.ajax({
@@ -357,18 +367,28 @@ font4{
           <br>
             
         <!-- 피파 대결신청 출력 -->    
+        <% if @teamlists_fifa.fifa_whichgame == false %>
           <button id="fight_fifa" type="button" class="btn btn-primary">대결 신청</button>
           <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
-            <%= form_tag("/freematch/delete_team", method: "get") do %>
-              <input type="submit" value="팀삭제">
-              <input type='hidden' name='teamlist_id' value=<%= @teamlists_fifa.id %>>
-              <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
-            <% end %>
-          <% end %>
-          <br><br>
-          <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
+              <%= form_tag("/freematch/delete_team", method: "get") do %>
+                <input type="submit" value="팀삭제">
+                <input type='hidden' name='teamlist_id' value=<%= @teamlists_fifa.id %>>
+                <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+              <% end %>
+          <% end %>    
+        <% else %>
+          <%= @teamlists_fifa.fifa_opposing_team %> 님과 대결중!!!!
+          <a href="#">대결 정보 보러 가기</a>
+        <% end %>
+          
+          <% if @teamlists_fifa.fifa_whichgame == false %>
+            <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
             이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
-                   <a href="/freematch/matching_success/<%= s.fifa_add_team_name_id %>"><button id="fifa_matching_success">수락</button></a><br>
+            
+                    <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
+                       <a href="/freematch/matching_success?fifa_add_team_name_id=<%=s.fifa_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="fifa_matching_success">수락</button></a><br>
+                    <% end %>
+            <% end %>
           <% end %>
             
         <!-- 피파 대결신청 출력 끝 -->
@@ -387,6 +407,9 @@ font4{
               }
               else if (<%= @teamlists_fifa.fightsubscription_fifas.count >= 3 %>){
                 alert("더 이상 대결 신청을 할 수 없습니다."); 
+              }
+              else if (<%= @teamlists_fifa.fifa_whichgame == true %>){
+                alert("현재 대결 중입니다.");
               }
               else{
                 $.ajax({
@@ -433,20 +456,29 @@ font4{
           <font4><%= @teamlists_hearthstone.comment %></font4></center>
           <h1> 팀 설명 : <%= @teamlists_hearthstone.comment %></h1><br>
          
-          
-          <button id="fight_hearthstone" type="button" class="btn btn-primary" >대결 신청</button>
-          
-          <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
-            <%= form_tag("/freematch/delete_team", method: "get") do %>
-              <input type="submit" value="팀삭제">
-              <input type='hidden' name='teamlist_id' value=<%= @teamlists_hearthstone.id %>>
-              <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+          <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
+            <button id="fight_hearthstone" type="button" class="btn btn-primary" >대결 신청</button>
+            
+            <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
+              <%= form_tag("/freematch/delete_team", method: "get") do %>
+                <input type="submit" value="팀삭제">
+                <input type='hidden' name='teamlist_id' value=<%= @teamlists_hearthstone.id %>>
+                <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+              <% end %>
             <% end %>
+          <% else %>
+            <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중!!!!
+            <a href="#">대결 정보 보러 가기</a>
           <% end %>
           
-          <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
-            이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
-                   <a href="/freematch/matching_success/<%= s.hearthstone_add_team_name_id %>"><button id="hearthstone_matching_success">수락</button></a><br>
+          <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
+            <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
+              이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
+              
+                     <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
+                       <a href="/freematch/matching_success?hearthstone_add_team_name_id=<%=s.hearthstone_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="hearthstone_matching_success">수락</button></a><br>
+                     <% end %>
+            <% end %>
           <% end %>
           
           <script>
@@ -460,6 +492,9 @@ font4{
                 }
                 else if (<%= @teamlists_hearthstone.fightsubscription_hearthstones.count >= 3 %>){
                   alert("더 이상 대결 신청을 할 수 없습니다."); 
+                }
+                else if (<%= @teamlists_hearthstone.hearthstone_whichgame == true %>){
+                  alert("현재 대결 중입니다.");
                 }
                 else{
                   $.ajax({
