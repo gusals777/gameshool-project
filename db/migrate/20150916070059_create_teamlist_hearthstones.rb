@@ -9,6 +9,13 @@ class CreateTeamlistHearthstones < ActiveRecord::Migration
           
           t.string :hearthstone_major,              null: false, default: "" #hearthstone_major
           t.string :hearthstone_user_name,          null: false, default: ""  #하스스톤 유저 이름  
+          
+        #하스스톤 랭크
+          t.integer:hearthstone_total_game       , null: false, default: 0    #하스 총 경기수
+          t.integer :hearthstone_victory          , null: false, default: 0   #하스 승수
+          t.integer :hearthstone_lose             , null: false, default: 0   #하스 패수  
+          t.integer :hearthstone_winner_point     , null: false, default: 0   #하스 승점    
+          t.integer :hearthstone_winning_rate     , null: false, default: 0   #하스 승률  
       
       t.timestamps null: false
     end

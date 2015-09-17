@@ -195,10 +195,55 @@ class FreematchController < ApplicationController
    # 대결신청 시 신청팀 저장 시킴 끝 
     
     def rank
-      render layout: false
+        @teamlists_fifa = TeamlistFifa.all.sort()
+        @teamlists_lol = TeamlistLol.all.sort()
+        @teamlists_hearthstone = TeamlistHearthstone.all.sort()
+        
+        
+        @rank_fifa_winner_point = TeamlistFifa.order(fifa_winner_point: :desc )    #피파승점
+        @rank_fifa_total_game = TeamlistFifa.order(fifa_total_game: :desc)         #피파총경기수
+        @rank_fifa_winning_rate = TeamlistFifa.order(fifa_winning_rate: :desc)     #피파승률
+        @rank_fifa_lose = TeamlistFifa.order(fifa_lose: :desc)                     #피파트롤
+        
+         
+        @rank_Heartstone_winner_point = TeamlistHearthstone.order(hearthstone_winner_point: :desc)     #하스승점
+        @rank_Heartstone_total_game = TeamlistHearthstone.order(hearthstone_total_game: :desc)         #하스총경기수
+        @rank_Heartstone_winning_rate = TeamlistHearthstone.order(hearthstone_winning_rate: :desc)     #하스승률
+        @rank_Heartstone_lose = TeamlistHearthstone.order(hearthstone_lose: :desc)                     #하스트롤
+        
+         
+        @rank_lol_winner_point = TeamlistLol.order(lol_winner_point: :desc)     #롤승점
+        @rank_lol_total_game = TeamlistLol.order(lol_total_game: :desc)         #롤총경기수
+        @rank_lol_winning_rate = TeamlistLol.order(lol_winning_rate: :desc)     #롤승률
+        @rank_lol_lose = TeamlistLol.order(lol_lose: :desc)                     #롤트롤
+        render layout: false
     end
+   
     
-    def loldetailrank
+    def total_ranking
+        @teamlists_fifa = TeamlistFifa.all.sort()
+        @teamlists_lol = TeamlistLol.all.sort()
+        @teamlists_hearthstone = TeamlistHearthstone.all.sort()
+        
+        
+        @rank_fifa_winner_point = TeamlistFifa.order(fifa_winner_point: :desc )     #피파승점
+        @rank_fifa_total_game = TeamlistFifa.order(fifa_total_game: :desc)         #피파총경기수
+        @rank_fifa_winning_rate = TeamlistFifa.order(fifa_winning_rate: :desc)     #피파승률
+        @rank_fifa_lose = TeamlistFifa.order(fifa_lose: :desc)                     #피파트롤
+        
+         
+        @rank_Heartstone_winner_point = TeamlistHearthstone.order(hearthstone_winner_point: :desc)     #하스승점
+        @rank_Heartstone_total_game = TeamlistHearthstone.order(hearthstone_total_game: :desc)         #하스총경기수
+        @rank_Heartstone_winning_rate = TeamlistHearthstone.order(hearthstone_winning_rate: :desc)     #하스승률
+        @rank_Heartstone_lose = TeamlistHearthstone.order(hearthstone_lose: :desc)                     #하스트롤
+        
+         
+        @rank_lol_winner_point = TeamlistLol.order(lol_winner_point: :desc)     #롤승점
+        @rank_lol_total_game = TeamlistLol.order(lol_total_game: :desc)         #롤총경기수
+        @rank_lol_winning_rate = TeamlistLol.order(lol_winning_rate: :desc)     #롤승률
+        @rank_lol_lose = TeamlistLol.order(lol_lose: :desc)                     #롤트롤
+        render layout: false
+      
     end
     
     def matching_success

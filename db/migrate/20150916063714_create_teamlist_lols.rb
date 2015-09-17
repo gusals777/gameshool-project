@@ -35,6 +35,13 @@ class CreateTeamlistLols < ActiveRecord::Migration
           t.string :lol_member_name_2     , null: false, default: ""
           t.string :lol_member_name_3     , null: false, default: ""
           t.string :lol_member_name_4     , null: false, default: ""
+          
+        #롤 랭크
+          t.integer :lol_total_game       , null: false, default: 0   #롤 총 경기수
+          t.integer :lol_victory          , null: false, default: 0   #롤 승수
+          t.integer :lol_lose             , null: false, default: 0   #롤 패수  
+          t.integer :lol_winner_point     , null: false, default: 0   #롤 승점  
+          t.integer :lol_winning_rate     , null: false, default: 0   #롤 승률
 
       #------롤 DB 공간------끝
         

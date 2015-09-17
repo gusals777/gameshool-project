@@ -75,6 +75,11 @@ ActiveRecord::Schema.define(version: 20150916084825) do
     t.integer  "fifa_current_user_id",              null: false
     t.string   "fifa_major",           default: "", null: false
     t.string   "fifa_user_name",       default: "", null: false
+    t.integer  "fifa_total_game",      default: 0,  null: false
+    t.integer  "fifa_victory",         default: 0,  null: false
+    t.integer  "fifa_lose",            default: 0,  null: false
+    t.integer  "fifa_winner_point",    default: 0,  null: false
+    t.integer  "fifa_winning_rate",    default: 0,  null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
   end
@@ -86,6 +91,11 @@ ActiveRecord::Schema.define(version: 20150916084825) do
     t.integer  "hearthstone_current_user_id",              null: false
     t.string   "hearthstone_major",           default: "", null: false
     t.string   "hearthstone_user_name",       default: "", null: false
+    t.integer  "hearthstone_total_game",      default: 0,  null: false
+    t.integer  "hearthstone_victory",         default: 0,  null: false
+    t.integer  "hearthstone_lose",            default: 0,  null: false
+    t.integer  "hearthstone_winner_point",    default: 0,  null: false
+    t.integer  "hearthstone_winning_rate",    default: 0,  null: false
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
   end
@@ -111,6 +121,11 @@ ActiveRecord::Schema.define(version: 20150916084825) do
     t.string   "lol_member_name_2",   default: "",    null: false
     t.string   "lol_member_name_3",   default: "",    null: false
     t.string   "lol_member_name_4",   default: "",    null: false
+    t.integer  "lol_total_game",      default: 0,     null: false
+    t.integer  "lol_victory",         default: 0,     null: false
+    t.integer  "lol_lose",            default: 0,     null: false
+    t.integer  "lol_winner_point",    default: 0,     null: false
+    t.integer  "lol_winning_rate",    default: 0,     null: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

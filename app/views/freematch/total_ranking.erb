@@ -1,0 +1,13 @@
+<h1>해당 버튼에 대한 전체 랭킹</h1>
+
+
+
+  <% @rank_lol_winner_point.each do |t| %>
+    <h4><%= t.lol_team_name %></h4>
+    <p>승점 : <%= t.lol_winner_point %> 점</p>
+  <% end %>
+  <% else %>
+  <h1>하하</h1>
+  
+<% end %>
+
