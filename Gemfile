@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'mailgun_rails'
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
