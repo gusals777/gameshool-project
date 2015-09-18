@@ -272,6 +272,8 @@ class FreematchController < ApplicationController
         @opposing_team.save
         
         
+        
+        
         @whichgame_lol = Whichgame.new
         @whichgame_lol.lol_whichgame_opposing_id = @opposing_team.id
         @whichgame_lol.lol_whichgame_opposing_teamname = @opposing_team.lol_team_name
@@ -368,6 +370,7 @@ class FreematchController < ApplicationController
    def image_upload
      
      @kind_of_game = params[:kind_of_game]
+     @teamlist_id = params[:teamlist_id]
      
      if @kind_of_game == "lol"
       @whichgame_lol = Whichgame.find(params[:which_id])
@@ -379,6 +382,12 @@ class FreematchController < ApplicationController
       @whichgame_lol = WhichgameFifa.find(params[:which_id])
       @whichgame_lol.fifa_victory_image = params[:fifa_img_file]
       @whichgame_lol.save
+      
+      # @one_teamlist_fifa = TeamlistFifa.find(@teamlist_id)
+      # @one_teamlist_fifa.fifa_whichgame = false
+      # @one_teamlist_fifa.fifa_opposing_team = ""
+      # @one_teamlist_fifa.save
+      
       redirect_to action: 'whichgame_info', :kind_of_game => 'fifa', :which_id => params[:which_id]  
       
       
@@ -386,6 +395,12 @@ class FreematchController < ApplicationController
       @whichgame_lol = WhichgameHearthstone.find(params[:which_id])
       @whichgame_lol.hearthstone_victory_image = params[:hearthstone_img_file]
       @whichgame_lol.save
+      
+      # @one_teamlist_fifa = TeamlistFifa.find(@teamlist_id)
+      # @one_teamlist_fifa._whichgame = false
+      # @one_teamlist_fifa.fifa_opposing_team = ""
+      # @one_teamlist_fifa.save
+      
       redirect_to action: 'whichgame_info', :kind_of_game => 'hearthstone', :which_id => params[:which_id]  
       
      end

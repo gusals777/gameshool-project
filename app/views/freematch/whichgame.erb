@@ -83,7 +83,7 @@
    <% @whichgame_fifa.each do |which| %>
    
         <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
-        <a href="/freematch/whichgame_info?kind_of_game=fifa">자세히 보기</a><br>
+        <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>">자세히 보기</a><br>
    <% end %>
          </div>
         </div>
@@ -111,7 +111,7 @@
    <% @whichgame_hearthstone.each do |which| %>
    
        <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
-        <a href="/freematch/whichgame_info?kind_of_game=hearthstone">자세히 보기</a><br>
+        <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>">자세히 보기</a><br>
    <% end %>
        </div>
          

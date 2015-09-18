@@ -171,8 +171,9 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           
         </div>
       
-         <%= form_tag("/freematch/image_upload?kind_of_game=lol", enctype: "multipart/form-data",  method: "post") do %>
+         <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %>
             스크린샷 첨부 : <input type="file" name="lol_img_file"><input type="submit" value="확인">
+                            <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
                             <input type="hidden" name="which_id" value="<%= @whichgame_lol.id %>"><br>
                             <img src="<%= @whichgame_lol.lol_victory_image.url %>"><br>
                            
@@ -231,9 +232,11 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
         </div>
       </div>
       
-        <%= form_tag("/freematch/image_upload?kind_of_game=fifa", enctype: "multipart/form-data",  method: "post") do %>
+        <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %>
           스크린샷 첨부 : <input type="file" name="fifa_img_file"><input type="submit" value="확인">
           <input type="hidden" name="which_id" value="<%= @whichgame_fifa.id %>"><br>
+          <input type="hidden" name="teamlist_id" value="<%= @whichgame_fifa.fifa_whichgame_my_id %>">
+          <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
           <img src="<%= @whichgame_fifa.fifa_victory_image.url %>"><br>
         <% end %>
   
@@ -289,9 +292,10 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           </table>
         </div>
       </div>
-      d
+      
         <%= form_tag("/freematch/image_upload?kind_of_game=hearthstone", enctype: "multipart/form-data",  method: "post") do %>
           스크린샷 첨부 : <input type="file" name="hearthstone_img_file"><input type="submit" value="확인">
+          <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
           <input type="hidden" name="which_id" value="<%= @whichgame_hearthstone.id %>"><br>
           <img src="<%= @whichgame_hearthstone.hearthstone_victory_image.url %>"><br>
         <% end %>
