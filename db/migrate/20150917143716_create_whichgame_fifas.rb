@@ -7,7 +7,7 @@ class CreateWhichgameFifas < ActiveRecord::Migration
           t.integer :fifa_whichgame_opposing_id,               default: 0
           t.string :fifa_whichgame_my_teamname,                default: ""
           t.string :fifa_whichgame_opposing_teamname,          default: ""
-
+          t.string :fifa_victory_image
       t.timestamps null: false
     end
   end

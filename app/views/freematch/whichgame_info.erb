@@ -6,7 +6,6 @@
 * {font-family: Helvetica Neue, Arial, sans-serif; }
 
 
-
 h1, table { text-align: center; }
 
 table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem;}
@@ -71,42 +70,42 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
               <tr class="info">
                 <th><%= @kind_of_game %></th>
                 <th>팀장</th>
-                <th><%= @bbb.leader_name %></th>
-                <th><%= @bbb.lol_major %></th>
-                <th><%= @bbb.lol_leader_tear %></th>
-                <th><%= @bbb.lol_leader_id %></th>
+                <th><%= @lol_my_tema_info.leader_name %></th>
+                <th><%= @lol_my_tema_info.lol_major %></th>
+                <th><%= @lol_my_tema_info.lol_leader_tear %></th>
+                <th><%= @lol_my_tema_info.lol_leader_id %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @bbb.lol_member_name_1 %></th>
-                <th><%= @bbb.lol_member_major_1 %></th>
-                <th><%= @bbb.lol_tear_user_1 %></th>
-                <th><%= @bbb.lol_user_id_1 %></th>
+                <th><%= @lol_my_tema_info.lol_member_name_1 %></th>
+                <th><%= @lol_my_tema_info.lol_member_major_1 %></th>
+                <th><%= @lol_my_tema_info.lol_tear_user_1 %></th>
+                <th><%= @lol_my_tema_info.lol_user_id_1 %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @bbb.lol_member_name_2 %></th>
-                <th><%= @bbb.lol_member_major_2 %></th>
-                <th><%= @bbb.lol_tear_user_2 %></th>
-                <th><%= @bbb.lol_user_id_2 %></th>
+                <th><%= @lol_my_tema_info.lol_member_name_2 %></th>
+                <th><%= @lol_my_tema_info.lol_member_major_2 %></th>
+                <th><%= @lol_my_tema_info.lol_tear_user_2 %></th>
+                <th><%= @lol_my_tema_info.lol_user_id_2 %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @bbb.lol_member_name_3 %></th>
-                <th><%= @bbb.lol_member_major_3 %></th>
-                <th><%= @bbb.lol_tear_user_3 %></th>
-                <th><%= @bbb.lol_user_id_3 %></th>
+                <th><%= @lol_my_tema_info.lol_member_name_3 %></th>
+                <th><%= @lol_my_tema_info.lol_member_major_3 %></th>
+                <th><%= @lol_my_tema_info.lol_tear_user_3 %></th>
+                <th><%= @lol_my_tema_info.lol_user_id_3 %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @bbb.lol_member_name_4 %></th>
-                <th><%= @bbb.lol_member_major_4 %></th>
-                <th><%= @bbb.lol_tear_user_4 %></th>
-                <th><%= @bbb.lol_user_id_4 %></th>
+                <th><%= @lol_my_tema_info.lol_member_name_4 %></th>
+                <th><%= @lol_my_tema_info.lol_member_major_4 %></th>
+                <th><%= @lol_my_tema_info.lol_tear_user_4 %></th>
+                <th><%= @lol_my_tema_info.lol_user_id_4 %></th>
               </tr>
             </table>
           </div>
@@ -114,7 +113,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           <div class="col-md-2" style="text-align: center">
           
              <h1>VS</h1>
-          
+            
           </div>
           
           <div class="col-md-5">
@@ -130,48 +129,56 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
               <tr class="info">
                 <th><%= @kind_of_game %></th>
                 <th>팀장</th>
-                <th><%= @ccc.leader_name %></th>
-                <th><%= @ccc.lol_major %></th>
-                <th><%= @ccc.lol_leader_tear %></th>
-                <th><%= @ccc.lol_leader_id %></th>
+                <th><%= @lol_opposing_team_info.leader_name %></th>
+                <th><%= @lol_opposing_team_info.lol_major %></th>
+                <th><%= @lol_opposing_team_info.lol_leader_tear %></th>
+                <th><%= @lol_opposing_team_info.lol_leader_id %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @ccc.lol_member_name_1 %></th>
-                <th><%= @ccc.lol_member_major_1 %></th>
-                <th><%= @ccc.lol_tear_user_1 %></th>
-                <th><%= @ccc.lol_user_id_1 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_name_1 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_major_1 %></th>
+                <th><%= @lol_opposing_team_info.lol_tear_user_1 %></th>
+                <th><%= @lol_opposing_team_info.lol_user_id_1 %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @ccc.lol_member_name_2 %></th>
-                <th><%= @ccc.lol_member_major_2 %></th>
-                <th><%= @ccc.lol_tear_user_2 %></th>
-                <th><%= @ccc.lol_user_id_2 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_name_2 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_major_2 %></th>
+                <th><%= @lol_opposing_team_info.lol_tear_user_2 %></th>
+                <th><%= @lol_opposing_team_info.lol_user_id_2 %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @ccc.lol_member_name_3 %></th>
-                <th><%= @ccc.lol_member_major_3 %></th>
-                <th><%= @ccc.lol_tear_user_3 %></th>
-                <th><%= @ccc.lol_user_id_3 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_name_3 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_major_3 %></th>
+                <th><%= @lol_opposing_team_info.lol_tear_user_3 %></th>
+                <th><%= @lol_opposing_team_info.lol_user_id_3 %></th>
               </tr>
               <tr class="info">
                 <th></th>
                 <th>팀원</th>
-                <th><%= @ccc.lol_member_name_4 %></th>
-                <th><%= @ccc.lol_member_major_4 %></th>
-                <th><%= @ccc.lol_tear_user_4 %></th>
-                <th><%= @ccc.lol_user_id_4 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_name_4 %></th>
+                <th><%= @lol_opposing_team_info.lol_member_major_4 %></th>
+                <th><%= @lol_opposing_team_info.lol_tear_user_4 %></th>
+                <th><%= @lol_opposing_team_info.lol_user_id_4 %></th>
               </tr>
             </table>
           </div>
+          
         </div>
-       
-<% elsif @kind_of_game == "fifa" %>
+      
+         <%= form_tag("/freematch/image_upload?kind_of_game=lol", enctype: "multipart/form-data",  method: "post") do %>
+            스크린샷 첨부 : <input type="file" name="lol_img_file"><input type="submit" value="확인">
+                            <input type="hidden" name="which_id" value="<%= which.id %>"><br>
+                            <img src="<%= which.lol_victory_image.url %>"><br>
+                           
+         <% end %>
+         
+  <% elsif @kind_of_game == "fifa" %>       
     <div class="row"> 
       <div class="col-md-5">
        <table class="table">
@@ -186,10 +193,10 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
             <tr class="info">
               <th><%= @kind_of_game %></th>
               <th>팀장</th>
-              <th><%= @bbb.fifa_user_name %></th>
-              <th><%= @bbb.fifa_major %></th>
-              <th><%= @bbb.tear %></th>
-              <th><%= @bbb.game_id %></th>
+              <th><%= @fifa_my_info.fifa_user_name %></th>
+              <th><%= @fifa_my_info.fifa_major %></th>
+              <th><%= @fifa_my_info.tear %></th>
+              <th><%= @fifa_my_info.game_id %></th>
             </tr>
           
           </table>
@@ -214,18 +221,23 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
             <tr class="info">
               <th><%= @kind_of_game %></th>
               <th>팀장</th>
-              <th><%= @ccc.fifa_user_name %></th>
-              <th><%= @ccc.fifa_major %></th>
-              <th><%= @ccc.tear %></th>
-              <th><%= @ccc.game_id %></th>
+              <th><%= @fifa_opposing_info.fifa_user_name %></th>
+              <th><%= @fifa_opposing_info.fifa_major %></th>
+              <th><%= @fifa_opposing_info.tear %></th>
+              <th><%= @fifa_opposing_info.game_id %></th>
             </tr>
            
           </table>
         </div>
       </div>
+      
+        <%= form_tag("/freematch/image_upload?kind_of_game=fifa", enctype: "multipart/form-data",  method: "post") do %>
+          스크린샷 첨부 : <input type="file" name="fifa_img_file"><input type="submit" value="확인">
+          <input type="hidden" name="which_id" value="<%= which.id %>"><br>
+          <img src="<%= which.fifa_victory_image.url %>"><br>
+        <% end %>
   
 <% else %>
-   
     <div class="row"> 
       <div class="col-md-5">
        <table class="table">
@@ -240,10 +252,10 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
             <tr class="info">
               <th><%= @kind_of_game %></th>
               <th>팀장</th>
-              <th><%= @bbb.hearthstone_user_name %></th>
-              <th><%= @bbb.hearthstone_major %></th>
-              <th><%= @bbb.tear %></th>
-              <th><%= @bbb.game_id %></th>
+              <th><%= @hearthstone_my_info.hearthstone_user_name %></th>
+              <th><%= @hearthstone_my_info.hearthstone_major %></th>
+              <th><%= @hearthstone_my_info.tear %></th>
+              <th><%= @hearthstone_my_info.game_id %></th>
             </tr>
           
           </table>
@@ -268,16 +280,21 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
             <tr class="info">
               <th><%= @kind_of_game %></th>
               <th>팀장</th>
-              <th><%= @ccc.hearthstone_user_name %></th>
-              <th><%= @ccc.hearthstone_major %></th>
-              <th><%= @ccc.tear %></th>
-              <th><%= @ccc.game_id %></th>
+              <th><%= @hearthstone_opposing_info.hearthstone_user_name %></th>
+              <th><%= @hearthstone_opposing_info.hearthstone_major %></th>
+              <th><%= @hearthstone_opposing_info.tear %></th>
+              <th><%= @hearthstone_opposing_info.game_id %></th>
             </tr>
            
           </table>
         </div>
       </div>
-
+        <%= form_tag("/freematch/image_upload?kind_of_game=hearthstone", enctype: "multipart/form-data",  method: "post") do %>
+          스크린샷 첨부 : <input type="file" name="hearthstone_img_file"><input type="submit" value="확인">
+          <input type="hidden" name="which_id" value="<%= which.id %>"><br>
+          <img src="<%= which.hearthstone_victory_image.url %>"><br>
+        <% end %>
+        
 <% end %>
 </div>
 
