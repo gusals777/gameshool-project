@@ -284,7 +284,7 @@ font4{
               
               <% if @teamlists_lol.lol_current_user_id == current_user.id %>
                 <%= form_tag("/freematch/delete_team", method: "get") do %>
-                  <input type="submit" value="팀삭제">
+                 <button type="submit" class="btn btn-primary">팀삭제</button>
                   <input type='hidden' name='teamlist_id' value=<%= @teamlists_lol.id %>>
                   <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
                 <% end %>
@@ -372,7 +372,8 @@ font4{
           <button id="fight_fifa" type="button" class="btn btn-primary">대결 신청</button><br>
           <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
-                <input type="submit" value="팀삭제">
+                <button type="submit" class="btn btn-primary">팀삭제</button>
+                <!--<input type="submit" value="팀삭제">-->
                 <input type='hidden' name='teamlist_id' value=<%= @teamlists_fifa.id %>>
                 <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
               <% end %>
@@ -462,7 +463,7 @@ font4{
             
             <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
-                <input type="submit" value="팀삭제">
+                 <button type="submit" class="btn btn-primary">팀삭제</button>
                 <input type='hidden' name='teamlist_id' value=<%= @teamlists_hearthstone.id %>>
                 <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
               <% end %>
