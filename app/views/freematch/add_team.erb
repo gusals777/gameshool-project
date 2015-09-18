@@ -6,86 +6,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
 <style>
-    .jumbotron
-  { min-height: 200px;
-    width:250px;
-  color:black;
-  background: #ffffff;
-  background: rgba(255, 255, 255, 0.3);
-  }
-  
-      .jumbotron2
-  { min-height: 500px;
-    width:850px;
-  color:black;
-  background: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  }
-  
-<style type="text/css">
-.form-style-2{
-    max-width: 500px;
-    padding: 20px 12px 10px 20px;
-    font: 13px Arial, Helvetica, sans-serif;
-}
-.form-style-2-heading{
-    font-weight: bold;
-    font-style: italic;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
-    font-size: 15px;
-    padding-bottom: 3px;
-}
-.form-style-2 label{
-    display: block;
-    margin: 0px 0px 15px 0px;
-}
-.form-style-2 label > span{
-    width: 100px;
-    font-weight: bold;
-    float: left;
-    padding-top: 8px;
-    padding-right: 5px;
-}
-.form-style-2 span.required{
-    color:red;
-}
-.form-style-2 .tel-number-field{
-    width: 40px;
-    text-align: center;
-}
-.form-style-2 input.input-field{
-    width: 48%;
-    
-}
 
-.form-style-2 input.input-field, 
-.form-style-2 .tel-number-field, 
-.form-style-2 .textarea-field, 
-.form-style-2 .select-field{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px 1px 4px #EBEBEB;
-    -moz-box-shadow: 1px 1px 4px #EBEBEB;
-    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    padding: 7px;
-    outline: none;
-}
-.form-style-2 .input-field:focus, 
-.form-style-2 .tel-number-field:focus, 
-.form-style-2 .textarea-field:focus,  
-.form-style-2 .select-field:focus{
-    border: 1px solid #0C0;
-}
-.form-style-2 .textarea-field{
-    height:100px;
-    width: 55%;
-}
 .form-style-2 input[type=submit],
 .form-style-2 input[type=button]{
     border: none;
@@ -99,10 +20,78 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.form-style-2 input[type=submit]:hover,
-.form-style-2 input[type=button]:hover{
-    background: #EA7B00;
-    color: #fff;
+
+  
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+div.wrapper {
+  margin: 20px auto;
+  width: 350px;
+}
+
+
+
+nav.vertical {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  overflow: hidden;
+  text-align: center;
+}
+
+
+
+      nav.vertical > ul > li > a {
+        background-color: rgb(157, 34, 60);
+        background-image: -webkit-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        background-image: -moz-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        background-image: -o-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        background-image: linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);
+        color: rgb(255,255,255);
+        display: block;
+        font-size: .85rem;
+        font-weight: 500;
+        height: 50px;
+        letter-spacing: .5rem;
+        line-height: 50px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        text-transform: uppercase;
+        transition: all .1s ease;
+        text-decoration: none;
+      }
+
+ 
+      
+
+
+
+ 
+
+div.wrapper2 {
+  margin: 20px auto;
+  width: 1000px;
 }
 </style>
 
@@ -117,11 +106,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                      <div class="site-heading">
-                       
-                        <h1><font1>팀 등록</font1></h1><h4>아래의 START를 눌러주세요<h4>
+                     
+                        <h1>팀 등록</h1>
                         <hr>
-                        <span class="subheading"><font1>참가하는 팀의 정보를 작성 해주세요.</font1></span>
-                      
+                        <span class="subheading">자신이 원하는 게임의 팀을 등록 합니다.</span>
+                     
                     </div>
                 </div>
             </div>
@@ -130,60 +119,75 @@
 
 
 
-
   <%= form_tag("/freematch/team_list_write", method: "post", :class => "form-style-2") do %>
     
-    <div class="row">
-      <div class="col-md-2"><center></center>
-      </div>
-      <div class="col-md-2">
-        <div class="jumbotron">
-          <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-              <div style="padding-bottom:1px; background:rgba(80,80,75,0.5); align:center">
-                <center><font1><a href="/freematch/team_list"><font color="black">Team list</font></a></font1></center>
-              </div>
-            <div style="padding-bottom:1px; background:rgba(80,80,75,0.5); align:center">               
-              <center><h1><font3><font size="20px">팀 등록</font></font3></h1></center>                
-            </div><!-- padding 닫혀지는 div -->
-            <br><br>
-
-            <div id="kind_of_game">
-              
-              <div>
-                <input type="radio" id="radio01" name="radio" value="lol">
-                <label for="radio01">League Of Legend</label><br>
-              </div>
-              
-              <div>
-                <input type="radio" id="radio02" name="radio" value="fifa">
-                <label for="radio02">Fifa Online 3</label><br>
-              </div>
-             
-              <div>
-                <input type="radio" id="radio03" name="radio" value="hearthstone">
-                <label for="radio03">Hearth stone</label><br>
-              </div>
-            </div>
-            </div><!-- md-8 닫는 div-->
-          </div><!-- 팀등록 페이지 첫 class row 닫는 div -->
-        </div><!-- 첫 점보트론 닫는 div -->
-      </div><!-- col_md 4의 div -->
+ 
+    
+   
+     
+       
+          
+        
+            
+         <div class="row">
+           
+              <div class="col-md-1"></div>
+            <div class="col-md-2">
+          <div class="wrapper">
+            <nav class="vertical">
+              <ul>
+                <li>
+                  <a href="#"><font2><font size="3px">게임을 선택해 주세요</font></font2></a>
+                  <div class="row">
+                  <div class="col-md-2"></div>
+                   <div class="col-md-8">
+                  <div style="text-align:left">
+                    <ul>
+                        <br><br>
+                      <li> <div><input type="radio" id="radio01" name="radio" value="lol"><label for="radio01">League Of Legend</label><br></div></li><br>
+                      <li> <div><input type="radio" id="radio02" name="radio" value="fifa"><label for="radio02">Fifa Online 3</label><br></div></li><br>
+                      <li> <div><input type="radio" id="radio03" name="radio" value="hearthstone"><label for="radio03">Hearth stone</label><br></div></li><br>
+                      <br><br>
+                    </ul>
+                  </div>
+                  </div>
+                   <div class="col-md-2"></div>
+                  </div>
+                </li>
+               
+              </ul>
+            </nav>
+           
+          </div>
+            </div><!-- 라디오버튼 부분 그리드 닫음 -->
+          
+        <div class="col-md-1"></div>
+       
+    
 
     
     <!-- 롤 팀 등록 -->
        
-        <div class="col-md-1"><font3><font size="5px" color="black"></font></font3>
-        </div>
-        <div class="col-md-7">
-          <div id="lol_team_introduce">
+       
+         <div class="col-md-7">
+          <div class="wrapper2">
+            <nav class="vertical">
+              <ul>
+                <li>
+                  <a href="#"><font2><font size="3px">팀 정보를 입력해주세요</font></font2></a>
+                 <div class="row">
+                 <div class="col-md-1"></div>
+                 <div class="col-md-10">
+          <div id="lol_team_introduce" style="text-align:left">
             <h1> 리그 오브 레전드 팀 등록 </h1>
+            팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"> <br>
+            학과 : <%= current_user.major %>
             <p>
-            팀명 : <input type="text" name="lol_team_name" placeholder="팀명">
+            팀명 : <input type="text" name="lol_team_name" placeholder="팀명" >
+            
             </p>
             <p>
-            팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"> 
+            
             
             <input type="hidden" name="lol_major" value="<%= current_user.major %>">
             <input type="hidden" name="lol_current_user_id" value="<%= current_user.id %>">
@@ -200,7 +204,7 @@
            		<option value="챌린저">챌린저</option>
             </select>
             
-            학과 : <%= current_user.major %>
+            
             </p>
             <p>
             팀원 1 : <input type="text" name="lol_member_name_1" placeholder="팀원 1"> ID : <input type="text" name="lol_user_id_1" placeholder="ID">
@@ -373,12 +377,12 @@
             </p>
       
             <textarea name="lol_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
-            <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
+            <input type="submit" value="완료" onClick="this.style.visibility='hidden'"><br><br>
           </div><!-- 롤팀 등록 div 끝-->
       
 
           <!-- 피파 팀 등록 -->  
-          <div style="display :none" id="fifa_team_introduce">
+          <div style="display :none; text-align:left" id="fifa_team_introduce">
             <h1> 피파 온라인3 팀 등록 </h1>
             <p>이름 : <%= current_user.name %><input type="hidden" name="fifa_user_name" value="<%= current_user.name %>"></p>
             <p>학과 : <%= current_user.major %><input type="hidden" name="fifa_major" value="<%= current_user.major %>"></p> 
@@ -387,14 +391,14 @@
             <p>
             <textarea name="fifa_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
             <input type="hidden" name="fifa_current_user_id" value="<%= current_user.id %>">
-            <input type="submit" value="완료" onClick="this.style.visibility='hidden'">
+            <input type="submit" value="완료" onClick="this.style.visibility='hidden'"><br><br>
             </p>
           </div>
       
       
       
           <!-- 하스 팀 등록 -->
-          <div style="display :none" id="hearthstone_team_introduce">
+          <div style="display :none; text-align:left" id="hearthstone_team_introduce">
           <h1> 하스스톤 팀 등록 </h1>
           <p>이름 : <%= current_user.name %><input type="hidden" name="hearthstone_user_name" value="<%= current_user.name %>"></p>
           <p>학과 : <%= current_user.major %><input type="hidden" name="hearthstone_major" value="<%= current_user.major %>"></p>
@@ -403,15 +407,30 @@
           <p>  
             <textarea name="hearthstone_team_comment" placeholder="팀을 소개 해주세요." style="margin: 0px; width: 518px; height: 142px;"></textarea><br>
             <input type="hidden" name="hearthstone_current_user_id" value="<%= current_user.id %>">
-            <input type="submit" value="완료" onClick="this.style.visibility='hidden'"></p>
+            <input type="submit" value="완료" onClick="this.style.visibility='hidden'"></p><br><br>
           </div>
         
-        </div>
+   
 
-    </div><!-- row 끝 -->
-  <div class="col-md-1"></div>
+  
+  
   <% end %> <!-- form 태그 end 끝-->
-
+         </li>
+                <li>
+                  <a href="#">TIP+ / GameSchool</a>
+                  </li>
+              </ul>
+            </nav>
+           
+          </div>
+         
+        
+  </div>
+  </div>
+  
+  <div class="col-md-1"></div>
+  </div>
+</div><!-- 전체 row div tag -->
 
 <script>
   $(function(){

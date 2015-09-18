@@ -1,5 +1,60 @@
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+<link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
 
-<h1>대결성사 자세히보기찡</h1>
+<style>
+* {font-family: Helvetica Neue, Arial, sans-serif; }
+
+
+
+h1, table { text-align: center; }
+
+table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem;}
+
+th, td { padding: 1.5rem; font-size: 1.3rem; }
+
+tr {background: hsl(50, 50%, 80%); }
+
+tr, td { transition: .4s ease-in; } 
+
+tr:first-child {background: hsla(12, 100%, 40%, 0.5); }
+
+tr:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
+
+td:empty {background: hsla(50, 25%, 60%, 0.7); }
+
+tr:hover:not(#firstrow), tr:hover td:empty {background: #ff0; pointer-events: visible;}
+tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+
+</style>
+
+<!-- Navigation -->
+     <%=render :partial =>"game_page/fixed_bar" %>
+<br>
+
+
+       
+        
+          <header class="intro-header" style="background-image: url('http://kr.leagueoflegends.com/upload/EditorImages/20150309153856_hyZxkMRP.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                     
+                       <h1>Detail View</h1>
+                        <hr>
+                        <span class="subheading"><strong>대전중인 팀을 상세히 볼 수 있어요!</strong></span>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+
 
 <% if @kind_of_game == "lol" %>
   <% @whichgame_lol.each do |which| %>
@@ -242,3 +297,8 @@
     <% end %>
 
 <% end %>
+</div>
+
+<div class="col-md-2"></div>
+
+</div>
