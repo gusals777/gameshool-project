@@ -56,11 +56,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
 <div class="col-md-8">
 
 
-<% if @kind_of_game == "lol" %>
-  <% @whichgame_lol.each do |which| %>
-      
-       <% @bbb = TeamlistLol.find(which.lol_whichgame_my_id) %>
-       <% @ccc = TeamlistLol.find(which.lol_whichgame_opposing_id) %>     
+<% if @kind_of_game == "lol" %>      
       <div class="row"> 
         <div class="col-md-5">
          <table class="table">
@@ -175,15 +171,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           </div>
         </div>
        
-  <% end %>
-
-
 <% elsif @kind_of_game == "fifa" %>
-
-    <% @whichgame_fifa.each do |which| %>
-      
-      <% @bbb = TeamlistFifa.find(which.fifa_whichgame_my_id) %>
-      <% @ccc = TeamlistFifa.find(which.fifa_whichgame_opposing_id) %>     
     <div class="row"> 
       <div class="col-md-5">
        <table class="table">
@@ -235,14 +223,9 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           </table>
         </div>
       </div>
-    <% end %>
   
 <% else %>
-
-    <% @whichgame_hearthstone.each do |which| %>
-      
-      <% @bbb = TeamlistHearthstone.find(which.hearthstone_whichgame_my_id) %>
-      <% @ccc = TeamlistHearthstone.find(which.hearthstone_whichgame_opposing_id) %>     
+   
     <div class="row"> 
       <div class="col-md-5">
        <table class="table">
@@ -294,7 +277,6 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           </table>
         </div>
       </div>
-    <% end %>
 
 <% end %>
 </div>

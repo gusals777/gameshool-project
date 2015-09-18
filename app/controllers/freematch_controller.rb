@@ -343,10 +343,25 @@ class FreematchController < ApplicationController
     def whichgame_info
       
       @kind_of_game = params[:kind_of_game]
+      @which_id = params[:which_id]
       
-      @whichgame_lol = Whichgame.all
-      @whichgame_fifa = WhichgameFifa.all
-      @whichgame_hearthstone = WhichgameHearthstone.all
+      if @kind_of_game == "lol"
+        @whichgame_lol = Whichgame.find(@which_id)
+        
+        @bbb = TeamlistLol.find(@whichgame_lol.lol_whichgame_my_id)
+        @ccc = TeamlistLol.find(@whichgame_lol.lol_whichgame_opposing_id)
+      elsif @kind_of_game == "fifa"
+        @whichgame_fifa = WhichgameFifa.find(@which_id)
+        
+        @bbb = TeamlistFifa.find(@whichgame_fifa.fifa_whichgame_my_id)
+        @ccc = TeamlistFifa.find(@whichgame_fifa.fifa_whichgame_opposing_id)
+      else
+        @whichgame_hearthstone = WhichgameHearthstone.find(@which_id)
+        
+        @bbb = TeamlistHearthstone.find(@whichgame_hearthstone.hearthstone_whichgame_my_id)
+        @ccc = TeamlistHearthstone.find(@whichgame_hearthstone.hearthstone_whichgame_opposing_id)
+      end
+      
     end
     
 end

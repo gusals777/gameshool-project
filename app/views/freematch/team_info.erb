@@ -291,14 +291,13 @@ font4{
               <% end %>
             <% else %>
               <font1>현재&nbsp;<font color="bluc" size="4px"><%= @teamlists_lol.lol_opposing_team %> 님</font>과 대결중!!!!<br></font1>
-              <a href="/freematch/whichgame_info?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
+              <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
             <% end %>  
           </div>
           <br>
           <% if @teamlists_lol.lol_whichgame == false %>
             <% @teamlists_lol.fightsubscriptions.each do |s| %>
               팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
-                     <%= s.lol_add_team_name_id %>
                        <% if @teamlists_lol.lol_current_user_id == current_user.id %>
                          <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success">수락</button></a><br>
                         
@@ -379,7 +378,7 @@ font4{
           <% end %>    
         <% else %>
           <font2>현재<font color="bluc" size="4px"><%= @teamlists_fifa.fifa_opposing_team %> 님</font>과 대결중</font2><br>
-          <a href="/freematch/whichgame_info?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
+          <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
         <% end %>
           
           <% if @teamlists_fifa.fifa_whichgame == false %>
@@ -469,7 +468,7 @@ font4{
             <% end %>
           <% else %>
           <font2>현재 <font color="bluc" size="4px"> <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중</font></font2><br>
-            <a href="/freematch/whichgame_info?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
+            <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
           <% end %>
           
           <% if @teamlists_hearthstone.hearthstone_whichgame == false %>

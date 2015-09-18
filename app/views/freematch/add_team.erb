@@ -178,7 +178,7 @@ div.wrapper2 {
                  <div class="row">
                  <div class="col-md-1"></div>
                  <div class="col-md-10">
-          <div id="lol_team_introduce" style="text-align:left">
+          <div id="lol_team_introduce" style="text-align:left; display: none;">
             <h1> 리그 오브 레전드 팀 등록 </h1>
             팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"> <br>
             학과 : <%= current_user.major %>
@@ -438,9 +438,9 @@ div.wrapper2 {
     $("#radio01").click(function(){
     //롤을 클릭했뜰때
       if (<%= @Duplication_subscription_lol.nil? %>){
-        $("#lol_team_introduce" ).show();
-        $("#fifa_team_introduce" ).hide();
-        $("#hearthstone_team_introduce").hide();
+        $("#fifa_team_introduce" ).hide(500);
+        $("#hearthstone_team_introduce").hide(500);
+        $("#lol_team_introduce" ).show(500);
       }
       else{
         alert("이미 리그 오브 레전드 팀을 등록하셨습니다.");
@@ -451,9 +451,9 @@ div.wrapper2 {
     //피파을 클릭했뜰때
       
       if (<%= @Duplication_subscription_fifa.nil? %>){
-        $("#lol_team_introduce" ).hide();
-        $("#fifa_team_introduce" ).show();
-        $("#hearthstone_team_introduce" ).hide();
+        $("#lol_team_introduce" ).hide("slow")
+        $("#hearthstone_team_introduce" ).hide("slow")
+        $("#fifa_team_introduce" ).show("slow");
       }
       else{
         alert("이미 피파 온라인3 팀을 등록하셨습니다.");
@@ -463,9 +463,9 @@ div.wrapper2 {
     $("#radio03").click(function(){
       if (<%= @Duplication_subscription_hearthstone.nil? %>){
         //하스스톤을 클릭했뜰때
-        $("#lol_team_introduce" ).hide();
-        $("#fifa_team_introduce" ).hide();
-        $("#hearthstone_team_introduce" ).show();
+        $("#hearthstone_team_introduce" ).show(500);
+        $("#lol_team_introduce" ).hide(500);
+        $("#fifa_team_introduce" ).hide(500);
       }
       else{
         alert("이미 하스스톤 팀을 등록하셨습니다.");  
