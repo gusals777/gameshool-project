@@ -348,18 +348,18 @@ class FreematchController < ApplicationController
       if @kind_of_game == "lol"
         @whichgame_lol = Whichgame.find(@which_id)
         
-        @bbb = TeamlistLol.find(@whichgame_lol.lol_whichgame_my_id)
-        @ccc = TeamlistLol.find(@whichgame_lol.lol_whichgame_opposing_id)
+        @lol_my_team_info = TeamlistLol.find(@whichgame_lol.lol_whichgame_my_id)
+        @lol_opposing_team_info = TeamlistLol.find(@whichgame_lol.lol_whichgame_opposing_id)
       elsif @kind_of_game == "fifa"
         @whichgame_fifa = WhichgameFifa.find(@which_id)
         
-        @bbb = TeamlistFifa.find(@whichgame_fifa.fifa_whichgame_my_id)
-        @ccc = TeamlistFifa.find(@whichgame_fifa.fifa_whichgame_opposing_id)
+        @fifa_my_info = TeamlistFifa.find(@whichgame_fifa.fifa_whichgame_my_id)
+        @fifa_opposing_info = TeamlistFifa.find(@whichgame_fifa.fifa_whichgame_opposing_id)
       else
         @whichgame_hearthstone = WhichgameHearthstone.find(@which_id)
         
-        @bbb = TeamlistHearthstone.find(@whichgame_hearthstone.hearthstone_whichgame_my_id)
-        @ccc = TeamlistHearthstone.find(@whichgame_hearthstone.hearthstone_whichgame_opposing_id)
+        @hearthstone_my_info = TeamlistHearthstone.find(@whichgame_hearthstone.hearthstone_whichgame_my_id)
+        @hearthstone_opposing_info = TeamlistHearthstone.find(@whichgame_hearthstone.hearthstone_whichgame_opposing_id)
       end
       
     end
@@ -373,20 +373,20 @@ class FreematchController < ApplicationController
       @whichgame_lol = Whichgame.find(params[:which_id])
       @whichgame_lol.lol_victory_image = params[:lol_img_file]
       @whichgame_lol.save
-      redirect_to '/freematch/whichgame_info?kind_of_game=lol'  
+      redirect_to action: 'whichgame_info', :kind_of_game => 'lol', :which_id => params[:which_id]  
       
     elsif @kind_of_game == "fifa" 
       @whichgame_lol = WhichgameFifa.find(params[:which_id])
       @whichgame_lol.fifa_victory_image = params[:fifa_img_file]
       @whichgame_lol.save
-      redirect_to '/freematch/whichgame_info?kind_of_game=fifa'
+      redirect_to action: 'whichgame_info', :kind_of_game => 'fifa', :which_id => params[:which_id]  
       
       
     else  
       @whichgame_lol = WhichgameHearthstone.find(params[:which_id])
       @whichgame_lol.hearthstone_victory_image = params[:hearthstone_img_file]
       @whichgame_lol.save
-      redirect_to '/freematch/whichgame_info?kind_of_game=hearthstone'
+      redirect_to action: 'whichgame_info', :kind_of_game => 'hearthstone', :which_id => params[:which_id]  
       
      end
    end
