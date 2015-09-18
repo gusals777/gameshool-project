@@ -298,7 +298,6 @@ font4{
           <% if @teamlists_lol.lol_whichgame == false %>
             <% @teamlists_lol.fightsubscriptions.each do |s| %>
               팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
-                     <%= s.lol_add_team_name_id %>
                        <% if @teamlists_lol.lol_current_user_id == current_user.id %>
                          <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success">수락</button></a><br>
                         
@@ -385,7 +384,6 @@ font4{
           <% if @teamlists_fifa.fifa_whichgame == false %>
             <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
             이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
-            
                     <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
                        <a href="/freematch/matching_success?fifa_add_team_name_id=<%=s.fifa_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="fifa_matching_success">수락</button></a><br>
                     <% end %>
@@ -475,7 +473,6 @@ font4{
           <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
             <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
               이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
-              
                      <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
                        <a href="/freematch/matching_success?hearthstone_add_team_name_id=<%=s.hearthstone_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="hearthstone_matching_success">수락</button></a><br>
                      <% end %>

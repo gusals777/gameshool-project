@@ -165,6 +165,7 @@ ActiveRecord::Schema.define(version: 20150917143720) do
     t.integer  "fifa_whichgame_opposing_id",       default: 0
     t.string   "fifa_whichgame_my_teamname",       default: ""
     t.string   "fifa_whichgame_opposing_teamname", default: ""
+    t.string   "fifa_victory_image"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
   end
@@ -174,6 +175,7 @@ ActiveRecord::Schema.define(version: 20150917143720) do
     t.integer  "hearthstone_whichgame_opposing_id",       default: 0
     t.string   "hearthstone_whichgame_my_teamname",       default: ""
     t.string   "hearthstone_whichgame_opposing_teamname", default: ""
+    t.string   "hearthstone_victory_image"
     t.datetime "created_at",                                           null: false
     t.datetime "updated_at",                                           null: false
   end
@@ -183,6 +185,7 @@ ActiveRecord::Schema.define(version: 20150917143720) do
     t.integer  "lol_whichgame_opposing_id",       default: 0
     t.string   "lol_whichgame_my_teamname",       default: ""
     t.string   "lol_whichgame_opposing_teamname", default: ""
+    t.string   "lol_victory_image"
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
   end

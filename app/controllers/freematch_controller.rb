@@ -347,6 +347,36 @@ class FreematchController < ApplicationController
       @whichgame_lol = Whichgame.all
       @whichgame_fifa = WhichgameFifa.all
       @whichgame_hearthstone = WhichgameHearthstone.all
+      
+     
+      
     end
-    
+  
+  # 승리한팀이 스크린샷 저장 시키는 곳 
+   def image_upload
+     
+     @kind_of_game = params[:kind_of_game]
+     
+     if @kind_of_game == "lol"
+      @whichgame_lol = Whichgame.find(params[:which_id])
+      @whichgame_lol.lol_victory_image = params[:lol_img_file]
+      @whichgame_lol.save
+      redirect_to '/freematch/whichgame_info?kind_of_game=lol'  
+      
+    elsif @kind_of_game == "fifa" 
+      @whichgame_lol = WhichgameFifa.find(params[:which_id])
+      @whichgame_lol.fifa_victory_image = params[:fifa_img_file]
+      @whichgame_lol.save
+      redirect_to '/freematch/whichgame_info?kind_of_game=fifa'
+      
+      
+    else  
+      @whichgame_lol = WhichgameHearthstone.find(params[:which_id])
+      @whichgame_lol.hearthstone_victory_image = params[:hearthstone_img_file]
+      @whichgame_lol.save
+      redirect_to '/freematch/whichgame_info?kind_of_game=hearthstone'
+      
+     end
+   end
+  # 승리한팀이 스크린샷 저장 시키는 곳 끝
 end
