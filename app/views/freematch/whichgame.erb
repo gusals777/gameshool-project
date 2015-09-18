@@ -56,7 +56,7 @@
    <% @whichgame_lol.each do |which| %>
    
         <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
-        <a href="/freematch/whichgame_info?kind_of_game=lol">자세히 보기</a><br>
+        <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>">자세히 보기</a><br>
    <% end %>
          </div>
          
