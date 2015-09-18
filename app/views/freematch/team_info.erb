@@ -280,7 +280,7 @@ font4{
           <div>
   
             <% if @teamlists_lol.lol_whichgame == false %>
-              <button id="fight_lol" type="button" class="btn btn-primary">대결 신청</button>
+              <button id="fight_lol" type="button" class="btn btn-primary">대결 신청</button><br>
               
               <% if @teamlists_lol.lol_current_user_id == current_user.id %>
                 <%= form_tag("/freematch/delete_team", method: "get") do %>
@@ -369,7 +369,7 @@ font4{
             
         <!-- 피파 대결신청 출력 -->    
         <% if @teamlists_fifa.fifa_whichgame == false %>
-          <button id="fight_fifa" type="button" class="btn btn-primary">대결 신청</button>
+          <button id="fight_fifa" type="button" class="btn btn-primary">대결 신청</button><br>
           <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
                 <input type="submit" value="팀삭제">
@@ -455,10 +455,10 @@ font4{
           <br>
           <center><h1><font3>소개</font3></h1><br>
           <font4><%= @teamlists_hearthstone.comment %></font4></center>
-          <h1> 팀 설명 : <%= @teamlists_hearthstone.comment %></h1><br>
+        
          
           <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
-            <button id="fight_hearthstone" type="button" class="btn btn-primary" >대결 신청</button>
+            <button id="fight_hearthstone" type="button" class="btn btn-primary" >대결 신청</button><br>
             
             <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
