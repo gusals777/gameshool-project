@@ -223,7 +223,6 @@ class FreematchController < ApplicationController
         @rank_lol_winning_rate = TeamlistLol.order(lol_winning_rate: :desc)     #롤승률
         @rank_lol_lose = TeamlistLol.order(lol_lose: :desc)                     #롤트롤
         
-        @a = [1, 2, 3, 4, 5].each{|i| puts i}
         render layout: false
 
     end

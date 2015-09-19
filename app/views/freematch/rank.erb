@@ -129,10 +129,10 @@
           <h4 class="section-heading"><center>승점</center></h4>
             <% @rank_lol_winner_point.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffe4c4;">
                   <h4><%= t.lol_team_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffe4c4;">
                   <h4><%= t.lol_winner_point %> 점 </h4>
                 </div>
               </div>
@@ -148,10 +148,10 @@
           <h4 class="section-heading"><center>경기수</center></h4>
             <% @rank_lol_total_game.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #E0FFFF;">
                   <h4><%= t.lol_team_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #E0FFFF">
                   <h4><%= t.lol_total_game %> 번 </h4>
                 </div>
               </div>
@@ -167,10 +167,10 @@
           <h4 class="section-heading"><center>승률</center></h4>
             <% @rank_lol_winning_rate.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffffe0">
                   <h4><%= t.lol_team_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffffe0">
                   <h4><%= t.lol_winning_rate %> % </h4>
                 </div>
               </div>
@@ -186,10 +186,10 @@
           <h4 class="section-heading"><center>트롤</center></h4>
             <% @rank_lol_lose.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
                   <h4><%= t.lol_team_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
                   <h4> <%= t.lol_lose %> 번</h4>
                 </div>
               </div>
@@ -217,10 +217,10 @@
           <h4 class="section-heading"><center>승점</center></h4>
           <% @rank_fifa_winner_point.first(5).each do |t| %>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffe4c4;">
                 <h4><%= t.fifa_user_name %></h4>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffe4c4;">
                 <h4><%= t.fifa_winner_point %> 점</h4>
               </div>
             </div>
@@ -236,10 +236,10 @@
           <h4 class="section-heading"><center>경기수</center></h4>
           <% @rank_fifa_total_game.first(5).each do |t| %>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #E0FFFF;">
                 <h4><%= t.fifa_user_name %></h4>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #E0FFFF;">
                 <h4><%= t.fifa_total_game %> 번</h4>
               </div>
             </div>
@@ -256,10 +256,10 @@
           
           <% @rank_fifa_winning_rate.first(5).each do |t| %>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffffe0">
                 <h4><%= t.fifa_user_name %></h4>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffffe0">
                 <h4><%= t.fifa_winning_rate %> %</h4>
               </div>
             </div>
@@ -276,10 +276,10 @@
           
           <% @rank_fifa_lose.first(5).each do |t| %>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
                 <h4><%= t.fifa_user_name %></h4>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
                 <h4><%= t.fifa_lose %> 번</h4>
               </div>
             </div>
@@ -310,10 +310,10 @@
           <h4 class="section-heading"><center>승점</center></h4>
             <% @rank_Heartstone_winner_point.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffe4c4;">
                   <h4><%= t.hearthstone_user_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffe4c4;">
                   <h4><%= t.hearthstone_winner_point %> 점</h4>
                 </div>
               </div>
@@ -329,10 +329,10 @@
           <h4 class="section-heading"><center>경기수</center></h4>
             <% @rank_Heartstone_total_game.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #E0FFFF;">
                   <h4><%= t.hearthstone_user_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #E0FFFF;">
                   <h4><%= t.hearthstone_total_game %> 번</h4>
                 </div>
               </div>
@@ -348,10 +348,10 @@
           <h4 class="section-heading"><center>승률</center></h4>
             <% @rank_Heartstone_winning_rate.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffffe0">
                   <h4><%= t.hearthstone_user_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #ffffe0">
                   <h4><%= t.hearthstone_winning_rate %> %</h4>
                 </div>
               </div>
@@ -367,10 +367,10 @@
           <h4 class="section-heading"><center>트롤</center></h4>
             <% @rank_Heartstone_lose.first(5).each do |t| %>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
                   <h4><%= t.hearthstone_user_name %></h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
                   <h4><%= t.hearthstone_lose %> 번</h4>
                 </div>
               </div>
