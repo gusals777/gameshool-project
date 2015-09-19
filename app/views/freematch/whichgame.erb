@@ -18,7 +18,7 @@
 
        
         
-          <header class="intro-header" style="background-image: url('http://gameabout.com/files/attach/images/111/602/031/003/14efe2cc5f78fd67b7c201cc88fdf200.jpg')">
+    <header class="intro-header" style="background-image: url('http://gameabout.com/files/attach/images/111/602/031/003/14efe2cc5f78fd67b7c201cc88fdf200.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -55,8 +55,10 @@
           
    <% @whichgame_lol.each do |which| %>
    
-        <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
-        <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>">자세히 보기</a><br>
+      <% if which.lol_mode == false %>
+          <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
+          <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>">자세히 보기</a><br>
+      <% end %>
    <% end %>
          </div>
          
@@ -82,8 +84,11 @@
               <div class="scroll">
    <% @whichgame_fifa.each do |which| %>
    
+       <% if which.fifa_mode == false %>
         <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
         <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>">자세히 보기</a><br>
+       <% end %>  
+       
    <% end %>
          </div>
         </div>
@@ -109,9 +114,10 @@
           <div class="clearfix"></div>
        <div class="scroll">     
    <% @whichgame_hearthstone.each do |which| %>
-   
+     <% if which.hearthstone_mode == false %>
        <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>님이 <font color="bluc" size="4px">대결중</font> 입니다.
         <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>">자세히 보기</a><br>
+     <% end %>  
    <% end %>
        </div>
          

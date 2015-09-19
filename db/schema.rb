@@ -199,8 +199,9 @@ ActiveRecord::Schema.define(version: 20150918045214) do
     t.string   "fifa_whichgame_my_teamname",       default: ""
     t.string   "fifa_whichgame_opposing_teamname", default: ""
     t.string   "fifa_victory_image"
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.boolean  "fifa_mode",                        default: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
   end
 
   create_table "whichgame_hearthstones", force: :cascade do |t|
@@ -209,8 +210,9 @@ ActiveRecord::Schema.define(version: 20150918045214) do
     t.string   "hearthstone_whichgame_my_teamname",       default: ""
     t.string   "hearthstone_whichgame_opposing_teamname", default: ""
     t.string   "hearthstone_victory_image"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
+    t.boolean  "hearthstone_mode",                        default: false
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
   end
 
   create_table "whichgames", force: :cascade do |t|
@@ -219,8 +221,9 @@ ActiveRecord::Schema.define(version: 20150918045214) do
     t.string   "lol_whichgame_my_teamname",       default: ""
     t.string   "lol_whichgame_opposing_teamname", default: ""
     t.string   "lol_victory_image"
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
+    t.boolean  "lol_mode",                        default: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
 end

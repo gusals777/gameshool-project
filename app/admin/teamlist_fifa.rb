@@ -8,7 +8,7 @@ ActiveAdmin.register TeamlistFifa do
 # or
 #
 permit_params do
-  permitted = [:fifa_total_game, :fifa_total_game, :fifa_victory, :fifa_lose, :fifa_winner_point, :fifa_winning_rate]
+  permitted = [:fifa_total_game, :fifa_total_game, :fifa_victory, :fifa_lose, :fifa_winner_point, :fifa_winning_rate, :created_at]
 #   permitted << :other if resource.something?
   permitted
 end
@@ -22,8 +22,8 @@ end
   column :fifa_lose
   column :fifa_winner_point
   column :fifa_winning_rate
+  column :created_at
   
   actions
   end
-    
 end

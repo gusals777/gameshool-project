@@ -28,6 +28,13 @@ TeamlistLol.create(:lol_whichgame => "아하", :lol_team_name => "못난4", :lol
 :lol_tear_user_4 =>"마스터", :leader_name => "아라리요", :lol_member_name_1 =>"하하", :lol_member_name_2 =>"재석", :lol_member_name_3 =>"준하",
 :lol_member_name_4 =>"홍철", :lol_total_game => 10 ,:lol_victory => 100,:lol_lose => 20, :lol_winner_point => 40, :lol_winning_rate =>40 )
 
+TeamlistLol.create(:lol_whichgame => "아하", :lol_team_name => "못난4", :lol_major => "루루", 
+ :lol_current_user_id => "라라",:comment => "히히", :lol_leader_id => "페이커", :lol_user_id_1 => "페이커",
+ :lol_user_id_2 => "페이커", :lol_user_id_3 => "페이커" ,:lol_user_id_4 =>"페이커",
+:lol_leader_tear => "브론즈", :lol_tear_user_1 =>"실버", :lol_tear_user_2 =>"골드", :lol_tear_user_3 =>"챌리저", 
+:lol_tear_user_4 =>"마스터", :leader_name => "아라리요", :lol_member_name_1 =>"하하", :lol_member_name_2 =>"재석", :lol_member_name_3 =>"준하",
+:lol_member_name_4 =>"홍철", :lol_total_game => 10 ,:lol_victory => 100,:lol_lose => 20, :lol_winner_point => 40, :lol_winning_rate =>40 )
+
 #피파 시드값
 
 TeamlistFifa.create(:game_id => "aa", :tear => "sdfsdf", :comment => "dsfdsf",
@@ -45,6 +52,10 @@ TeamlistFifa.create(:game_id => "aa", :tear => "sdfsdf", :comment => "dsfdsf",
                     :fifa_user_name =>"성중",  :fifa_winner_point => 60, :fifa_lose => 8, :fifa_victory => 7,
                     :fifa_winning_rate =>60, :fifa_total_game => 20)
 
+TeamlistFifa.create(:game_id => "aa", :tear => "sdfsdf", :comment => "dsfdsf",
+                    :fifa_current_user_id => 1,  :fifa_major => "sdfsdf",
+                    :fifa_user_name =>"거늬",  :fifa_winner_point => 50, :fifa_lose => 7, :fifa_victory => 8,
+                    :fifa_winning_rate =>50, :fifa_total_game => 10)
 TeamlistFifa.create(:game_id => "aa", :tear => "sdfsdf", :comment => "dsfdsf",
                     :fifa_current_user_id => 1,  :fifa_major => "sdfsdf",
                     :fifa_user_name =>"거늬",  :fifa_winner_point => 50, :fifa_lose => 7, :fifa_victory => 8,
