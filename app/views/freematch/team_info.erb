@@ -308,8 +308,10 @@ font4{
           <script>
             $(document).ready(function(){
               $("#fight_lol").click(function(){
-        
-                if (<%= @lol_subscription_user.nil? %>) {
+                if (<%= @teamlists_fifa.fifa_current_user_id == current_user.id %>){
+                  alert("본인 팀에 대결 신청하시려고?");
+                }
+                else if (<%= @lol_subscription_user.nil? %>) {
                   alert("리그 오브 레전드 팀을 등록하고 대결 신청해주세요.");
                 }
                 else if (<%= @lol_subscription_check.nil? == false %>){
