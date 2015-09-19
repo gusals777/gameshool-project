@@ -8,6 +8,7 @@ class CreateWhichgameHearthstones < ActiveRecord::Migration
           t.string :hearthstone_whichgame_my_teamname,                 default: ""
           t.string :hearthstone_whichgame_opposing_teamname,           default: ""
           t.string :hearthstone_victory_image
+          t.boolean :hearthstone_mode,                                 default: false
       t.timestamps null: false
     end
   end

@@ -8,6 +8,7 @@ class CreateWhichgameFifas < ActiveRecord::Migration
           t.string :fifa_whichgame_my_teamname,                default: ""
           t.string :fifa_whichgame_opposing_teamname,          default: ""
           t.string :fifa_victory_image
+          t.boolean :fifa_mode,                                default: false
       t.timestamps null: false
     end
   end
