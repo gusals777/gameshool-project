@@ -223,21 +223,17 @@ nav.vertical {
             </table>
           </div>
           
-        
-        <div class="col-md-4">
-        
-         <div class="wrapper">
-            <nav class="vertical">
-              <ul>
-                <li>
-                <a><center><font2><font size="4px">경기결과를 올려주세요</font></font2></center></a>      
-         <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %><br>
-                              <center><img src="<%= @whichgame_lol.lol_victory_image.url %>"></center><br>
-                            <input type="file" name="lol_img_file"><input type="submit" value="확인"><br>
-                            <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>"><br>
+
+        </div>
+      
+         <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %>
+            스크린샷 첨부 : <input type="file" name="lol_img_file"><input type="submit" value="확인">
+                            <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
+                            <input type="hidden" name="lol_whichgame_my_teamname"value="<%= @whichgame_lol.lol_whichgame_my_teamname %>">
                             <input type="hidden" name="which_id" value="<%= @whichgame_lol.id %>"><br>
-                            <input type="hidden" name="teamlist_id" value="<%= @whichgame_lol.lol_whichgame_my_id %>">
-                           
+                            <input type="hidden" name="teamlist_my_id" value="<%= @whichgame_lol.lol_whichgame_my_id %>">
+                            <img src="<%= @whichgame_lol.lol_victory_image.url %>"><br>
+
                            
          <% end %>
          
@@ -347,7 +343,8 @@ nav.vertical {
         <img src="<%= @whichgame_fifa.fifa_victory_image.url %>"><br>
           <input type="file" name="fifa_img_file"><input type="submit" value="확인">
           <input type="hidden" name="which_id" value="<%= @whichgame_fifa.id %>">
-          <input type="hidden" name="teamlist_id" value="<%= @whichgame_fifa.fifa_whichgame_my_id %>">
+          <input type="hidden" name="teamlist_my_id" value="<%= @whichgame_fifa.fifa_whichgame_my_id %>">
+          <input type="hidden" name="teamlist_pposing_id" value="<%= @whichgame_fifa.fifa_whichgame_opposing_id %>">
           <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
         <% end %>
         
@@ -455,7 +452,8 @@ nav.vertical {
           <img src="<%= @whichgame_hearthstone.hearthstone_victory_image.url %>"><br>
           <input type="file" name="hearthstone_img_file"><input type="submit" value="확인">
           <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
-          <input type="hidden" name="teamlist_id" value="<%= @whichgame_hearthstone.hearthstone_whichgame_my_id %>">
+          <input type="hidden" name="teamlist_my_id" value="<%= @whichgame_hearthstone.hearthstone_whichgame_my_id %>">
+          <input type="hidden" name="teamlist_pposing_id" value="<%= @whichgame_hearthstone.hearthstone_whichgame_opposing_id %>">
           <input type="hidden" name="which_id" value="<%= @whichgame_hearthstone.id %>"><br>
           
         <% end %>

@@ -391,46 +391,82 @@ class FreematchController < ApplicationController
    def image_upload
      
      @kind_of_game = params[:kind_of_game]
-     @teamlist_id = params[:teamlist_id]
+     @teamlist_my_id = params[:teamlist_my_id]
+     @teamlist_pposing_id = params[:teamlist_pposing_id]
      
      if @kind_of_game == "lol"
       @whichgame_lol = Whichgame.find(params[:which_id])
       @whichgame_lol.lol_victory_image = params[:lol_img_file]
+      @whichgame_lol.lol_mode = true
       @whichgame_lol.save
       
-      @one_teamlist_lol = TeamlistLol.find(@teamlist_id)
-      @one_teamlist_lol.lol_whichgame = false
-      @one_teamlist_lol.lol_opposing_team = ""
-      @one_teamlist_lol.save
+      # 롤 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈
+      @one_teamlist_my_lol = TeamlistLol.find(@teamlist_my_id)
+      @one_teamlist_my_lol.lol_whichgame = false
+      @one_teamlist_my_lol.lol_opposing_team = ""
+      @one_teamlist_my_lol.save
+      
+      
+      @one_teamlist_opposing_lol = TeamlistLol.find(@teamlist_pposing_id)
+      @one_teamlist_opposing_lol.lol_whichgame = false
+      @one_teamlist_opposing_lol.lol_opposing_team = ""
+      @one_teamlist_opposing_lol.save
+      # 롤 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈 끝
       
       redirect_to action: 'whichgame_info', :kind_of_game => 'lol', :which_id => params[:which_id]  
       
     elsif @kind_of_game == "fifa" 
-      @whichgame_lol = WhichgameFifa.find(params[:which_id])
-      @whichgame_lol.fifa_victory_image = params[:fifa_img_file]
-      @whichgame_lol.save
+      @whichgame_fifa = WhichgameFifa.find(params[:which_id])
+      @whichgame_fifa.fifa_victory_image = params[:fifa_img_file]
+      @whichgame_fifa.fifa_mode = true
+      @whichgame_fifa.save
       
-      @one_teamlist_fifa = TeamlistFifa.find(@teamlist_id)
-      @one_teamlist_fifa.fifa_whichgame = false
-      @one_teamlist_fifa.fifa_opposing_team = ""
-      @one_teamlist_fifa.save
+      # 피파 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈
+      @one_teamlist_my_fifa = TeamlistFifa.find(@teamlist_my_id)
+      @one_teamlist_my_fifa.fifa_whichgame = false
+      @one_teamlist_my_fifa.fifa_opposing_team = ""
+      @one_teamlist_my_fifa.save
+      
+      @one_teamlist_opposing_fifa = TeamlistFifa.find(@teamlist_pposing_id)
+      @one_teamlist_opposing_fifa.fifa_whichgame = false
+      @one_teamlist_opposing_fifa.fifa_opposing_team = ""
+      @one_teamlist_opposing_fifa.save
+      # fifa 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈 끝
       
       redirect_to action: 'whichgame_info', :kind_of_game => 'fifa', :which_id => params[:which_id]  
       
       
     else  
-      @whichgame_lol = WhichgameHearthstone.find(params[:which_id])
-      @whichgame_lol.hearthstone_victory_image = params[:hearthstone_img_file]
-      @whichgame_lol.save
+      @whichgame_hearthstone = WhichgameHearthstone.find(params[:which_id])
+      @whichgame_hearthstone.hearthstone_victory_image = params[:hearthstone_img_file]
+      @whichgame_hearthstone.hearthstone_mode = true
+      @whichgame_hearthstone.save
       
-      @one_teamlist_hearthstone = TeamlistHearthstone.find(@teamlist_id)
-      @one_teamlist_hearthstone.hearthstone_whichgame = false
-      @one_teamlist_hearthstone.hearthstone_opposing_team = ""
-      @one_teamlist_hearthstone.save
+      # 하스스톤 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈
+      @one_teamlist_my_hearthstone = TeamlistHearthstone.find(@teamlist_my_id)
+      @one_teamlist_my_hearthstone.hearthstone_whichgame = false
+      @one_teamlist_my_hearthstone.hearthstone_opposing_team = ""
       
+      @one_teamlist_my_hearthstone.save
+      
+      @one_teamlist_opposing_hearthstone = TeamlistHearthstone.find(@teamlist_pposing_id)
+      @one_teamlist_opposing_hearthstone.hearthstone_whichgame = false
+      @one_teamlist_opposing_hearthstone.hearthstone_opposing_team = ""
+      @one_teamlist_opposing_hearthstone.save
+      # 하스스톤 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈
       redirect_to action: 'whichgame_info', :kind_of_game => 'hearthstone', :which_id => params[:which_id]  
       
      end
    end
   # 승리한팀이 스크린샷 저장 시키는 곳 끝
+  
+  def evidence
+     
+      
+      @whichgame_lol = Whichgame.all
+      @whichgame_fifa = WhichgameFifa.all
+      @whichgame_hearthstone = WhichgameHearthstone.all
+     
+      
+  end
 end

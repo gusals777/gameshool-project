@@ -8,6 +8,7 @@ class CreateWhichgames < ActiveRecord::Migration
           t.string :lol_whichgame_my_teamname,                default: ""
           t.string :lol_whichgame_opposing_teamname,          default: ""
           t.string :lol_victory_image
+          t.boolean :lol_mode,                        default: false
           
       t.timestamps null: false
     end
