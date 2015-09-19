@@ -1,0 +1,1336 @@
+2015-08-12 23:42:35.168000 HD-Service( 5616: 8376): Opened log file
+2015-08-12 23:42:35.205000 HD-Service( 5616: 9032): OnStart
+2015-08-12 23:42:35.206000 HD-Service( 5616: 9032): ForceVMLegacyMode is set
+2015-08-12 23:42:35.206000 HD-Service( 5616: 9032): Virtualization type Legacy
+2015-08-12 23:42:35.208000 HD-Service( 5616: 9032): Starting Android VM as service BstHdAndroidSvc
+2015-08-12 23:42:35.209000 HD-Service( 5616: 9032): Preparing VM
+2015-08-12 23:42:35.209000 HD-Service( 5616: 9032): Using runtime directory C:\Program Files (x86)\BlueStacks\
+2015-08-12 23:42:35.209000 HD-Service( 5616: 9032): Using guest configuration key HKEY_LOCAL_MACHINE\Software\BlueStacks\Guests\Android
+2015-08-12 23:42:35.229000 HD-Service( 5616: 9032): winBuildNumber: 7601
+2015-08-12 23:42:35.229000 HD-Service( 5616: 9032): Verifying ELF kernel image (buf: 0x03BF0000, len: 5643047)
+2015-08-12 23:42:35.267000 HD-Service( 5616: 9032): Hypervisor ABI version 105
+2015-08-12 23:42:35.342000 HD-Service( 5616: 9032): Guest kernel ABI version 105
+2015-08-12 23:42:35.420000 HD-Service( 5616: 9032): Creating VM monitor
+2015-08-12 23:42:36.002000 HD-Service( 5616: 9032): Created monitor with ID 5616
+2015-08-12 23:42:36.112000 HD-Service( 5616: 9032): Starting network helper process
+2015-08-12 23:42:36.260000 HD-Network( 8348: 8496): Opened log file
+2015-08-12 23:42:36.263000 HD-Network( 8348: 8496): Starting network helper process
+2015-08-12 23:42:36.263000 HD-Network( 8348: 8496): Using FD_SETSIZE = 512
+2015-08-12 23:42:36.291000 HD-Network( 8348: 8496): Adding redirect for guest port tcp/5555
+2015-08-12 23:42:36.292000 HD-Network( 8348: 8496): Using host port tcp/5555 for guest tcp/5555
+2015-08-12 23:42:36.293000 HD-Network( 8348: 8496): Adding redirect for guest port tcp/6666
+2015-08-12 23:42:36.293000 HD-Network( 8348: 8496): Using host port tcp/6666 for guest tcp/6666
+2015-08-12 23:42:36.294000 HD-Network( 8348: 8496): Adding redirect for guest port tcp/7777
+2015-08-12 23:42:36.294000 HD-Network( 8348: 8496): Using host port tcp/7777 for guest tcp/7777
+2015-08-12 23:42:36.295000 HD-Network( 8348: 8496): Adding redirect for guest port tcp/9999
+2015-08-12 23:42:36.295000 HD-Network( 8348: 8496): Using host port tcp/9999 for guest tcp/9999
+2015-08-12 23:42:36.296000 HD-Network( 8348: 2116): Starting DNS update thread
+2015-08-12 23:42:36.296000 HD-Network( 8348: 7108): Starting process control window thread
+2015-08-12 23:42:36.296000 HD-Network( 8348: 7108): Using window name uHD-Core-Window-8348
+2015-08-12 23:42:36.296000 HD-Network( 8348: 7108): ProcessControlWindowProc(00050038, 0x24, 0x00000000, 0x0159f2f4)
+2015-08-12 23:42:36.297000 HD-Network( 8348: 7108): ProcessControlWindowProc(00050038, 0x81, 0x00000000, 0x0159f2e8)
+2015-08-12 23:42:36.297000 HD-Network( 8348: 7108): ProcessControlWindowProc(00050038, 0x83, 0x00000000, 0x0159f2d4)
+2015-08-12 23:42:36.297000 HD-Network( 8348: 7108): ProcessControlWindowProc(00050038, 0x1, 0x00000000, 0x0159f2e8)
+2015-08-12 23:42:36.302000 HD-Network( 8348: 8496): PID 8348, PPID 5616
+2015-08-12 23:42:36.303000 HD-Service( 5616: 9032): network: OK
+2015-08-12 23:42:36.303000 HD-Service( 5616: 9032): Starting block device helper process
+2015-08-12 23:42:36.799000 HD-BlockDevice( 2780: 7732): Opened log file
+2015-08-12 23:42:36.800000 HD-BlockDevice( 2780: 7732): Starting block device helper process
+2015-08-12 23:42:36.800000 HD-BlockDevice( 2780: 7732): Configuring block devices 4:
+2015-08-12 23:42:36.800000 HD-BlockDevice( 2780: 7732):      0 sda1 -> D:\BlueStacks\Android\Root.fs
+2015-08-12 23:42:36.800000 HD-BlockDevice( 2780: 7732):      1 sdb1 -> D:\BlueStacks\Android\Data.sparsefs
+2015-08-12 23:42:37.237000 HD-BlockDevice( 2780: 7732):      2 sdc1 -> D:\BlueStacks\Android\SDCard.sparsefs
+2015-08-12 23:42:37.331000 HD-BlockDevice( 2780: 7732):      3 sdd1 -> D:\BlueStacks\Android\Prebundled.fs
+2015-08-12 23:42:37.332000 HD-BlockDevice( 2780: 4828): Starting process control window thread
+2015-08-12 23:42:37.333000 HD-BlockDevice( 2780: 4828): Using window name uHD-Core-Window-2780
+2015-08-12 23:42:37.333000 HD-BlockDevice( 2780: 4828): ProcessControlWindowProc(0002014E, 0x24, 0x00000000, 0x00f4f2f4)
+2015-08-12 23:42:37.333000 HD-BlockDevice( 2780: 4828): ProcessControlWindowProc(0002014E, 0x81, 0x00000000, 0x00f4f2e8)
+2015-08-12 23:42:37.333000 HD-BlockDevice( 2780: 4828): ProcessControlWindowProc(0002014E, 0x83, 0x00000000, 0x00f4f2d4)
+2015-08-12 23:42:37.333000 HD-BlockDevice( 2780: 4828): ProcessControlWindowProc(0002014E, 0x1, 0x00000000, 0x00f4f2e8)
+2015-08-12 23:42:37.337000 HD-BlockDevice( 2780: 7732): PID 2780, PPID 5616
+2015-08-12 23:42:37.338000 HD-Service( 5616: 9032): block device: OK
+2015-08-12 23:42:37.338000 HD-Service( 5616: 9032): Starting shared folder helper process
+2015-08-12 23:42:37.403000 HD-SharedFolder( 9104: 4836): Opened log file
+2015-08-12 23:42:37.403000 HD-SharedFolder( 9104: 4836): Starting shared folder helper process
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836): Configuring shared folders:
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): Starting device notification window thread
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): Using device notification window name uHD-SharedFolder-VolumeEvent-Window-9104
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836):      0 BstSharedFolder -> D:\BlueStacks\UserData\SharedFolder\ - 1
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x24, 0x00000000, 0x0106f258)
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x81, 0x00000000, 0x0106f24c)
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x83, 0x00000000, 0x0106f238)
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x1, 0x00000000, 0x0106f24c)
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0xd, 0x00000100, 0x0106f408)
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836):      1 Pictures -> C:\Users\
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836):      2 PublicPictures -> C:\Users\Public\Pictures - 1
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836):      3 Documents -> C:\Users\
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836):      4 PublicDocuments -> C:\Users\Public\Documents - 1
+2015-08-12 23:42:37.404000 HD-SharedFolder( 9104: 4836):      5 InputMapper -> D:\BlueStacks\UserData\InputMapper\ - 1
+2015-08-12 23:42:37.405000 HD-SharedFolder( 9104: 8896): Starting process control window thread
+2015-08-12 23:42:37.405000 HD-SharedFolder( 9104: 8896): Using window name uHD-Core-Window-9104
+2015-08-12 23:42:37.405000 HD-SharedFolder( 9104: 8896): ProcessControlWindowProc(00010192, 0x24, 0x00000000, 0x0116f2f4)
+2015-08-12 23:42:37.405000 HD-SharedFolder( 9104: 8896): ProcessControlWindowProc(00010192, 0x81, 0x00000000, 0x0116f2e8)
+2015-08-12 23:42:37.405000 HD-SharedFolder( 9104: 8896): ProcessControlWindowProc(00010192, 0x83, 0x00000000, 0x0116f2d4)
+2015-08-12 23:42:37.405000 HD-SharedFolder( 9104: 8896): ProcessControlWindowProc(00010192, 0x1, 0x00000000, 0x0116f2e8)
+2015-08-12 23:42:37.407000 HD-SharedFolder( 9104: 4836): PID 9104, PPID 5616
+2015-08-12 23:42:37.408000 HD-Service( 5616: 9032): shared folder: OK
+2015-08-12 23:42:37.408000 HD-Service( 5616: 9032): Spawning VM thread
+2015-08-12 23:42:37.409000 HD-Service( 5616: 6552): Starting id manager
+2015-08-12 23:42:37.428000 HD-Service( 5616: 7376): Guest: Linux version 3.10.30-android-x86-hd+ (build@Build2) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #1 PREEMPT Tue Jun 16 19:07:34 IST 2015
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Notice: NX (Execute Disable) protection cannot be enabled: non-PAE kernel!
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: initial memory mapped: [mem 0x00000000-0xffffffff]
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: init_memory_mapping: [mem 0x00000000-0x000fffff]
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:  [mem 0x00000000-0x000fffff] page 4k
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: 1597MB LOWMEM available.
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   mapped low ram: 0 - 00000000
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   low ram: 0 - 63dff000
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: RAMDISK: 0xe3c46000 - 0xe3dfeaaa
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Zone ranges:
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   Normal   
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: [mem 0x00000000-0x63dfefff]
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Movable zone start for each node
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Early memory node ranges
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   node   0: [mem 0x00000000-0x63dfefff]
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: On node 0 totalpages: 409087
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: free_area_init_node: node 0, pgdat 813b6958, node_mem_map 8165a000
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   Normal zone: 3196 pages used for memmap
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   Normal zone: 0 pages reserved
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:   Normal zone: 409087 pages, LIFO batch:31
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: 
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: pcpu-alloc: 
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: [0] 
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: 0 
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: 
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 405891
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Kernel command line: noxsave noxsaveopt nosmap nosmep ROOT=/dev/sda1 SRC=/android DATA=/dev/sdb1 SDCARD=/dev/sdc1 PREBUNDLEDAPPSFS=/dev/sdd1 HOST=WIN GUID=d9b83eec-40ff-11e5-a3d3-685d43dc1869 VERSION=0.9.30.4239 bstandroidport=9999 OEM=BlueStacks LANG=en_US armSwitch=true armApps=true GlMode=1 DNS2=8.8.8.8 OEMFEATURES=0 caCode=410 country=KR pcode=ddfa WINDOWSAGENT=10.0.2.2:2861 WINDOWSFRONTEND=10.0.2.2:2871
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: PID hash table entries: 4096 (order: 2, 16384 bytes)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Initializing CPU#0
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Memory: 1597336k/1636348k available (2511k kernel code, 0k reserved, 1309k data, 180k init, 0k highmem)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: virtual kernel memory layout:
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:     fixmap  : 0xfffe4000 - 0xfffff000   ( 108 kB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:     hd      : 0xfee00000 - 0xffc00000   (  14 MB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:     vmalloc : 0xe45ff000 - 0xfedfe000   ( 423 MB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:     lowmem  : 0x80000000 - 0xe3dff000   (1597 MB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:       .init : 0x813bc000 - 0x813e9000   ( 180 kB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:       .data : 0x81273cd6 - 0x813bb100   (1309 kB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest:       .text : 0x81000000 - 0x81273cd6   (2511 kB)
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: NR_IRQS:224 nr_irqs:224 16
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: CPU 0 irqstacks, hard=e3806000 soft=e3808000
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Console: colour dummy device 80x25
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: console [tty0] enabled
+2015-08-12 23:42:37.494000 HD-Service( 5616: 7376): Guest: Calibrating delay loop... 
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: 764059.64 BogoMIPS (lpj=3820298240)
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: pid_max: default: 32768 minimum: 301
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Security Framework initialized
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Mount-cache hash table entries: 512
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Last level iTLB entries: 4KB 512, 2MB 0, 4MB 0
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: CPU: 
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Intel(R) Core(TM) i7-3610QM CPU @ 2.30GHz
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest:  (fam: 06, model: 3a
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: , stepping: 09)
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Performance Events: 
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest:  disabled
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: NMI watchdog: disabled (cpu0): hardware events not enabled
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: NET: Registered protocol family 16
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: bio: create slab <bio-0> at 0
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Linux video capture interface: v2.00
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Advanced Linux Sound Architecture Driver Initialized.
+2015-08-12 23:42:37.890000 HD-Service( 5616: 7376): Guest: Switching to clocksource refined-jiffies
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: NET: Registered protocol family 2
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: TCP bind hash table entries: 16384 (order: 4, 65536 bytes)
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: TCP: Hash tables configured (established 16384 bind 16384)
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: TCP: reno registered
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: UDP hash table entries: 1024 (order: 2, 16384 bytes)
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: UDP-Lite hash table entries: 1024 (order: 2, 16384 bytes)
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: NET: Registered protocol family 1
+2015-08-12 23:42:37.900000 HD-Service( 5616: 7376): Guest: Trying to unpack rootfs image as initramfs...
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: Freeing initrd memory: 1764k freed
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: VFS: Disk quotas dquot_6.5.2
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: fuse init (API version 7.22)
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: msgmni has been set to 3123
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: io scheduler noop registered
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: io scheduler deadline registered
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: io scheduler cfq registered (default)
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: brd: module loaded
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: loop: module loaded
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: tun: Universal TUN/TAP device driver, 1.6
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: mousedev: PS/2 mouse device common for all mice
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: lirc_dev: IR Remote Control driver registered, major 253 
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR NEC protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR RC5(x) protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR RC6 protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR JVC protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR Sony protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR RC5 (streamzap) protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR SANYO protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR MCE Keyboard/mouse protocol handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: IR LIRC bridge handler initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: uevent
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: POWER_SUPPLY_NAME=ac
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: prop ONLINE=1
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: power_supply_changed
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: device-mapper: uevent: version 1.0.3
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: power_supply_changed_work
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: uevent
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: POWER_SUPPLY_NAME=ac
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: power_supply ac: prop ONLINE=1
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: hidraw: raw HID events driver (C) Jiri Kosina
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: ashmem: initialized
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: logger: created 256K log 'log_main'
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: logger: created 256K log 'log_events'
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: logger: created 256K log 'log_radio'
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: logger: created 256K log 'log_system'
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: Netfilter messages via NETLINK v0.30.
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: ip_tables: (C) 2000-2006 Netfilter Core Team
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: TCP: cubic registered
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: NET: Registered protocol family 10
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: ip6_tables: (C) 2000-2006 Netfilter Core Team
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: NET: Registered protocol family 17
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest: ALSA device list:
+2015-08-12 23:42:37.941000 HD-Service( 5616: 7376): Guest:   No soundcards found.
+2015-08-12 23:42:37.950000 HD-Service( 5616: 7376): Guest: Freeing unused kernel memory: 180k freed
+2015-08-12 23:42:37.956000 HD-Service( 5616: 7376): Guest: Loading BlueStacks modules
+2015-08-12 23:42:37.956000 HD-Service( 5616: 7376): Guest: bstblock: module license 'unspecified' taints kernel.
+2015-08-12 23:42:37.956000 HD-Service( 5616: 7376): Guest: Disabling lock debugging due to kernel taint
+2015-08-12 23:42:37.956000 HD-Service( 5616: 7376): Guest: bstblock: Waiting for block devices
+2015-08-12 23:42:37.960000 HD-Service( 5616: 7376): Guest: bstblock: sda1 891289600 bytes
+2015-08-12 23:42:37.960000 HD-Service( 5616: 7376): Guest: bstblock: sdb1 8589934592 bytes
+2015-08-12 23:42:37.960000 HD-Service( 5616: 7376): Guest: bstblock: sdc1 8589934592 bytes
+2015-08-12 23:42:37.960000 HD-Service( 5616: 7376): Guest: bstblock: sdd1 471859200 bytes
+2015-08-12 23:42:37.973000 HD-Service( 5616: 7376): Guest: bstnet0: MAC 02:00:00:62:73:74 IRQ 7
+2015-08-12 23:42:37.973000 HD-Service( 5616: 7376): Guest: Configured video mode is 1440x900x16
+2015-08-12 23:42:38.018000 HD-Service( 5616: 7376): Guest: Setting video mode 1440x900x16
+2015-08-12 23:42:38.018000 HD-Service( 5616: 7376): Guest: Console: switching 
+2015-08-12 23:42:38.018000 HD-Service( 5616: 7376): Guest: to colour frame buffer device 180x56
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: major: 251 minor: 0
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: Created cdev
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: Asked udevd to create dev node
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: atkbd serio0: Failed to deactivate keyboard on bstkbd
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: input: AT Translated Set 2 keyboard as /devices/serio0/input/input0
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: input: BlueStacks Virtual Mouse as /devices/virtual/input/input1
+2015-08-12 23:42:38.030000 HD-Service( 5616: 7376): Guest: input: BlueStacks Virtual Touch as /devices/virtual/input/input2
+2015-08-12 23:42:38.036000 HD-Service( 5616: 7376): Guest: bstaudio: Created device 0
+2015-08-12 23:42:38.037000 HD-Service( 5616: 7376): Guest: bstgps: initializing gps interface.
+2015-08-12 23:42:38.037000 HD-Service( 5616: 7376): Guest: Detecting Android-x86...
+2015-08-12 23:42:38.037000 HD-Service( 5616: 7376): Guest: Mounting rootFS using /dev/sda1
+2015-08-12 23:42:38.037000 HD-Service( 5616: 7376): Guest: EXT3-fs (sda1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.037000 HD-Service( 5616: 7376): Guest: EXT2-fs (sda1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.070000 HD-Service( 5616: 7376): Guest: EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+2015-08-12 23:42:38.140000 HD-Service( 5616: 7376): Guest:  found at /dev/sda1
+2015-08-12 23:42:38.143000 HD-Service( 5616: 7376): Guest: successfully mounted /dev/sda1 as rootFS
+2015-08-12 23:42:38.143000 HD-Service( 5616: 7376): Guest: First stage boot completed successfully.
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: create instance for instance 0
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: vivi-000: V4L2 device registered as video0
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: 
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: create instance for instance 1
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: vivi-001: V4L2 device registered as video1
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: 
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: Video Technology Magazine Virtual Video Capture Board ver 0.7.0 successfully loaded.
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: bstcamera: init successful
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: Enabling core dump
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: EXT3-fs (sdb1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.170000 HD-Service( 5616: 7376): Guest: EXT2-fs (sdb1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.181000 HD-Service( 5616: 7376): Guest: EXT4-fs (sdb1): warning: checktime reached, running e2fsck is recommended
+2015-08-12 23:42:38.181000 HD-Service( 5616: 7376): Guest: EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+2015-08-12 23:42:38.181000 HD-Service( 5616: 7376): Guest:  is not present
+2015-08-12 23:42:38.184000 HD-Service( 5616: 7376): Guest: DataFS is already mounted.
+2015-08-12 23:42:38.184000 HD-Service( 5616: 7376): Guest: Mounting prebundled appFS.
+2015-08-12 23:42:38.184000 HD-Service( 5616: 7376): Guest: Mounting prebundled apps FS using /dev/sdd1
+2015-08-12 23:42:38.184000 HD-Service( 5616: 7376): Guest: EXT3-fs (sdd1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.184000 HD-Service( 5616: 7376): Guest: EXT2-fs (sdd1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.204000 HD-Service( 5616: 7376): Guest: EXT4-fs (sdd1): mounted filesystem with ordered data mode. Opts: (null)
+2015-08-12 23:42:38.220000 HD-Service( 5616: 7376): Guest: Use bst_appdetails file for OEM BlueStacks
+2015-08-12 23:42:38.220000 HD-Service( 5616: 7376): Guest: Copying file mnt/prebundledapps/bst_appdetails to mnt/prebundledapps/appdetails
+2015-08-12 23:42:38.230000 HD-Service( 5616: 7376): Guest: Copy prebundled apps into dataFS.
+2015-08-12 23:42:38.240000 HD-Service( 5616: 7376): Guest: Copying prebundled FS files.
+2015-08-12 23:42:38.992000 HD-Service( 5616: 6552): Retrying to set Id
+2015-08-12 23:42:39.042000 HD-Service( 5616: 6552): Set Id success!
+2015-08-12 23:42:39.049000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:42:39.049000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x07f11ddb, 0x00000000, 2, e29794c0), argv[0] iSetId
+2015-08-12 23:42:39.049000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-12 23:42:39.384000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:42:39.385000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x635f9056, 0x00000000, 1, e29794e0), argv[0] /system/bin/stop
+2015-08-12 23:42:39.385000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:42:39.385000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:42:39.548000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-12 23:42:41.377000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:42:41.377000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x59b72220, 0x00000000, 1, e2979ea0), argv[0] /system/bin/start
+2015-08-12 23:42:41.377000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:42:41.377000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:42:41.377000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-12 23:42:45.960000 HD-Service( 5616: 7376): Guest: Removing any data app file that is not needed for this OEM BlueStacks
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: Updating prop files.
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: update_propfiles : newer sdk is 19 ,caCode is 410 and pcode is ddfa
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: Updating default system properties using propfile bluestacks.prop.kr.note3
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: Copying file mnt/prebundledapps/propfiles/410/bluestacks.prop.kr.note3 to data/.bluestacks.prop
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: Prebundled apps are latest one.
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: SDCard will be mounted at later stage via vold/MountService.
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: Configuring network
+2015-08-12 23:42:45.970000 HD-Service( 5616: 7376): Guest: setting proper permission in BlueStacks special dir
+2015-08-12 23:42:45.974000 HD-Service( 5616: 7376): Guest: Second stage boot completed successfully.
+2015-08-12 23:42:45.974000 HD-Service( 5616: 7376): Guest: Switching to android workspace now
+2015-08-12 23:42:47.474000 HD-Service( 5616: 7376): Guest: init: property 'ro.hardware' doesn't exist while expanding '/init.${ro.hardware}.rc'
+2015-08-12 23:42:47.474000 HD-Service( 5616: 7376): Guest: init: error while handling import on line '10' in '/init.rc'
+2015-08-12 23:42:47.474000 HD-Service( 5616: 7376): Guest: init: /init.x86.rc: 130: ignored duplicate definition of service 'logcat'
+2015-08-12 23:42:47.521000 HD-Service( 5616: 7376): Guest: power_supply ac: uevent
+2015-08-12 23:42:47.521000 HD-Service( 5616: 7376): Guest: power_supply ac: POWER_SUPPLY_NAME=ac
+2015-08-12 23:42:47.521000 HD-Service( 5616: 7376): Guest: power_supply ac: prop ONLINE=1
+2015-08-12 23:42:47.531000 HD-Service( 5616: 7376): Guest: init: /dev/hw_random not found
+2015-08-12 23:42:47.540000 HD-Service( 5616: 7376): Guest: init: file $[/sys/class/dmi/id/sys_vendor] cannot be opened for reading
+2015-08-12 23:42:47.540000 HD-Service( 5616: 7376): Guest: init: file $[/sys/class/dmi/id/product_name] cannot be opened for reading
+2015-08-12 23:42:47.797000 HD-Service( 5616: 7376): Guest: init: /dev/hw_random not found
+2015-08-12 23:42:47.810000 HD-Service( 5616: 7376): Guest: init: Unable to read property file '/system/default.prop'
+2015-08-12 23:42:47.810000 HD-Service( 5616: 7376): Guest: init: Unable to read property file '/data/local.prop'
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryStatusPath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryHealthPath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryPresentPath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryCapacityPath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryVoltagePath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryTemperaturePath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: healthd: BatteryTechnologyPath not found
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: binder: 600:600 transaction failed 29189, size 0-0
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+2015-08-12 23:42:47.818000 HD-Service( 5616: 7376): Guest: init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+2015-08-12 23:42:48.000000 HD-Service( 5616: 7376): Guest: ARM binary format support added successfully.
+2015-08-12 23:42:49.480000 HD-Service( 5616: 7376): Guest: fs_mgr: Cannot open file /fstab.universal5420
+2015-08-12 23:42:49.990000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 609
+2015-08-12 23:42:49.990000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 0 for PID 609
+2015-08-12 23:42:49.990000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 609. magic = 1, cid = 609, entry = e2b256c0, tid = 609
+2015-08-12 23:42:57.155000 HD-Service( 5616: 7376): Guest: warning: `zygote' uses 32-bit capabilities (legacy support in use)
+2015-08-12 23:42:57.389000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:42:57.389000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(1)
+2015-08-12 23:42:57.389000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(2)
+2015-08-12 23:42:57.389000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(3)
+2015-08-12 23:43:07.960000 HD-Service( 5616: 7376): Guest: system_server (1754): /proc/1754/oom_adj is deprecated, please use /proc/1754/oom_score_adj instead.
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 0 => oom_score_adj 0
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 1 => oom_score_adj 58
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 2 => oom_score_adj 117
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 4 => oom_score_adj 235
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 9 => oom_score_adj 529
+2015-08-12 23:43:08.603000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+2015-08-12 23:43:14.199000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:14.199000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:23.810000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 1990
+2015-08-12 23:43:23.810000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 1 for PID 1990
+2015-08-12 23:43:23.810000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1990. magic = 39, cid = 1990, entry = b8cd7e40, tid = 1990
+2015-08-12 23:43:23.820000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 609. magic = 44, cid = 609, entry = b8cd7ec0, tid = 637
+2015-08-12 23:43:24.000000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 609. magic = 117, cid = 609, entry = be0b3dc0, tid = 2091
+2015-08-12 23:43:25.152000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 2295
+2015-08-12 23:43:25.152000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 2 for PID 2295
+2015-08-12 23:43:25.152000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 2295. magic = 182, cid = 2295, entry = be0b35c0, tid = 2295
+2015-08-12 23:43:25.690000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:25.690000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:25.761000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:25.761000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:25.961000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:43:31.266000 HD-Service( 5616: 7376): Guest: init: sys_prop: permission denied uid:1000  name:user.language
+2015-08-12 23:43:31.266000 HD-Service( 5616: 7376): Guest: init: sys_prop: permission denied uid:1000  name:user.region
+2015-08-12 23:43:33.943000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 609. magic = 516, cid = 609, entry = b81e36c0, tid = 639
+2015-08-12 23:43:34.021000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 609. magic = 528, cid = 609, entry = b81e3440, tid = 2495
+2015-08-12 23:43:34.509000 HD-Service( 5616: 7376): Guest: binder: release 2496:2542 transaction 6891 out, still active
+2015-08-12 23:43:35.999000 HD-Service( 5616: 7376): Guest: binder: 1754:2212 transaction failed 29189, size 1596-8
+2015-08-12 23:43:35.999000 HD-Service( 5616: 7376): Guest: binder: send failed reply for transaction 6891, target dead
+2015-08-12 23:43:36.539000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 1754
+2015-08-12 23:43:36.539000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 3 for PID 1754
+2015-08-12 23:43:36.539000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 851, cid = 1754, entry = b1cab740, tid = 2173
+2015-08-12 23:43:37.819000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 2636
+2015-08-12 23:43:37.819000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 4 for PID 2636
+2015-08-12 23:43:37.829000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 2636. magic = 873, cid = 2636, entry = bc77a5c0, tid = 2636
+2015-08-12 23:43:38.346000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:43:38.346000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:43:38.680000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 2414
+2015-08-12 23:43:38.680000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 5 for PID 2414
+2015-08-12 23:43:38.680000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 2414. magic = 961, cid = 2414, entry = bc43e4c0, tid = 2735
+2015-08-12 23:43:40.580000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:40.580000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:40.900000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 1339, cid = 1754, entry = ae927ac0, tid = 2216
+2015-08-12 23:43:41.520000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 2414. magic = 1422, cid = 2414, entry = bc43edc0, tid = 2414
+2015-08-12 23:43:41.970000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:43:42.982000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:43:42.987000 HD-Service( 5616: 7376): Guest: device closed. will free index 4 for PID 208
+2015-08-12 23:43:43.225000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:43.225000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:43.340000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 1857, cid = 1754, entry = ba42b8c0, tid = 2156
+2015-08-12 23:43:43.400000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:43:43.452000 HD-Service( 5616: 7376): Guest: device closed. will free index 2 for PID 2295
+2015-08-12 23:43:43.799000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 1983, cid = 1754, entry = b1edc8c0, tid = 1768
+2015-08-12 23:43:43.961000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 3080
+2015-08-12 23:43:43.961000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 2 for PID 3080
+2015-08-12 23:43:43.961000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 3080. magic = 1999, cid = 3080, entry = b8cd73c0, tid = 3080
+2015-08-12 23:43:46.130000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:46.130000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:48.130000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:48.130000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:54.614000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 2370
+2015-08-12 23:43:54.615000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 4 for PID 2370
+2015-08-12 23:43:54.615000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 2370. magic = 2543, cid = 2370, entry = ba79d9c0, tid = 3563
+2015-08-12 23:44:09.509000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:09.509000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:11.059000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 2773, cid = 1754, entry = ada4ebc0, tid = 2026
+2015-08-12 23:44:11.218000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 2313
+2015-08-12 23:44:11.218000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 6 for PID 2313
+2015-08-12 23:44:11.229000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 2313. magic = 2810, cid = 2313, entry = ae9272c0, tid = 2313
+2015-08-12 23:44:12.829000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:12.829000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:13.090000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 3932
+2015-08-12 23:44:13.090000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 7 for PID 3932
+2015-08-12 23:44:13.090000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 3932. magic = 3018, cid = 3932, entry = ada9c140, tid = 3932
+2015-08-12 23:44:20.080000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 3959
+2015-08-12 23:44:20.080000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 8 for PID 3959
+2015-08-12 23:44:20.080000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 3959. magic = 3241, cid = 3959, entry = bc43e940, tid = 3959
+2015-08-12 23:44:21.470000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:21.470000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:22.708000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:44:22.709000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:44:26.169000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:44:30.329000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:30.329000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:31.190000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:44:31.190000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:44:31.216000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:31.216000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:32.273000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:32.273000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:32.344000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:32.344000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.368000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.368000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.438000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.438000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.719000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.720000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.750000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.750000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.792000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.792000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.895000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.895000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.928000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.928000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:34.770000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:44:38.670000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 4665
+2015-08-12 23:44:38.670000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 9 for PID 4665
+2015-08-12 23:44:38.670000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 4665. magic = 5040, cid = 4665, entry = ae90e4c0, tid = 4665
+2015-08-12 23:44:41.779000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:41.779000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:42.629000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:42.629000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:44.739000 HD-Service( 5616: 7376): Guest: binder: undelivered transaction 64878
+2015-08-12 23:44:45.279000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:44:45.279000 HD-Service( 5616: 7376): Guest: device closed. will free index 8 for PID 3959
+2015-08-12 23:44:45.529000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:45.529000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:45.609000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:44:45.609000 HD-Service( 5616: 7376): Guest: device closed. will free index 6 for PID 208
+2015-08-12 23:44:46.110000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:44:46.119000 HD-Service( 5616: 7376): Guest: device closed. will free index 7 for PID 208
+2015-08-12 23:44:46.909000 HD-Service( 5616: 7376): Guest: init: untracked pid 4645 exited
+2015-08-12 23:44:48.380000 HD-Service( 5616: 7376): Guest: init: untracked pid 4656 exited
+2015-08-12 23:44:48.770000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:44:48.920000 HD-Service( 5616: 7376): Guest: binder: undelivered transaction 74502
+2015-08-12 23:44:48.920000 HD-Service( 5616: 7376): Guest: binder: undelivered transaction 74435
+2015-08-12 23:44:48.940000 HD-Service( 5616: 7376): Guest: device closed. will free index 2 for PID 3080
+2015-08-12 23:44:50.410000 HD-Service( 5616: 7376): Guest: init: untracked pid 4763 exited
+2015-08-12 23:44:50.520000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 5381
+2015-08-12 23:44:50.520000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 2 for PID 5381
+2015-08-12 23:44:50.520000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 5381. magic = 6010, cid = 5381, entry = a9ca37c0, tid = 5381
+2015-08-12 23:44:51.472000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:44:51.500000 HD-Service( 5616: 7376): Guest: device closed. will free index 9 for PID 4665
+2015-08-12 23:44:58.393000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:58.393000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:00.229000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 5204
+2015-08-12 23:45:00.229000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 6 for PID 5204
+2015-08-12 23:45:00.229000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 5204. magic = 6933, cid = 5204, entry = a9ca3840, tid = 5204
+2015-08-12 23:45:01.975000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:01.975000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:02.069000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 7140, cid = 1754, entry = ada9c240, tid = 4946
+2015-08-12 23:45:02.094000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 609. magic = 7143, cid = 609, entry = ae91a3c0, tid = 5757
+2015-08-12 23:45:02.199000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 5729
+2015-08-12 23:45:02.199000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 7 for PID 5729
+2015-08-12 23:45:02.199000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 5729. magic = 7176, cid = 5729, entry = ada4eac0, tid = 5729
+2015-08-12 23:45:05.072000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:05.072000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:07.634000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:07.634000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:08.869000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:08.869000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:10.039000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:10.039000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:31.769000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 15184, cid = 1754, entry = 9c4b4940, tid = 2215
+2015-08-12 23:45:37.189000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:37.189000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:37.299000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 15643, cid = 1754, entry = bc77a9c0, tid = 4945
+2015-08-12 23:45:37.939000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 5819
+2015-08-12 23:45:37.939000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 8 for PID 5819
+2015-08-12 23:45:37.939000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 5819. magic = 15760, cid = 5819, entry = be1bdf40, tid = 5819
+2015-08-12 23:45:38.839000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:38.839000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:45.109000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:45.109000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:46.389000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:46.389000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:54.919000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:54.919000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:56.879000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:56.879000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:58.209000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:58.209000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:06.619000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:06.619000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:06.879000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:06.879000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:11.539000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:46:11.799000 HD-Service( 5616: 7376): Guest: device closed. will free index 7 for PID 5729
+2015-08-12 23:46:31.819000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:31.819000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:32.439000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 6181
+2015-08-12 23:46:32.439000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 7 for PID 6181
+2015-08-12 23:46:32.439000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6181. magic = 19937, cid = 6181, entry = ada4e7c0, tid = 6181
+2015-08-12 23:46:33.939000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6181. magic = 20080, cid = 6181, entry = b1fafec0, tid = 6296
+2015-08-12 23:46:41.759000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:41.759000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:44.469000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:44.469000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:51.169000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:51.169000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:52.119000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:52.119000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:53.739000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:53.739000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:13.829000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:13.829000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:14.889000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:14.889000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:14.929000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 20118, cid = 1754, entry = a9fd4dc0, tid = 4949
+2015-08-12 23:48:14.949000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 20137, cid = 1754, entry = a9fd4dc0, tid = 2212
+2015-08-12 23:48:15.819000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:15.819000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:16.279000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:16.279000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:17.099000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:17.099000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:17.559000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:17.559000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:20.989000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:20.989000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:21.089000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 20918, cid = 1754, entry = acdd9440, tid = 4948
+2015-08-12 23:48:24.029000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:24.039000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:28.549000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:28.549000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:29.559000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:29.559000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:31.469000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:31.469000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:31.489000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 22032, cid = 1754, entry = b0c33440, tid = 2155
+2015-08-12 23:48:31.519000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 1754. magic = 22052, cid = 1754, entry = b0c33440, tid = 4947
+2015-08-12 23:48:33.789000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:33.789000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:34.319000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:48:34.379000 HD-Service( 5616: 7376): Guest: binder: undelivered transaction 126591
+2015-08-12 23:48:34.379000 HD-Service( 5616: 7376): Guest: device closed. will free index 8 for PID 5819
+2015-08-12 23:48:34.519000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:34.519000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:35.389000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:35.389000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:35.589000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:35.589000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.289000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.289000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.299000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.299000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.839000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.839000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.879000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.879000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:37.399000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:37.399000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:37.419000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:37.419000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:37.839000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:37.839000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:38.759000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:38.759000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:38.779000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:38.779000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:39.229000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:39.229000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:55.399000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:55.399000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:55.519000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:55.519000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:55.539000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:55.539000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.319000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.319000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.349000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.349000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.669000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.669000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.919000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.919000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:07.709000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:07.709000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:08.009000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:08.009000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:08.149000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:08.149000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:08.309000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:08.309000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:09.069000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:09.069000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:09.469000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:09.469000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:10.709000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:10.709000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:11.189000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:11.189000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:15.386000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:49:15.386000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x29f68bf0, 0x00000000, 1, a9e9e980), argv[0] /system/bin/stop
+2015-08-12 23:49:15.386000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:49:15.386000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:49:15.401000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.401000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.417000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.433000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.433000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.464000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.479000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: device closed. will free index 6 for PID 208
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 2102 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 2125 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 2141 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 2234 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 2466 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 5204 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 6125 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 6138 exited
+2015-08-12 23:49:15.495000 HD-Service( 5616: 7376): Guest: init: untracked pid 6560 exited
+2015-08-12 23:49:15.511000 HD-Service( 5616: 7376): Guest: init: untracked pid 1754 exited
+2015-08-12 23:49:15.511000 HD-Service( 5616: 7376): Guest: device closed. will free index 3 for PID 208
+2015-08-12 23:49:15.511000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-12 23:49:15.526000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-12 23:49:15.542000 HD-Service( 5616: 7376): Guest: alarm_release: clear alarm, pending 0
+2015-08-12 23:49:15.542000 HD-Service( 5616: 7376): Guest: alarm_release: clear alarm, pending 0
+2015-08-12 23:49:15.557000 HD-Service( 5616: 7376): Guest: device closed. will free index 0 for PID 609
+2015-08-12 23:49:15.557000 HD-Service( 5616: 7376): Guest: init: untracked pid 2159 exited
+2015-08-12 23:49:15.557000 HD-Service( 5616: 7376): Guest: device closed. will free index 4 for PID 2370
+2015-08-12 23:49:15.557000 HD-Service( 5616: 7376): Guest: init: untracked pid 2370 exited
+2015-08-12 23:49:15.573000 HD-Service( 5616: 7376): Guest: device closed. will free index 2 for PID 5381
+2015-08-12 23:49:15.573000 HD-Service( 5616: 7376): Guest: init: untracked pid 5381 exited
+2015-08-12 23:49:15.573000 HD-Service( 5616: 7376): Guest: device closed. will free index 1 for PID 1990
+2015-08-12 23:49:15.573000 HD-Service( 5616: 7376): Guest: init: untracked pid 1990 exited
+2015-08-12 23:49:15.589000 HD-Service( 5616: 7376): Guest: init: untracked pid 6268 exited
+2015-08-12 23:49:15.589000 HD-Service( 5616: 7376): Guest: init: untracked pid 2117 exited
+2015-08-12 23:49:15.604000 HD-Service( 5616: 7376): Guest: device closed. will free index 7 for PID 6181
+2015-08-12 23:49:15.604000 HD-Service( 5616: 7376): Guest: init: untracked pid 6181 exited
+2015-08-12 23:49:15.604000 HD-Service( 5616: 7376): Guest: device closed. will free index 5 for PID 2414
+2015-08-12 23:49:15.620000 HD-Service( 5616: 7376): Guest: init: untracked pid 2414 exited
+2015-08-12 23:49:15.620000 HD-Service( 5616: 7376): Guest: init: untracked pid 6062 exited
+2015-08-12 23:49:15.620000 HD-Service( 5616: 7376): Guest: init: untracked pid 3695 exited
+2015-08-12 23:49:16.213000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:16.213000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:16.213000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:16.213000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:16.329000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:49:16.329000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x44567f07, 0x00000000, 1, be1e8e80), argv[0] /system/bin/start
+2015-08-12 23:49:16.329000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:49:16.329000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:49:16.339000 HD-Service( 5616: 7376): Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-12 23:49:16.339000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-12 23:49:16.349000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 6668
+2015-08-12 23:49:16.349000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 0 for PID 6668
+2015-08-12 23:49:16.349000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6668. magic = 24680, cid = 6668, entry = e38953c0, tid = 6668
+2015-08-12 23:49:16.359000 HD-Service( 5616: 7376): Guest: Setting video mode 1440x900x16
+2015-08-12 23:49:16.459000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:49:16.459000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(1)
+2015-08-12 23:49:16.459000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(2)
+2015-08-12 23:49:16.459000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(3)
+2015-08-12 23:49:16.959000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:16.959000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 0 => oom_score_adj 0
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 1 => oom_score_adj 58
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 2 => oom_score_adj 117
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 4 => oom_score_adj 235
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 9 => oom_score_adj 529
+2015-08-12 23:49:18.169000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+2015-08-12 23:49:18.590000 HD-Service( 5616: 7376): Guest: binder: 620:1578 transaction failed 29189, size 172-0
+2015-08-12 23:49:19.682000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 6762
+2015-08-12 23:49:19.682000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 1 for PID 6762
+2015-08-12 23:49:19.682000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6762. magic = 24721, cid = 6762, entry = ba57a1c0, tid = 6762
+2015-08-12 23:49:19.792000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6668. magic = 24730, cid = 6668, entry = ada858c0, tid = 6670
+2015-08-12 23:49:20.072000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6668. magic = 24756, cid = 6668, entry = b1edc640, tid = 6674
+2015-08-12 23:49:20.197000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 6899
+2015-08-12 23:49:20.197000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 2 for PID 6899
+2015-08-12 23:49:20.197000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6899. magic = 24772, cid = 6899, entry = a9ca3ec0, tid = 6899
+2015-08-12 23:49:20.618000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:20.618000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:20.618000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:20.618000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:20.728000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:49:20.728000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-12 23:49:20.977000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6668. magic = 24935, cid = 6668, entry = a9fd49c0, tid = 7073
+2015-08-12 23:49:21.553000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:49:21.553000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:49:24.993000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:49:25.953000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:25.953000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:30.273000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:30.273000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:30.973000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:30.973000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:38.523000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:38.523000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:45.573000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:45.573000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:45.873000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:45.873000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:51.183000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:51.183000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:51.943000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:51.943000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:52.213000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:52.213000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:53.203000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:53.203000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:55.303000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:55.303000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:55.953000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:55.953000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:56.113000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:56.113000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:56.943000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:56.943000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:58.893000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:49:58.893000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:49:59.223000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:59.223000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:59.793000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:59.793000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:02.393000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:50:02.833000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:02.833000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:06.965000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:06.965000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:07.400000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:50:07.400000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:50:07.400000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 7957
+2015-08-12 23:50:07.400000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 3 for PID 7957
+2015-08-12 23:50:07.410000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 7957. magic = 25453, cid = 7957, entry = ba79dbc0, tid = 7957
+2015-08-12 23:50:08.530000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:08.530000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:10.786000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:50:11.500000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:11.500000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:12.210000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:12.210000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:12.990000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:12.990000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:13.030000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:13.030000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:19.567000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:19.567000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:19.604000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:19.604000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:19.629000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:19.629000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:20.374000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:20.374000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:25.187000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:25.188000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:25.630000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:25.630000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:25.667000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:25.667000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:26.215000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:26.215000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:26.270000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:26.270000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:31.860000 HD-Service( 5616: 7376): Guest: binder: 6683:6706 transaction failed 29189, size 144-0
+2015-08-12 23:50:32.193000 HD-Service( 5616: 7376): Guest: binder: undelivered transaction 158325
+2015-08-12 23:50:32.935000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:32.935000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:34.005000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:34.005000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:47.934000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:47.934000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:58.501000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:58.501000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:04.966000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:04.966000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:05.020000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:05.020000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:05.113000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6668. magic = 29030, cid = 6668, entry = bc43ea40, tid = 8464
+2015-08-12 23:51:08.398000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:08.398000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:16.750000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:16.750000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:16.840000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 6683
+2015-08-12 23:51:16.840000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 4 for PID 6683
+2015-08-12 23:51:16.840000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6683. magic = 30231, cid = 6683, entry = ba79d0c0, tid = 6694
+2015-08-12 23:51:16.930000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6683. magic = 30252, cid = 6683, entry = b1e8bcc0, tid = 6697
+2015-08-12 23:51:17.152000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 8740
+2015-08-12 23:51:17.152000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 5 for PID 8740
+2015-08-12 23:51:17.152000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 8740. magic = 30294, cid = 8740, entry = ae90e4c0, tid = 8740
+2015-08-12 23:51:17.170000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 6956
+2015-08-12 23:51:17.170000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 6 for PID 6956
+2015-08-12 23:51:17.170000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 6956. magic = 30302, cid = 6956, entry = a9fd44c0, tid = 8753
+2015-08-12 23:51:18.790000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 8740. magic = 30524, cid = 8740, entry = b1fccb40, tid = 8856
+2015-08-12 23:51:19.850000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:51:19.850000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-12 23:51:19.880000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 620
+2015-08-12 23:51:19.880000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 7 for PID 620
+2015-08-12 23:51:19.890000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 30586, cid = 620, entry = a9ee0340, tid = 8904
+2015-08-12 23:51:20.400000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 30592, cid = 620, entry = a9ee0e40, tid = 8902
+2015-08-12 23:51:20.450000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 30601, cid = 620, entry = a9ee0e40, tid = 8903
+2015-08-12 23:51:20.660000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 30627, cid = 620, entry = a9ee03c0, tid = 8907
+2015-08-12 23:51:24.200000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 31558, cid = 620, entry = e3895cc0, tid = 3389
+2015-08-12 23:51:27.744000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:51:31.605000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:31.605000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:32.501000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:32.501000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:35.210000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:51:35.210000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-12 23:51:39.525000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:39.525000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:42.549000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:42.549000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:43.668000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:43.668000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:44.909000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:44.909000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:45.076000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:45.076000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:45.413000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:45.413000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:45.903000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:45.903000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:46.085000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:46.086000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:52:10.890000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:52:10.890000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:52:41.116000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:52:41.116000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:55:36.889000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:55:36.889000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:55:38.662000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:55:38.662000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:55:56.032000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:55:56.032000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:15.452000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:15.452000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:16.182000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:16.182000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:18.572000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:18.572000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:18.962000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:18.962000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:32.292000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:32.292000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:33.072000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:33.072000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:33.862000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:33.862000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:35.662000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:35.662000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:36.252000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:36.252000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:36.652000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:36.652000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:37.472000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:37.472000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:37.762000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:37.762000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:37.922000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:37.922000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:38.712000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:38.712000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:38.992000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:38.992000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.122000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.122000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.562000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.562000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.722000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.722000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.952000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.952000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:46.072000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:46.072000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:46.982000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:46.982000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:47.122000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:47.122000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:47.402000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:47.402000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:47.572000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:47.572000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:48.762000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:48.762000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:49.122000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:49.122000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:54.557000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-13 00:01:54.557000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x13af4515, 0x00000000, 1, a8b48240), argv[0] /system/bin/stop
+2015-08-13 00:01:54.557000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-13 00:01:54.557000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-13 00:01:54.838000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:54.884000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:54.900000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:54.916000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:54.947000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:54.947000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: device closed. will free index 3 for PID 208
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 6790 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 6844 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 6857 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 6886 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 6927 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 7347 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 7865 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 7957 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 9252 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 9270 exited
+2015-08-13 00:01:55.009000 HD-Service( 5616: 7376): Guest: init: untracked pid 9286 exited
+2015-08-13 00:01:55.056000 HD-Service( 5616: 7376): Guest: init: untracked pid 8740 exited
+2015-08-13 00:01:55.056000 HD-Service( 5616: 7376): Guest: device closed. will free index 5 for PID 208
+2015-08-13 00:01:55.056000 HD-Service( 5616: 7376): Guest: init: untracked pid 6683 exited
+2015-08-13 00:01:55.056000 HD-Service( 5616: 7376): Guest: device closed. will free index 4 for PID 208
+2015-08-13 00:01:55.056000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:01:55.072000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-13 00:01:55.087000 HD-Service( 5616: 7376): Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:01:55.087000 HD-Service( 5616: 7376): Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:01:55.134000 HD-Service( 5616: 7376): Guest: init: untracked pid 6821 exited
+2015-08-13 00:01:55.150000 HD-Service( 5616: 7376): Guest: binder: undelivered death notification, 77c08d10
+2015-08-13 00:01:55.150000 HD-Service( 5616: 7376): Guest: device closed. will free index 0 for PID 6668
+2015-08-13 00:01:55.150000 HD-Service( 5616: 7376): Guest: init: untracked pid 7303 exited
+2015-08-13 00:01:55.150000 HD-Service( 5616: 7376): Guest: init: untracked pid 8471 exited
+2015-08-13 00:01:55.150000 HD-Service( 5616: 7376): Guest: device closed. will free index 6 for PID 6956
+2015-08-13 00:01:55.150000 HD-Service( 5616: 7376): Guest: init: untracked pid 6956 exited
+2015-08-13 00:01:55.196000 HD-Service( 5616: 7376): Guest: init: untracked pid 8787 exited
+2015-08-13 00:01:55.196000 HD-Service( 5616: 7376): Guest: device closed. will free index 2 for PID 6899
+2015-08-13 00:01:55.196000 HD-Service( 5616: 7376): Guest: init: untracked pid 6899 exited
+2015-08-13 00:01:55.196000 HD-Service( 5616: 7376): Guest: init: untracked pid 6872 exited
+2015-08-13 00:01:55.212000 HD-Service( 5616: 7376): Guest: device closed. will free index 1 for PID 6762
+2015-08-13 00:01:55.212000 HD-Service( 5616: 7376): Guest: init: untracked pid 6762 exited
+2015-08-13 00:01:55.477000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:55.477000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:55.477000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:55.477000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:55.660000 HD-Service( 5616: 7376): Guest: bstcmd: ping command received, sending response for the same
+2015-08-13 00:01:55.660000 HD-Service( 5616: 7376): Guest: bstcmd_run(0x6b306300, 0x00000000, 1, a9e9e220), argv[0] /system/bin/start
+2015-08-13 00:01:55.660000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-13 00:01:55.660000 HD-Service( 5616: 7376): Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-13 00:01:55.670000 HD-Service( 5616: 7376): Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-13 00:01:55.670000 HD-Service( 5616: 7376): Guest: bstcmd_run ret = 0
+2015-08-13 00:01:56.371000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 9404
+2015-08-13 00:01:56.371000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 0 for PID 9404
+2015-08-13 00:01:56.371000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9404. magic = 1135849, cid = 9404, entry = acdd9e40, tid = 9404
+2015-08-13 00:01:56.380000 HD-Service( 5616: 7376): Guest: Setting video mode 1440x900x16
+2015-08-13 00:01:56.510000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:56.510000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:57.770000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-13 00:01:57.770000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(1)
+2015-08-13 00:01:57.770000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(2)
+2015-08-13 00:01:57.770000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(3)
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 0 => oom_score_adj 0
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 1 => oom_score_adj 58
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 2 => oom_score_adj 117
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 4 => oom_score_adj 235
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 9 => oom_score_adj 529
+2015-08-13 00:02:01.496000 HD-Service( 5616: 7376): Guest: lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+2015-08-13 00:02:02.012000 HD-Service( 5616: 7376): Guest: binder: 620:8967 transaction failed 29189, size 172-0
+2015-08-13 00:02:02.917000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 9499
+2015-08-13 00:02:02.917000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 1 for PID 9499
+2015-08-13 00:02:02.917000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9499. magic = 1135883, cid = 9499, entry = b1e8b4c0, tid = 9499
+2015-08-13 00:02:02.932000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9404. magic = 1135889, cid = 9404, entry = b1e8b5c0, tid = 9408
+2015-08-13 00:02:04.071000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9404. magic = 1135919, cid = 9404, entry = b1fafc40, tid = 9406
+2015-08-13 00:02:04.602000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9404. magic = 1135948, cid = 9404, entry = ba57a3c0, tid = 9728
+2015-08-13 00:02:04.602000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 9643
+2015-08-13 00:02:04.602000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 2 for PID 9643
+2015-08-13 00:02:04.648000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9643. magic = 1135951, cid = 9643, entry = ba57a3c0, tid = 9643
+2015-08-13 00:02:04.882000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:04.882000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:04.882000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:04.882000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:04.882000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-13 00:02:04.882000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-13 00:02:05.070000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-13 00:02:05.070000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:06.500000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:06.500000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:08.630000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-13 00:02:11.880000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:11.880000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:12.330000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:12.330000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:12.460000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:12.460000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:12.510000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 9419
+2015-08-13 00:02:12.510000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 3 for PID 9419
+2015-08-13 00:02:12.510000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9419. magic = 1136156, cid = 9419, entry = ae91ae40, tid = 9642
+2015-08-13 00:02:12.650000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9419. magic = 1136183, cid = 9419, entry = ada9c340, tid = 9433
+2015-08-13 00:02:13.120000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 9666
+2015-08-13 00:02:13.120000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 4 for PID 9666
+2015-08-13 00:02:13.120000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 9666. magic = 1136302, cid = 9666, entry = ae90e9c0, tid = 10140
+2015-08-13 00:02:13.270000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 10113
+2015-08-13 00:02:13.270000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 5 for PID 10113
+2015-08-13 00:02:13.270000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 10113. magic = 1136323, cid = 10113, entry = ae9134c0, tid = 10113
+2015-08-13 00:02:14.150000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:14.150000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:16.520000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 10113. magic = 1136474, cid = 10113, entry = accdc740, tid = 10272
+2015-08-13 00:02:18.130000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_start(0)
+2015-08-13 00:02:18.130000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:18.750000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 1136571, cid = 620, entry = ae90e1c0, tid = 10305
+2015-08-13 00:02:19.140000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 1136579, cid = 620, entry = ae913ec0, tid = 10303
+2015-08-13 00:02:19.180000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 1136594, cid = 620, entry = ae913ec0, tid = 10304
+2015-08-13 00:02:19.450000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 1136619, cid = 620, entry = e3af1a40, tid = 10315
+2015-08-13 00:02:21.000000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:21.000000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:23.290000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 620. magic = 1137162, cid = 620, entry = b1faf340, tid = 8967
+2015-08-13 00:02:27.709000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:27.709000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:28.097000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:28.097000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:29.079000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:29.079000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:29.529000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:29.529000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:31.579000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:31.579000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:32.139000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:32.139000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:33.695000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:33.695000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:36.240000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:36.240000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:36.808000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:36.808000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:37.810000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:37.810000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:39.245000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:39.245000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:40.735000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:40.735000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:41.495000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:41.495000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:42.515000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:44.305000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.305000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.525000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.525000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.695000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.695000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.835000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.835000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.995000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.995000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.105000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:45.105000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.255000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:45.255000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.365000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:45.365000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.845000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:50.885000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:54.155000 HD-Service( 5616: 7376): Guest: alloc_index called for cid 10906
+2015-08-13 00:02:54.155000 HD-Service( 5616: 7376): Guest: device opened...allocated map index 6 for PID 10906
+2015-08-13 00:02:54.165000 HD-Service( 5616: 7376): Guest: Connect ACK received for pid = 10906. magic = 1167423, cid = 10906, entry = e30b9dc0, tid = 10906
+2015-08-13 00:02:54.175000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:59.345000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:59.345000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:59.375000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:59.375000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:59.395000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:59.395000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:03:38.215000 HD-Service( 5616: 7376): Guest: binder: release 11176:11259 transaction 344286 out, still active
+2015-08-13 00:03:38.225000 HD-Service( 5616: 7376): Guest: binder: 9566:9593 transaction failed 29189, size 140-8
+2015-08-13 00:03:38.225000 HD-Service( 5616: 7376): Guest: binder: send failed reply for transaction 344286, target dead
+2015-08-13 00:03:41.425000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:44.705000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:49.765000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:53.045000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:58.065000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:04:01.345000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:06:28.525000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:28.525000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:29.415000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:29.465000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:30.055000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:30.055000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:30.625000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:30.625000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:31.015000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:31.015000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:32.885000 HD-Service( 5616: 7376): Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:32.885000 HD-Service( 5616: 7376): Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:07:25.454000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:25.904000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:26.824000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:28.344000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:28.384000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:28.904000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:29.034000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:07:33.724000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:07:34.164000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:07:34.784000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:07:34.804000 HD-Service( 5616: 7376): Guest: device closed. will free index 1 for PID 9499
+2015-08-13 00:08:27.564000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:08:27.584000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:08:32.844000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:08:32.844000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:03.354000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:03.354000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: SysRq : 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: Show Blocked State
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   task                PC stack   pid father
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: bstaudio        D
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  24f47300 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:     0   445      2 0x00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2995f6c
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000046
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e39263b0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  24f47300
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e39263b0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2995f34
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  81039334
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000001
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2971df8
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2971e30
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2971e3c
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2995f3c
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  81039374
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2995f60
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  81038a25
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000003
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2994000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e4c53597
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2995f68
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2971e28
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: Call Trace:
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81039334>] ? try_to_wake_up+0x11b/0x124
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81039374>] ? default_wake_function+0xb/0xd
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81038a25>] ? __wake_up_common+0x35/0x57
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<e4c53597>] ? bstaudio_isr+0x14/0x14 [bstaudio]
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<e4c53597>] ? bstaudio_isr+0x14/0x14 [bstaudio]
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81271957>] schedule+0x55/0x57
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81033922>] kthread+0x70/0x8e
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81272d37>] ret_from_kernel_thread+0x1b/0x28
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<810338b2>] ? kthread_worker_fn+0x128/0x128
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: bstcamera       D
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  2cb41780 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:     0   502      2 0x00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2b1ff6c
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000046
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e38a0ef0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  2cb41780
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e38a0ef0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2b1ff34
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  81039334
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000001
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e29b3e24
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e29b3e5c
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e29b3e68
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2b1ff3c
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  81039374
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2b1ff60
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  81038a25
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000003
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2b1e000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  00000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e4c79014
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e2b1ff68
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  e29b3e54
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: Call Trace:
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81039334>] ? try_to_wake_up+0x11b/0x124
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81039374>] ? default_wake_function+0xb/0xd
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81038a25>] ? __wake_up_common+0x35/0x57
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<e4c79014>] ? bstcamera_isr+0x14/0x14 [bstcamera]
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<e4c79014>] ? bstcamera_isr+0x14/0x14 [bstcamera]
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81271957>] schedule+0x55/0x57
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81033922>] kthread+0x70/0x8e
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<81272d37>] ret_from_kernel_thread+0x1b/0x28
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  [<810338b2>] ? kthread_worker_fn+0x128/0x128
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: Sched Debug Version: v0.10, 3.10.30-android-x86-hd+ #1
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: ktime                                   : 1587920.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: sched_clk                               : 1587920.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: cpu_clk                                 : 1587920.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: jiffies                                 : 128792
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: sched_clock_stable                      : 0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: sysctl_sched
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sysctl_sched_latency                    : 10.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sysctl_sched_min_granularity            : 0.750000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sysctl_sched_wakeup_granularity         : 2.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sysctl_sched_child_runs_first           : 0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sysctl_sched_features                   : 11899
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sysctl_sched_tunable_scaling            : 1 (logaritmic)
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: cpu#0, 2294.000 MHz
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .nr_running                    : 3
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .load                          : 9398
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .nr_switches                   : 7911990
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .nr_load_updates               : 158792
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .nr_uninterruptible            : 2
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .next_balance                  : 0.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .curr->pid                     : 9535
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .clock                         : 1587920.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .cpu_load[0]                   : 9398
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .cpu_load[1]                   : 7792
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .cpu_load[2]                   : 7139
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .cpu_load[3]                   : 6850
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .cpu_load[4]                   : 6613
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .yld_count                     : 375
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sched_count                   : 8096723
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .sched_goidle                  : 1586934
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .ttwu_count                    : 5540411
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .ttwu_local                    : 0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .exec_clock                    : 532450.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .MIN_vruntime                  : 417225.931347
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .min_vruntime                  : 417230.931347
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .max_vruntime                  : 417228.552955
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .spread                        : 2.621608
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .spread0                       : 0.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .nr_spread_over                : 32224
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .nr_running                    : 3
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .load                          : 9398
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .rt_nr_running                 : 0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .rt_throttled                  : 0
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .rt_time                       : 0.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:   .rt_runtime                    : 950.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: R
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:        watchdog  9535    417225.931347       219   118 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:    417225.931347         0.000000    423220.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: .android.common 10216    417228.552955     18103   114 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:    417228.552955      1340.000000    400940.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:  
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:      Thread-158 10294    417225.931347     19709   114 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest:    417225.931347       620.000000    394040.000000
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.374000 HD-Service( 5616: 7376): Guest: 
+2015-08-13 00:09:05.394000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.474000 HD-Service( 5616: 7376): Guest: binder: release 9419:9641 transaction 383320 out, still active
+2015-08-13 00:09:05.474000 HD-Service( 5616: 7376): Guest: binder: release 9419:9641 transaction 383319 in, still active
+2015-08-13 00:09:05.474000 HD-Service( 5616: 7376): Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:09:05.474000 HD-Service( 5616: 7376): Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:09:05.474000 HD-Service( 5616: 7376): Guest: device closed. will free index 3 for PID 9419
+2015-08-13 00:09:05.524000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.534000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.544000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.544000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.584000 HD-Service( 5616: 7376): Guest: device closed. will free index 6 for PID 10906
+2015-08-13 00:09:05.624000 HD-Service( 5616: 7376): Guest: returning EINTR to user
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: device closed. will free index 7 for PID 208
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: binder: release 11457:11457 transaction 383319 out, still active
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 9540 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 9566 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 9587 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 9627 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 10080 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 10755 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 10906 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 11038 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 11091 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 11199 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 11410 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 11457 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 620 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 10774 exited
+2015-08-13 00:09:05.674000 HD-Service( 5616: 7376): Guest: init: untracked pid 11145 exited
+2015-08-13 00:09:05.714000 HD-Service( 5616: 7376): Guest: device closed. will free index 5 for PID 10113
+2015-08-13 00:09:05.714000 HD-Service( 5616: 7376): Guest: init: untracked pid 10113 exited
+2015-08-13 00:09:05.814000 HD-Service( 5616: 7376): Guest: device closed. will free index 2 for PID 9643
+2015-08-13 00:09:05.814000 HD-Service( 5616: 7376): Guest: init: untracked pid 9643 exited
+2015-08-13 00:09:05.814000 HD-Service( 5616: 7376): Guest: init: untracked pid 11263 exited
+2015-08-13 00:09:05.854000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(0)
+2015-08-13 00:09:05.854000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(1)
+2015-08-13 00:09:05.854000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(2)
+2015-08-13 00:09:05.854000 HD-Service( 5616: 7376): Guest: bstsensor_mesg_send_stop(3)
+2015-08-13 00:09:05.944000 HD-Service( 5616: 7376): Guest: init: untracked pid 11105 exited
+2015-08-13 00:09:05.944000 HD-Service( 5616: 7376): Guest: device closed. will free index 4 for PID 9666
+2015-08-13 00:09:05.944000 HD-Service( 5616: 7376): Guest: init: untracked pid 9609 exited
+2015-08-13 00:09:05.944000 HD-Service( 5616: 7376): Guest: init: untracked pid 9666 exited
+2015-08-13 00:09:31.354000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00008000, 0x003ee7c0)
+2015-08-13 00:09:31.354000 HD-SharedFolder( 9104: 2864): VolumeEventHandleDeviceArrival()
+2015-08-13 00:09:31.354000 HD-SharedFolder( 9104: 2864):     unitmask = 0x00000020
+2015-08-13 00:09:31.354000 HD-SharedFolder( 9104: 2864):     flags    = 0x00000000
+2015-08-13 00:09:31.384000 HD-SharedFolder( 9104: 2864):     name     = F
+2015-08-13 00:09:31.384000 HD-SharedFolder( 9104: 2864):     path     = F:\
+2015-08-13 00:09:31.404000 HD-SharedFolder( 9104: 2864): VolumeEventHandleAttached('F', 'F:\')
+2015-08-13 00:09:31.404000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0xd, 0x00000100, 0x0106f0d4)
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 2864): VolumeEventHandleAttached: insert context 00EA8ED8
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 2864): VolumeEventCreate(0, 'F', 'F:\')
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 2864): VolumeEventEnqueue(00E68700)
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 2864): VolumeEventWait(00E68700)
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 4836): VolumeEventDequeue 00E68700
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 4836): VolumeEventComplete(00E68700)
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 4836): VolumeEventDequeue 00000000
+2015-08-13 00:09:31.574000 HD-SharedFolder( 9104: 2864): VolumeEventDestroy(00E68700)
+2015-08-13 00:09:31.634000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00008006, 0x003ee620)
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): VolumeEventHandleCustom(00000219, 0x00008006, 0x003ee620, 0x003ee620)
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): VolumeEventHandleCustom: device type 6
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864):     handle     = 000000d0
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864):     hdevnotify = 0076a360
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): VolumeEventHandleCustom: fetch context 00EA8ED8
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864):     name     = F
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864):     path     = F:\
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): {b5804878-1a96-11d2-8ffd-00a0c9a06d32}
+2015-08-13 00:09:31.644000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:09:32.754000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:09:34.814000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x219, 0x00000007, 0x00000000)
+2015-08-13 00:10:29.744000 HD-SharedFolder( 9104: 2864): VolumeEventWindowProc(0001018E, 0x218, 0x0000000a, 0x00000000)
+2015-08-13 00:10:32.454000 HD-Service( 5616: 8476): OnPowerEvent(PowerStatusChange)
