@@ -222,7 +222,9 @@ class FreematchController < ApplicationController
         @rank_lol_total_game = TeamlistLol.order(lol_total_game: :desc)         #롤총경기수
         @rank_lol_winning_rate = TeamlistLol.order(lol_winning_rate: :desc)     #롤승률
         @rank_lol_lose = TeamlistLol.order(lol_lose: :desc)                     #롤트롤
+        
         render layout: false
+
     end
    
     
@@ -248,6 +250,25 @@ class FreematchController < ApplicationController
         @rank_lol_total_game = TeamlistLol.order(lol_total_game: :desc)         #롤총경기수
         @rank_lol_winning_rate = TeamlistLol.order(lol_winning_rate: :desc)     #롤승률
         @rank_lol_lose = TeamlistLol.order(lol_lose: :desc)                     #롤트롤
+        
+        #롤 받음
+        @mode_rank_lol_winner_point = params[:mode_rank_lol_winner_point]
+        @mode_rank_lol_total_game = params[:mode_rank_lol_total_game]
+        @mode_rank_lol_winning_rate = params[:mode_rank_lol_winning_rate]
+        @mode_rank_lol_lose = params[:mode_rank_lol_lose]
+        
+        #피파 받음
+        @mode_rank_fifa_winner_point = params[:mode_rank_fifa_winner_point]
+        @mode_rank_fifa_total_game = params[:mode_rank_fifa_total_gamet]
+        @mode_rank_fifa_winning_rate = params[:mode_rank_fifa_winning_rate]
+        @mode_rank_fifa_lose = params[:mode_rank_fifa_lose]
+        
+        #하스 받음
+        @mode_mode_rank_Heartstone_winner_point = params[:mode_rank_Heartstone_winner_point]
+        @mode_rank_Heartstone_total_game = params[:mode_rank_Heartstone_total_game]
+        @mode_rank_Heartstone_winning_rate = params[:mode_rank_Heartstone_winning_rate]
+        @mode_rank_Heartstone_lose = params[:mode_rank_Heartstone_lose]
+        
         render layout: false
       
     end

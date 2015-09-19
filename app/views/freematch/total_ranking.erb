@@ -1,13 +1,292 @@
-<h1>해당 버튼에 대한 전체 랭킹</h1>
+
+<center><h1> Total Ranking </h1><img src="http://cfile27.uf.tistory.com/image/2661AB33538D6B26124FE2" style=width="100px; height=100px;">
+
+<style>
 
 
+table, td, th,tr {
+    border: 1px solid #D7D2D2;
+                }
+ 
+ h3{
+    
+    color: #D07635;
+ }
+ 
+ p{
+   color:black
+ 
+ }
+</style>
 
-  <% @rank_lol_winner_point.each do |t| %>
-    <h4><%= t.lol_team_name %></h4>
-    <p>승점 : <%= t.lol_winner_point %> 점</p>
-  <% end %>
-  <% else %>
-  <h1>하하</h1>
+<!--if 문 시작 -->
+<!--롤 -->
+<% if @mode_rank_lol_winner_point %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>승점</th>
+    </tr>
+    <% @rank_lol_winner_point.each_with_index do |t, i| %>  
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.lol_team_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.lol_winner_point %> 점 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+   
+      
+<% elsif @mode_rank_lol_total_game %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>경기수</th>
+    </tr>
+    <% @rank_lol_total_game.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.lol_team_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.lol_total_game %> 번 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<% elsif @mode_rank_lol_winning_rate %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>승률</th>
+    </tr>
+    <% @rank_lol_winning_rate.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.lol_team_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.lol_winning_rate %> % </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+<% elsif @mode_rank_lol_lose %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>패배수</th>
+    </tr>
+    <% @rank_lol_lose.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.lol_team_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.lol_lose%> 번</h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<!-- 피파 -->
+<% elsif @mode_rank_fifa_winner_point %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>승점</th>
+    </tr>
+    <% @rank_fifa_winner_point.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.fifa_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.fifa_winner_point%> 번</h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<% elsif @mode_rank_fifa_winning_rate %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>승률</th>
+    </tr>
+    <% @rank_fifa_winning_rate.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th >
+          <h3><%= t.fifa_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.fifa_winning_rate %> % </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<% elsif @mode_rank_fifa_lose %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>패배수</th>
+    </tr>
+    <% @rank_fifa_lose.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.fifa_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.fifa_lose %> 번 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
   
-<% end %>
+<% elsif @mode_rank_fifa_total_game %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>경기수</th>
+    </tr>
+    <% @rank_fifa_total_game.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.fifa_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.fifa_total_game %> 번 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
 
+<!-- 하스  -->
+<% elsif @mode_mode_rank_Heartstone_winner_point %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>승점</th>
+    </tr>
+    <% @rank_Heartstone_winner_point.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.hearthstone_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.hearthstone_winner_point %> 점 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<% elsif @mode_rank_Heartstone_total_game %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>경기수</th>
+    </tr>
+    <% @rank_Heartstone_total_game.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.hearthstone_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.hearthstone_total_game %> 번 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<% elsif @mode_rank_Heartstone_winning_rate %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>승률</th>
+    </tr>
+    <% @rank_Heartstone_winning_rate.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.hearthstone_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.hearthstone_winning_rate %> % </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+
+<% else %>
+  <table style="width:400px;height:100px table-layout: fixed">
+    <tr>
+      <th>순위</th>
+      <th>팀명</th>
+      <th>패배수</th>
+    </tr>
+    <% @rank_Heartstone_lose.each_with_index do |t, i| %>
+      <tr>
+        <th>
+          <%= (i+1) %>위
+        </th>
+        <th>
+          <h3><%= t.hearthstone_user_name %></h3>
+        </th>
+        <th>
+          <h3><%= t.hearthstone_lose %> 번 </h3>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+  
+<% end %> <!-- if 문 end -->
+
+</center>
