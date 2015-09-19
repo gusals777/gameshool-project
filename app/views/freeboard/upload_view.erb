@@ -100,7 +100,7 @@ background: rgba(255, 255, 255, 0.7s);
                                 
                                 <div class="<%= r.id %>" style="display :none">
                                     <textarea name="rp_content" class="rp_modify_<%= r.id %>"></textarea>
-                                    <button class="modify_confirm_<%= r.id %>">확인</button>
+                                    <button class="modify_confirm_<%= r.id %>" onClick="this.style.visibility='hidden'">확인</button>
                                 </div>
                                 
                                 <script>
@@ -156,7 +156,7 @@ background: rgba(255, 255, 255, 0.7s);
                                 <input type="hidden" name="freeboard_id" value="<%= @one_fb.id %>">
                                 <input type="hidden" name="rp_name" value="<%= current_user.name %>">
                                 <input type="hidden" name="rp_hakbun" value="<%= current_user.hakbun %>">
-                                <input type="submit" value="댓글달기"><br>
+                                <input type="submit" value="댓글달기"onClick="this.style.visibility='hidden'"><br>
                                 
                             <% end %>
                             <br>

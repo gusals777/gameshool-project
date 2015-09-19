@@ -6,6 +6,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'carrierwave'
 gem 'mini_magick' #미니 매직 젬 설치 후 명령어 창에 sudo apt-get install imagemagick 입력하여 설치
 gem 'fog'
+gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

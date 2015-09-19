@@ -1,0 +1,2253 @@
+2015-08-12 23:39:40.576 0000000000000048: ENT Initializing hypervisor...
+2015-08-12 23:39:40.576 0000000000000048: ENT Entry point at 0xFFFFF8800C6032F0
+2015-08-12 23:39:40.576 0000000000000048: ENT the registry path is pp??υο???\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-12 23:39:40.576 0000000000000048: ENT 0
+2015-08-12 23:39:40.576 0000000000000048: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-12 23:39:44.262 0000000000002004: HVM HVM_HAL supported, runing on VMX
+
+2015-08-12 23:39:44.262 0000000000002004: IOC BstHdHvmSupportCheck() returned status 0
+2015-08-12 23:39:44.264 0000000000002004: IOC BstHdHvmCheck() returned virttype 1
+2015-08-12 23:39:44.266 0000000000002004: VMX cpu #0 MSR_IA32_FEATURE_CONTROL is 0x0000000000000005
+2015-08-12 23:39:44.266 0000000000002004: IOC BstHdHvmEnabledInBiosCheck() returned status 0
+2015-08-12 23:42:35.420 0000000000002348: MON Creating monitor 5616 for Android
+2015-08-12 23:42:35.420 0000000000002348: MON Fetching monitor configuration
+2015-08-12 23:42:35.420 0000000000002348: CFG Guest memory is 1598 MB
+2015-08-12 23:42:35.420 0000000000002348: CFG Hypervisor robustness is disabled
+2015-08-12 23:42:35.420 0000000000002348: CFG Frame buffer 0 as 1440x900x16
+2015-08-12 23:42:35.420 0000000000002348: MON Creating locks
+2015-08-12 23:42:35.420 0000000000002348: MON Initializing monitor messaging
+2015-08-12 23:42:35.420 0000000000002348: MON Initializing memory parameters
+2015-08-12 23:42:35.420 0000000000002348: MON Creating memory maps
+2015-08-12 23:42:35.460 0000000000002348: MON Preparing monitor page allocator
+2015-08-12 23:42:35.460 0000000000002348: MON Initializing guest memory
+2015-08-12 23:42:35.479 0000000000002348: MON Preparing guest page allocator
+2015-08-12 23:42:35.500 0000000000002348: MON Initializing host <-> guest message passing
+2015-08-12 23:42:35.512 0000000000002348: MON Initializing virtual clock interrupt
+2015-08-12 23:42:35.512 0000000000002348: MON Configuring virtual devices
+2015-08-12 23:42:35.522 0000000000002348: MON Creating processor state storage area
+2015-08-12 23:42:35.522 0000000000002348: PRS XSAVE  -> 1
+2015-08-12 23:42:35.522 0000000000002348: PRS FXSAVE -> 1
+2015-08-12 23:42:35.522 0000000000002348: PRS XSAVE Enabled -> 1
+2015-08-12 23:42:35.522 0000000000002348: PRS Using XSAVE
+2015-08-12 23:42:35.522 0000000000002348: PRS XSAVE size 832
+2015-08-12 23:42:35.522 0000000000002348: PRS Allocating 4096 bytes for processor state save area
+2015-08-12 23:42:35.522 0000000000002348: MON Initializing the shared memory subsystem
+2015-08-12 23:42:35.522 0000000000002348: IOC In function BstHdShmemInit
+
+2015-08-12 23:42:37.408 0000000000002348: MON Fixing guest kernel image
+2015-08-12 23:42:37.428 0000000000001CD0: MON Guest: Linux version 3.10.30-android-x86-hd+ (build@Build2) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #1 PREEMPT Tue Jun 16 19:07:34 IST 2015
+2015-08-12 23:42:37.428 0000000000001CD0: MON Guest: Notice: NX (Execute Disable) protection cannot be enabled: non-PAE kernel!
+2015-08-12 23:42:37.428 0000000000001CD0: MON Guest: initial memory mapped: [mem 0x00000000-0xffffffff]
+2015-08-12 23:42:37.428 0000000000001CD0: MON Guest: init_memory_mapping: [mem 0x00000000-0x000fffff]
+2015-08-12 23:42:37.428 0000000000001CD0: MON Guest:  [mem 0x00000000-0x000fffff] page 4k
+2015-08-12 23:42:37.439 0000000000001CD0: MON Guest: 1597MB LOWMEM available.
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest:   mapped low ram: 0 - 00000000
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest:   low ram: 0 - 63dff000
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest: RAMDISK: 0xe3c46000 - 0xe3dfeaaa
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest: Zone ranges:
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest:   Normal   
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest: [mem 0x00000000-0x63dfefff]
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest: Movable zone start for each node
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest: Early memory node ranges
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest:   node   0: [mem 0x00000000-0x63dfefff]
+2015-08-12 23:42:37.440 0000000000001CD0: MON Guest: On node 0 totalpages: 409087
+2015-08-12 23:42:37.473 0000000000001CD0: MON Guest: free_area_init_node: node 0, pgdat 813b6958, node_mem_map 8165a000
+2015-08-12 23:42:37.473 0000000000001CD0: MON Guest:   Normal zone: 3196 pages used for memmap
+2015-08-12 23:42:37.473 0000000000001CD0: MON Guest:   Normal zone: 0 pages reserved
+2015-08-12 23:42:37.473 0000000000001CD0: MON Guest:   Normal zone: 409087 pages, LIFO batch:31
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: 
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: pcpu-alloc: 
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: [0] 
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: 0 
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: 
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 405891
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: PID hash table entries: 4096 (order: 2, 16384 bytes)
+2015-08-12 23:42:37.476 0000000000001CD0: MON Guest: Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+2015-08-12 23:42:37.477 0000000000001CD0: MON Guest: Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+2015-08-12 23:42:37.477 0000000000001CD0: MON Guest: Initializing CPU#0
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: Memory: 1597336k/1636348k available (2511k kernel code, 0k reserved, 1309k data, 180k init, 0k highmem)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: virtual kernel memory layout:
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:     fixmap  : 0xfffe4000 - 0xfffff000   ( 108 kB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:     hd      : 0xfee00000 - 0xffc00000   (  14 MB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:     vmalloc : 0xe45ff000 - 0xfedfe000   ( 423 MB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:     lowmem  : 0x80000000 - 0xe3dff000   (1597 MB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:       .init : 0x813bc000 - 0x813e9000   ( 180 kB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:       .data : 0x81273cd6 - 0x813bb100   (1309 kB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest:       .text : 0x81000000 - 0x81273cd6   (2511 kB)
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: NR_IRQS:224 nr_irqs:224 16
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: CPU 0 irqstacks, hard=e3806000 soft=e3808000
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: Console: colour dummy device 80x25
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: console [tty0] enabled
+2015-08-12 23:42:37.493 0000000000001CD0: MON Guest: Calibrating delay loop... 
+2015-08-12 23:42:37.872 0000000000001CD0: MON Guest: 764059.64 BogoMIPS (lpj=3820298240)
+2015-08-12 23:42:37.872 0000000000001CD0: MON Guest: pid_max: default: 32768 minimum: 301
+2015-08-12 23:42:37.872 0000000000001CD0: MON Guest: Security Framework initialized
+2015-08-12 23:42:37.872 0000000000001CD0: MON Guest: Mount-cache hash table entries: 512
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: Last level iTLB entries: 4KB 512, 2MB 0, 4MB 0
+Last level dTLB entries: 4KB 512, 2MB 32, 4MB 32
+tlb_flushall_shift: 1
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: CPU: 
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: Intel(R) Core(TM) i7-3610QM CPU @ 2.30GHz
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest:  (fam: 06, model: 3a
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: , stepping: 09)
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: Performance Events: 
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest:  disabled
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: NMI watchdog: disabled (cpu0): hardware events not enabled
+2015-08-12 23:42:37.873 0000000000001CD0: MON Guest: NET: Registered protocol family 16
+2015-08-12 23:42:37.874 0000000000001CD0: MON Guest: bio: create slab <bio-0> at 0
+2015-08-12 23:42:37.875 0000000000001CD0: MON Guest: Linux video capture interface: v2.00
+2015-08-12 23:42:37.889 0000000000001CD0: MON Guest: Advanced Linux Sound Architecture Driver Initialized.
+2015-08-12 23:42:37.889 0000000000001CD0: MON Guest: Switching to clocksource refined-jiffies
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: NET: Registered protocol family 2
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: TCP bind hash table entries: 16384 (order: 4, 65536 bytes)
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: TCP: Hash tables configured (established 16384 bind 16384)
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: TCP: reno registered
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: UDP hash table entries: 1024 (order: 2, 16384 bytes)
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: UDP-Lite hash table entries: 1024 (order: 2, 16384 bytes)
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: NET: Registered protocol family 1
+2015-08-12 23:42:37.892 0000000000001CD0: MON Guest: Trying to unpack rootfs image as initramfs...
+2015-08-12 23:42:37.925 0000000000001CD0: MON Guest: Freeing initrd memory: 1764k freed
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: VFS: Disk quotas dquot_6.5.2
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: fuse init (API version 7.22)
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: msgmni has been set to 3123
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: io scheduler noop registered
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: io scheduler deadline registered
+2015-08-12 23:42:37.926 0000000000001CD0: MON Guest: io scheduler cfq registered (default)
+2015-08-12 23:42:37.928 0000000000001CD0: MON Guest: brd: module loaded
+2015-08-12 23:42:37.928 0000000000001CD0: MON Guest: loop: module loaded
+2015-08-12 23:42:37.928 0000000000001CD0: MON Guest: tun: Universal TUN/TAP device driver, 1.6
+2015-08-12 23:42:37.928 0000000000001CD0: MON Guest: tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+2015-08-12 23:42:37.928 0000000000001CD0: MON Guest: mousedev: PS/2 mouse device common for all mice
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: lirc_dev: IR Remote Control driver registered, major 253 
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR NEC protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR RC5(x) protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR RC6 protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR JVC protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR Sony protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR RC5 (streamzap) protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR SANYO protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR MCE Keyboard/mouse protocol handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: IR LIRC bridge handler initialized
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: power_supply ac: uevent
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: power_supply ac: POWER_SUPPLY_NAME=ac
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: power_supply ac: prop ONLINE=1
+2015-08-12 23:42:37.929 0000000000001CD0: MON Guest: power_supply ac: power_supply_changed
+2015-08-12 23:42:37.939 0000000000001CD0: MON Guest: device-mapper: uevent: version 1.0.3
+2015-08-12 23:42:37.939 0000000000001CD0: MON Guest: power_supply ac: power_supply_changed_work
+2015-08-12 23:42:37.939 0000000000001CD0: MON Guest: power_supply ac: uevent
+2015-08-12 23:42:37.939 0000000000001CD0: MON Guest: power_supply ac: POWER_SUPPLY_NAME=ac
+2015-08-12 23:42:37.939 0000000000001CD0: MON Guest: power_supply ac: prop ONLINE=1
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: hidraw: raw HID events driver (C) Jiri Kosina
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: ashmem: initialized
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: logger: created 256K log 'log_main'
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: logger: created 256K log 'log_events'
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: logger: created 256K log 'log_radio'
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: logger: created 256K log 'log_system'
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: Netfilter messages via NETLINK v0.30.
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: ip_tables: (C) 2000-2006 Netfilter Core Team
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: TCP: cubic registered
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: NET: Registered protocol family 10
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: ip6_tables: (C) 2000-2006 Netfilter Core Team
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: NET: Registered protocol family 17
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest: ALSA device list:
+2015-08-12 23:42:37.940 0000000000001CD0: MON Guest:   No soundcards found.
+2015-08-12 23:42:37.942 0000000000001CD0: MON Guest: Freeing unused kernel memory: 180k freed
+2015-08-12 23:42:37.955 0000000000001CD0: MON Guest: Loading BlueStacks modules
+2015-08-12 23:42:37.956 0000000000001CD0: MON Guest: bstblock: module license 'unspecified' taints kernel.
+2015-08-12 23:42:37.956 0000000000001CD0: MON Guest: Disabling lock debugging due to kernel taint
+2015-08-12 23:42:37.956 0000000000001CD0: MON Guest: bstblock: Waiting for block devices
+2015-08-12 23:42:37.957 0000000000001CD0: MON Guest: bstblock: sda1 891289600 bytes
+2015-08-12 23:42:37.957 0000000000001CD0: MON Guest: bstblock: sdb1 8589934592 bytes
+2015-08-12 23:42:37.957 0000000000001CD0: MON Guest: bstblock: sdc1 8589934592 bytes
+2015-08-12 23:42:37.957 0000000000001CD0: MON Guest: bstblock: sdd1 471859200 bytes
+2015-08-12 23:42:37.960 0000000000001CD0: MON Guest: bstnet0: MAC 02:00:00:62:73:74 IRQ 7
+2015-08-12 23:42:37.961 0000000000001CD0: MON Guest: Configured video mode is 1440x900x16
+2015-08-12 23:42:38.017 0000000000001CD0: MON Guest: Setting video mode 1440x900x16
+2015-08-12 23:42:38.017 0000000000001CD0: MON Guest: Console: switching 
+2015-08-12 23:42:38.017 0000000000001CD0: MON Guest: to colour frame buffer device 180x56
+2015-08-12 23:42:38.022 0000000000001CD0: MON Guest: major: 251 minor: 0
+2015-08-12 23:42:38.022 0000000000001CD0: MON Guest: Created cdev
+2015-08-12 23:42:38.022 0000000000001CD0: MON Guest: Asked udevd to create dev node
+2015-08-12 23:42:38.024 0000000000001CD0: MON Guest: atkbd serio0: Failed to deactivate keyboard on bstkbd
+2015-08-12 23:42:38.025 0000000000001CD0: MON Guest: input: AT Translated Set 2 keyboard as /devices/serio0/input/input0
+2015-08-12 23:42:38.025 0000000000001CD0: MON Guest: input: BlueStacks Virtual Mouse as /devices/virtual/input/input1
+2015-08-12 23:42:38.027 0000000000001CD0: MON Guest: input: BlueStacks Virtual Touch as /devices/virtual/input/input2
+2015-08-12 23:42:38.031 0000000000001CD0: MON Guest: bstaudio: Created device 0
+2015-08-12 23:42:38.032 0000000000001CD0: MON Guest: bstgps: initializing gps interface.
+2015-08-12 23:42:38.035 0000000000001CD0: MON Guest: Detecting Android-x86...
+2015-08-12 23:42:38.036 0000000000001CD0: MON Guest: Mounting rootFS using /dev/sda1
+2015-08-12 23:42:38.037 0000000000001CD0: MON Guest: EXT3-fs (sda1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.037 0000000000001CD0: MON Guest: EXT2-fs (sda1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.065 0000000000001CD0: MON Guest: EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+2015-08-12 23:42:38.139 0000000000001CD0: MON Guest:  found at /dev/sda1
+2015-08-12 23:42:38.140 0000000000001CD0: MON Guest: successfully mounted /dev/sda1 as rootFS
+2015-08-12 23:42:38.141 0000000000001CD0: MON Guest: First stage boot completed successfully.
+2015-08-12 23:42:38.166 0000000000001CD0: MON Guest: create instance for instance 0
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: vivi-000: V4L2 device registered as video0
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: 
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: create instance for instance 1
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: vivi-001: V4L2 device registered as video1
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: 
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: Video Technology Magazine Virtual Video Capture Board ver 0.7.0 successfully loaded.
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: bstcamera: init successful
+2015-08-12 23:42:38.167 0000000000001CD0: MON Guest: Enabling core dump
+2015-08-12 23:42:38.169 0000000000001CD0: MON Guest: EXT3-fs (sdb1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.169 0000000000001CD0: MON Guest: EXT2-fs (sdb1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.180 0000000000001CD0: MON Guest: EXT4-fs (sdb1): warning: checktime reached, running e2fsck is recommended
+2015-08-12 23:42:38.180 0000000000001CD0: MON Guest: EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+2015-08-12 23:42:38.180 0000000000001CD0: MON Guest:  is not present
+2015-08-12 23:42:38.181 0000000000001CD0: MON Guest: DataFS is already mounted.
+2015-08-12 23:42:38.181 0000000000001CD0: MON Guest: Mounting prebundled appFS.
+2015-08-12 23:42:38.182 0000000000001CD0: MON Guest: Mounting prebundled apps FS using /dev/sdd1
+2015-08-12 23:42:38.182 0000000000001CD0: MON Guest: EXT3-fs (sdd1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.182 0000000000001CD0: MON Guest: EXT2-fs (sdd1): error: couldn't mount because of unsupported optional features (240)
+2015-08-12 23:42:38.203 0000000000001CD0: MON Guest: EXT4-fs (sdd1): mounted filesystem with ordered data mode. Opts: (null)
+2015-08-12 23:42:38.213 0000000000001CD0: MON Guest: Use bst_appdetails file for OEM BlueStacks
+2015-08-12 23:42:38.213 0000000000001CD0: MON Guest: Copying file mnt/prebundledapps/bst_appdetails to mnt/prebundledapps/appdetails
+2015-08-12 23:42:38.225 0000000000001CD0: MON Guest: Copy prebundled apps into dataFS.
+2015-08-12 23:42:38.232 0000000000001CD0: MON Guest: Copying prebundled FS files.
+2015-08-12 23:42:39.042 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:42:39.042 0000000000001CD0: MON Guest: bstcmd_run(0x07f11ddb, 0x00000000, 2, e29794c0), argv[0] iSetId
+2015-08-12 23:42:39.042 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-12 23:42:39.384 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:42:39.384 0000000000001CD0: MON Guest: bstcmd_run(0x635f9056, 0x00000000, 1, e29794e0), argv[0] /system/bin/stop
+2015-08-12 23:42:39.384 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:42:39.384 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:42:39.546 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-12 23:42:41.373 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:42:41.373 0000000000001CD0: MON Guest: bstcmd_run(0x59b72220, 0x00000000, 1, e2979ea0), argv[0] /system/bin/start
+2015-08-12 23:42:41.373 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:42:41.373 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:42:41.373 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-12 23:42:45.959 0000000000001CD0: MON Guest: Removing any data app file that is not needed for this OEM BlueStacks
+2015-08-12 23:42:45.961 0000000000001CD0: MON Guest: Updating prop files.
+2015-08-12 23:42:45.963 0000000000001CD0: MON Guest: update_propfiles : newer sdk is 19 ,caCode is 410 and pcode is ddfa
+2015-08-12 23:42:45.964 0000000000001CD0: MON Guest: Updating default system properties using propfile bluestacks.prop.kr.note3
+2015-08-12 23:42:45.964 0000000000001CD0: MON Guest: Copying file mnt/prebundledapps/propfiles/410/bluestacks.prop.kr.note3 to data/.bluestacks.prop
+2015-08-12 23:42:45.964 0000000000001CD0: MON Guest: Prebundled apps are latest one.
+2015-08-12 23:42:45.965 0000000000001CD0: MON Guest: SDCard will be mounted at later stage via vold/MountService.
+2015-08-12 23:42:45.967 0000000000001CD0: MON Guest: Configuring network
+2015-08-12 23:42:45.968 0000000000001CD0: MON Guest: setting proper permission in BlueStacks special dir
+2015-08-12 23:42:45.970 0000000000001CD0: MON Guest: Second stage boot completed successfully.
+2015-08-12 23:42:45.971 0000000000001CD0: MON Guest: Switching to android workspace now
+2015-08-12 23:42:47.472 0000000000001CD0: MON Guest: init: property 'ro.hardware' doesn't exist while expanding '/init.${ro.hardware}.rc'
+2015-08-12 23:42:47.473 0000000000001CD0: MON Guest: init: error while handling import on line '10' in '/init.rc'
+2015-08-12 23:42:47.473 0000000000001CD0: MON Guest: init: /init.x86.rc: 130: ignored duplicate definition of service 'logcat'
+2015-08-12 23:42:47.521 0000000000001CD0: MON Guest: power_supply ac: uevent
+2015-08-12 23:42:47.521 0000000000001CD0: MON Guest: power_supply ac: POWER_SUPPLY_NAME=ac
+2015-08-12 23:42:47.521 0000000000001CD0: MON Guest: power_supply ac: prop ONLINE=1
+2015-08-12 23:42:47.530 0000000000001CD0: MON Guest: init: /dev/hw_random not found
+2015-08-12 23:42:47.535 0000000000001CD0: MON Guest: init: file $[/sys/class/dmi/id/sys_vendor] cannot be opened for reading
+2015-08-12 23:42:47.535 0000000000001CD0: MON Guest: init: file $[/sys/class/dmi/id/product_name] cannot be opened for reading
+2015-08-12 23:42:47.797 0000000000001CD0: MON Guest: init: /dev/hw_random not found
+2015-08-12 23:42:47.809 0000000000001CD0: MON Guest: init: Unable to read property file '/system/default.prop'
+2015-08-12 23:42:47.809 0000000000001CD0: MON Guest: init: Unable to read property file '/data/local.prop'
+2015-08-12 23:42:47.810 0000000000001CD0: MON Guest: healthd: BatteryStatusPath not found
+2015-08-12 23:42:47.810 0000000000001CD0: MON Guest: healthd: BatteryHealthPath not found
+2015-08-12 23:42:47.810 0000000000001CD0: MON Guest: healthd: BatteryPresentPath not found
+2015-08-12 23:42:47.810 0000000000001CD0: MON Guest: healthd: BatteryCapacityPath not found
+2015-08-12 23:42:47.811 0000000000001CD0: MON Guest: healthd: BatteryVoltagePath not found
+2015-08-12 23:42:47.811 0000000000001CD0: MON Guest: healthd: BatteryTemperaturePath not found
+2015-08-12 23:42:47.811 0000000000001CD0: MON Guest: healthd: BatteryTechnologyPath not found
+2015-08-12 23:42:47.811 0000000000001CD0: MON Guest: binder: 600:600 transaction failed 29189, size 0-0
+2015-08-12 23:42:47.811 0000000000001CD0: MON Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-12 23:42:47.812 0000000000001CD0: MON Guest: init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+2015-08-12 23:42:47.812 0000000000001CD0: MON Guest: init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+2015-08-12 23:42:47.997 0000000000001CD0: MON Guest: ARM binary format support added successfully.
+2015-08-12 23:42:49.476 0000000000001CD0: MON Guest: fs_mgr: Cannot open file /fstab.universal5420
+2015-08-12 23:42:49.981 0000000000001CD0: MON Guest: alloc_index called for cid 609
+2015-08-12 23:42:49.981 0000000000001CD0: MON Guest: device opened...allocated map index 0 for PID 609
+2015-08-12 23:42:49.981 0000000000001CD0: MON Guest: Connect ACK received for pid = 609. magic = 1, cid = 609, entry = e2b256c0, tid = 609
+2015-08-12 23:42:49.982 0000000000001498: IOC IOCTL returning 04f40000
+
+2015-08-12 23:42:49.984 0000000000001498: IOC IOCTL returning 0f3b0000
+
+2015-08-12 23:42:49.987 0000000000001498: IOC IOCTL returning 0f5b0000
+
+2015-08-12 23:42:57.152 0000000000001CD0: MON Guest: warning: `zygote' uses 32-bit capabilities (legacy support in use)
+2015-08-12 23:42:57.383 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:42:57.383 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(1)
+2015-08-12 23:42:57.383 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(2)
+2015-08-12 23:42:57.383 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(3)
+2015-08-12 23:43:07.952 0000000000001CD0: MON Guest: system_server (1754): /proc/1754/oom_adj is deprecated, please use /proc/1754/oom_score_adj instead.
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 0 => oom_score_adj 0
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 1 => oom_score_adj 58
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 2 => oom_score_adj 117
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 4 => oom_score_adj 235
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 9 => oom_score_adj 529
+2015-08-12 23:43:08.602 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+2015-08-12 23:43:14.197 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:14.197 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:23.801 0000000000001CD0: MON Guest: alloc_index called for cid 1990
+2015-08-12 23:43:23.801 0000000000001CD0: MON Guest: device opened...allocated map index 1 for PID 1990
+2015-08-12 23:43:23.802 0000000000001CD0: MON Guest: Connect ACK received for pid = 1990. magic = 39, cid = 1990, entry = b8cd7e40, tid = 1990
+2015-08-12 23:43:23.804 0000000000001658: IOC IOCTL returning 057b0000
+
+2015-08-12 23:43:23.807 0000000000001658: IOC IOCTL returning 0e390000
+
+2015-08-12 23:43:23.808 0000000000001658: IOC IOCTL returning 0e590000
+
+2015-08-12 23:43:23.813 0000000000001CD0: MON Guest: Connect ACK received for pid = 609. magic = 44, cid = 609, entry = b8cd7ec0, tid = 637
+2015-08-12 23:43:23.813 0000000000000A24: IOC IOCTL returning 057d0000
+
+2015-08-12 23:43:23.815 0000000000000A24: IOC IOCTL returning 106e0000
+
+2015-08-12 23:43:23.817 0000000000000A24: IOC IOCTL returning 108e0000
+
+2015-08-12 23:43:23.990 0000000000001CD0: MON Guest: Connect ACK received for pid = 609. magic = 117, cid = 609, entry = be0b3dc0, tid = 2091
+2015-08-12 23:43:23.991 0000000000002150: IOC IOCTL returning 05830000
+
+2015-08-12 23:43:23.993 0000000000002150: IOC IOCTL returning 10f60000
+
+2015-08-12 23:43:23.995 0000000000002150: IOC IOCTL returning 11160000
+
+2015-08-12 23:43:25.152 0000000000001CD0: MON Guest: alloc_index called for cid 2295
+2015-08-12 23:43:25.152 0000000000001CD0: MON Guest: device opened...allocated map index 2 for PID 2295
+2015-08-12 23:43:25.152 0000000000001CD0: MON Guest: Connect ACK received for pid = 2295. magic = 182, cid = 2295, entry = be0b35c0, tid = 2295
+2015-08-12 23:43:25.178 00000000000022A4: IOC IOCTL returning 05880000
+
+2015-08-12 23:43:25.180 00000000000022A4: IOC IOCTL returning 11460000
+
+2015-08-12 23:43:25.182 00000000000022A4: IOC IOCTL returning 11660000
+
+2015-08-12 23:43:25.684 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:25.684 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:25.750 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:25.750 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:25.950 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:43:31.264 0000000000001CD0: MON Guest: init: sys_prop: permission denied uid:1000  name:user.language
+2015-08-12 23:43:31.264 0000000000001CD0: MON Guest: init: sys_prop: permission denied uid:1000  name:user.region
+2015-08-12 23:43:33.914 0000000000001CD0: MON Guest: Connect ACK received for pid = 609. magic = 516, cid = 609, entry = b81e36c0, tid = 639
+2015-08-12 23:43:33.947 0000000000002134: IOC IOCTL returning 068f0000
+
+2015-08-12 23:43:33.948 0000000000002134: IOC IOCTL returning 13bb0000
+
+2015-08-12 23:43:33.949 0000000000002134: IOC IOCTL returning 15c90000
+
+2015-08-12 23:43:33.995 0000000000001CD0: MON Guest: Connect ACK received for pid = 609. magic = 528, cid = 609, entry = b81e3440, tid = 2495
+2015-08-12 23:43:34.021 00000000000023EC: IOC IOCTL returning 06900000
+
+2015-08-12 23:43:34.022 00000000000023EC: IOC IOCTL returning 15e90000
+
+2015-08-12 23:43:34.025 00000000000023EC: IOC IOCTL returning 16b50000
+
+2015-08-12 23:43:34.507 0000000000001CD0: MON Guest: binder: release 2496:2542 transaction 6891 out, still active
+2015-08-12 23:43:35.995 0000000000001CD0: MON Guest: binder: 1754:2212 transaction failed 29189, size 1596-8
+2015-08-12 23:43:35.995 0000000000001CD0: MON Guest: binder: send failed reply for transaction 6891, target dead
+2015-08-12 23:43:36.534 0000000000001CD0: MON Guest: alloc_index called for cid 1754
+2015-08-12 23:43:36.534 0000000000001CD0: MON Guest: device opened...allocated map index 3 for PID 1754
+2015-08-12 23:43:36.534 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 851, cid = 1754, entry = b1cab740, tid = 2173
+2015-08-12 23:43:36.535 0000000000001ED4: IOC IOCTL returning 06b90000
+
+2015-08-12 23:43:36.537 0000000000001ED4: IOC IOCTL returning 16090000
+
+2015-08-12 23:43:36.539 0000000000001ED4: IOC IOCTL returning 16290000
+
+2015-08-12 23:43:37.817 0000000000001CD0: MON Guest: alloc_index called for cid 2636
+2015-08-12 23:43:37.817 0000000000001CD0: MON Guest: device opened...allocated map index 4 for PID 2636
+2015-08-12 23:43:37.820 0000000000001CD0: MON Guest: Connect ACK received for pid = 2636. magic = 873, cid = 2636, entry = bc77a5c0, tid = 2636
+2015-08-12 23:43:37.820 0000000000002360: IOC IOCTL returning 06ba0000
+
+2015-08-12 23:43:37.822 0000000000002360: IOC IOCTL returning 16490000
+
+2015-08-12 23:43:37.824 0000000000002360: IOC IOCTL returning 16d50000
+
+2015-08-12 23:43:38.345 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:43:38.345 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:43:38.674 0000000000001CD0: MON Guest: alloc_index called for cid 2414
+2015-08-12 23:43:38.674 0000000000001CD0: MON Guest: device opened...allocated map index 5 for PID 2414
+2015-08-12 23:43:38.676 0000000000001CD0: MON Guest: Connect ACK received for pid = 2414. magic = 961, cid = 2414, entry = bc43e4c0, tid = 2735
+2015-08-12 23:43:38.677 0000000000002244: IOC IOCTL returning 06c00000
+
+2015-08-12 23:43:38.679 0000000000002244: IOC IOCTL returning 173c0000
+
+2015-08-12 23:43:38.680 0000000000002244: IOC IOCTL returning 175c0000
+
+2015-08-12 23:43:40.574 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:40.574 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:40.867 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 1339, cid = 1754, entry = ae927ac0, tid = 2216
+2015-08-12 23:43:40.899 0000000000002128: IOC IOCTL returning 06c10000
+
+2015-08-12 23:43:40.901 0000000000002128: IOC IOCTL returning 17e20000
+
+2015-08-12 23:43:40.903 0000000000002128: IOC IOCTL returning 18020000
+
+2015-08-12 23:43:41.512 0000000000001CD0: MON Guest: Connect ACK received for pid = 2414. magic = 1422, cid = 2414, entry = bc43edc0, tid = 2414
+2015-08-12 23:43:41.513 0000000000002140: IOC IOCTL returning 06c20000
+
+2015-08-12 23:43:41.514 0000000000002140: IOC IOCTL returning 18480000
+
+2015-08-12 23:43:41.515 0000000000002140: IOC IOCTL returning 18680000
+
+2015-08-12 23:43:41.961 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:43:42.974 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:43:42.982 0000000000001CD0: MON Guest: device closed. will free index 4 for PID 208
+2015-08-12 23:43:42.983 0000000000002360: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:43:42.983 0000000000002360: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:43:42.983 0000000000002360: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:43:43.224 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:43.224 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:43.335 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 1857, cid = 1754, entry = ba42b8c0, tid = 2156
+2015-08-12 23:43:43.336 0000000000002158: IOC IOCTL returning 06ba0000
+
+2015-08-12 23:43:43.339 0000000000002158: IOC IOCTL returning 16d50000
+
+2015-08-12 23:43:43.340 0000000000002158: IOC IOCTL returning 170e0000
+
+2015-08-12 23:43:43.395 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:43:43.451 0000000000001CD0: MON Guest: device closed. will free index 2 for PID 2295
+2015-08-12 23:43:43.453 00000000000022A4: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:43:43.453 00000000000022A4: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:43:43.453 00000000000022A4: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:43:43.784 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 1983, cid = 1754, entry = b1edc8c0, tid = 1768
+2015-08-12 23:43:43.799 00000000000023CC: IOC IOCTL returning 05880000
+
+2015-08-12 23:43:43.801 00000000000023CC: IOC IOCTL returning 115f0000
+
+2015-08-12 23:43:43.803 00000000000023CC: IOC IOCTL returning 13510000
+
+2015-08-12 23:43:43.951 0000000000001CD0: MON Guest: alloc_index called for cid 3080
+2015-08-12 23:43:43.951 0000000000001CD0: MON Guest: device opened...allocated map index 2 for PID 3080
+2015-08-12 23:43:43.951 0000000000001CD0: MON Guest: Connect ACK received for pid = 3080. magic = 1999, cid = 3080, entry = b8cd73c0, tid = 3080
+2015-08-12 23:43:43.952 0000000000000F48: IOC IOCTL returning 06bb0000
+
+2015-08-12 23:43:43.954 0000000000000F48: IOC IOCTL returning 18880000
+
+2015-08-12 23:43:43.956 0000000000000F48: IOC IOCTL returning 18a80000
+
+2015-08-12 23:43:46.120 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:46.120 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:48.126 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:43:48.126 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:43:54.582 0000000000001CD0: MON Guest: alloc_index called for cid 2370
+2015-08-12 23:43:54.582 0000000000001CD0: MON Guest: device opened...allocated map index 4 for PID 2370
+2015-08-12 23:43:54.582 0000000000001CD0: MON Guest: Connect ACK received for pid = 2370. magic = 2543, cid = 2370, entry = ba79d9c0, tid = 3563
+2015-08-12 23:43:54.614 0000000000002450: IOC IOCTL returning 04ee0000
+
+2015-08-12 23:43:54.616 0000000000002450: IOC IOCTL returning 192b0000
+
+2015-08-12 23:43:54.618 0000000000002450: IOC IOCTL returning 198b0000
+
+2015-08-12 23:44:09.507 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:09.507 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:11.053 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 2773, cid = 1754, entry = ada4ebc0, tid = 2026
+2015-08-12 23:44:11.056 000000000000257C: IOC IOCTL returning 04ef0000
+
+2015-08-12 23:44:11.058 000000000000257C: IOC IOCTL returning 14840000
+
+2015-08-12 23:44:11.059 000000000000257C: IOC IOCTL returning 14a40000
+
+2015-08-12 23:44:11.216 0000000000001CD0: MON Guest: alloc_index called for cid 2313
+2015-08-12 23:44:11.216 0000000000001CD0: MON Guest: device opened...allocated map index 6 for PID 2313
+2015-08-12 23:44:11.229 0000000000001CD0: MON Guest: Connect ACK received for pid = 2313. magic = 2810, cid = 2313, entry = ae9272c0, tid = 2313
+2015-08-12 23:44:11.230 00000000000025F0: IOC IOCTL returning 04f00000
+
+2015-08-12 23:44:11.232 00000000000025F0: IOC IOCTL returning 1a0c0000
+
+2015-08-12 23:44:11.234 00000000000025F0: IOC IOCTL returning 1a2c0000
+
+2015-08-12 23:44:12.823 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:12.823 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:13.087 0000000000001CD0: MON Guest: alloc_index called for cid 3932
+2015-08-12 23:44:13.087 0000000000001CD0: MON Guest: device opened...allocated map index 7 for PID 3932
+2015-08-12 23:44:13.089 0000000000001CD0: MON Guest: Connect ACK received for pid = 3932. magic = 3018, cid = 3932, entry = ada9c140, tid = 3932
+2015-08-12 23:44:13.090 00000000000026E0: IOC IOCTL returning 06e70000
+
+2015-08-12 23:44:13.092 00000000000026E0: IOC IOCTL returning 1ab70000
+
+2015-08-12 23:44:13.094 00000000000026E0: IOC IOCTL returning 1b2d0000
+
+2015-08-12 23:44:20.079 0000000000001CD0: MON Guest: alloc_index called for cid 3959
+2015-08-12 23:44:20.079 0000000000001CD0: MON Guest: device opened...allocated map index 8 for PID 3959
+2015-08-12 23:44:20.079 0000000000001CD0: MON Guest: Connect ACK received for pid = 3959. magic = 3241, cid = 3959, entry = bc43e940, tid = 3959
+2015-08-12 23:44:20.080 0000000000002428: IOC IOCTL returning 06e80000
+
+2015-08-12 23:44:20.082 0000000000002428: IOC IOCTL returning 1a4c0000
+
+2015-08-12 23:44:20.084 0000000000002428: IOC IOCTL returning 1a6c0000
+
+2015-08-12 23:44:21.464 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:21.464 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:22.703 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:44:22.703 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:44:26.162 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:44:30.319 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:30.319 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:31.183 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:44:31.183 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:44:31.215 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:31.215 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:32.271 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:32.271 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:32.344 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:32.344 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.367 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.367 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.431 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.431 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.719 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.719 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.743 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.743 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.792 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.792 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.895 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.895 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:33.928 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:33.928 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:34.769 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:44:38.665 0000000000001CD0: MON Guest: alloc_index called for cid 4665
+2015-08-12 23:44:38.665 0000000000001CD0: MON Guest: device opened...allocated map index 9 for PID 4665
+2015-08-12 23:44:38.666 0000000000001CD0: MON Guest: Connect ACK received for pid = 4665. magic = 5040, cid = 4665, entry = ae90e4c0, tid = 4665
+2015-08-12 23:44:38.667 0000000000001890: IOC IOCTL returning 06ef0000
+
+2015-08-12 23:44:38.669 0000000000001890: IOC IOCTL returning 1bba0000
+
+2015-08-12 23:44:38.670 0000000000001890: IOC IOCTL returning 1bda0000
+
+2015-08-12 23:44:41.776 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:41.776 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:42.623 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:42.623 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:44.734 0000000000001CD0: MON Guest: binder: undelivered transaction 64878
+2015-08-12 23:44:45.270 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:44:45.278 0000000000001CD0: MON Guest: device closed. will free index 8 for PID 3959
+2015-08-12 23:44:45.278 0000000000002428: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:45.278 0000000000002428: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:45.278 0000000000002428: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:45.527 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:45.527 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:44:45.600 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:44:45.607 0000000000001CD0: MON Guest: device closed. will free index 6 for PID 208
+2015-08-12 23:44:45.607 00000000000025F0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:45.607 00000000000025F0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:45.607 00000000000025F0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:46.104 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:44:46.118 0000000000001CD0: MON Guest: device closed. will free index 7 for PID 208
+2015-08-12 23:44:46.120 00000000000026E0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:46.120 00000000000026E0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:46.120 00000000000026E0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:46.899 0000000000001CD0: MON Guest: init: untracked pid 4645 exited
+2015-08-12 23:44:48.371 0000000000001CD0: MON Guest: init: untracked pid 4656 exited
+2015-08-12 23:44:48.769 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:44:48.919 0000000000001CD0: MON Guest: binder: undelivered transaction 74502
+2015-08-12 23:44:48.919 0000000000001CD0: MON Guest: binder: undelivered transaction 74435
+2015-08-12 23:44:48.933 0000000000001CD0: MON Guest: device closed. will free index 2 for PID 3080
+2015-08-12 23:44:48.936 0000000000000F48: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:48.936 0000000000000F48: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:48.936 0000000000000F48: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:50.401 0000000000001CD0: MON Guest: init: untracked pid 4763 exited
+2015-08-12 23:44:50.513 0000000000001CD0: MON Guest: alloc_index called for cid 5381
+2015-08-12 23:44:50.513 0000000000001CD0: MON Guest: device opened...allocated map index 2 for PID 5381
+2015-08-12 23:44:50.513 0000000000001CD0: MON Guest: Connect ACK received for pid = 5381. magic = 6010, cid = 5381, entry = a9ca37c0, tid = 5381
+2015-08-12 23:44:50.514 0000000000002618: IOC IOCTL returning 04f00000
+
+2015-08-12 23:44:50.516 0000000000002618: IOC IOCTL returning 18880000
+
+2015-08-12 23:44:50.518 0000000000002618: IOC IOCTL returning 18a80000
+
+2015-08-12 23:44:51.464 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:44:51.498 0000000000001CD0: MON Guest: device closed. will free index 9 for PID 4665
+2015-08-12 23:44:51.498 0000000000001890: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:51.498 0000000000001890: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:51.499 0000000000001890: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:44:58.393 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:44:58.393 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:00.222 0000000000001CD0: MON Guest: alloc_index called for cid 5204
+2015-08-12 23:45:00.222 0000000000001CD0: MON Guest: device opened...allocated map index 6 for PID 5204
+2015-08-12 23:45:00.223 0000000000001CD0: MON Guest: Connect ACK received for pid = 5204. magic = 6933, cid = 5204, entry = a9ca3840, tid = 5204
+2015-08-12 23:45:00.224 0000000000002294: IOC IOCTL returning 04f10000
+
+2015-08-12 23:45:00.227 0000000000002294: IOC IOCTL returning 1a180000
+
+2015-08-12 23:45:00.229 0000000000002294: IOC IOCTL returning 1ab70000
+
+2015-08-12 23:45:01.975 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:01.975 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:02.066 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 7140, cid = 1754, entry = ada9c240, tid = 4946
+2015-08-12 23:45:02.066 00000000000020F0: IOC IOCTL returning 06e70000
+
+2015-08-12 23:45:02.068 00000000000020F0: IOC IOCTL returning 1b340000
+
+2015-08-12 23:45:02.070 00000000000020F0: IOC IOCTL returning 1bc40000
+
+2015-08-12 23:45:02.070 0000000000001CD0: MON Guest: Connect ACK received for pid = 609. magic = 7143, cid = 609, entry = ae91a3c0, tid = 5757
+2015-08-12 23:45:02.094 00000000000022A4: IOC IOCTL returning 06e80000
+
+2015-08-12 23:45:02.096 00000000000022A4: IOC IOCTL returning 1d640000
+
+2015-08-12 23:45:02.098 00000000000022A4: IOC IOCTL returning 1d840000
+
+2015-08-12 23:45:02.192 0000000000001CD0: MON Guest: alloc_index called for cid 5729
+2015-08-12 23:45:02.192 0000000000001CD0: MON Guest: device opened...allocated map index 7 for PID 5729
+2015-08-12 23:45:02.192 0000000000001CD0: MON Guest: Connect ACK received for pid = 5729. magic = 7176, cid = 5729, entry = ada4eac0, tid = 5729
+2015-08-12 23:45:02.193 0000000000002468: IOC IOCTL returning 06ed0000
+
+2015-08-12 23:45:02.195 0000000000002468: IOC IOCTL returning 1e450000
+
+2015-08-12 23:45:02.197 0000000000002468: IOC IOCTL returning 1e650000
+
+2015-08-12 23:45:05.070 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:05.070 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:07.633 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:07.633 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:08.859 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:08.859 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:10.039 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:10.039 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:31.759 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 15184, cid = 1754, entry = 9c4b4940, tid = 2215
+2015-08-12 23:45:31.759 0000000000001F44: IOC IOCTL returning 06ef0000
+
+2015-08-12 23:45:31.759 0000000000001F44: IOC IOCTL returning 230a0000
+
+2015-08-12 23:45:31.759 0000000000001F44: IOC IOCTL returning 232a0000
+
+2015-08-12 23:45:37.189 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:37.189 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:37.289 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 15643, cid = 1754, entry = bc77a9c0, tid = 4945
+2015-08-12 23:45:37.299 00000000000019F0: IOC IOCTL returning 06ee0000
+
+2015-08-12 23:45:37.299 00000000000019F0: IOC IOCTL returning 1b790000
+
+2015-08-12 23:45:37.309 00000000000019F0: IOC IOCTL returning 1ef10000
+
+2015-08-12 23:45:37.929 0000000000001CD0: MON Guest: alloc_index called for cid 5819
+2015-08-12 23:45:37.929 0000000000001CD0: MON Guest: device opened...allocated map index 8 for PID 5819
+2015-08-12 23:45:37.929 0000000000001CD0: MON Guest: Connect ACK received for pid = 5819. magic = 15760, cid = 5819, entry = be1bdf40, tid = 5819
+2015-08-12 23:45:37.929 0000000000001748: IOC IOCTL returning 07010000
+
+2015-08-12 23:45:37.939 0000000000001748: IOC IOCTL returning 1da40000
+
+2015-08-12 23:45:37.939 0000000000001748: IOC IOCTL returning 1dc40000
+
+2015-08-12 23:45:38.839 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:38.839 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:45.109 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:45.109 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:46.379 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:46.379 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:54.919 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:54.919 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:56.879 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:56.879 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:45:58.199 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:45:58.199 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:06.619 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:06.619 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:06.879 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:06.879 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:11.529 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:46:11.789 0000000000001CD0: MON Guest: device closed. will free index 7 for PID 5729
+2015-08-12 23:46:11.789 0000000000002468: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:46:11.789 0000000000002468: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:46:11.789 0000000000002468: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:46:31.819 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:31.819 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:32.439 0000000000001CD0: MON Guest: alloc_index called for cid 6181
+2015-08-12 23:46:32.439 0000000000001CD0: MON Guest: device opened...allocated map index 7 for PID 6181
+2015-08-12 23:46:32.439 0000000000001CD0: MON Guest: Connect ACK received for pid = 6181. magic = 19937, cid = 6181, entry = ada4e7c0, tid = 6181
+2015-08-12 23:46:32.439 0000000000002530: IOC IOCTL returning 06ed0000
+
+2015-08-12 23:46:32.439 0000000000002530: IOC IOCTL returning 1e300000
+
+2015-08-12 23:46:32.439 0000000000002530: IOC IOCTL returning 1e500000
+
+2015-08-12 23:46:33.929 0000000000001CD0: MON Guest: Connect ACK received for pid = 6181. magic = 20080, cid = 6181, entry = b1fafec0, tid = 6296
+2015-08-12 23:46:33.929 00000000000025D8: IOC IOCTL returning 07000000
+
+2015-08-12 23:46:33.929 00000000000025D8: IOC IOCTL returning 20060000
+
+2015-08-12 23:46:33.939 00000000000025D8: IOC IOCTL returning 20260000
+
+2015-08-12 23:46:41.749 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:41.749 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:44.469 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:44.469 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:51.169 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:51.169 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:52.109 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:52.109 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:46:53.729 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:46:53.729 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:13.819 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:13.819 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:14.889 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:14.889 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:14.899 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 20118, cid = 1754, entry = a9fd4dc0, tid = 4949
+2015-08-12 23:48:14.929 000000000000270C: IOC IOCTL returning 07020000
+
+2015-08-12 23:48:14.929 000000000000270C: IOC IOCTL returning 20dc0000
+
+2015-08-12 23:48:14.929 000000000000270C: IOC IOCTL returning 20fc0000
+
+2015-08-12 23:48:14.939 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 20137, cid = 1754, entry = a9fd4dc0, tid = 2212
+2015-08-12 23:48:14.939 00000000000025EC: IOC IOCTL returning 07040000
+
+2015-08-12 23:48:14.939 00000000000025EC: IOC IOCTL returning 211c0000
+
+2015-08-12 23:48:14.939 00000000000025EC: IOC IOCTL returning 213c0000
+
+2015-08-12 23:48:15.819 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:15.819 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:16.279 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:16.279 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:17.099 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:17.099 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:17.549 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:17.549 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:20.989 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:20.989 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:21.069 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 20918, cid = 1754, entry = acdd9440, tid = 4948
+2015-08-12 23:48:21.089 0000000000001590: IOC IOCTL returning 07090000
+
+2015-08-12 23:48:21.089 0000000000001590: IOC IOCTL returning 215c0000
+
+2015-08-12 23:48:21.089 0000000000001590: IOC IOCTL returning 217c0000
+
+2015-08-12 23:48:24.029 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:24.029 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:28.539 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:28.539 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:29.549 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:29.549 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:31.469 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:31.469 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:31.489 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 22032, cid = 1754, entry = b0c33440, tid = 2155
+2015-08-12 23:48:31.489 0000000000000A60: IOC IOCTL returning 070e0000
+
+2015-08-12 23:48:31.489 0000000000000A60: IOC IOCTL returning 102f0000
+
+2015-08-12 23:48:31.489 0000000000000A60: IOC IOCTL returning 1fc50000
+
+2015-08-12 23:48:31.519 0000000000001CD0: MON Guest: Connect ACK received for pid = 1754. magic = 22052, cid = 1754, entry = b0c33440, tid = 4947
+2015-08-12 23:48:31.519 0000000000000FAC: IOC IOCTL returning 070f0000
+
+2015-08-12 23:48:31.519 0000000000000FAC: IOC IOCTL returning 20460000
+
+2015-08-12 23:48:31.519 0000000000000FAC: IOC IOCTL returning 20660000
+
+2015-08-12 23:48:33.789 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:33.789 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:34.309 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:48:34.369 0000000000001CD0: MON Guest: binder: undelivered transaction 126591
+2015-08-12 23:48:34.379 0000000000001CD0: MON Guest: device closed. will free index 8 for PID 5819
+2015-08-12 23:48:34.379 0000000000001748: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:48:34.379 0000000000001748: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:48:34.379 0000000000001748: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:48:34.519 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:34.519 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:35.389 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:35.389 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:35.579 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:35.579 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.279 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.279 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.299 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.299 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.839 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.839 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:36.869 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:36.869 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:37.399 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:37.399 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:37.419 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:37.419 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:37.829 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:37.829 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:38.749 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:38.749 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:38.779 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:38.779 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:39.219 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:39.219 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:55.389 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:55.389 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:55.509 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:55.509 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:55.539 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:55.539 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.319 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.319 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.349 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.349 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.659 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.659 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:48:56.909 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:48:56.909 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:07.699 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:07.699 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:07.999 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:07.999 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:08.139 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:08.139 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:08.299 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:08.299 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:09.069 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:09.069 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:09.469 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:09.469 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:10.709 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:10.709 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:11.179 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:11.179 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemDetach
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:12.125 00000000000021B8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:49:15.370 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:49:15.370 0000000000001CD0: MON Guest: bstcmd_run(0x29f68bf0, 0x00000000, 1, a9e9e980), argv[0] /system/bin/stop
+2015-08-12 23:49:15.370 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:49:15.370 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:49:15.386 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.386 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.401 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.417 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.417 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.448 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.464 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: device closed. will free index 6 for PID 208
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 2102 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 2125 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 2141 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 2234 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 2466 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 5204 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 6125 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 6138 exited
+2015-08-12 23:49:15.479 0000000000001CD0: MON Guest: init: untracked pid 6560 exited
+2015-08-12 23:49:15.495 0000000000001CD0: MON Guest: init: untracked pid 1754 exited
+2015-08-12 23:49:15.495 0000000000001CD0: MON Guest: device closed. will free index 3 for PID 208
+2015-08-12 23:49:15.495 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-12 23:49:15.511 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-12 23:49:15.526 0000000000001CD0: MON Guest: alarm_release: clear alarm, pending 0
+2015-08-12 23:49:15.526 0000000000001CD0: MON Guest: alarm_release: clear alarm, pending 0
+2015-08-12 23:49:15.542 0000000000001CD0: MON Guest: device closed. will free index 0 for PID 609
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: init: untracked pid 2159 exited
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: device closed. will free index 4 for PID 2370
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: init: untracked pid 2370 exited
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: device closed. will free index 2 for PID 5381
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: init: untracked pid 5381 exited
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: device closed. will free index 1 for PID 1990
+2015-08-12 23:49:15.557 0000000000001CD0: MON Guest: init: untracked pid 1990 exited
+2015-08-12 23:49:15.573 0000000000001CD0: MON Guest: init: untracked pid 6268 exited
+2015-08-12 23:49:15.573 0000000000001CD0: MON Guest: init: untracked pid 2117 exited
+2015-08-12 23:49:15.589 0000000000001CD0: MON Guest: device closed. will free index 7 for PID 6181
+2015-08-12 23:49:15.589 0000000000001CD0: MON Guest: init: untracked pid 6181 exited
+2015-08-12 23:49:15.589 0000000000001CD0: MON Guest: device closed. will free index 5 for PID 2414
+2015-08-12 23:49:15.604 0000000000001CD0: MON Guest: init: untracked pid 2414 exited
+2015-08-12 23:49:15.604 0000000000001CD0: MON Guest: init: untracked pid 6062 exited
+2015-08-12 23:49:15.604 0000000000001CD0: MON Guest: init: untracked pid 3695 exited
+2015-08-12 23:49:16.197 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:16.197 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:16.197 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:16.197 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:16.324 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-12 23:49:16.328 0000000000001CD0: MON Guest: bstcmd_run(0x44567f07, 0x00000000, 1, be1e8e80), argv[0] /system/bin/start
+2015-08-12 23:49:16.328 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-12 23:49:16.328 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-12 23:49:16.333 0000000000001CD0: MON Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-12 23:49:16.334 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-12 23:49:16.342 0000000000001CD0: MON Guest: alloc_index called for cid 6668
+2015-08-12 23:49:16.342 0000000000001CD0: MON Guest: device opened...allocated map index 0 for PID 6668
+2015-08-12 23:49:16.342 0000000000001CD0: MON Guest: Connect ACK received for pid = 6668. magic = 24680, cid = 6668, entry = e38953c0, tid = 6668
+2015-08-12 23:49:16.343 0000000000000F34: IOC IOCTL returning 04bf0000
+
+2015-08-12 23:49:16.345 0000000000000F34: IOC IOCTL returning 0ebf0000
+
+2015-08-12 23:49:16.347 0000000000000F34: IOC IOCTL returning 0edf0000
+
+2015-08-12 23:49:16.353 0000000000001CD0: MON Guest: Setting video mode 1440x900x16
+2015-08-12 23:49:16.451 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:49:16.451 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(1)
+2015-08-12 23:49:16.451 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(2)
+2015-08-12 23:49:16.451 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(3)
+2015-08-12 23:49:16.956 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:16.956 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 0 => oom_score_adj 0
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 1 => oom_score_adj 58
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 2 => oom_score_adj 117
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 4 => oom_score_adj 235
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 9 => oom_score_adj 529
+2015-08-12 23:49:18.169 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+2015-08-12 23:49:18.559 0000000000001CD0: MON Guest: binder: 620:1578 transaction failed 29189, size 172-0
+2015-08-12 23:49:19.667 0000000000001CD0: MON Guest: alloc_index called for cid 6762
+2015-08-12 23:49:19.667 0000000000001CD0: MON Guest: device opened...allocated map index 1 for PID 6762
+2015-08-12 23:49:19.667 0000000000001CD0: MON Guest: Connect ACK received for pid = 6762. magic = 24721, cid = 6762, entry = ba57a1c0, tid = 6762
+2015-08-12 23:49:19.682 0000000000001B2C: IOC IOCTL returning 06da0000
+
+2015-08-12 23:49:19.682 0000000000001B2C: IOC IOCTL returning 0fa30000
+
+2015-08-12 23:49:19.698 0000000000001B2C: IOC IOCTL returning 0fc30000
+
+2015-08-12 23:49:19.776 0000000000001CD0: MON Guest: Connect ACK received for pid = 6668. magic = 24730, cid = 6668, entry = ada858c0, tid = 6670
+2015-08-12 23:49:19.776 0000000000000EC8: IOC IOCTL returning 06f40000
+
+2015-08-12 23:49:19.776 0000000000000EC8: IOC IOCTL returning 10840000
+
+2015-08-12 23:49:19.776 0000000000000EC8: IOC IOCTL returning 10a40000
+
+2015-08-12 23:49:20.057 0000000000001CD0: MON Guest: Connect ACK received for pid = 6668. magic = 24756, cid = 6668, entry = b1edc640, tid = 6674
+2015-08-12 23:49:20.057 00000000000018E8: IOC IOCTL returning 06db0000
+
+2015-08-12 23:49:20.072 00000000000018E8: IOC IOCTL returning 12130000
+
+2015-08-12 23:49:20.072 00000000000018E8: IOC IOCTL returning 12330000
+
+2015-08-12 23:49:20.182 0000000000001CD0: MON Guest: alloc_index called for cid 6899
+2015-08-12 23:49:20.182 0000000000001CD0: MON Guest: device opened...allocated map index 2 for PID 6899
+2015-08-12 23:49:20.182 0000000000001CD0: MON Guest: Connect ACK received for pid = 6899. magic = 24772, cid = 6899, entry = a9ca3ec0, tid = 6899
+2015-08-12 23:49:20.182 0000000000001618: IOC IOCTL returning 06f60000
+
+2015-08-12 23:49:20.182 0000000000001618: IOC IOCTL returning 101e0000
+
+2015-08-12 23:49:20.182 0000000000001618: IOC IOCTL returning 103e0000
+
+2015-08-12 23:49:20.603 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:20.603 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:20.603 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:20.603 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:20.712 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:49:20.712 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-12 23:49:20.962 0000000000001CD0: MON Guest: Connect ACK received for pid = 6668. magic = 24935, cid = 6668, entry = a9fd49c0, tid = 7073
+2015-08-12 23:49:20.962 0000000000002508: IOC IOCTL returning 07150000
+
+2015-08-12 23:49:20.962 0000000000002508: IOC IOCTL returning 15a20000
+
+2015-08-12 23:49:20.962 0000000000002508: IOC IOCTL returning 15c20000
+
+2015-08-12 23:49:21.543 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:49:21.543 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:49:24.983 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:49:25.943 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:25.943 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:30.273 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:30.273 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:30.973 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:30.973 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:38.523 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:38.523 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:45.563 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:45.563 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:45.863 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:45.863 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:51.183 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:51.183 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:51.933 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:51.933 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:52.213 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:52.213 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:53.203 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:53.203 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:55.303 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:55.303 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:55.953 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:55.953 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:56.103 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:56.103 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:56.933 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:56.933 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:58.893 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:49:58.893 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:49:59.223 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:59.223 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:49:59.783 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:49:59.783 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:02.383 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:50:02.833 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:02.833 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:06.965 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:06.965 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:07.393 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:50:07.393 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-12 23:50:07.399 0000000000001CD0: MON Guest: alloc_index called for cid 7957
+2015-08-12 23:50:07.399 0000000000001CD0: MON Guest: device opened...allocated map index 3 for PID 7957
+2015-08-12 23:50:07.400 0000000000001CD0: MON Guest: Connect ACK received for pid = 7957. magic = 25453, cid = 7957, entry = ba79dbc0, tid = 7957
+2015-08-12 23:50:07.402 00000000000021A0: IOC IOCTL returning 00cb0000
+
+2015-08-12 23:50:07.404 00000000000021A0: IOC IOCTL returning 145e0000
+
+2015-08-12 23:50:07.406 00000000000021A0: IOC IOCTL returning 165c0000
+
+2015-08-12 23:50:08.528 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:08.529 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:10.785 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:50:11.499 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:11.499 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:12.205 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:12.205 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:12.989 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:12.989 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:13.029 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:13.029 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:19.566 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:19.566 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:19.604 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:19.604 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:19.629 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:19.629 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:20.373 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:20.373 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:25.185 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:25.185 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:25.629 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:25.629 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:25.662 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:25.662 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:26.214 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:26.214 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:26.269 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:26.269 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:31.859 0000000000001CD0: MON Guest: binder: 6683:6706 transaction failed 29189, size 144-0
+2015-08-12 23:50:32.193 0000000000001CD0: MON Guest: binder: undelivered transaction 158325
+2015-08-12 23:50:32.933 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:32.933 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:34.001 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:34.001 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:47.933 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:47.933 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:50:58.500 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:50:58.500 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:04.966 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:04.966 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:05.013 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:05.013 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:05.083 0000000000001CD0: MON Guest: Connect ACK received for pid = 6668. magic = 29030, cid = 6668, entry = bc43ea40, tid = 8464
+2015-08-12 23:51:05.114 0000000000001684: IOC IOCTL returning 007d0000
+
+2015-08-12 23:51:05.116 0000000000001684: IOC IOCTL returning 11c20000
+
+2015-08-12 23:51:05.119 0000000000001684: IOC IOCTL returning 16390000
+
+2015-08-12 23:51:08.396 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:08.397 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:16.741 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:16.741 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:16.836 0000000000001CD0: MON Guest: alloc_index called for cid 6683
+2015-08-12 23:51:16.836 0000000000001CD0: MON Guest: device opened...allocated map index 4 for PID 6683
+2015-08-12 23:51:16.836 0000000000001CD0: MON Guest: Connect ACK received for pid = 6683. magic = 30231, cid = 6683, entry = ba79d0c0, tid = 6694
+2015-08-12 23:51:16.837 0000000000001D98: IOC IOCTL returning 007e0000
+
+2015-08-12 23:51:16.838 0000000000001D98: IOC IOCTL returning 16910000
+
+2015-08-12 23:51:16.839 0000000000001D98: IOC IOCTL returning 16b10000
+
+2015-08-12 23:51:16.921 0000000000001CD0: MON Guest: Connect ACK received for pid = 6683. magic = 30252, cid = 6683, entry = b1e8bcc0, tid = 6697
+2015-08-12 23:51:16.925 0000000000000568: IOC IOCTL returning 00cc0000
+
+2015-08-12 23:51:16.928 0000000000000568: IOC IOCTL returning 18f20000
+
+2015-08-12 23:51:16.930 0000000000000568: IOC IOCTL returning 19120000
+
+2015-08-12 23:51:17.124 0000000000001CD0: MON Guest: alloc_index called for cid 8740
+2015-08-12 23:51:17.124 0000000000001CD0: MON Guest: device opened...allocated map index 5 for PID 8740
+2015-08-12 23:51:17.124 0000000000001CD0: MON Guest: Connect ACK received for pid = 8740. magic = 30294, cid = 8740, entry = ae90e4c0, tid = 8740
+2015-08-12 23:51:17.152 0000000000001E54: IOC IOCTL returning 00cd0000
+
+2015-08-12 23:51:17.154 0000000000001E54: IOC IOCTL returning 18a60000
+
+2015-08-12 23:51:17.156 0000000000001E54: IOC IOCTL returning 18c60000
+
+2015-08-12 23:51:17.161 0000000000001CD0: MON Guest: alloc_index called for cid 6956
+2015-08-12 23:51:17.161 0000000000001CD0: MON Guest: device opened...allocated map index 6 for PID 6956
+2015-08-12 23:51:17.161 0000000000001CD0: MON Guest: Connect ACK received for pid = 6956. magic = 30302, cid = 6956, entry = a9fd44c0, tid = 8753
+2015-08-12 23:51:17.163 000000000000271C: IOC IOCTL returning 00ce0000
+
+2015-08-12 23:51:17.166 000000000000271C: IOC IOCTL returning 197d0000
+
+2015-08-12 23:51:17.169 000000000000271C: IOC IOCTL returning 199d0000
+
+2015-08-12 23:51:18.780 0000000000001CD0: MON Guest: Connect ACK received for pid = 8740. magic = 30524, cid = 8740, entry = b1fccb40, tid = 8856
+2015-08-12 23:51:18.781 0000000000002514: IOC IOCTL returning 04c00000
+
+2015-08-12 23:51:18.783 0000000000002514: IOC IOCTL returning 19da0000
+
+2015-08-12 23:51:18.785 0000000000002514: IOC IOCTL returning 1a9f0000
+
+2015-08-12 23:51:19.844 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:51:19.844 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-12 23:51:19.879 0000000000001CD0: MON Guest: alloc_index called for cid 620
+2015-08-12 23:51:19.879 0000000000001CD0: MON Guest: device opened...allocated map index 7 for PID 620
+2015-08-12 23:51:19.880 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 30586, cid = 620, entry = a9ee0340, tid = 8904
+2015-08-12 23:51:19.880 00000000000024D8: IOC IOCTL returning 04d90000
+
+2015-08-12 23:51:19.883 00000000000024D8: IOC IOCTL returning 1b200000
+
+2015-08-12 23:51:19.885 00000000000024D8: IOC IOCTL returning 1b400000
+
+2015-08-12 23:51:20.396 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 30592, cid = 620, entry = a9ee0e40, tid = 8902
+2015-08-12 23:51:20.396 000000000000275C: IOC IOCTL returning 056e0000
+
+2015-08-12 23:51:20.398 000000000000275C: IOC IOCTL returning 1cc80000
+
+2015-08-12 23:51:20.400 000000000000275C: IOC IOCTL returning 1ce80000
+
+2015-08-12 23:51:20.444 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 30601, cid = 620, entry = a9ee0e40, tid = 8903
+2015-08-12 23:51:20.445 00000000000023A4: IOC IOCTL returning 056f0000
+
+2015-08-12 23:51:20.446 00000000000023A4: IOC IOCTL returning 1d2f0000
+
+2015-08-12 23:51:20.449 00000000000023A4: IOC IOCTL returning 1d900000
+
+2015-08-12 23:51:20.651 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 30627, cid = 620, entry = a9ee03c0, tid = 8907
+2015-08-12 23:51:20.667 0000000000001FD8: IOC IOCTL returning 059f0000
+
+2015-08-12 23:51:20.669 0000000000001FD8: IOC IOCTL returning 252f0000
+
+2015-08-12 23:51:20.670 0000000000001FD8: IOC IOCTL returning 254f0000
+
+2015-08-12 23:51:24.194 00000000000024D8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:51:24.194 00000000000024D8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:51:24.195 00000000000024D8: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:51:24.195 00000000000023A4: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:51:24.195 00000000000023A4: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:51:24.195 00000000000023A4: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-12 23:51:24.196 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 31558, cid = 620, entry = e3895cc0, tid = 3389
+2015-08-12 23:51:24.197 000000000000201C: IOC IOCTL returning 04d90000
+
+2015-08-12 23:51:24.199 000000000000201C: IOC IOCTL returning 1b2f0000
+
+2015-08-12 23:51:24.200 000000000000201C: IOC IOCTL returning 1b4f0000
+
+2015-08-12 23:51:27.740 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-12 23:51:31.604 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:31.604 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:32.500 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:32.500 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:35.201 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-12 23:51:35.201 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-12 23:51:39.524 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:39.524 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:42.548 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:42.548 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:43.668 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:43.668 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:44.908 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:44.908 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:45.076 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:45.076 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:45.412 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:45.412 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:45.901 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:45.901 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:51:46.085 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:51:46.085 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:52:10.883 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:52:10.883 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:52:41.112 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:52:41.112 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:55:36.879 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:55:36.879 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:55:38.661 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:55:38.661 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:55:56.022 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:55:56.022 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:15.442 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:15.442 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:16.172 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:16.172 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:18.562 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:18.562 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-12 23:57:18.952 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-12 23:57:18.952 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:32.292 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:32.292 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:33.072 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:33.072 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:33.862 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:33.862 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:35.652 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:35.652 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:36.252 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:36.252 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:36.652 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:36.652 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:37.472 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:37.472 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:37.752 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:37.752 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:37.912 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:37.912 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:38.702 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:38.702 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:38.992 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:38.992 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.122 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.122 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.552 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.552 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.712 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.712 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:43.942 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:43.942 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:46.072 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:46.072 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:46.972 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:46.972 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:47.112 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:47.112 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:47.402 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:47.402 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:47.562 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:47.562 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:48.752 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:48.752 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:49.112 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:49.112 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemDetach
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:49.643 00000000000023BC: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:01:54.541 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-13 00:01:54.541 0000000000001CD0: MON Guest: bstcmd_run(0x13af4515, 0x00000000, 1, a8b48240), argv[0] /system/bin/stop
+2015-08-13 00:01:54.541 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-13 00:01:54.541 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-13 00:01:54.822 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:54.869 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:54.884 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:54.900 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:54.931 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:54.931 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: device closed. will free index 3 for PID 208
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 6790 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 6844 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 6857 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 6886 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 6927 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 7347 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 7865 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 7957 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 9252 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 9270 exited
+2015-08-13 00:01:54.947 0000000000001CD0: MON Guest: init: untracked pid 9286 exited
+2015-08-13 00:01:55.040 0000000000001CD0: MON Guest: init: untracked pid 8740 exited
+2015-08-13 00:01:55.040 0000000000001CD0: MON Guest: device closed. will free index 5 for PID 208
+2015-08-13 00:01:55.056 0000000000001CD0: MON Guest: init: untracked pid 6683 exited
+2015-08-13 00:01:55.056 0000000000001CD0: MON Guest: device closed. will free index 4 for PID 208
+2015-08-13 00:01:55.056 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:01:55.056 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-13 00:01:55.072 0000000000001CD0: MON Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:01:55.072 0000000000001CD0: MON Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:01:55.118 0000000000001CD0: MON Guest: init: untracked pid 6821 exited
+2015-08-13 00:01:55.134 0000000000001CD0: MON Guest: binder: undelivered death notification, 77c08d10
+2015-08-13 00:01:55.134 0000000000001CD0: MON Guest: device closed. will free index 0 for PID 6668
+2015-08-13 00:01:55.134 0000000000001CD0: MON Guest: init: untracked pid 7303 exited
+2015-08-13 00:01:55.134 0000000000001CD0: MON Guest: init: untracked pid 8471 exited
+2015-08-13 00:01:55.150 0000000000001CD0: MON Guest: device closed. will free index 6 for PID 6956
+2015-08-13 00:01:55.150 0000000000001CD0: MON Guest: init: untracked pid 6956 exited
+2015-08-13 00:01:55.181 0000000000001CD0: MON Guest: init: untracked pid 8787 exited
+2015-08-13 00:01:55.181 0000000000001CD0: MON Guest: device closed. will free index 2 for PID 6899
+2015-08-13 00:01:55.181 0000000000001CD0: MON Guest: init: untracked pid 6899 exited
+2015-08-13 00:01:55.181 0000000000001CD0: MON Guest: init: untracked pid 6872 exited
+2015-08-13 00:01:55.212 0000000000001CD0: MON Guest: device closed. will free index 1 for PID 6762
+2015-08-13 00:01:55.212 0000000000001CD0: MON Guest: init: untracked pid 6762 exited
+2015-08-13 00:01:55.477 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:55.477 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:55.477 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:55.477 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:55.658 0000000000001CD0: MON Guest: bstcmd: ping command received, sending response for the same
+2015-08-13 00:01:55.658 0000000000001CD0: MON Guest: bstcmd_run(0x6b306300, 0x00000000, 1, a9e9e220), argv[0] /system/bin/start
+2015-08-13 00:01:55.658 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_setup function
+2015-08-13 00:01:55.658 0000000000001CD0: MON Guest: bstcmd_run calling call_usermodehelper_exec function
+2015-08-13 00:01:55.670 0000000000001CD0: MON Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-13 00:01:55.670 0000000000001CD0: MON Guest: bstcmd_run ret = 0
+2015-08-13 00:01:56.370 0000000000001CD0: MON Guest: alloc_index called for cid 9404
+2015-08-13 00:01:56.370 0000000000001CD0: MON Guest: device opened...allocated map index 0 for PID 9404
+2015-08-13 00:01:56.370 0000000000001CD0: MON Guest: Connect ACK received for pid = 9404. magic = 1135849, cid = 9404, entry = acdd9e40, tid = 9404
+2015-08-13 00:01:56.373 0000000000002154: IOC IOCTL returning 052a0000
+
+2015-08-13 00:01:56.374 0000000000002154: IOC IOCTL returning 0f3e0000
+
+2015-08-13 00:01:56.375 0000000000002154: IOC IOCTL returning 0f5e0000
+
+2015-08-13 00:01:56.379 0000000000001CD0: MON Guest: Setting video mode 1440x900x16
+2015-08-13 00:01:56.505 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:01:56.505 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:01:57.760 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-13 00:01:57.760 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(1)
+2015-08-13 00:01:57.760 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(2)
+2015-08-13 00:01:57.760 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(3)
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 0 => oom_score_adj 0
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 1 => oom_score_adj 58
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 2 => oom_score_adj 117
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 4 => oom_score_adj 235
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 9 => oom_score_adj 529
+2015-08-13 00:02:01.495 0000000000001CD0: MON Guest: lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+2015-08-13 00:02:02.012 0000000000001CD0: MON Guest: binder: 620:8967 transaction failed 29189, size 172-0
+2015-08-13 00:02:02.901 0000000000001CD0: MON Guest: alloc_index called for cid 9499
+2015-08-13 00:02:02.901 0000000000001CD0: MON Guest: device opened...allocated map index 1 for PID 9499
+2015-08-13 00:02:02.901 0000000000001CD0: MON Guest: Connect ACK received for pid = 9499. magic = 1135883, cid = 9499, entry = b1e8b4c0, tid = 9499
+2015-08-13 00:02:02.917 0000000000001424: IOC IOCTL returning 05cf0000
+
+2015-08-13 00:02:02.917 0000000000001424: IOC IOCTL returning 0cb90000
+
+2015-08-13 00:02:02.917 0000000000001424: IOC IOCTL returning 0ef90000
+
+2015-08-13 00:02:02.917 0000000000001CD0: MON Guest: Connect ACK received for pid = 9404. magic = 1135889, cid = 9404, entry = b1e8b5c0, tid = 9408
+2015-08-13 00:02:02.917 000000000000162C: IOC IOCTL returning 05d00000
+
+2015-08-13 00:02:02.932 000000000000162C: IOC IOCTL returning 10b00000
+
+2015-08-13 00:02:02.932 000000000000162C: IOC IOCTL returning 105c0000
+
+2015-08-13 00:02:04.056 0000000000001CD0: MON Guest: Connect ACK received for pid = 9404. magic = 1135919, cid = 9404, entry = b1fafc40, tid = 9406
+2015-08-13 00:02:04.056 000000000000047C: IOC IOCTL returning 05e20000
+
+2015-08-13 00:02:04.056 000000000000047C: IOC IOCTL returning 107c0000
+
+2015-08-13 00:02:04.056 000000000000047C: IOC IOCTL returning 114f0000
+
+2015-08-13 00:02:04.586 0000000000001CD0: MON Guest: Connect ACK received for pid = 9404. magic = 1135948, cid = 9404, entry = ba57a3c0, tid = 9728
+2015-08-13 00:02:04.586 0000000000001A60: IOC IOCTL returning 05e10000
+
+2015-08-13 00:02:04.586 0000000000001A60: IOC IOCTL returning 12f10000
+
+2015-08-13 00:02:04.586 0000000000001A60: IOC IOCTL returning 13110000
+
+2015-08-13 00:02:04.586 0000000000001CD0: MON Guest: alloc_index called for cid 9643
+2015-08-13 00:02:04.586 0000000000001CD0: MON Guest: device opened...allocated map index 2 for PID 9643
+2015-08-13 00:02:04.617 0000000000001CD0: MON Guest: Connect ACK received for pid = 9643. magic = 1135951, cid = 9643, entry = ba57a3c0, tid = 9643
+2015-08-13 00:02:04.648 0000000000000E8C: IOC IOCTL returning 05e70000
+
+2015-08-13 00:02:04.648 0000000000000E8C: IOC IOCTL returning 137f0000
+
+2015-08-13 00:02:04.648 0000000000000E8C: IOC IOCTL returning 139f0000
+
+2015-08-13 00:02:04.867 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:04.867 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:04.867 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:04.867 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:04.867 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-13 00:02:04.867 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 20)
+2015-08-13 00:02:05.054 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-13 00:02:05.054 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:06.490 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:06.490 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:08.620 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-13 00:02:11.870 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:11.870 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:12.330 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:12.330 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:12.460 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:12.460 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:12.500 0000000000001CD0: MON Guest: alloc_index called for cid 9419
+2015-08-13 00:02:12.500 0000000000001CD0: MON Guest: device opened...allocated map index 3 for PID 9419
+2015-08-13 00:02:12.500 0000000000001CD0: MON Guest: Connect ACK received for pid = 9419. magic = 1136156, cid = 9419, entry = ae91ae40, tid = 9642
+2015-08-13 00:02:12.500 00000000000006F0: IOC IOCTL returning 06d10000
+
+2015-08-13 00:02:12.500 00000000000006F0: IOC IOCTL returning 09fa0000
+
+2015-08-13 00:02:12.510 00000000000006F0: IOC IOCTL returning 154d0000
+
+2015-08-13 00:02:12.630 0000000000001CD0: MON Guest: Connect ACK received for pid = 9419. magic = 1136183, cid = 9419, entry = ada9c340, tid = 9433
+2015-08-13 00:02:12.650 0000000000001BDC: IOC IOCTL returning 06e70000
+
+2015-08-13 00:02:12.660 0000000000001BDC: IOC IOCTL returning 09c00000
+
+2015-08-13 00:02:12.660 0000000000001BDC: IOC IOCTL returning 156d0000
+
+2015-08-13 00:02:13.120 0000000000001CD0: MON Guest: alloc_index called for cid 9666
+2015-08-13 00:02:13.120 0000000000001CD0: MON Guest: device opened...allocated map index 4 for PID 9666
+2015-08-13 00:02:13.120 0000000000001CD0: MON Guest: Connect ACK received for pid = 9666. magic = 1136302, cid = 9666, entry = ae90e9c0, tid = 10140
+2015-08-13 00:02:13.120 000000000000206C: IOC IOCTL returning 06e80000
+
+2015-08-13 00:02:13.120 000000000000206C: IOC IOCTL returning 10f10000
+
+2015-08-13 00:02:13.130 000000000000206C: IOC IOCTL returning 158d0000
+
+2015-08-13 00:02:13.270 0000000000001CD0: MON Guest: alloc_index called for cid 10113
+2015-08-13 00:02:13.270 0000000000001CD0: MON Guest: device opened...allocated map index 5 for PID 10113
+2015-08-13 00:02:13.270 0000000000001CD0: MON Guest: Connect ACK received for pid = 10113. magic = 1136323, cid = 10113, entry = ae9134c0, tid = 10113
+2015-08-13 00:02:13.270 00000000000024DC: IOC IOCTL returning 06ea0000
+
+2015-08-13 00:02:13.270 00000000000024DC: IOC IOCTL returning 16910000
+
+2015-08-13 00:02:13.270 00000000000024DC: IOC IOCTL returning 16b10000
+
+2015-08-13 00:02:14.140 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:14.140 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:16.510 0000000000001CD0: MON Guest: Connect ACK received for pid = 10113. magic = 1136474, cid = 10113, entry = accdc740, tid = 10272
+2015-08-13 00:02:16.510 0000000000000C3C: IOC IOCTL returning 06ef0000
+
+2015-08-13 00:02:16.520 0000000000000C3C: IOC IOCTL returning 16d10000
+
+2015-08-13 00:02:16.520 0000000000000C3C: IOC IOCTL returning 16f10000
+
+2015-08-13 00:02:18.120 0000000000001CD0: MON Guest: bstsensor_mesg_send_start(0)
+2015-08-13 00:02:18.120 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:18.740 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 1136571, cid = 620, entry = ae90e1c0, tid = 10305
+2015-08-13 00:02:18.740 0000000000002510: IOC IOCTL returning 06f00000
+
+2015-08-13 00:02:18.740 0000000000002510: IOC IOCTL returning 17df0000
+
+2015-08-13 00:02:18.750 0000000000002510: IOC IOCTL returning 17ff0000
+
+2015-08-13 00:02:19.130 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 1136579, cid = 620, entry = ae913ec0, tid = 10303
+2015-08-13 00:02:19.130 0000000000000930: IOC IOCTL returning 07940000
+
+2015-08-13 00:02:19.130 0000000000000930: IOC IOCTL returning 1a3c0000
+
+2015-08-13 00:02:19.130 0000000000000930: IOC IOCTL returning 1a5c0000
+
+2015-08-13 00:02:19.170 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 1136594, cid = 620, entry = ae913ec0, tid = 10304
+2015-08-13 00:02:19.180 0000000000001854: IOC IOCTL returning 07950000
+
+2015-08-13 00:02:19.180 0000000000001854: IOC IOCTL returning 1aac0000
+
+2015-08-13 00:02:19.190 0000000000001854: IOC IOCTL returning 1acc0000
+
+2015-08-13 00:02:19.440 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 1136619, cid = 620, entry = e3af1a40, tid = 10315
+2015-08-13 00:02:19.530 0000000000000860: IOC IOCTL returning 07fb0000
+
+2015-08-13 00:02:19.530 0000000000000860: IOC IOCTL returning 22a50000
+
+2015-08-13 00:02:19.530 0000000000000860: IOC IOCTL returning 22c50000
+
+2015-08-13 00:02:21.000 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:21.000 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:23.260 0000000000002510: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:02:23.260 0000000000002510: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:02:23.260 0000000000002510: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:02:23.260 0000000000001854: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:02:23.260 0000000000001854: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:02:23.260 0000000000001854: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:02:23.280 0000000000001CD0: MON Guest: Connect ACK received for pid = 620. magic = 1137162, cid = 620, entry = b1faf340, tid = 8967
+2015-08-13 00:02:23.280 00000000000021D8: IOC IOCTL returning 06f00000
+
+2015-08-13 00:02:23.280 00000000000021D8: IOC IOCTL returning 17da0000
+
+2015-08-13 00:02:23.280 00000000000021D8: IOC IOCTL returning 17fa0000
+
+2015-08-13 00:02:27.708 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:27.708 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:28.095 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:28.095 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:29.073 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:29.073 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:29.527 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:29.527 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:31.569 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:31.569 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:32.137 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:32.137 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:33.695 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:33.695 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:36.239 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:36.239 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:36.807 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:36.807 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:37.800 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:37.800 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:39.245 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:39.245 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:40.735 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:40.735 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:41.495 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:41.495 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:42.505 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:44.295 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.295 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.525 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.525 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.685 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.685 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.825 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.825 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:44.985 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:44.985 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.105 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:45.105 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.245 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:45.245 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.365 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:45.365 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:45.845 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:50.875 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:54.155 0000000000001CD0: MON Guest: alloc_index called for cid 10906
+2015-08-13 00:02:54.155 0000000000001CD0: MON Guest: device opened...allocated map index 6 for PID 10906
+2015-08-13 00:02:54.155 0000000000001CD0: MON Guest: Connect ACK received for pid = 10906. magic = 1167423, cid = 10906, entry = e30b9dc0, tid = 10906
+2015-08-13 00:02:54.155 0000000000002024: IOC IOCTL returning 00c60000
+
+2015-08-13 00:02:54.155 0000000000002024: IOC IOCTL returning 22e50000
+
+2015-08-13 00:02:54.165 0000000000002024: IOC IOCTL returning 23270000
+
+2015-08-13 00:02:54.165 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:02:59.345 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:59.345 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:59.375 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:59.375 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:02:59.395 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:02:59.395 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:03:38.205 0000000000001CD0: MON Guest: binder: release 11176:11259 transaction 344286 out, still active
+2015-08-13 00:03:38.215 0000000000001CD0: MON Guest: binder: 9566:9593 transaction failed 29189, size 140-8
+2015-08-13 00:03:38.215 0000000000001CD0: MON Guest: binder: send failed reply for transaction 344286, target dead
+2015-08-13 00:03:41.415 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:44.705 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:49.755 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:53.045 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:03:58.055 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:04:01.345 0000000000001CD0: MON Guest: bstsensor_mesg_send_set_delay(0, 1)
+2015-08-13 00:06:28.515 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:28.515 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:29.415 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:29.415 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:30.045 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:30.045 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:30.615 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:30.615 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:31.015 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:31.015 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:32.885 0000000000001CD0: MON Guest: atkbd serio0: Unknown key released (translated set 2, code 0x0 on bstkbd).
+2015-08-13 00:06:32.885 0000000000001CD0: MON Guest: atkbd serio0: Use 'setkeycodes 00 <keycode>' to make it known.
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemDetach
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.605 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:06:35.621 0000000000000EB0: IOC In function BstHdShmemGuestInformUnmap
+
+2015-08-13 00:07:33.714 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:07:34.154 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:07:34.734 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:07:34.794 0000000000001CD0: MON Guest: device closed. will free index 1 for PID 9499
+2015-08-13 00:08:27.554 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:08:27.564 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:08:32.834 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:08:32.844 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:03.344 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:03.354 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: SysRq : 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: Show Blocked State
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   task                PC stack   pid father
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: bstaudio        D
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  24f47300 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:     0   445      2 0x00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2995f6c
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000046
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e39263b0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  24f47300
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e39263b0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2995f34
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  81039334
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000001
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2971df8
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2971e30
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2971e3c
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2995f3c
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  81039374
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2995f60
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  81038a25
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000003
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2994000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e4c53597
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2995f68
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2971e28
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: Call Trace:
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81039334>] ? try_to_wake_up+0x11b/0x124
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81039374>] ? default_wake_function+0xb/0xd
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81038a25>] ? __wake_up_common+0x35/0x57
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<e4c53597>] ? bstaudio_isr+0x14/0x14 [bstaudio]
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<e4c53597>] ? bstaudio_isr+0x14/0x14 [bstaudio]
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81271957>] schedule+0x55/0x57
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81033922>] kthread+0x70/0x8e
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81272d37>] ret_from_kernel_thread+0x1b/0x28
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<810338b2>] ? kthread_worker_fn+0x128/0x128
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: bstcamera       D
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  2cb41780 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:     0   502      2 0x00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2b1ff6c
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000046
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e38a0ef0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  2cb41780
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e38a0ef0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2b1ff34
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  81039334
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000001
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e29b3e24
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e29b3e5c
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e29b3e68
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2b1ff3c
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  81039374
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2b1ff60
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  81038a25
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000003
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2b1e000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  00000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e4c79014
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e2b1ff68
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  e29b3e54
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: Call Trace:
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81039334>] ? try_to_wake_up+0x11b/0x124
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81039374>] ? default_wake_function+0xb/0xd
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81038a25>] ? __wake_up_common+0x35/0x57
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<e4c79014>] ? bstcamera_isr+0x14/0x14 [bstcamera]
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<e4c79014>] ? bstcamera_isr+0x14/0x14 [bstcamera]
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81271957>] schedule+0x55/0x57
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81033922>] kthread+0x70/0x8e
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<81272d37>] ret_from_kernel_thread+0x1b/0x28
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  [<810338b2>] ? kthread_worker_fn+0x128/0x128
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: Sched Debug Version: v0.10, 3.10.30-android-x86-hd+ #1
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: ktime                                   : 1587920.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: sched_clk                               : 1587920.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: cpu_clk                                 : 1587920.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: jiffies                                 : 128792
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: sched_clock_stable                      : 0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: sysctl_sched
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sysctl_sched_latency                    : 10.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sysctl_sched_min_granularity            : 0.750000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sysctl_sched_wakeup_granularity         : 2.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sysctl_sched_child_runs_first           : 0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sysctl_sched_features                   : 11899
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sysctl_sched_tunable_scaling            : 1 (logaritmic)
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: cpu#0, 2294.000 MHz
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .nr_running                    : 3
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .load                          : 9398
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .nr_switches                   : 7911990
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .nr_load_updates               : 158792
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .nr_uninterruptible            : 2
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .next_balance                  : 0.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .curr->pid                     : 9535
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .clock                         : 1587920.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .cpu_load[0]                   : 9398
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .cpu_load[1]                   : 7792
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .cpu_load[2]                   : 7139
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .cpu_load[3]                   : 6850
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .cpu_load[4]                   : 6613
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .yld_count                     : 375
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sched_count                   : 8096723
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .sched_goidle                  : 1586934
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .ttwu_count                    : 5540411
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .ttwu_local                    : 0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+cfs_rq[0]:
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .exec_clock                    : 532450.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .MIN_vruntime                  : 417225.931347
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .min_vruntime                  : 417230.931347
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .max_vruntime                  : 417228.552955
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .spread                        : 2.621608
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .spread0                       : 0.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .nr_spread_over                : 32224
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .nr_running                    : 3
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .load                          : 9398
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+rt_rq[0]:
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .rt_nr_running                 : 0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .rt_throttled                  : 0
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .rt_time                       : 0.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:   .rt_runtime                    : 950.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: R
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:        watchdog  9535    417225.931347       219   118 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:    417225.931347         0.000000    423220.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: .android.common 10216    417228.552955     18103   114 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:    417228.552955      1340.000000    400940.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:  
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:      Thread-158 10294    417225.931347     19709   114 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest:    417225.931347       620.000000    394040.000000
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.364 0000000000001CD0: MON Guest: 
+2015-08-13 00:09:05.384 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.464 0000000000001CD0: MON Guest: binder: release 9419:9641 transaction 383320 out, still active
+2015-08-13 00:09:05.464 0000000000001CD0: MON Guest: binder: release 9419:9641 transaction 383319 in, still active
+2015-08-13 00:09:05.464 0000000000001CD0: MON Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:09:05.464 0000000000001CD0: MON Guest: alarm_release: clear alarm, pending 0
+2015-08-13 00:09:05.464 0000000000001CD0: MON Guest: device closed. will free index 3 for PID 9419
+2015-08-13 00:09:05.514 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.524 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.534 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.534 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.574 0000000000001CD0: MON Guest: device closed. will free index 6 for PID 10906
+2015-08-13 00:09:05.614 0000000000001CD0: MON Guest: returning EINTR to user
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: device closed. will free index 7 for PID 208
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: cannot find '/system/bin/arm-runtime', disabling 'arm_runtime'
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: binder: release 11457:11457 transaction 383319 out, still active
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 9540 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 9566 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 9587 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 9627 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 10080 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 10755 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 10906 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 11038 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 11091 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 11199 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 11410 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 11457 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 620 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 10774 exited
+2015-08-13 00:09:05.664 0000000000001CD0: MON Guest: init: untracked pid 11145 exited
+2015-08-13 00:09:05.704 0000000000001CD0: MON Guest: device closed. will free index 5 for PID 10113
+2015-08-13 00:09:05.704 0000000000001CD0: MON Guest: init: untracked pid 10113 exited
+2015-08-13 00:09:05.794 0000000000001CD0: MON Guest: device closed. will free index 2 for PID 9643
+2015-08-13 00:09:05.794 0000000000001CD0: MON Guest: init: untracked pid 9643 exited
+2015-08-13 00:09:05.794 0000000000001CD0: MON Guest: init: untracked pid 11263 exited
+2015-08-13 00:09:05.834 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(0)
+2015-08-13 00:09:05.834 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(1)
+2015-08-13 00:09:05.834 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(2)
+2015-08-13 00:09:05.834 0000000000001CD0: MON Guest: bstsensor_mesg_send_stop(3)
+2015-08-13 00:09:05.934 0000000000001CD0: MON Guest: init: untracked pid 11105 exited
+2015-08-13 00:09:05.934 0000000000001CD0: MON Guest: device closed. will free index 4 for PID 9666
+2015-08-13 00:09:05.934 0000000000001CD0: MON Guest: init: untracked pid 9609 exited
+2015-08-13 00:09:05.934 0000000000001CD0: MON Guest: init: untracked pid 9666 exited
+2015-08-15 01:03:30.164 000000000000006C: ENT Initializing hypervisor...
+2015-08-15 01:03:30.164 000000000000006C: ENT Entry point at 0xFFFFF8801AC872F0
+2015-08-15 01:03:30.164 000000000000006C: ENT the registry path is pp
+2015-08-15 01:03:30.164 000000000000006C: ENT 0
+2015-08-15 01:03:30.164 000000000000006C: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-15 12:36:29.021 0000000000000050: ENT Initializing hypervisor...
+2015-08-15 12:36:29.021 0000000000000050: ENT Entry point at 0xFFFFF880036F22F0
+2015-08-15 12:36:29.021 0000000000000050: ENT the registry path is pp?????\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-15 12:36:29.021 0000000000000050: ENT 0
+2015-08-15 12:36:29.021 0000000000000050: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-16 15:17:46.483 0000000000000058: ENT Initializing hypervisor...
+2015-08-16 15:17:46.483 0000000000000058: ENT Entry point at 0xFFFFF8801C2272F0
+2015-08-16 15:17:46.483 0000000000000058: ENT the registry path is pp
+2015-08-16 15:17:46.483 0000000000000058: ENT 0
+2015-08-16 15:17:46.483 0000000000000058: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-16 17:08:49.319 0000000000000050: ENT Initializing hypervisor...
+2015-08-16 17:08:49.319 0000000000000050: ENT Entry point at 0xFFFFF8801A7412F0
+2015-08-16 17:08:49.319 0000000000000050: ENT the registry path is pp??²ο???\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-16 17:08:49.319 0000000000000050: ENT 0
+2015-08-16 17:08:49.319 0000000000000050: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-17 10:35:56.254 0000000000000060: ENT Initializing hypervisor...
+2015-08-17 10:35:56.254 0000000000000060: ENT Entry point at 0xFFFFF88003BBA2F0
+2015-08-17 10:35:56.254 0000000000000060: ENT the registry path is pp??³†???\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-17 10:35:56.254 0000000000000060: ENT 0
+2015-08-17 10:35:56.254 0000000000000060: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-17 16:17:21.321 000000000000005C: ENT Initializing hypervisor...
+2015-08-17 16:17:21.321 000000000000005C: ENT Entry point at 0xFFFFF88003E032F0
+2015-08-17 16:17:21.321 000000000000005C: ENT the registry path is pp??²ο???\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-17 16:17:21.321 000000000000005C: ENT 0
+2015-08-17 16:17:21.321 000000000000005C: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-17 18:20:10.046 0000000000000050: ENT Initializing hypervisor...
+2015-08-17 18:20:10.046 0000000000000050: ENT Entry point at 0xFFFFF8801B0A32F0
+2015-08-17 18:20:10.046 0000000000000050: ENT the registry path is pp
+2015-08-17 18:20:10.046 0000000000000050: ENT 0
+2015-08-17 18:20:10.046 0000000000000050: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-17 21:26:21.091 000000000000004C: ENT Initializing hypervisor...
+2015-08-17 21:26:21.091 000000000000004C: ENT Entry point at 0xFFFFF8801B1112F0
+2015-08-17 21:26:21.091 000000000000004C: ENT the registry path is pp??????\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-17 21:26:21.091 000000000000004C: ENT 0
+2015-08-17 21:26:21.091 000000000000004C: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-18 11:12:21.262 0000000000000040: ENT Initializing hypervisor...
+2015-08-18 11:12:21.262 0000000000000040: ENT Entry point at 0xFFFFF8801ACF02F0
+2015-08-18 11:12:21.262 0000000000000040: ENT the registry path is pp
+2015-08-18 11:12:21.262 0000000000000040: ENT 0
+2015-08-18 11:12:21.262 0000000000000040: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-18 17:12:05.670 000000000000004C: ENT Initializing hypervisor...
+2015-08-18 17:12:05.670 000000000000004C: ENT Entry point at 0xFFFFF8801AEE82F0
+2015-08-18 17:12:05.670 000000000000004C: ENT the registry path is pp??²ο???\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-18 17:12:05.670 000000000000004C: ENT 0
+2015-08-18 17:12:05.670 000000000000004C: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-18 21:19:01.915 0000000000000040: ENT Initializing hypervisor...
+2015-08-18 21:19:01.915 0000000000000040: ENT Entry point at 0xFFFFF8801B0D72F0
+2015-08-18 21:19:01.915 0000000000000040: ENT the registry path is pp??????\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-18 21:19:01.915 0000000000000040: ENT 0
+2015-08-18 21:19:01.915 0000000000000040: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-19 08:44:40.633 0000000000000064: ENT Initializing hypervisor...
+2015-08-19 08:44:40.633 0000000000000064: ENT Entry point at 0xFFFFF8801B09F2F0
+2015-08-19 08:44:40.633 0000000000000064: ENT the registry path is pp??????\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-19 08:44:40.633 0000000000000064: ENT 0
+2015-08-19 08:44:40.633 0000000000000064: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-19 13:03:56.831 0000000000000068: ENT Initializing hypervisor...
+2015-08-19 13:03:56.831 0000000000000068: ENT Entry point at 0xFFFFF8801AA032F0
+2015-08-19 13:03:56.831 0000000000000068: ENT the registry path is pp??Ι±???\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-19 13:03:56.831 0000000000000068: ENT 0
+2015-08-19 13:03:56.831 0000000000000068: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-19 14:42:53.724 000000000000005C: ENT Initializing hypervisor...
+2015-08-19 14:42:53.724 000000000000005C: ENT Entry point at 0xFFFFF880037452F0
+2015-08-19 14:42:53.724 000000000000005C: ENT the registry path is pp??????\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-19 14:42:53.724 000000000000005C: ENT 0
+2015-08-19 14:42:53.724 000000000000005C: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-19 21:46:25.393 0000000000000068: ENT Initializing hypervisor...
+2015-08-19 21:46:25.393 0000000000000068: ENT Entry point at 0xFFFFF8801AEC72F0
+2015-08-19 21:46:25.393 0000000000000068: ENT the registry path is pp
+2015-08-19 21:46:25.393 0000000000000068: ENT 0
+2015-08-19 21:46:25.393 0000000000000068: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-23 16:48:17.706 0000000000000054: ENT Initializing hypervisor...
+2015-08-23 16:48:17.706 0000000000000054: ENT Entry point at 0xFFFFF8801AAB82F0
+2015-08-23 16:48:17.706 0000000000000054: ENT the registry path is pp
+2015-08-23 16:48:17.706 0000000000000054: ENT 0
+2015-08-23 16:48:17.706 0000000000000054: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-24 10:01:53.922 0000000000000060: ENT Initializing hypervisor...
+2015-08-24 10:01:53.922 0000000000000060: ENT Entry point at 0xFFFFF8801ACAC2F0
+2015-08-24 10:01:53.922 0000000000000060: ENT the registry path is pp??????\REGISTRY\MACHINE\SYSTEM\ControlSet001\services\BstHdDrv
+2015-08-24 10:01:53.922 0000000000000060: ENT 0
+2015-08-24 10:01:53.922 0000000000000060: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-24 21:41:41.102 0000000000000054: ENT Initializing hypervisor...
+2015-08-24 21:41:41.102 0000000000000054: ENT Entry point at 0xFFFFF8801B0C62F0
+2015-08-24 21:41:41.102 0000000000000054: ENT the registry path is pp
+2015-08-24 21:41:41.102 0000000000000054: ENT 0
+2015-08-24 21:41:41.102 0000000000000054: ENT **************** MANAGER INIT RETURNED **************  0
+
+2015-08-25 11:57:54.614 000000000000004C: ENT Initializing hypervisor...
+2015-08-25 11:57:54.614 000000000000004C: ENT Entry point at 0xFFFFF8801CD712F0
+2015-08-25 11:57:54.614 000000000000004C: ENT the registry path is pp
+2015-08-25 11:57:54.614 000000000000004C: ENT 0
+2015-08-25 11:57:54.614 000000000000004C: ENT **************** MANAGER INIT RETURNED **************  0
+
