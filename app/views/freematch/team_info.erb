@@ -297,10 +297,11 @@ font4{
           <br>
           <% if @teamlists_lol.lol_whichgame == false %>
             <% @teamlists_lol.fightsubscriptions.each do |s| %>
+              
               팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
                        <% if @teamlists_lol.lol_current_user_id == current_user.id %>
                          <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success">수락</button></a><br>
-                        
+                           
                        <% end %>
             <% end %>           
           <% end %>
