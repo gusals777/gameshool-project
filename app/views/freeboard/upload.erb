@@ -158,8 +158,8 @@
 
 <div class="row">
 <div class="col-md-2"></div>
-<div class="col-md-3"> <img src="/imgs/연필.png" style="width:330px; height:300px"><img src="/imgs/책디자인.png" style="width:330px; height:300px"></div>
-<div class="col-md-4">
+<div class="col-md-4"> <img src="/imgs/연필.png" style="width:330px; height:300px"><img src="/imgs/책디자인.png" style="width:330px; height:300px"></div>
+<div class="col-md-3">
     
     <div class="row">
     <%= form_tag("/freeboard/write", method: "post", :class => "form-style-10") do %>
@@ -186,7 +186,7 @@
         <input type="hidden" name="user_hakbun" value="<%= current_user.hakbun %>">
         
     
-        <input type="submit" value="확인">
+        <input type="submit" value="확인" onClick="this.style.visibility='hidden'">
     
     <% end %>
     
