@@ -3,28 +3,71 @@
 <link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
 
 <style>
-* {font-family: Helvetica Neue, Arial, sans-serif; }
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+div.wrapper {
+  margin: 20px auto;
+  width: 500px;
+}
 
 
-h1, table { text-align: center; }
 
-table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem;}
+nav.vertical {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  overflow: hidden;
+ 
+}
 
-th, td { padding: 1.5rem; font-size: 1.3rem; }
 
-tr {background: hsl(50, 50%, 80%); }
 
-tr, td { transition: .4s ease-in; } 
-
-tr:first-child {background: hsla(12, 100%, 40%, 0.5); }
-
-tr:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
-
-td:empty {background: hsla(50, 25%, 60%, 0.7); }
-
-tr:hover:not(#firstrow), tr:hover td:empty {background: #ff0; pointer-events: visible;}
-tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
-
+      nav.vertical > ul > li > a {
+        background-color: rgb(157, 34, 60);
+        background-image: -webkit-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        background-image: -moz-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        background-image: -o-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        background-image: linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);
+        color: rgb(255,255,255);
+        display: block;
+        font-size: .85rem;
+        font-weight: 500;
+        height: 50px;
+        letter-spacing: .5rem;
+        line-height: 50px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        text-transform: uppercase;
+        transition: all .1s ease;
+        text-decoration: none;
+      }
+      
+      
+      div.wrapper2 {
+  margin: 20px auto;
+  width: 1200px;
+}
 
 </style>
 
@@ -51,16 +94,27 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
         </div>
     </header>
     <div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-8">
+<div class="col-md-1"></div>
+<div class="col-md-10">
 
 
-<% if @kind_of_game == "lol" %>      
+<% if @kind_of_game == "lol" %>  
+    
+      <div class="row">
+      <div class="col-md-12">
+      
+         <div class="wrapper2">
+            <nav class="vertical">
+              <ul>
+                <li>
+                <a><center><font2><font size="5px">현제 진행중인 팀 상세 정보 입니다.</font></font2></center></a>
+      
       <div class="row"> 
-        <div class="col-md-5">
-         <table class="table">
+        <div class="col-md-3">
+        
+         <table class="table" style="margin-top:30%">
               <tr >
-                <th>게임종류</th>
+               
                 <th>분류</th>
                 <th>이름</th>
                 <th>학과</th>
@@ -68,7 +122,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th>게임 ID</th>
               </tr>
               <tr class="info">
-                <th><%= @kind_of_game %></th>
+                
                 <th>팀장</th>
                 <th><%= @lol_my_team_info.leader_name %></th>
                 <th><%= @lol_my_team_info.lol_major %></th>
@@ -76,7 +130,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_my_team_info.lol_leader_id %></th>
               </tr>
               <tr class="info">
-                <th></th>
+              
                 <th>팀원</th>
                 <th><%= @lol_my_team_info.lol_member_name_1 %></th>
                 <th><%= @lol_my_team_info.lol_member_major_1 %></th>
@@ -84,7 +138,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_my_team_info.lol_user_id_1 %></th>
               </tr>
               <tr class="info">
-                <th></th>
+               
                 <th>팀원</th>
                 <th><%= @lol_my_team_info.lol_member_name_2 %></th>
                 <th><%= @lol_my_team_info.lol_member_major_2 %></th>
@@ -92,7 +146,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_my_team_info.lol_user_id_2 %></th>
               </tr>
               <tr class="info">
-                <th></th>
+               
                 <th>팀원</th>
                 <th><%= @lol_my_team_info.lol_member_name_3 %></th>
                 <th><%= @lol_my_team_info.lol_member_major_3 %></th>
@@ -100,7 +154,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_my_team_info.lol_user_id_3 %></th>
               </tr>
               <tr class="info">
-                <th></th>
+             
                 <th>팀원</th>
                 <th><%= @lol_my_team_info.lol_member_name_4 %></th>
                 <th><%= @lol_my_team_info.lol_member_major_4 %></th>
@@ -110,16 +164,16 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
             </table>
           </div>
           
-          <div class="col-md-2" style="text-align: center">
-          
-             <h1>VS</h1>
+          <div class="col-md-1" style="text-align: center; margin-top:10%" >
+              <h1>LOL</h1><br>
+             <h3>VS</h3>
             
           </div>
           
-          <div class="col-md-5">
-         <table class="table">
+          <div class="col-md-3">
+         <table class="table" style="margin-top:30%">
               <tr >
-                <th>게임종류</th>
+              
                 <th>분류</th>
                 <th>이름</th>
                 <th>학과</th>
@@ -127,7 +181,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th>게임 ID</th>
               </tr>
               <tr class="info">
-                <th><%= @kind_of_game %></th>
+               
                 <th>팀장</th>
                 <th><%= @lol_opposing_team_info.leader_name %></th>
                 <th><%= @lol_opposing_team_info.lol_major %></th>
@@ -135,7 +189,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_opposing_team_info.lol_leader_id %></th>
               </tr>
               <tr class="info">
-                <th></th>
+              
                 <th>팀원</th>
                 <th><%= @lol_opposing_team_info.lol_member_name_1 %></th>
                 <th><%= @lol_opposing_team_info.lol_member_major_1 %></th>
@@ -143,7 +197,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_opposing_team_info.lol_user_id_1 %></th>
               </tr>
               <tr class="info">
-                <th></th>
+              
                 <th>팀원</th>
                 <th><%= @lol_opposing_team_info.lol_member_name_2 %></th>
                 <th><%= @lol_opposing_team_info.lol_member_major_2 %></th>
@@ -151,7 +205,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_opposing_team_info.lol_user_id_2 %></th>
               </tr>
               <tr class="info">
-                <th></th>
+               
                 <th>팀원</th>
                 <th><%= @lol_opposing_team_info.lol_member_name_3 %></th>
                 <th><%= @lol_opposing_team_info.lol_member_major_3 %></th>
@@ -159,7 +213,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
                 <th><%= @lol_opposing_team_info.lol_user_id_3 %></th>
               </tr>
               <tr class="info">
-                <th></th>
+              
                 <th>팀원</th>
                 <th><%= @lol_opposing_team_info.lol_member_name_4 %></th>
                 <th><%= @lol_opposing_team_info.lol_member_major_4 %></th>
@@ -169,23 +223,74 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
             </table>
           </div>
           
-        </div>
-      
-         <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %>
-            스크린샷 첨부 : <input type="file" name="lol_img_file"><input type="submit" value="확인">
-                            <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
+        
+        <div class="col-md-4">
+        
+         <div class="wrapper">
+            <nav class="vertical">
+              <ul>
+                <li>
+                <a><center><font2><font size="4px">경기결과를 올려주세요</font></font2></center></a>      
+         <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %><br>
+                              <center><img src="<%= @whichgame_lol.lol_victory_image.url %>"></center><br>
+                            <input type="file" name="lol_img_file"><input type="submit" value="확인"><br>
+                            <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>"><br>
                             <input type="hidden" name="which_id" value="<%= @whichgame_lol.id %>"><br>
                             <input type="hidden" name="teamlist_id" value="<%= @whichgame_lol.lol_whichgame_my_id %>">
-                            <img src="<%= @whichgame_lol.lol_victory_image.url %>"><br>
+                           
                            
          <% end %>
          
-  <% elsif @kind_of_game == "fifa" %>       
-    <div class="row"> 
-      <div class="col-md-5">
-       <table class="table">
+                </li>
+                
+               
+              </ul>
+              
+               <ul>
+                <li>
+                 <a><center><font2><font size="3px">TIP+ / Gameschool</font></font2></center></a>
+                </li>
+                </ul>
+            </nav>
+           
+          </div>
+         </div>
+         </div>
+          
+                </li>
+                
+               
+              </ul>
+              
+               <ul>
+                <li>
+                 <a><center><font2><font size="5px">TIP+ / GameSchool</font></font2></center></a>
+                </li>
+                </ul>
+            </nav>
+           
+          </div>
+         </div>
+         </div>
+         
+         
+     
+      
+         
+  <% elsif @kind_of_game == "fifa" %>      
+   <div class="row">
+      <div class="col-md-12">
+      
+         <div class="wrapper2">
+            <nav class="vertical">
+              <ul>
+                <li>
+                <a><center><font2><font size="5px">현제 진행중인 팀 상세 정보 입니다.</font></font2></center></a>
+     <div class="row"> 
+      <div class="col-md-3">
+       <table class="table"  style="margin-top:30%">
             <tr>
-              <th>게임종류</th>
+            
               <th>분류</th>
               <th>이름</th>
               <th>학과</th>
@@ -193,7 +298,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
               <th>게임 ID</th>
             </tr>
             <tr class="info">
-              <th><%= @kind_of_game %></th>
+             
               <th>팀장</th>
               <th><%= @fifa_my_info.fifa_user_name %></th>
               <th><%= @fifa_my_info.fifa_major %></th>
@@ -204,16 +309,16 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           </table>
         </div>
         
-        <div class="col-md-2" style="text-align: center">
-        
-           <h1>VS</h1>
+        <div class="col-md-1" style="text-align: center; margin-top:5%">
+            <h2>FIFA</h2><br>
+           <h3>VS</h3>
         
         </div>
         
-        <div class="col-md-5">
-          <table class="table">
+        <div class="col-md-3">
+          <table class="table"  style="margin-top:30%">
             <tr >
-              <th>게임종류</th>
+          
               <th>분류</th>
               <th>이름</th>
               <th>학과</th>
@@ -221,7 +326,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
               <th>게임 ID</th>
             </tr>
             <tr class="info">
-              <th><%= @kind_of_game %></th>
+            
               <th>팀장</th>
               <th><%= @fifa_opposing_info.fifa_user_name %></th>
               <th><%= @fifa_opposing_info.fifa_major %></th>
@@ -231,22 +336,68 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
            
           </table>
         </div>
-      </div>
       
+        <div class="col-md-4">
+         <div class="wrapper">
+            <nav class="vertical">
+              <ul>
+                <li>
+                <a><center><font2><font size="4px">경기결과를 올려주세요</font></font2></center></a>
         <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %>
-          스크린샷 첨부 : <input type="file" name="fifa_img_file"><input type="submit" value="확인">
+        <img src="<%= @whichgame_fifa.fifa_victory_image.url %>"><br>
+          <input type="file" name="fifa_img_file"><input type="submit" value="확인">
           <input type="hidden" name="which_id" value="<%= @whichgame_fifa.id %>">
           <input type="hidden" name="teamlist_id" value="<%= @whichgame_fifa.fifa_whichgame_my_id %>">
           <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
-          <img src="<%= @whichgame_fifa.fifa_victory_image.url %>"><br>
         <% end %>
-  
+        
+        
+                </li>
+                
+               
+              </ul>
+              
+               <ul>
+                <li>
+                 <a><center><font2><font size="3px">TIP+ / Gameschool</font></font2></center></a>
+                </li>
+                </ul>
+            </nav>
+           
+          </div>
+        </div>
+          
+                </li>
+                
+               
+              </ul>
+              
+               <ul>
+                <li>
+                 <a><center><font2><font size="5px">TIP+ / GameSchool</font></font2></center></a>
+                </li>
+                </ul>
+            </nav>
+           
+          </div>
+         </div>
+         </div>
+        </div>
 <% else %>
+ <div class="row">
+      <div class="col-md-12">
+      
+         <div class="wrapper2">
+            <nav class="vertical">
+              <ul>
+                <li>
+                <a><center><font2><font size="5px">현제 진행중인 팀 상세 정보 입니다.</font></font2></center></a>
+
     <div class="row"> 
-      <div class="col-md-5">
-       <table class="table">
+      <div class="col-md-3">
+       <table class="table" style="margin-top:30%">
             <tr>
-              <th>게임종류</th>
+             
               <th>분류</th>
               <th>이름</th>
               <th>학과</th>
@@ -254,7 +405,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
               <th>게임 ID</th>
             </tr>
             <tr class="info">
-              <th><%= @kind_of_game %></th>
+            
               <th>팀장</th>
               <th><%= @hearthstone_my_info.hearthstone_user_name %></th>
               <th><%= @hearthstone_my_info.hearthstone_major %></th>
@@ -265,16 +416,16 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
           </table>
         </div>
         
-        <div class="col-md-2" style="text-align: center">
-        
-           <h1>VS</h1>
+        <div class="col-md-1" style="text-align: center; margin-top:5%">
+          <h3>하스스톤</h3><br>
+           <h3>VS</h3>
         
         </div>
         
-        <div class="col-md-5">
-          <table class="table">
+        <div class="col-md-3">
+          <table class="table" style="margin-top:30%">
             <tr >
-              <th>게임종류</th>
+            
               <th>분류</th>
               <th>이름</th>
               <th>학과</th>
@@ -282,7 +433,7 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
               <th>게임 ID</th>
             </tr>
             <tr class="info">
-              <th><%= @kind_of_game %></th>
+            
               <th>팀장</th>
               <th><%= @hearthstone_opposing_info.hearthstone_user_name %></th>
               <th><%= @hearthstone_opposing_info.hearthstone_major %></th>
@@ -292,19 +443,61 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
            
           </table>
         </div>
-      </div>
       
+      <div class="col-md-4">
+      
+       <div class="wrapper">
+            <nav class="vertical">
+              <ul>
+                <li>
+                <a><center><font2><font size="4px">경기결과를 올려주세요</font></font2></center></a>
         <%= form_tag("/freematch/image_upload?kind_of_game=hearthstone", enctype: "multipart/form-data",  method: "post") do %>
-          스크린샷 첨부 : <input type="file" name="hearthstone_img_file"><input type="submit" value="확인">
+          <img src="<%= @whichgame_hearthstone.hearthstone_victory_image.url %>"><br>
+          <input type="file" name="hearthstone_img_file"><input type="submit" value="확인">
           <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
           <input type="hidden" name="teamlist_id" value="<%= @whichgame_hearthstone.hearthstone_whichgame_my_id %>">
           <input type="hidden" name="which_id" value="<%= @whichgame_hearthstone.id %>"><br>
-          <img src="<%= @whichgame_hearthstone.hearthstone_victory_image.url %>"><br>
+          
         <% end %>
         
+        
+                </li>
+                
+               
+              </ul>
+              
+               <ul>
+                <li>
+                 <a><center><font2><font size="3px">TIP+ / Gameschool</font></font2></center></a>
+                </li>
+                </ul>
+            </nav>
+           
+          </div>
+      </div>
+        
 <% end %>
+ 
+                </li>
+                
+               
+              </ul>
+              
+               <ul>
+                <li>
+                 <a><center><font2><font size="5px">TIP+ / GameSchool</font></font2></center></a>
+                </li>
+                </ul>
+            </nav>
+           
+          </div>
+         </div>
+         </div>
+        </div>
 </div>
 
-<div class="col-md-2"></div>
+</div>
+
+<div class="col-md-1"></div>
 
 </div>

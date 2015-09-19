@@ -177,11 +177,11 @@ body {
                         <td  style="text-align :center"><%=a.created_at.in_time_zone("Seoul")%></td>
                 </tr>
             <% end %>
-        </table>
+        </table><br>
         <% if user_signed_in? %>
-            <p align="right"><a href="/freeboard/upload">작성하기</a></p>
+            <p align="right"><button><a href="/freeboard/upload" style="text-decoration:none"><font color="black">작성하기</font></a></button></p>
         <% else %>
-            <p align="right"><a href="/freeboard/warning">작성하기</a></p>
+            <p align="right"><a href="/freeboard/warning" style="text-decoration:none">작성하기</a></p>
         <% end %>
         <div class="paging-container" id="tablePaging"> </div>
         <div style="clear: both;"></div>
