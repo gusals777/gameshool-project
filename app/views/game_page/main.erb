@@ -69,14 +69,11 @@
 
     <!-- Project One -->
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-5">
         <img class="img-responsive" src="http://cfile25.uf.tistory.com/image/162E5A4C50B36D822B636E" alt="">
       </div>
-      <div class="col-md-5">
-        <h3>공지사항</h3>
-        <h4>내용을 확인해주세요</h4>
-        <h5>1.완성하자</54>
-        <h5>2.화이팅이다</54> <br><br><br>
+      <div class="col-md-7">
+        <h1><center>공지사항</center></h1>
         
         
       </div>
@@ -86,26 +83,34 @@
     <hr>
 
     <!-- Project Two -->
-    <div class="row">
-      <div class="col-md-7">
+    <div class="row" >
+      <div class="col-md-5">
         <center><img class="img-responsive" src="https://ilahoud.files.wordpress.com/2011/01/team.png" alt="" style="width:550px"></center>
       </div>
-      <div class="col-md-5">
-        <h3>New Team</h3>
-        <h4>새로 올라온 팀 입니다!</h4>
-        <h5>New 롤 팀</54>
-        <% @teamlists_lol.last(3).each do |t| %>
-          <h5><%= t.lol_team_name %></h5>
-        <% end %>
-        <h5>New 피파 팀</54>
-        <% @teamlists_fifa.last(3).each do |t| %>
-          <h5><%= t.fifa_user_name %></h5>
-        <% end %>
-        <h5>New 하스스톤 팀</h5>
-        <% @teamlists_hearthstone.last(3).each do |t| %>
-          <h5><%= t.hearthstone_user_name %></h5>
-        <% end %>
+      <div class="col-md-7">
+        <h1><center>New Team</center></h1>
         
+        <div class="row">
+          <div class="col-md-4">
+            <h3>롤 팀</h3>
+            <% @teamlists_lol.last(3).each do |t| %>
+              <h4><%= t.lol_team_name %></h4>
+            <% end %>
+          </div>  
+          <div class="col-md-4">
+            <h3>피파 팀</h3>
+            <% @teamlists_fifa.last(3).each do |t| %>
+              <h4><%= t.fifa_user_name %></h4>
+            <% end %>
+          </div>
+          
+          <div class="col-md-4">
+            <h3>하스스톤 팀</h3>
+            <% @teamlists_hearthstone.last(3).each do |t| %>
+              <h4><%= t.hearthstone_user_name %></h4>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /.row -->
@@ -114,15 +119,36 @@
 
     <!-- Project Three -->
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-5">
         <center><img class="img-responsive" src="http://static.comicvine.com/uploads/original/11118/111188740/4578063-1619579521-45143.png" alt="" style=":width:700px">></center>
       </div>
-      <div class="col-md-5">
-        <h3>오늘의 매치</h3>
-        <h4>일정을 확인 해주세요!</h4>
-        <h5>1.이병호vs극수극태</54>
-        <h5>2.수원vs범계</54> <br><br><br>
+      <div class="col-md-7">
+        <h1><center>Today Match</center></h1>
         
+        <div class="row">
+          <div class="col-md-4">
+            <h3>롤매치</h3>
+            <% @today_lol_matching.each do |which| %>
+              <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
+              <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히</button></a><br>
+            <% end %>  
+          </div>
+          
+          <div class="col-md-4">
+            <h3>피파 매치</h3>
+            <% @today_fifa_matching.each do |which| %>
+              <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
+              <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히</button></a><br>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <h3>하스스톤 매치</h3>
+            <% @today_hearthstone_matching.each do |which| %>
+              <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
+              <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /.row -->
