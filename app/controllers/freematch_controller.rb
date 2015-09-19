@@ -413,6 +413,13 @@ class FreematchController < ApplicationController
       @one_teamlist_opposing_lol.save
       # 롤 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈 끝
       
+      # 롤 게임종료 시 상대팀명과 수락버튼 삭제
+      @my_lol_opposing_name_destroy = Fightsubscription.find(params[:which_id])
+      @my_lol_opposing_name_destroy.destroy
+      
+      # 롤 게임종료 시 상대팀명과 수락버튼 삭제 끝
+      
+      
       redirect_to action: 'whichgame_info', :kind_of_game => 'lol', :which_id => params[:which_id]  
       
     elsif @kind_of_game == "fifa" 
@@ -432,6 +439,11 @@ class FreematchController < ApplicationController
       @one_teamlist_opposing_fifa.fifa_opposing_team = ""
       @one_teamlist_opposing_fifa.save
       # fifa 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈 끝
+      
+      # 피파 게임종료 시 상대팀명과 수락버튼 삭제
+      @fifa_opposing_name_destroy = FightsubscriptionFifa.find(params[:which_id])
+      @fifa_opposing_name_destroy.destroy
+      # 피파 게임종료 시 상대팀명과 수락버튼 삭제 끝
       
       redirect_to action: 'whichgame_info', :kind_of_game => 'fifa', :which_id => params[:which_id]  
       
@@ -454,6 +466,12 @@ class FreematchController < ApplicationController
       @one_teamlist_opposing_hearthstone.hearthstone_opposing_team = ""
       @one_teamlist_opposing_hearthstone.save
       # 하스스톤 승리 스크린샷 첨부 시 "게임중"을 false로 바꿈
+      
+      # 하스스톤 게임종료 시 상대팀명과 수락버튼 삭제
+      @hearthstone_opposing_name_destroy = FightsubscriptionHearthstone.find(params[:which_id])
+      @hearthstone_opposing_name_destroy.destroy
+      # 하스스톤 게임종료 시 상대팀명과 수락버튼 삭제 끝
+      
       redirect_to action: 'whichgame_info', :kind_of_game => 'hearthstone', :which_id => params[:which_id]  
       
      end
