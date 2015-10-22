@@ -86,7 +86,7 @@ background: rgba(255, 255, 255, 0.7s);
                             <% @one_fb.replies.each do |r| %>
                              
                                 <div class="reply_<%= r.id %>" style="text-align: left">  
-                                    <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><font size="2px"><%=r.created_at.in_time_zone("Seoul")%></font></i><br>
+                                    <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><font size="2px"><%=time_ago_in_words(r.created_at)%> 전</font></i><br>
                                     <span id="rp_content_<%= r.id%>"><font size="2px"><%= r.rp_content %></font></span> 
                                     
                                     <span class="navbar-right">
