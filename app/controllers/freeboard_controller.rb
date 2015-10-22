@@ -45,13 +45,9 @@ class FreeboardController < ApplicationController
     # 글 수정 처리
     def update
         
-        @login_user = User.all
-        
         fb_modify = Freeboard.find(params[:id])
         
-        
         if fb_modify.fb_password == params[:md_passowrd]
-             
            
             fb_modify.fb_name = params[:md_name]
             fb_modify.fb_content = params[:md_content]
