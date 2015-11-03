@@ -8,6 +8,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
+   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+
+hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+  </style>
 
   <title>평택대학교 게임 스쿨에 오신 걸 환영합니다.</title>
 
@@ -36,45 +60,107 @@
 </head>
 
 <body style="background-image:url('');">
-
-  <%=render :partial =>"game_page/fixed_bar" %>
-  <!-- Page Header -->
-  <!-- Set your background image for this header on the line below. -->
-  <header class="intro-header" style="background-image: url('/img/main.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="site-heading">
-             
-            <h1><font1>Welcome To GameSchool</font1></h1>
-            <hr>
-            <span class="subheading"><font1>아래의 자세한 정보를 확인해 주세요.</font1></span>
-            
-          </div>
+ <%=render :partial =>"game_page/fixed_bar" %>
+ 
+ 
+ <header class="intro-header" style="background-image: url('/img/main.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                        <h1><font1>Welcome To GameSchool</font1></h1>
+                        <hr>
+                        <span class="subheading"><font1>아래의 자세한 정보를 확인해 주세요.</font1></span>
+                      
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
+   <center> <img src="/img/둘러보기.PNG" style="width:150px"> </center>
+<br>
 
+<div class="row" style="margin-top:cm">
   
+
+  <div class="col-md-102">
+   
+    <div class="thumbnail" style="background-image: url('')" >
+   
+      
+      
+      <div class="row">
+      
+    
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+    
+        <img src="/img/11111.png" alt="Chania" width="500" height="345">
+          <center><font2><font size="3px">팀등록 을 통해 매치에 참여 할 수 있습니다.</font></font2></center>
+        
+      </div>
+
+    
+    
+      <div class="item">
+        <img src="/img/11111.png" alt="Flower" width="500" height="345">
+          <center><font2><font size="3px">팀등록 을 통해 매치에 참여 할 수 있습니다.</font></font2></center>
+      </div>
+
+      <div class="item">
+        <img src="/img/11111.png" alt="Flower" width="500" height="345">
+          <center><font2><font size="3px">팀등록 을 통해 매치에 참여 할 수 있습니다.</font></font2></center>
+      </div>
+      
+     
+    </div>
+
+    <!-- Left and right controls -->
+  
+  </div>
+
+</div>
+    </div>
+  </div>
+  
+</div>
+
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header"><font2>GameSchool</font2>
-          <small>TIP+</small>
+       
         </h1>
       </div>
     </div>
     <!-- /.row -->
 
     <!-- Project One -->
-    <div class="row">
+    
+    
+    <hr class="style-five">
+		<div class="code" style="margin-top: 13px;">
+	
+	
+
+
+
+    <div class="row" style="margin-top:0.5cm">
       <div class="col-md-5">
-        <img class="img-responsive" src="http://cfile25.uf.tistory.com/image/162E5A4C50B36D822B636E" alt="">
+        <center><img class="img-responsive" src="http://cfile25.uf.tistory.com/image/162E5A4C50B36D822B636E" alt="" style="width:200px"></center>
       </div>
       <div class="col-md-7">
-        <h1><center>공지사항</center></h1>
-        
+        <font2><font size="4px">공지사항</font></font2>
         
       </div>
     </div>
@@ -85,27 +171,27 @@
     <!-- Project Two -->
     <div class="row" >
       <div class="col-md-5">
-        <center><img class="img-responsive" src="https://ilahoud.files.wordpress.com/2011/01/team.png" alt="" style="width:550px"></center>
+        <center><img class="img-responsive" src="https://ilahoud.files.wordpress.com/2011/01/team.png" alt="" style="width:200px"></center>
       </div>
       <div class="col-md-7">
-        <h1><center>New Team</center></h1>
-        
+       <font2><font size="4px">New Team</font></font2>
+        <br> <br>
         <div class="row">
           <div class="col-md-4">
-            <h3>롤 팀</h3>
+            <font1>롤 팀</font1>
             <% @teamlists_lol.last(3).each do |t| %>
               <h4><%= t.lol_team_name %></h4>
             <% end %>
           </div>  
           <div class="col-md-4">
-            <h3>피파 팀</h3>
+            <font1>피파 팀</font1>
             <% @teamlists_fifa.last(3).each do |t| %>
               <h4><%= t.fifa_user_name %></h4>
             <% end %>
           </div>
           
           <div class="col-md-4">
-            <h3>하스스톤 팀</h3>
+            <font1>하스스톤 팀</font1>
             <% @teamlists_hearthstone.last(3).each do |t| %>
               <h4><%= t.hearthstone_user_name %></h4>
             <% end %>
@@ -120,14 +206,14 @@
     <!-- Project Three -->
     <div class="row">
       <div class="col-md-5">
-        <center><img class="img-responsive" src="http://static.comicvine.com/uploads/original/11118/111188740/4578063-1619579521-45143.png" alt="" style=":width:700px"></center>
+        <center><img class="img-responsive" src="http://static.comicvine.com/uploads/original/11118/111188740/4578063-1619579521-45143.png" alt="" style="width:200px"></center>
       </div>
       <div class="col-md-7">
-        <h1><center>Today Match</center></h1>
-        
+        <font2><font size="4px">Today Match</font></font2>
+        <br> <br>
         <div class="row">
           <div class="col-md-4">
-            <h3>롤매치</h3>
+            <font2>롤매치</font2>
             <% @today_lol_matching.each do |which| %>
               <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
               <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히</button></a><br>
@@ -135,14 +221,14 @@
           </div>
           
           <div class="col-md-4">
-            <h3>피파 매치</h3>
+            <font1>피파 매치</font1>
             <% @today_fifa_matching.each do |which| %>
               <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
               <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히</button></a><br>
             <% end %>
           </div>
           <div class="col-md-4">
-            <h3>하스스톤 매치</h3>
+            <font1>하스스톤 매치</font1>
             <% @today_hearthstone_matching.each do |which| %>
               <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
               <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
@@ -153,12 +239,14 @@
     </div>
     <!-- /.row -->
 
-    <hr>
+<hr class="style-five">
+		<div class="code" style="margin-top: 13px;">
 
     
 
 
         <!-- Footer -->
+        
         <footer>
             <div class="row">
                 <div class="col-lg-12">
@@ -170,6 +258,7 @@
 
 
   </div>
+   
     <!-- /.container -->
 
     <!-- jQuery -->
