@@ -72,18 +72,25 @@
                         <a href="/game_page/main"><font size="4px"><font1>Home</font1></font></a>
                     </li>
                     <li>
-                        <% if user_signed_in? %>
-                            <a href="/freematch/add_team"><font size="4px"><font1>팀 등록</font1></font></a>
-                        <% else %>    
-                            <a href="/freeboard/warning"><font size="4px"><font1>팀 등록</font1></font></a>
-                        <% end %>
-                    </li>
-                    <li>
-                        <% if user_signed_in? %>
-                            <a href="/freematch/team_list"><font size="4px"><font1>대전신청</font1></font></a>
-                        <% else %>
-                            <a href="/freeboard/warning"><font size="4px"><font1>대전신청</font1></font></a>
-                        <% end %>
+                        <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><font size="4px"><font1>친선전</font></font1>
+                        <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation">
+                            <% if user_signed_in? %>
+                                <a tabindex="-1" href="/freematch/add_team"><font1><font color="gray" size="4px">팀 등록</font><font1></a>
+                            <% else %>
+                                <a tabindex="-1" href="/freeboard/warning"><font1><font color="gray" size="4px">팀 등록</font></font1></a>
+                            <% end %>
+                            </li>
+                            
+                            <li role="presentation">
+                            <% if user_signed_in? %>
+                                <a role="menuitem" tabindex="-1" href="/freematch/team_list"><font1><font color="gray" size="4px">대전신청</font><font1></a>
+                            <% else %>
+                                <a role="menuitem" tabindex="-1" href="/freeboard/warning"><font1><font color="gray" size="4px">대전신청</font><font1></a>
+                            <% end %>
+                            </li>
+                          </ul>
                     </li>
                     <li>
                         <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>
