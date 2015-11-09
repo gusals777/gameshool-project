@@ -123,14 +123,6 @@ div.wrapper2 {
 
   <%= form_tag("/freematch/team_list_write", method: "post", :class => "form-style-2") do %>
     
- 
-    
-   
-     
-       
-          
-        
-            
          <div class="row">
            
               <div class="col-md-1"></div>
@@ -190,8 +182,8 @@ div.wrapper2 {
             팀장 : <%= current_user.name %><input type="hidden" name="leader_name" value="<%= current_user.name %>"> <br>
             학과 : <%= current_user.major %>
             <p>
-            팀명 : <input type="text" name="lol_team_name" placeholder="팀명" >
-            
+            팀명 : <input type="text" name="lol_team_name" placeholder="팀명" maxlength='7'>
+            &nbsp &nbsp<small>팀명은 7글자 이하로 정해주세요.</small>
             </p>
             <p>
             

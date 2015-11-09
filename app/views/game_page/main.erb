@@ -215,23 +215,29 @@ hr.style-five:after {  /* Not really supposed to work, but does */
           <div class="col-md-4">
             <font2>롤매치</font2>
             <% @today_lol_matching.each do |which| %>
-              <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
-              <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히</button></a><br>
-            <% end %>  
+              <% if which.lol_mode == false %>
+                <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
+                <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히</button></a><br>
+              <% end %>
+            <% end %>
           </div>
           
           <div class="col-md-4">
             <font1>피파 매치</font1>
             <% @today_fifa_matching.each do |which| %>
-              <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
-              <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히</button></a><br>
+              <% if which.fifa_mode == false %>
+                <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
+                <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히</button></a><br>
+              <% end %>
             <% end %>
           </div>
           <div class="col-md-4">
             <font1>하스스톤 매치</font1>
             <% @today_hearthstone_matching.each do |which| %>
-              <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
-              <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+              <% if which.hearthstone_mode == false %>
+                <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
+                <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+              <% end %>
             <% end %>
           </div>
         </div>
