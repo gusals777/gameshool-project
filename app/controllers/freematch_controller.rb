@@ -488,5 +488,14 @@ class FreematchController < ApplicationController
       
   end
   
+  def detailrank
+  end
+  
+  def detailrankff
+  end
+  
+  def detailrankhs
+  end
+  
   
 end

@@ -1,0 +1,59 @@
+<html>
+    <head>
+    </head>
+    
+    <body>
+    
+
+<style type="text/css">
+.styled-button-1 {
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	color:#333;
+	background-color:#FA2;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:none;
+	font-family:'Helvetica Neue',Arial,sans-serif;
+	font-size:16px;
+	font-weight:700;
+	height:36px;
+	padding:4px 16px;
+	text-shadow:#FE6 0 1px 0
+}
+
+table, td, th,tr {
+    border: 1px solid #D7D2D2;
+                }
+ 
+ h3{
+    
+    color: #D07635;
+ }
+ 
+ p{
+   color:black
+ 
+ }
+
+ </style>
+ 
+ <center><h1> 전체랭킹 </h1><img src="http://cfile27.uf.tistory.com/image/2661AB33538D6B26124FE2" style=width="100px; height=100px;">
+ 
+ <table style="width:400px;height:100px table-layout: fixed">
+    
+   
+    
+   
+  </table>
+ 
+            <a href="/freematch/total_ranking?mode_rank_fifa_winner_point=<%= @rank_fifa_winner_point %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">승점랭킹</a>
+            <a href="/freematch/total_ranking?mode_rank_fifa_total_gamet=<%= @rank_fifa_total_game %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">다전랭킹</a>
+            <a href="/freematch/total_ranking?mode_rank_fifa_winning_rate=<%= @rank_fifa_winning_rate %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">승률랭킹</a>
+            <a href="/freematch/total_ranking?mode_rank_fifa_lose=<%= @rank_fifa_lose %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">패배랭킹</a>
+ 
+    </body>
+    
+</html>

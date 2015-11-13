@@ -139,6 +139,10 @@
         <div class="col-lg-3 col-md-3 col-sm-3" >
           <h3 class="section-heading"><center>리그 오브 레전드</center></h3>
           <img  class="img-responsive" src="http://www.leagueoflegends.co.kr/upload/EditorImages/20140219162533_2VHbsaIr.jpg" alt="" >
+          <br>
+            <center>
+           <a href="/freematch/detailrank" onclick="window.open(this.href,'window','width=450,height=500,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
+           </center>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1" >
           <hr class="section-heading-spacer">
@@ -157,6 +161,7 @@
           <h4><center>5위</center></h4>
         </div>
         
+        
         <div class="col-lg-2 col-md-2 col-sm-6">
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
@@ -164,16 +169,14 @@
             <% @rank_lol_winner_point.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4><%= t.lol_team_name %></h4>
+                  <h5><%= t.lol_team_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4> <%= t.lol_winner_point %> 점 </h4>
+                  <h5> <%= t.lol_winner_point %> 점 </h5>
                 </div>
               </div>
             <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_lol_winner_point=<%= @rank_lol_winner_point %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+         
         </div>
         
         
@@ -184,16 +187,14 @@
             <% @rank_lol_total_game.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4><%= t.lol_team_name %></h4>
+                  <h5><%= t.lol_team_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.lol_total_game %> 번 </h4>
+                  <h5><%= t.lol_total_game %> 번 </h5>
                 </div>
               </div>
             <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_lol_total_game=<%= @rank_lol_total_game %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg" >전체랭킹</a>
-          </center>        
+            
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -203,16 +204,14 @@
             <% @rank_lol_winning_rate.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.lol_team_name %></h4>
+                  <h5><%= t.lol_team_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.lol_winning_rate %> % </h4>
+                  <h5><%= t.lol_winning_rate %> % </h5>
                 </div>
               </div>
             <% end %> 
-          <center>  
-            <a href="/freematch/total_ranking?mode_rank_lol_winning_rate=<%= @rank_lol_winning_rate %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+         
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -222,16 +221,14 @@
             <% @rank_lol_lose.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.lol_team_name %></h4>
+                  <h5><%= t.lol_team_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4> <%= t.lol_lose %> 번</h4>
+                  <h5> <%= t.lol_lose %> 번</h5>
                 </div>
               </div>
             <% end %> 
-          <center>    
-            <a href="/freematch/total_ranking?mode_rank_lol_lose=<%= @rank_lol_lose %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+         
         </div>
       </div>
     </div>  
@@ -244,7 +241,12 @@
         <div class="col-lg-3 col-md-3 col-sm-3">
           <h3 class="section-heading"><center>피파온라인 3</center></h3>
           <img class="img-responsive" src="http://file.bodnara.co.kr/logo/insidelogo.php?image=%2Fhttp%3A%2F%2Ffile.bodnara.co.kr%2Fwebedit%2Fnews%2F2010%2F1385002579-FO3.jpg" alt="">
+          <center>
+          <br>
+          <a href="/freematch/detailrankff" onclick="window.open(this.href,'window','width=450,height=500,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
+          </center>
         </div>
+        
         <div class="col-lg-1 col-md-1 col-sm-1" >
           <hr class="section-heading-spacer">
          
@@ -260,6 +262,8 @@
           <h4><center>4위</center></h4>
           <div class="clearfix"></div>
           <h4><center>5위</center></h4>
+          
+          
         </div>
         <div class="col-lg-2 col-md-2 col-sm-6">
           <hr class="section-heading-spacer">
@@ -268,16 +272,14 @@
           <% @rank_fifa_winner_point.first(5).each do |t| %>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #;">
-                <h4><%= t.fifa_user_name %></h4>
+                <h5><%= t.fifa_user_name %></h5>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #;">
-                <h4><%= t.fifa_winner_point %> 점</h4>
+                <h5><%= t.fifa_winner_point %> 점</h5>
               </div>
             </div>
           <% end %> 
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_fifa_winner_point=<%= @rank_fifa_winner_point %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+          
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -287,16 +289,14 @@
           <% @rank_fifa_total_game.first(5).each do |t| %>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #;">
-                <h4><%= t.fifa_user_name %></h4>
+                <h5><%= t.fifa_user_name %></h5>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #;">
-                <h4><%= t.fifa_total_game %> 번</h4>
+                <h5><%= t.fifa_total_game %> 번</h5>
               </div>
             </div>
           <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_fifa_total_gamet=<%= @rank_fifa_total_game %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+        
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -307,16 +307,14 @@
           <% @rank_fifa_winning_rate.first(5).each do |t| %>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #">
-                <h4><%= t.fifa_user_name %></h4>
+                <h5><%= t.fifa_user_name %></h5>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #">
-                <h4><%= t.fifa_winning_rate %> %</h4>
+                <h5><%= t.fifa_winning_rate %> %</h5>
               </div>
             </div>
           <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_fifa_winning_rate=<%= @rank_fifa_winning_rate %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+          
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -327,16 +325,14 @@
           <% @rank_fifa_lose.first(5).each do |t| %>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #">
-                <h4><%= t.fifa_user_name %></h4>
+                <h5><%= t.fifa_user_name %></h5>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #">
-                <h4><%= t.fifa_lose %> 번</h4>
+                <h5><%= t.fifa_lose %> 번</h5>
               </div>
             </div>
           <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_fifa_lose=<%= @rank_fifa_lose %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+          
         </div>
 
         
@@ -351,7 +347,11 @@
         
         <div class="col-lg-3 col-md-3 col-sm-3">
           <h3 class="section-heading"><center>하스스톤</center></h3>
-          <img class="img-responsive"  src="http://i1.daumcdn.net/thumb/R750x0/?fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F233E4A4C55700EB21A0CD7" alt="">
+          <img class="img-responsive"  src="http://i1.daumcdn.net/thumb/R750x0/?fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F233E4A4C55700EB21A0CD7" alt=""><br>
+          <center>
+           <a href="/freematch/detailrankhs" onclick="window.open(this.href,'window','width=450,height=500,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
+           </center>
+          
         </div>
          <div class="col-lg-1 col-md-1 col-sm-1" >
           <hr class="section-heading-spacer">
@@ -376,16 +376,14 @@
             <% @rank_Heartstone_winner_point.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4><%= t.hearthstone_user_name %></h4>
+                  <h5><%= t.hearthstone_user_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4><%= t.hearthstone_winner_point %> 점</h4>
+                  <h5><%= t.hearthstone_winner_point %> 점</h5>
                 </div>
               </div>
             <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_Heartstone_winner_point=<%= @rank_Heartstone_winner_point %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+         
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -395,16 +393,14 @@
             <% @rank_Heartstone_total_game.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4><%= t.hearthstone_user_name %></h4>
+                  <h5><%= t.hearthstone_user_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5;">
-                  <h4><%= t.hearthstone_total_game %> 번</h4>
+                  <h5><%= t.hearthstone_total_game %> 번</h5>
                 </div>
               </div>
             <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_Heartstone_total_game=<%= @rank_Heartstone_total_game %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+         
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -414,16 +410,14 @@
             <% @rank_Heartstone_winning_rate.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.hearthstone_user_name %></h4>
+                  <h5><%= t.hearthstone_user_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.hearthstone_winning_rate %> %</h4>
+                  <h5><%= t.hearthstone_winning_rate %> %</h5>
                 </div>
               </div>
             <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_Heartstone_winning_rate=<%= @rank_Heartstone_winning_rate %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+        
         </div>
         
         <div class="col-lg-2 col-md-2 col-sm-6">
@@ -433,16 +427,14 @@
             <% @rank_Heartstone_lose.first(5).each do |t| %>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.hearthstone_user_name %></h4>
+                  <h5><%= t.hearthstone_user_name %></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: #f5f5f5">
-                  <h4><%= t.hearthstone_lose %> 번</h4>
+                  <h5><%= t.hearthstone_lose %> 번</h5>
                 </div>
               </div>
             <% end %>
-          <center>
-            <a href="/freematch/total_ranking?mode_rank_Heartstone_lose=<%= @rank_Heartstone_lose %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="btn btn-default btn-lg">전체랭킹</a>
-          </center>
+         
         </div>
       </div>
     </div>

@@ -11,7 +11,35 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
+.button-0 {
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    
+    border-radius: 10px;
+    font-family: 'Helvetica', cursive;
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;  
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+    /* Animation */
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
 
+.button-0:hover, 
+.button-0:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-0:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
 
 body {
               padding:0;
@@ -212,13 +240,16 @@ font4{
 
 
   <div class="container">
-    <div class="thumbnail"  style="height:800px">
+    <div class="thumbnail"  style="height:1100px">
       <img src="/imgs/TeamInfo이미지.PNG">
       <div style="padding-top:1px; padding-bottom:1px; background:white; align:center"><br>
 
         <% if @kind_of_game == "lol" %>
-          <font2>팀명</font2>&nbsp;&nbsp;&nbsp;<%= @teamlists_lol.lol_team_name %> 
-          
+         
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+           <font2>팀명</font2>&nbsp;&nbsp;&nbsp;<%= @teamlists_lol.lol_team_name %> 
           <table class="table">
             <tr >
               <th>게임종류</th>
@@ -269,27 +300,36 @@ font4{
               <th><%= @teamlists_lol.lol_user_id_4 %></th>
             </tr>
           </table>
+           </div>
+          <div class="col-md-1"></div>
+          </div>
           <br>
           
           <center><h1><font3>소개</font3></h1> <br>
-         
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+         <div class="thumbnail"  style="height:200px">
           <font4><%= @teamlists_lol.comment %></font4>
-      
+         </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
           </center>
           
           <div>
-            <div class="row">
+           
             
             <% if @teamlists_lol.lol_whichgame == false %>
               <div class="col-md-6" style="text-align:right">
-                <button id="fight_lol" type="button" class="btn btn-primary" onClick="this.style.visibility='hidden'">대결 신청</button><br>
+                <button id="fight_lol" type="button" class="button-0" onClick="this.style.visibility='hidden'"><font2>대결 신청</font2></button><br>
               </div>
              
              
               <% if @teamlists_lol.lol_current_user_id == current_user.id %>
                 <%= form_tag("/freematch/delete_team", method: "get") do %>
                   <div class="col-md-6">
-                    <button type="submit" class="btn btn-primary">팀삭제</button>
+                    <button type="submit" class="button-0"><font2>팀삭제</font2></button>
                     <input type='hidden' name='teamlist_id' value=<%= @teamlists_lol.id %>>
                     <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
                   </div>
@@ -300,9 +340,9 @@ font4{
               <font1>현재&nbsp;<font color="bluc" size="4px"><%= @teamlists_lol.lol_opposing_team %> 님</font>과 대결중!!!!<br></font1>
               <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
             <% end %>  
-            </div><!-- row div -->
+           <!-- row div -->
           </div>
-          <br>
+            <br><br><br><br><br><br>
           <% if @teamlists_lol.lol_whichgame == false %>
             <% @teamlists_lol.fightsubscriptions.each do |s| %>
               
@@ -312,7 +352,7 @@ font4{
                          <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success" class="btn btn-primary" onClick="this.style.visibility='hidden'">수락</button></a><br>
                       
 
-                       <% end %>
+                       <% end %><br>
             <% end %>           
           <% end %>
           
@@ -354,7 +394,9 @@ font4{
         <!-- 롤 대결신청 출력 끝 -->
           
         <% elsif @kind_of_game == "fifa" %>
-        
+         <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
           <table class="table">
             <tr>
               <th>게임종류</th>
@@ -373,40 +415,52 @@ font4{
               <th><%= @teamlists_fifa.game_id %></th>
             </tr>
           </table>
+            </div>
+          <div class="col-md-1"></div>
+          </div>
+          <br>
           <br>
           <center><h1><font3>소개</font3></h1><br>
-        
-          <font4><%= @teamlists_fifa.comment %></font4></center>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+         <div class="thumbnail"  style="height:200px">
+        <font4><%= @teamlists_fifa.comment %></font4>
+         </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
+          </center>
           <br>
             
         <!-- 피파 대결신청 출력 -->   
-        <div class="row">
+      
         <% if @teamlists_fifa.fifa_whichgame == false %>
          <div class="col-md-6" style="text-align:right">
-          <button id="fight_fifa" type="button" class="btn btn-primary" onClick="this.style.visibility='hidden'">대결 신청</button><br>
+          <button id="fight_fifa" type="button" class="button-0" onClick="this.style.visibility='hidden'"><font2>대결 신청</font2></button><br>
          </div>
           <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
                 <div class="col-md-6">
-                <button type="submit" type="button" class="btn btn-primary">팀삭제</button>
+                <button type="submit" type="button" class="button-0"><font2>팀삭제</font2></button>
                 <!--<input type="submit" value="팀삭제">-->
                 <input type='hidden' name='teamlist_id' value=<%= @teamlists_fifa.id %>>
                 <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
                  </div>
               <% end %>
-          <% end %>    
+          <% end %>   
         <% else %>
           <font2>현재<font color="bluc" size="4px"><%= @teamlists_fifa.fifa_opposing_team %> 님</font>과 대결중</font2><br>
           <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
         <% end %>
-         </div><!-- row div -->
-          
+        <!-- row div -->
+          <br><br><br><br>
           <% if @teamlists_fifa.fifa_whichgame == false %>
             <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
             이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
                     <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
                        <a href="/freematch/matching_success?fifa_add_team_name_id=<%=s.fifa_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="fifa_matching_success" class="btn btn-primary" onClick="this.style.visibility='hidden'">수락</button></a><br>
-                    <% end %>
+                    <% end %><br>
             <% end %>
           <% end %>
             
@@ -452,6 +506,9 @@ font4{
           
         <% else %>
           
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
           <table class="table">
             <tr>
               <th>게임종류</th>
@@ -470,19 +527,33 @@ font4{
               <th class="info"><%= @teamlists_hearthstone.game_id %></th>
             </tr>
           </table>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
           <br>
+           
           <center><h1><font3>소개</font3></h1><br>
-          <font4><%= @teamlists_hearthstone.comment %></font4></center>
-        
           <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+         <div class="thumbnail"  style="height:200px">
+          
+          <font4><%= @teamlists_hearthstone.comment %></font4>
+          </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
+          </center>
+        
+       
           <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
            <div class="col-md-6" style="text-align:right">
-            <button id="fight_hearthstone" type="button" class="btn btn-primary"onClick="this.style.visibility='hidden'" >대결 신청</button><br>
+            <button id="fight_hearthstone" type="button" class="button-0" onClick="this.style.visibility='hidden'" >대결 신청</button><br>
           </div>
             <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
               <%= form_tag("/freematch/delete_team", method: "get") do %>
                 <div class="col-md-6">
-                 <button type="submit" type="button" class="btn btn-primary">팀삭제</button>
+                 <button type="submit" type="button" class="button-0">팀삭제</button>
                 <input type='hidden' name='teamlist_id' value=<%= @teamlists_hearthstone.id %>>
                 <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
                 </div>
@@ -493,14 +564,14 @@ font4{
           <font2>현재 <font color="bluc" size="4px"> <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중</font></font2><br>
             <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
           <% end %>
-          </div>
-          
+         
+          <br><br><br><br><br><br>
           <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
             <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
               이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
                      <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
                        <a href="/freematch/matching_success?hearthstone_add_team_name_id=<%=s.hearthstone_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="hearthstone_matching_success" class="btn btn-primary" onClick="this.style.visibility='hidden'">수락</button></a><br>
-                     <% end %>
+                     <% end %><br>
             <% end %>
           <% end %>
           

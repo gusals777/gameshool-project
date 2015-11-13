@@ -66,7 +66,7 @@ nav.vertical {
       
       div.wrapper2 {
   margin: 20px auto;
-  width: 1200px;
+  width: 1300px;
 }
 
 </style>
@@ -93,16 +93,16 @@ nav.vertical {
             </div>
         </div>
     </header>
+    
+   
     <div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-10">
+      
+<div class="col-md-12">
 
 
 <% if @kind_of_game == "lol" %>  
     
-      <div class="row">
-      <div class="col-md-12">
-      
+     
          <div class="wrapper2">
             <nav class="vertical">
               <ul>
@@ -110,7 +110,7 @@ nav.vertical {
                 <a><center><font2><font size="5px">현제 진행중인 팀 상세 정보 입니다.</font></font2></center></a>
       
       <div class="row"> 
-        <div class="col-md-3">
+        <div class="col-md-4">
         
          <table class="table" style="margin-top:30%">
               <tr >
@@ -164,13 +164,9 @@ nav.vertical {
             </table>
           </div>
           
-          <div class="col-md-1" style="text-align: center; margin-top:10%" >
-              <h1>LOL</h1><br>
-             <h3>VS</h3>
-            
-          </div>
+         
           
-          <div class="col-md-3">
+          <div class="col-md-4">
          <table class="table" style="margin-top:30%">
               <tr >
               
@@ -225,12 +221,12 @@ nav.vertical {
           
 
   
-      <div class="col-md-4">
+      <div class="col-md-2">
         <div class="wrapper">
             <nav class="vertical">
               <ul>
                 <li>
-                <a><center><font2><font size="5px">현제 진행중인 팀 상세 정보 입니다.</font></font2></center></a>
+                <a><center><font2><font size="5px">팀매치 결과 확인 스샷</font></font2></center></a>
          <%= form_tag("/freematch/image_upload", enctype: "multipart/form-data",  method: "post") do %>
             스크린샷 첨부 : <input type="file" name="lol_img_file"><input type="submit" value="확인">
                             <input type="hidden" name="kind_of_game" value="<%= @kind_of_game %>">
@@ -271,9 +267,7 @@ nav.vertical {
                 </li>
                 </ul>
             </nav>
-           
-          </div>
-         </div>
+          </nav>
          </div>
    
          
@@ -291,7 +285,7 @@ nav.vertical {
                 <li>
                 <a><center><font2><font size="5px">현제 진행중인 팀 상세 정보 입니다.</font></font2></center></a>
      <div class="row"> 
-      <div class="col-md-3">
+      <div class="col-md-4">
        <table class="table"  style="margin-top:30%">
             <tr>
             
@@ -313,13 +307,9 @@ nav.vertical {
           </table>
         </div>
         
-        <div class="col-md-1" style="text-align: center; margin-top:5%">
-            <h2>FIFA</h2><br>
-           <h3>VS</h3>
         
-        </div>
         
-        <div class="col-md-3">
+        <div class="col-md-4">
           <table class="table"  style="margin-top:30%">
             <tr >
           
@@ -495,17 +485,20 @@ nav.vertical {
                 </li>
                 </ul>
                 <% end %>
-            </nav>
+            </div>
            
           </div>
          </div>
          </div>
         </div>
 </div>
+
 </div>
 
 
-<div class="col-md-1"></div>
+
+
+
 
 </div>
 <script src="/js/bootstrap.min.js"></script>
