@@ -15,12 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-
+  
 
 hr.style-five {
     border: 0;
@@ -63,6 +58,8 @@ hr.style-five:after {  /* Not really supposed to work, but does */
  <%=render :partial =>"game_page/fixed_bar" %>
  
  
+ 
+ 
  <header class="intro-header" style="background-image: url('/img/main.jpg')">
         <div class="container">
             <div class="row">
@@ -71,70 +68,23 @@ hr.style-five:after {  /* Not really supposed to work, but does */
                        
                         <h1><font1>Welcome To GameSchool</font1></h1>
                         <hr>
-                        <span class="subheading"><font1>아래의 자세한 정보를 확인해 주세요.</font1></span>
+                        <span class="subheading"><font1>아래의 자세한 정보를 확인해 주세요</font1></span>
                       
                     </div>
                 </div>
             </div>
         </div>
     </header>
-   <center> <img src="/img/둘러보기.PNG" style="width:150px"> </center>
+    
+    
+    
+    
+    
+    
+   
 <br>
 
-<div class="row" style="margin-top:cm">
-  
 
-  <div class="col-md-102">
-   
-    <div class="thumbnail" style="background-image: url('')" >
-   
-      
-      
-      <div class="row">
-      
-    
-  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-    
-        <img src="/img/11111.png" alt="Chania" width="500" height="345">
-          <center><font2><font size="3px">팀등록 을 통해 매치에 참여 할 수 있습니다.</font></font2></center>
-        
-      </div>
-
-    
-    
-      <div class="item">
-        <img src="/img/11111.png" alt="Flower" width="500" height="345">
-          <center><font2><font size="3px">팀등록 을 통해 매치에 참여 할 수 있습니다.</font></font2></center>
-      </div>
-
-      <div class="item">
-        <img src="/img/11111.png" alt="Flower" width="500" height="345">
-          <center><font2><font size="3px">팀등록 을 통해 매치에 참여 할 수 있습니다.</font></font2></center>
-      </div>
-      
-     
-    </div>
-
-    <!-- Left and right controls -->
-  
-  </div>
-
-</div>
-    </div>
-  </div>
-  
-</div>
 
   <div class="container">
     <div class="row">
@@ -157,7 +107,7 @@ hr.style-five:after {  /* Not really supposed to work, but does */
 
     <div class="row" style="margin-top:0.5cm">
       <div class="col-md-5">
-        <center><img class="img-responsive" src="http://cfile25.uf.tistory.com/image/162E5A4C50B36D822B636E" alt="" style="width:200px"></center>
+        <center><img class="img-responsive" src="http://cfile25.uf.tistory.com/image/162E5A4C50B36D822B636E" alt="" style="width:300px"></center>
       </div>
       <div class="col-md-7">
         <font2><font size="4px">공지사항</font></font2>
@@ -171,7 +121,7 @@ hr.style-five:after {  /* Not really supposed to work, but does */
     <!-- Project Two -->
     <div class="row" >
       <div class="col-md-5">
-        <center><img class="img-responsive" src="https://ilahoud.files.wordpress.com/2011/01/team.png" alt="" style="width:200px"></center>
+        <center><img class="img-responsive" src="https://ilahoud.files.wordpress.com/2011/01/team.png" alt="" style="width:300px"></center>
       </div>
       <div class="col-md-7">
        <font2><font size="4px">New Team</font></font2>
@@ -179,21 +129,21 @@ hr.style-five:after {  /* Not really supposed to work, but does */
         <div class="row">
           <div class="col-md-4">
             <font1>롤 팀</font1>
-            <% @teamlists_lol.last(3).each do |t| %>
-              <h4><%= t.lol_team_name %></h4>
+            <font1><% @teamlists_lol.last(3).each do |t| %></font1>
+              <h5><font1><%= t.lol_team_name %></font1></h5>
             <% end %>
           </div>  
           <div class="col-md-4">
             <font1>피파 팀</font1>
-            <% @teamlists_fifa.last(3).each do |t| %>
-              <h4><%= t.fifa_user_name %></h4>
+            <font1><% @teamlists_fifa.last(3).each do |t| %></font1>
+              <font1><h5><%= t.fifa_user_name %></h5></font1>
             <% end %>
           </div>
           
           <div class="col-md-4">
             <font1>하스스톤 팀</font1>
-            <% @teamlists_hearthstone.last(3).each do |t| %>
-              <h4><%= t.hearthstone_user_name %></h4>
+            <font1><% @teamlists_hearthstone.last(3).each do |t| %></font1>
+              <font1><h5><%= t.hearthstone_user_name %></h5><font1>
             <% end %>
           </div>
         </div>
@@ -206,16 +156,16 @@ hr.style-five:after {  /* Not really supposed to work, but does */
     <!-- Project Three -->
     <div class="row">
       <div class="col-md-5">
-        <center><img class="img-responsive" src="http://static.comicvine.com/uploads/original/11118/111188740/4578063-1619579521-45143.png" alt="" style="width:200px"></center>
+        <center><img class="img-responsive" src="http://static.comicvine.com/uploads/original/11118/111188740/4578063-1619579521-45143.png" alt="" style="width:300px"></center>
       </div>
       <div class="col-md-7">
         <font2><font size="4px">Today Match</font></font2>
         <br> <br>
         <div class="row">
           <div class="col-md-4">
-            <font2>롤매치</font2>
+            <font2>롤매치</font2><br>
             <% @today_lol_matching.each do |which| %>
-              <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
+              <font size="2px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="2px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
               <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히</button></a><br>
             <% end %>  
           </div>
@@ -250,7 +200,7 @@ hr.style-five:after {  /* Not really supposed to work, but does */
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>문의사항 kakao talk:ibh612 / e-mail:plazmapxt@naver.com</p>
+                    <p><font1>문의사항 kakao talk:ibh612 / e-mail:plazmapxt@naver.com</font1></p>
                 </div>
             </div>
             <!-- /.row -->
