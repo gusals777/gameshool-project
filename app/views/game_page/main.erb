@@ -8,19 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-   
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  
   <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-
+  
 
 hr.style-five {
     border: 0;
@@ -61,6 +56,8 @@ hr.style-five:after {  /* Not really supposed to work, but does */
 
 <body style="background-image:url('');">
  <%=render :partial =>"game_page/fixed_bar" %>
+ 
+ 
  
  
  <header class="intro-header" style="background-image: url('/img/main.jpg')">
@@ -109,15 +106,6 @@ hr.style-five:after {  /* Not really supposed to work, but does */
      
     </div>
 
-    <!-- Left and right controls -->
-  
-  </div>
-
-</div>
-    </div>
-  </div>
-  
-</div>
 
   <div class="container">
     <div class="row">
@@ -192,32 +180,54 @@ hr.style-five:after {  /* Not really supposed to work, but does */
     <!-- Project Three -->
     <div class="row">
       <div class="col-md-5">
+<<<<<<< HEAD
         <center><img class="img-responsive" src="/img/Match.jpg" alt="" style="width:800px"></center>
+=======
+        <center><img class="img-responsive" src="http://static.comicvine.com/uploads/original/11118/111188740/4578063-1619579521-45143.png" alt="" style="width:300px"></center>
+>>>>>>> e56c52ae35d3c202a2a82e89d285ac50fe927966
       </div>
       <div class="col-md-7">
         <font1><font size="6px">오늘의 경기</font></font1>
         <br> <br>
         <div class="row">
           <div class="col-md-4">
+<<<<<<< HEAD
             <h4> <font1>LOL Match</font1></h4>
             <% @today_lol_matching.each do |which| %>
               <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
               <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+=======
+            <font2>롤매치</font2><br>
+            <% @today_lol_matching.each do |which| %>
+
+              <font size="2px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="2px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
+              <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히</button></a><br>
+>>>>>>> e56c52ae35d3c202a2a82e89d285ac50fe927966
             <% end %>  
+
           </div>
           
           <div class="col-md-4">
              <h4> <font1>FIFA Match</font1> </h4> 
             <% @today_fifa_matching.each do |which| %>
+<<<<<<< HEAD
               <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
               <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+=======
+              <% if which.fifa_mode == false %>
+                <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
+                <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히</button></a><br>
+              <% end %>
+>>>>>>> e56c52ae35d3c202a2a82e89d285ac50fe927966
             <% end %>
           </div>
           <div class="col-md-4">
              <h4>  <font1>Hearts Ston Match</font1> </h4> 
             <% @today_hearthstone_matching.each do |which| %>
-              <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
-              <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+              <% if which.hearthstone_mode == false %>
+                <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
+                <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+              <% end %>
             <% end %>
           </div>
         </div>
@@ -246,12 +256,6 @@ hr.style-five:after {  /* Not really supposed to work, but does */
   </div>
    
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>

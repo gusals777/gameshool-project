@@ -6,7 +6,7 @@ Rails.application.configure do
           domain: 'sandbox6c3ca9c3b3b843a3b5c672440af35b24.mailgun.org'
   }
   
-  config.action_mailer.default_url_options = { host: 'http://hyunminnn.com', port: 80 }
+  config.action_mailer.default_url_options = { host: 'http://ptu-gameschool.com', port: 80 }
   
   # Settings specified here will take precedence over those in config/application.rb.
 
