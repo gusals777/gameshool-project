@@ -232,22 +232,22 @@
        
         
          
-           <h4> <font2><strong><font color="black">LOL Team</font></strong></font2></h4>
-           <h6><% @teamlists_lol.last(1).each do |t| %><h6>
-              <li><h5><strong><font color="blue"><%= t.lol_team_name %></font></strong></h5></li>
+           <h5> <font2><strong><font color="black">LOL Team</font></strong></font2></h5>
+           <h6><% @teamlists_lol.last(2).each do |t| %><h6>
+              <li><h6><strong><font color="blue"><%= t.lol_team_name %></font></strong></h6></li>
             <% end %>
          
          
-           <h4> <font1><strong><font color="black">FIFA Team</font></strong></font1></h4>
-            <% @teamlists_fifa.last(1).each do |t| %>
-              <li><h5><strong><font color="blue"><%= t.fifa_user_name %></font></strong></h5></li>
+           <h5> <font1><strong><font color="black">FIFA Team</font></strong></font1></h5>
+            <% @teamlists_fifa.last(2).each do |t| %>
+              <li><h6><strong><font color="blue"><%= t.fifa_user_name %></font></strong></h6></li>
             <% end %>
          
           
          
-           <h4><font1><strong><font color="black">HearthStone Team</font></strong></font1> </h4>
-            <% @teamlists_hearthstone.last(1).each do |t| %>
-             <li> <h5><strong><font color="blue"><%= t.hearthstone_user_name %></font></strong></h5></li>
+           <h5><font1><strong><font color="black">HearthStone Team</font></strong></font1> </h5>
+            <% @teamlists_hearthstone.last(2).each do |t| %>
+             <li> <h6><strong><font color="blue"><%= t.hearthstone_user_name %></font></strong></h6></li>
             <% end %>
           
        
@@ -336,7 +336,7 @@
 
 
     <!-- SCREENSHOTS -->
-    <section class="section bg-gray; " id="works">
+    <section class="section bg-gray" id="works">
         <div class="container">
 
             <div class="row">
