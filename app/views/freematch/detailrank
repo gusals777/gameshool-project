@@ -48,11 +48,11 @@ table, td, th,tr {
     
    
   </table>
- 
+        
      <a href="/freematch/total_ranking?mode_rank_lol_winner_point=<%= @rank_lol_winner_point %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">승점랭킹</a>
      <a href="/freematch/total_ranking?mode_rank_lol_total_game=<%= @rank_lol_total_game %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1" >다전랭킹</a>
      <a href="/freematch/total_ranking?mode_rank_lol_winning_rate=<%= @rank_lol_winning_rate %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">승률랭킹</a>
      <a href="/freematch/total_ranking?mode_rank_lol_lose=<%= @rank_lol_lose %>" onclick="window.open(this.href,'window','width=500,height=600,resizable,scrollbars,toolbar,menubar') ;return false;" class="styled-button-1">패배랭킹</a>
     </body>
-    
+        
 </html>

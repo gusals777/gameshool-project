@@ -340,9 +340,11 @@ font4{
               <% end %>
               
             <% else %>
+             <center>
               <font1>현재&nbsp;<font color="bluc" size="4px"><%= @teamlists_lol.lol_opposing_team %> 님</font>과 대결중!!!!<br></font1>
               <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
-            <% end %>  
+            <% end %> 
+             </center>
            <!-- row div -->
           </div>
           
@@ -357,14 +359,14 @@ font4{
             <div class="col-md-10">
             <center>
              <div class="panel panel-default" style="width:350px">
-      <div class="panel-heading"><font2>대전 신청 List</font2></div>
+      <div class="panel-heading"><font2>대전 신청 List</font2></div><br>
           <% if @teamlists_lol.lol_whichgame == false %>
             <% @teamlists_lol.fightsubscriptions.each do |s| %>
               
             <div align="left">  &nbsp;팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
                        <% if @teamlists_lol.lol_current_user_id == current_user.id %>
 
-                         <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success" class="button-0" onClick="this.style.visibility='hidden'">수락</button></a><br>
+                         <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success" class="btn btn-default" onClick="this.style.visibility='hidden'"><font size="2px">수락</font></button></a><br>
                       
 
                        <% end %></div><br>
@@ -472,20 +474,33 @@ font4{
               <% end %>
           <% end %>   
         <% else %>
+         <center>
           <font2>현재<font color="bluc" size="4px"><%= @teamlists_fifa.fifa_opposing_team %> 님</font>과 대결중</font2><br>
           <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
         <% end %>
+         </center>
         <!-- row div -->
           <br><br><br><br>
+           <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <center>
+             <div class="panel panel-default" style="width:350px">
+      <div class="panel-heading"><font2>대전 신청 List</font2></div><br>
           <% if @teamlists_fifa.fifa_whichgame == false %>
             <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
             이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
                     <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
-                       <a href="/freematch/matching_success?fifa_add_team_name_id=<%=s.fifa_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="fifa_matching_success" class="btn btn-primary" onClick="this.style.visibility='hidden'">수락</button></a><br>
+                       <a href="/freematch/matching_success?fifa_add_team_name_id=<%=s.fifa_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="fifa_matching_success" class="btn btn-default" onClick="this.style.visibility='hidden'">수락</button></a><br>
                     <% end %><br>
             <% end %>
           <% end %>
             
+            
+             </center>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
         <!-- 피파 대결신청 출력 끝 -->
         <script>
           $(document).ready(function(){
@@ -583,19 +598,29 @@ font4{
             <% end %>
             
           <% else %>
+          <center>
           <font2>현재 <font color="bluc" size="4px"> <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중</font></font2><br>
             <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
           <% end %>
-         
+          </center>
           <br><br><br><br><br><br>
+           <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <center><br>
           <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
             <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
               이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
                      <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
-                       <a href="/freematch/matching_success?hearthstone_add_team_name_id=<%=s.hearthstone_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="hearthstone_matching_success" class="btn btn-primary" onClick="this.style.visibility='hidden'">수락</button></a><br>
+                       <a href="/freematch/matching_success?hearthstone_add_team_name_id=<%=s.hearthstone_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="hearthstone_matching_success" class="btn btn-default" onClick="this.style.visibility='hidden'">수락</button></a><br>
                      <% end %><br>
             <% end %>
           <% end %>
+          
+           </center>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
           
           <script>
             $(document).ready(function(){
