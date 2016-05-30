@@ -1,0 +1,172 @@
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>평택대학교 게임 스쿨에 오신 걸 환영합니다.</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<title>GameSchool</title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="/css/fbstylesheet.css">
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<style>
+
+
+.jumbotron
+{ min-height: 650px; 
+color:black;
+background: #ffffff;
+background: rgba(255, 255, 255, 0.7s);
+}
+    </style>
+
+<body>
+
+
+         <%=render :partial =>"game_page/fixed_bar" %>
+   <header class="intro-header" style="background-image: url('/imgs/boot1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                     
+                        <h1>View</h1>
+                        <hr>
+                        <span class="subheading">작성한 내용를 볼수있습니다.</span>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class=" container">
+            <div class="row">
+                <div class="col-md-1">
+                    
+                </div>
+                <div class="col-md-9">
+                
+                    <div class="jumbotron" style="text-align: center">
+                   <h2>Freeboard</h2><br><br>
+                   <div style="text-align:left">TITLE</div> 
+                    <div style="padding-top:1px; padding-bottom:1px; background:white; align:center">
+                        <center><h3><%= @one_fb.fb_title %></h3></center>
+                      </div>  
+                        <br><br>
+                        <div style="text-align:left">CONTENT</div>
+                        <div style="padding-top:1px; padding-bottom:1px; background:white; align:center"><br>
+                        <center><p class="lead"><%= @one_fb.fb_content %></p></center><br><br>
+                        
+                        <center>
+                            
+                            </div><br>
+                            
+                            <% @one_fb.replies.each do |r| %>
+                             
+                                <div class="reply_<%= r.id %>" style="text-align: left">  
+                                    <p><strong><%= r.rp_name %></strong>&nbsp;&nbsp;<i><font size="2px"><%=time_ago_in_words(r.created_at)%> 전</font></i><br>
+                                    <span id="rp_content_<%= r.id%>"><font size="2px"><%= r.rp_content %></font></span> 
+                                    
+                                    <span class="navbar-right">
+                                    <% if current_user.hakbun == r.rp_hakbun %>
+                                        <button class="delete_button_<%= r.id %>"><font size="2px">삭제</font></button>
+                                        <button class="update_button_<%= r.id %>"><font size="2px">수정</font></button>
+                                    <% end %>
+                                    </span>
+                                    </p>
+                                </div>
+                                
+                                <div class="<%= r.id %>" style="display :none">
+                                    <textarea name="rp_content" class="rp_modify_<%= r.id %>"></textarea>
+                                    <button class="modify_confirm_<%= r.id %>" onClick="this.style.visibility='hidden'">확인</button>
+                                </div>
+                                
+                                <script>
+                            
+                                $(function(){
+                                    //수정 버튼 클릭했을때
+                                    $(".update_button_<%= r.id %>").click(
+                                        function(){
+                                            $(".<%= r.id %>" ).show();
+                                            $(".rp_modify_<%= r.id %>").val("<%= r.rp_content %>");
+                                        } 
+                                    );
+                                    
+                                    $(".delete_button_<%= r.id %>").click(
+                                        function(){
+                                            $.ajax({
+                                                data: { rp_id: <%= r.id %> },
+                                                url: "/freeboard/reply_delete",
+                                                success: function(){
+                                                    location.reload();
+                                                    alert("댓글 삭제가 완료되었습니다.");
+                                                }
+                                            });
+                                        } 
+                                    );
+                                    
+                                    $(".modify_confirm_<%= r.id %>").click(function(){
+                                        $.ajax({
+                                                data: { content: $(".rp_modify_<%= r.id %>").val(),
+                                                        rp_id: <%= r.id %>},
+                                                url: "/freeboard/reply_modify",
+                                                success: function(){
+                                                    var txt = $(".rp_modify_<%= r.id %>").val();
+                                                    $(".rp_content_<%= r.id %>").val(txt);
+                                                    $(".<%= r.id %>").hide();
+                                                    location.reload();
+                                                    alert("댓글 수정이 완료되었습니다.");
+                                                }
+                                            });
+                                        }
+                                    ); 
+                                });
+                            </script>
+                            <% end %>
+                  
+                          <br>
+                            <%= form_tag("/freeboard/reply_write", method: "post") do %>
+                                <% if user_signed_in? %>
+                                    작성자 : <%= current_user.name %> 
+                                <% end %><br>
+                                
+                                <textarea type="text" name="rp_content"  placeholder="리플을 달아주세요" rows="3" cols="30"></textarea><br>
+                                <input type="hidden" name="freeboard_id" value="<%= @one_fb.id %>">
+                                <input type="hidden" name="rp_name" value="<%= current_user.name %>">
+                                <input type="hidden" name="rp_hakbun" value="<%= current_user.hakbun %>">
+                                <input type="submit" value="댓글달기"onClick="this.style.visibility='hidden'"><br>
+                                
+                            <% end %>
+                            <br>
+                                <button type="button" class="btn btn-info"><a href="/freeboard/delete?id=<%= @one_fb.id %>"><font color="white">삭제</font></a></button>&nbsp;
+                                <button type="button" class="btn btn-info"><a href="/freeboard/modify?id=<%= @one_fb.id %>"><font color="white">수정</font></a></button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="/js/bootstrap.min.js"></script>

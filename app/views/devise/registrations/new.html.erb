@@ -1,0 +1,115 @@
+<style>
+.jumbotron
+{ min-height: 300px;
+  width: 300px;
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  }
+  .jumbotron3
+{ 
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  }
+  
+  body {
+              padding:0;
+              margin:0;
+ 
+              background-image: url('');
+              width: 100%; 
+              height: 100%; 
+              overflow: hidden; 
+              background-position: 0 0; 
+              background-repeat: no-repeat; 
+              background-attachment: fixed; 
+              background-size: cover;
+              position: relative;
+              overflow-y: auto; 
+          }
+	
+</style>
+<center>
+<body style="background-image:url('http://cfile22.uf.tistory.com/image/2727675051CB1004241360'); background-size:cover;">
+ <br><br><br><br>
+ 
+
+<div class="container">
+<div class="jumbotron">
+
+<h2>회원 가입</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  
+  <div class="field">
+    <%= f.label :email, "이메일" %><br />
+    <%= f.email_field :email, autofocus: true, required: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :name, "이름" %><br />
+    <%= f.text_field :name, autofocus: true, required: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :major, "학과" %><br />
+    <select name="user[major]" id="major" autofocus="autofocus">
+        <option value="신학과">신학과</option>
+        <option value="도시및부동산개발학과">도시및부동산개발학과</option>
+        <option value="행정학과">행정학과</option>
+        <option value="사회복지학과">사회복지학과</option>
+        <option value="아동청소년복지학과">아동청소년복지학과</option>
+        <option value="재활복지학과">재활복지학과</option>
+        <option value="다문화가족복지전공(연계전공)">다문화가족복지전공(연계전공)</option>
+        <option value="경영학과">경영학과</option>
+        <option value="무역ㆍ물류학과">무역ㆍ물류학과</option>
+        <option value="광고홍보학과">광고홍보학과</option>
+        <option value="미국학과">미국학과</option>
+        <option value="중국학과">중국학과</option>
+        <option value="일본학과">일본학과</option>
+        <option value="컴퓨터학과">컴퓨터학과</option>
+        <option value="정보통신학과">정보통신학과</option>
+        <option value="데이터정보학과">데이터정보학과</option>
+        <option value="음악학과">음악학과</option>
+        <option value="실용음악학과">실용음악학과</option>
+        <option value="방송연예학과">방송연예학과</option>
+        <option value="시각디자인학과">시각디자인학과</option>
+        <option value="영상디자인학과">영상디자인학과</option>
+        <option value="패션디자인및브랜딩학과">패션디자인및브랜딩학과</option>
+        <option value="간호학과">간호학과</option>
+        <option value="환경융합시스템학과">환경융합시스템학과</option>
+        <option value="교양학부">교양학부</option></select>
+  </div>
+  
+  <div class="field">
+    <%= f.label :hakbun,"학번" %><br />
+    <%= f.text_field :hakbun, autofocus: true, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "비밀번호" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 글자 이상)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "비밀번호 확인" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", required: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "가입 신청" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+
+
+</div>
+</body>
+</center>

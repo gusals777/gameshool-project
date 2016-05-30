@@ -1,0 +1,135 @@
+[Hardware]
+046d:c216 = Logitech_DualAction			# Logitech F310 DirectInput
+046d:c218 = Logitech_DualAction			# Logitech F510 DirectInput
+046d:c219 = Logitech_DualAction			# Logitech F710 DirectInput
+0079:0011 = DragonRise_USB_GamePad		# NES/SNES Controller
+
+[Hardware.Win32]
+045e:028e = Microsoft_XBox360			# Wired
+045e:028f = Microsoft_XBox360			# Wireless
+045e:02a1 = Microsoft_XBox360			# Wireless
+046d:c21d = Microsoft_XBox360			# Logitech F310 XInput
+046d:c21e = Microsoft_XBox360			# Logitech F510 XInput
+046d:c21f = Microsoft_XBox360			# Logitech F710 XInput
+8888:0308 = Sony_PlayStation3_MotioninJoy	# PlayStation2 Mode
+
+[Hardware.MacOS]
+045e:028e = Microsoft_XBox360_Tattiebogle	# Wired and Wireless
+054c:0268 = Sony_PlayStation3			# Wired and Wireless
+
+[Microsoft_XBox360]
+Layout	= XBox360
+B_1	= A
+B_2	= B
+B_3	= X
+B_4	= Y
+B_5	= LB
+B_6	= RB
+B_7	= Select
+B_8	= Start
+B_9	= LC
+B_10	= RC
+H	= H
+A_X	= LS_X
+A_Y	= LS_Y
+A_Z	= LT_RT
+AR_X	= RS_X
+AR_Y	= RS_Y
+
+[Microsoft_XBox360_Tattiebogle]
+Layout	= XBox360
+B_1	= A
+B_2	= B
+B_3	= X
+B_4	= Y
+B_5	= LB
+B_6	= RB
+B_7	= LC
+B_8	= RC
+B_9	= Start
+B_10	= Select
+B_12	= H_U
+B_13	= H_D
+B_14	= H_L
+B_15	= H_R
+A_X	= LS_X
+A_Y	= LS_Y
+A_Z	= LT
+AR_X	= RS_X
+AR_Y	= RS_Y
+AR_Z	= RT
+
+[Sony_PlayStation3]
+Layout	= PlayStation3
+B_1	= Select
+B_2	= LC
+B_3	= RC
+B_4	= Start
+B_5	= H_U
+B_6	= H_R
+B_7	= H_D
+B_8	= H_L
+B_9	= LT
+B_10	= RT
+B_11	= LB
+B_12	= RB
+B_13	= Y			# Triangle
+B_14	= B			# Circle
+B_15	= A			# Cross
+B_16	= X			# Square
+A_X	= LS_X
+A_Y	= LS_Y
+A_Z	= RS_X
+AR_Z	= RS_Y
+
+[Sony_PlayStation3_MotioninJoy]
+Layout	= PlayStation3
+B_1	= Y			# Triangle
+B_2	= B			# Circle
+B_3	= A			# Cross
+B_4	= X			# Square
+B_5	= LB
+B_6	= RB
+B_7	= LT
+B_8	= RT
+B_9	= Select
+B_10	= Start
+B_11	= LC
+B_12	= RC
+H	= H
+A_X	= LS_X
+A_Y	= LS_Y
+A_Z	= RS_X
+AR_Z	= RS_Y
+
+[Logitech_DualAction]
+Layout	= DualAction
+B_1	= X
+B_2	= A
+B_3	= B
+B_4	= Y
+B_5	= LB
+B_6	= RB
+B_7	= LT
+B_8	= RT
+B_9	= Select
+B_10	= Start
+B_11	= LC
+B_12	= RC
+H	= H
+A_X	= LS_X
+A_Y	= LS_Y
+A_Z	= RS_X
+AR_Z	= RS_Y
+
+[DragonRise_USB_GamePad]
+Layout	= SuperNintendo
+B_1	= X
+B_2	= A
+B_3	= B
+B_4	= Y
+B_5	= LB
+B_6	= RB
+B_9	= Select
+B_10	= Start
+A	= H

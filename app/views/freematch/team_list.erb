@@ -1,0 +1,365 @@
+<head>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+.container1 {
+    background:#000000;
+ 
+}
+.item {
+  float: left;
+  margin-left: 10px; 
+}
+
+.scroll {
+    width: 1070px;
+    height: 450px;
+    overflow-y: scroll;
+    
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+div.wrapper {
+  margin: 20px auto;
+  width: 300px;
+}
+
+div.wrapper2 {
+  margin: 20px auto;
+  width: 300px;
+}
+
+
+p {
+  font-family: georgia;
+  
+  line-height: 25px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+nav.vertical {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  overflow: hidden;
+  text-align: center;
+}
+
+  nav.vertical > ul {
+    list-style-type: none;
+  }
+
+    nav.vertical > ul > li {
+      display: block;
+    }
+
+      nav.vertical > ul > li > a {
+        background-color: rgb(157, 34, 60);
+        background-image: -webkit-linear-gradient(135deg, rgb(0, 0, 0), rgb(30, 64, 60));
+        background-image: -moz-linear-gradient(135deg, rgb(0, 0, 0), rgb(30, 64, 60));
+        background-image: -o-linear-gradient(135deg, rgb(0, 0, 0), rgb(30, 54, 60));
+        background-image: linear-gradient(135deg, rgb(0, 0, 0), rgb(30, 64, 60));
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);
+        color: rgb(255,255,255);
+        display: block;
+        font-size: .85rem;
+        font-weight: 500;
+        height: 50px;
+        letter-spacing: .5rem;
+        line-height: 50px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        text-transform: uppercase;
+        transition: all .1s ease;
+        text-decoration: none;
+      }
+
+        nav.vertical > ul > li > a:hover {
+         background-color: rgb(114, 51, 98);
+         background-image: -webkit-linear-gradient(150deg, rgb(10, 0, 60), rgb(30, 64, 60));
+         background-image: -moz-linear-gradient(150deg, rgb(10, 0, 60), rgb(30, 64, 60));
+         background-image: -o-linear-gradient(150deg, rgb(10, 0, 60), rgb(30, 64, 60));
+         background-image: linear-gradient(150deg, rgb(10, 0, 60), rgb(30, 64, 60)); 
+         cursor: pointer;
+        }
+        
+          nav.vertical > ul > li > div {
+            background-color: rgb(255,255,255);
+          }
+ 
+          nav.vertical > ul > li > div > ul {
+            list-style-type: none;
+          }
+
+            nav.vertical > ul > li > div > ul > li > a {
+             background-color: rgb(255,255,255);
+             border-bottom: 1px solid rgba(0,0,0,.05);
+             color: #333331;
+             display: block;
+             font-size: 1.1rem;
+             padding: 10px 0;
+             text-decoration: none;
+             transition: all 0.15s linear;
+            }
+
+              nav.vertical > ul > li > div > ul > li:hover > a {
+                background-color: lightBlue;
+                color: rgb(255,255,255);
+                padding: 10px 0 10px 50px;
+                
+                
+              
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+ <%=render :partial =>"game_page/fixed_bar" %>
+
+  <header class="intro-header" style="background-image: url('/imgs/gameteam2.jpg')">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                        <h1><font1><font color="gray">팀 리스트</font></font1></h1>
+                        <hr>
+                        <span class="subheading"><font1><font color="gray">현재 등록된 팀을 확인할수 있어요!</font></font1></span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="row">
+
+<div class="col-md-3">
+<div class="wrapper">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="#">TEAM LIST</a>
+        <div>
+          <ul>
+            <li id="all_game_button"><a href="#">전체보기</a></li>
+            <li id="lol_button"><a href="#">리그 오브 레전드</a></li>
+            <li id="fifa_button"><a href="#">피파온라인3</a></li>
+            <li id="hearthstone_button"><a href="#">하스 스톤</a></li>
+          </ul>
+        </div>
+        
+        
+        
+        
+        
+        
+      </li>
+      <li>
+        <a>TIP / GameSchool</a>
+      </li>
+    </ul>    
+  </nav>
+ 
+</div>
+<center>
+<div class="wrapper2" style="margin-top:1cm">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a><font1><font size="4px">대전현황</font></font1></a>
+        <div>
+          <ul>
+            <li id="all_game_button"><a href="/freematch/whichgame">대전현황 보러가기</a></li>
+            
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a>TIP / GameSchool</a>
+        
+  </nav>
+ 
+</div>
+</center>
+
+
+
+</div>
+<div class="col-md-7">
+&nbsp;
+
+<div class="scroll all_game_view">
+<div>
+<% @teamlists_lol.each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary" style="width:250px; height:150px" >
+      <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br>
+       <% if a.lol_whichgame == true %>
+         <font2><font color="bluc" size="4px"><%= a.lol_opposing_team %>팀</font>과 대결중</font2>
+      <% end %><br>
+     
+      <font style="font-style:normal;"><font2>LOL 팀명 : <%= a.lol_team_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    </p>
+  </div>     
+<% end %>
+</div>
+
+<div> 
+<% @teamlists_fifa.each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary"  style="width:250px; height:150px">
+      <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br>
+       <% if a.fifa_whichgame == true %>
+         <font2><font color="bluc" size="4px"><%= a.fifa_opposing_team %>님</font>과 대결중</font2>
+      <% end %><br>
+     
+      <font style="font-style:normal;"><font2>이름 : <%= a.fifa_user_name %></font2></font><br>
+
+      <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    <p>
+  </div>    
+<% end %>
+</div>
+
+<div> 
+  <% @teamlists_hearthstone.each do |a| %>
+    <div class="item">             
+      <p class="panel panel-primary"  style="width:250px; height:150px">
+        <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br>
+        <% if a.hearthstone_whichgame == true %>
+           <font2><font color="bluc" size="4px"><%= a.hearthstone_opposing_team %>팀</font>과 대결중</font2>
+        <% end %><br>
+        
+        <font style="font-style:normal;"><font2> 이름 :<%= a.hearthstone_user_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+      </p> 
+    </div>  
+  <% end %>
+</div>      
+</div>
+
+<div class="lol_view" style="display: none">
+<% @teamlists_lol.sample(@teamlists_lol.size).each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary" style="width:250px; height:150px" >
+      <img src="http://gooswiki.com/images/d/d1/Lol_logo.png" style="width:250px; height:75px"><br><br>
+      <% if a.lol_whichgame == true %>
+         <%= a.lol_opposing_team %>팀과 대결중
+      <% end %>
+      <font style="font-style:normal;"><font2>LOL 팀명 : <%= a.lol_team_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=lol" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    </p>
+  </div>     
+<% end %>
+</div>
+
+<div class="fifa_view" style="display: none"> 
+<% @teamlists_fifa.sample(@teamlists_fifa.size).each do |a| %>
+  <div class="item">
+    <p class="panel panel-primary"  style="width:250px; height:150px">
+      <img src="/imgs/피파.PNG" style="width:240px; height:75px"><br><br>
+      <% if a.fifa_whichgame == true %>
+         <%= a.fifa_opposing_team %>님과 대결중 
+      <% end %>
+      <font style="font-style:normal;"><font> 이름 : <%= a.fifa_user_name %></font2></font><br>
+      <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=fifa" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+    <p>
+  </div>    
+<% end %>
+</div>
+
+<div class="hearthstone_view" style="display: none"> 
+  <% @teamlists_hearthstone.sample(@teamlists_hearthstone.size).each do |a| %>
+    <div class="item">             
+      <p class="panel panel-primary"  style="width:250px; height:150px">
+        <img src="https://i.imgur.com/f0e9INl.png" style="width:250px; height:75px"><br><br>
+        <% if a.hearthstone_whichgame == true %>
+           <%= a.hearthstone_opposing_team %>팀과 대결중
+        <% end %>
+        <font style="font-style:normal;"><font2> 이름 :<%= a.hearthstone_user_name %></font2></font><br>
+        <a href="/freematch/team_info?id=<%= a.id %>&kind_of_game=hearthstone" style="text-decoration:none"><font color="#134F76"><font2>자세히 보기</font2></font></a>
+      </p> 
+    </div>  
+  <% end %>
+</div>
+
+</div>
+
+</div>
+
+<!-- 게임 종류에 따라 팀리스트 보이게 하는 자바 스크립트 -->
+<script>
+  $(function(){
+    $("#all_game_button").click(function(){
+      $(".all_game_view").show();
+      $(".lol_view").hide();
+      $(".fifa_view").hide();
+      $(".hearthstone_view").hide();
+    });
+  
+    $("#lol_button").click(function(){
+      $(".all_game_view").hide();
+      $(".lol_view").show();
+      $(".fifa_view").hide();
+      $(".hearthstone_view").hide();
+    });
+  
+    $("#fifa_button").click(function(){
+      $(".all_game_view").hide();
+      $(".lol_view").hide();
+      $(".fifa_view").show();
+      $(".hearthstone_view").hide();
+    });
+  
+    $("#hearthstone_button").click(function(){
+      $(".all_game_view").hide();
+      $(".lol_view").hide();
+      $(".fifa_view").hide();
+      $(".hearthstone_view").show();
+    });
+  });
+</script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+

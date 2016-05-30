@@ -1,0 +1,396 @@
+<html lang="en">    
+    <head>
+     
+        <title>참가 신청</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Heroic Features - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+   <style> 
+   
+    h1 {
+	font-family: Geneva;
+	font-size: 50px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 100;
+	line-height: 108px;
+	color:#00008b;
+    }
+	h3 {
+	font-family: Geneva;
+	font-size: 25px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 100;
+	line-height: 45px;
+    color:#191970;
+}
+  input#round{
+width:70px; /*same as the height*/
+height:70px; /*same as the width*/
+background-color:gray;
+border:1px solid gray; /*same colour as the background*/
+color:white;
+font-size:17px;
+/*set the border-radius at half the size of the width and height*/
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+/*give the button a small drop shadow*/
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+/***NOW STYLE THE BUTTON'S HOVER STATE***/
+input#round:hover{
+background:#778899;
+border:1px solid #778899;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+-moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+
+}
+
+<style type="text/css">
+.form-style-1 {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+    width: 49%;
+}
+
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-select{
+    width: 100%;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:red;
+}
+a.no-uline { text-decoration:none 
+}
+</style>
+</style>
+    
+    </head>
+
+    
+
+
+
+
+
+<body style="background-image:url('http://cfile2.uf.tistory.com/image/141C141B49F8780094DA9E'); background-size:90%;">
+
+    <!-- Navigation -->
+   
+ <%=render :partial =>"game_page/fixed_bar" %>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <center><h1>welcome to gameschool!</h1>
+            <p>현재 참가할수있는 게임은 리그오브레전드,피파,하스스톤입니다.</p>
+            <p>아래의 양식을 작성하여 신청하시길바랍니다</p></center>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Game School (game type)</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://cfile29.uf.tistory.com/image/2736153C531AB781272C9A" style="width:300px; height:200px;">
+          
+           <div class="caption">
+                        
+               <a href= "http://kr.leagueoflegends.com/"  target="blank"><h3>리그 오브 레전드</h3></a>
+                        <p></p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://cfile1.uf.tistory.com/image/243083505354D56404E72B"  style="width:300px; height:200px;">
+                    <div class="caption">
+                       <a href= "http://fifaonline3.nexon.com/main/index.aspx" target="blank"> <h3>피파 온라인</h3></a>
+                        <p></p>
+                  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSV0-KlXWRbW8mdlgmLukjrx2Fm3HgqbX0oXHf1zUQFo4qfuwpb" alt="하스스톤" style="width:300px; height:200px;">
+                    <div class="caption">
+                      <a href="http://kr.battle.net/hearthstone/ko/"  target="blank"><h3>하스 스톤</h3></a>
+                        <p></p>
+                 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt719RsHFcbYFd0OVsnnNgcNpJmtewhluXjdjUMqyp6NfZHv8v" alt="ETC">
+                    <div class="caption">
+                        <h3>ETC</h3>
+                        <h4>추후 추가할 예정입니다.</h4>
+                        <p>서든,베인글로리</p>
+                        <p>크레이지아케이드,카트라이더등등</p>
+                   
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+     
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+  
+</div> <!-- /container -->
+       
+       
+
+
+
+    
+
+</div>
+
+          <%= form_tag("/home/participation_process", method: "post",:class => "form-style-1") do %>
+     
+    <br><br>
+  <center>
+
+    
+     
+          
+        <%= form_tag("/home/participation_process", method: "post") do %>
+            <p>
+            <%=label_tag(:name, "이름: ") %>
+            <input type="text" name="name" id="inputWarning" required>
+            </p>
+            <p>
+                
+            <%= label_tag(:major, "학과: ") %>
+            <%= select_tag(:major, options_for_select([['신학과', '신학과'], 
+                                                        ['도시및부동산개발학과', '도시및부동산개발학과'],
+                                                        ['행정학과','행정학과'],
+                                                        ['사회복지학과','사회복지학과'],
+                                                        ['아동청소년복지학과','아동청소년복지학과'],
+                                                        ['재활복지학과','재활복지학과'],
+                                                        ['다문화가족복지전공(연계전공)','다문화가족복지전공(연계전공)'],
+                                                        ['경영학과','경영학과'],
+                                                        ['무역ㆍ물류학과','무역ㆍ물류학과'],
+                                                        ['광고홍보학과','광고홍보학과'],
+                                                        ['미국학과','미국학과'],
+                                                        ['중국학과','중국학과'],
+                                                        ['일본학과','일본학과'],
+                                                        ['컴퓨터학과','컴퓨터학과'],
+                                                        ['정보통신학과','정보통신학과'],
+                                                        ['데이터정보학과','데이터정보학과'],
+                                                        ['음악학과','음악학과'],
+                                                        ['실용음악학과','실용음악학과'],
+                                                        ['방송연예학과','방송연예학과'],
+                                                        ['시각디자인학과','시각디자인학과'],
+                                                        ['영상디자인학과','영상디자인학과'],
+                                                        ['패션디자인및브랜딩학과','패션디자인및브랜딩학과'],
+                                                        ['간호학과','간호학과'],
+                                                        ['환경융합시스템학과','환경융합시스템학과'],
+                                                        ['교양학부','교양학부']])) %>
+            </p>
+            
+
+            <p>
+            <%= label_tag(:hakbun, "학번: ") %>
+            <input type="text" name="hakbun" required>
+            </p>
+            <p>
+            <%= label_tag(:email, "이메일: ") %>
+            <input type="email" name="email" required>
+            </p>
+            <p>
+            <%= label_tag(:kakao, "카톡 ID: ") %>
+            <input type="text" name="kakao" required>
+            </p>
+            <p>
+            <%= label_tag(:phone_num, "연락처: ") %>
+            <input type="text" name="phone_num" required>
+            </p>
+            <p>
+                <label for="game">게임 리스트<br> </label>
+                <input id="game_select" name="game" type="radio" value="fifa" checked />
+                <label for="game">피파 온라인</label>
+                <input id="game_select" name="game" type="radio" value="lol" />
+                <label for="game">리그 오브 레전드</label>
+                <input id="game_select" name="game" type="radio" value="hearthstone" />
+                <label for="game">하스스톤</label>
+                           
+<input id="round" type="submit" value="신청" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="round" type="submit" value="Back" />
+   
+           
+            </p>
+            
+            <div id="lol_view" class="desc" style="display: none">
+                <p>
+                   <%= label_tag(:team_name, "팀명: ") %>
+                    <input type="text" name="team_name" >
+                    
+                </p>
+          
+
+            
+        <% end %>
+ 
+            
+        <% end %>
+        
+        </div>
+    </div>
+         
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    
+    <script>
+    $(function(){
+      $("input[name$='game']").click(function(){
+          var temp = $(this).val();
+          
+          if (temp == "lol"){
+              $("#lol_view").show(1000);
+          }else{
+              $("div.desc").hide(1000);   
+          }
+      });
+    });
+    </script>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	
+	<link rel="stylesheet" type="text/css" href="/css/example.css" />
+	<link rel="stylesheet" type="text/css" href="/css/jquery.pagepiling.css" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/js/jquery.pagepiling.js"></script>
+	<script type="text/javascript" src="/js/jquery.pagepiling.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4'],
+			    sectionsColor: ['#f5f5f5', '#afeeee', '#f8f8ff', '#87cefa'],
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+
+
+			/*
+		    * Internal use of the demo website
+		    */
+		    $('#showExamples').click(function(e){
+				e.stopPropagation();
+				e.preventDefault();
+				$('#examplesList').toggle();
+			});
+
+			$('html').click(function(){
+				$('#examplesList').hide();
+			});
+	    });
+    </script>
+
+    <style>
+    
+    
+    /*
+*************************************
+          Copyright 2014
+             benague
+*************************************
+*/
+
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* set global font to Open Sans */
+
+
+/* header */
+h1 {
+  color: #55acee;
+  text-align: center;
+}
+
+/* header/copyright link */
+.link {
+  text-decoration: none;
+  color: #55acee;
+  border-bottom: 2px dotted #55acee;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto;
+}
+
+.link:hover {
+  color: #2ecc71;
+  border-bottom: 2px dotted #2ecc71;
+}
+
+/* button div */
+#buttons {
+  padding-top: 50px;
+  text-align: center;
+}
+
+/* start da css for da buttons */
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.yellow {
+  background-color: #f1c40f;
+  box-shadow: 0px 5px 0px 0px #D8AB00;
+}
+
+.yellow:hover {
+  background-color: #FFDE29;
+}
+
+/* copyright stuffs.. */
+p {
+  text-align: center;
+  color: #55acee;
+  padding-top: 20px;
+}
+    
+    
+    
+    /* Section 1
+	 * --------------------------------------- */
+	#section1 h1{
+		color: #444;
+		font-size: 85px;
+	}
+	#section1 p{
+		color: gray;
+	font-size: 25px;
+	}
+	#section1 img{
+		margin: 20px 0;
+		opacity: 0.7;
+	}
+
+	/* Section 2
+	 * --------------------------------------- */
+	#section2 h1{
+		color: white;
+	font-size: 60px;
+	}
+	#section2 p{
+	    color: white;
+	font-size: 25px;
+	}
+
+	#section2 #colors{
+		right: 60px;
+		bottom: 0;
+		position: absolute;
+		height: 413px;
+		width: 258px;
+		background-image: url(imgs/colors.gif);
+		background-repeat: no-repeat;
+	}
+
+	/* Section 3
+	 * --------------------------------------- */
+		#section3 h1{
+		color: #444;]
+	}
+
+	#section3 #colors{
+		left: 60px;
+		bottom: 0;
+	}
+	#section3 p{
+		color: #a9a9a9;
+		
+	}
+
+	#colors2,
+	#colors3{
+		position: absolute;
+		height: 300px;
+		width: 450px;
+		z-index: 1;
+		background-repeat: no-repeat;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	#colors2{
+		background-image: url(imgs/medal.jpg);
+		top:0;
+	}
+	#colors3{
+		background-image: url(imgs/colors3.gif);
+		bottom:0;
+	}
+
+	/* Section 4
+	 * --------------------------------------- */
+		#section4 h1{
+		color: #444;
+	}
+	 #section4 p{
+		opacity: 0.6;
+	}
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	#pp-nav.custom .pp-tooltip{
+		color: #e0ffff;
+	}
+	#markup{
+		display: block;
+		width: 450px;
+		margin: 20px auto;
+		text-align: left;
+	}
+	
+	
+
+    #s{
+    	opacity:0.8;
+    }
+    
+     opa {
+        padding: 30px;
+        margin-top: 30%;
+
+      }
+     opa2 {
+        padding: 10px;
+          margin-top: 30%;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgba( 255, 255, 255, 0.3 );
+      
+      }
+      
+      
+   
+</style>
+
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Game School</a></li>
+		<li data-menuanchor="page2"><a href="#page2">introduce</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Schedule</a></li>
+		<li data-menuanchor="page4"><a href="#page4">Apply</a></li>
+	</ul>
+
+
+	<div id="pagepiling">
+	    <div class="section" id="section1" style="background-image:url('https://static4.businessinsider.com/image/52d571e269bedd7002d4ec36/the-14-most-beautiful-and-iconic-american-college-quads.jpg'); background-size:cover;  ">
+	    	
+	    	<h1>Game School</h1>
+			<p>Game School 에 오신걸 환영합니다.</p> 
+			<p>평택대학교 게임 매칭 사이트입니다.</p> 
+			
+			<img src="imgs/game.png" alt="pagePiling" />
+			
+
+	    </div>
+	    <div class="section" id="section2" style="background-image:url('http://www.khgames.co.kr/news/photo/201311/67987_12453_1524.jpg'); background-size:cover; ">
+	    	<div class="intro"  background-color: "white"; style="padding-top:1px; padding-bottom:1px; background:rgba(140,140,140,0.5); align:center">
+	    	
+	    	 
+	    	  
+	    		<p>학교,과별로 게임대회를 하고싶으신가요? </p>
+	    		<p>저희 Game School 를 찾아주세요.</p> 
+	    		<p>간단한 친선게임부터 토너먼트 대회 에 상금까지! </p> 
+	    		<p>지금 바로 신청하세요! </p>
+	    		
+
+	    	</div>
+	    </div>
+	    <div class="section" id="section3" style="background-image:url(''); background-size:cover; ">
+	    	<div class="intro">
+	    		<img src="/imgs/일정이미지.png" style="width:1000px; height:900 ;">
+	    		<p></p>
+	    	
+	    		
+	    	</div>
+	    </div>
+	    <div class="section" id="section4" style="background-image:url('http://www.matcl.com/files/2013/07/02/cb608b68b5531c556c1e06534ac8eae3230151.jpg'); background-size:cover; ">
+	    	<div class="intro">
+	    		
+	    		<div style="font-weight: 700; line-height:630px;">
+                 <img src="/imgs/gameschool11.jpg" style="width:60%; height:60%; opacity:0.9" >
+              	</div>
+	    
+	
+  
+  
+  
+ 
+  <a href="/game_page/main" class="btn yellow"><font color="black" size="3px"><strong>play!</strong></font></a>
+
+ 
+             	
+	    	</div>
+	    </div>
+	</div>

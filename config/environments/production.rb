@@ -1,4 +1,13 @@
 Rails.application.configure do
+  
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+          api_key: 'key-98537319a7e7656ceb2995dd7edc4ace',
+          domain: 'sandbox6c3ca9c3b3b843a3b5c672440af35b24.mailgun.org'
+  }
+  
+  config.action_mailer.default_url_options = { host: 'http://ptu-gameschool.com', port: 80 }
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

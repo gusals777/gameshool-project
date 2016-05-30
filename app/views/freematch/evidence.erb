@@ -1,0 +1,35 @@
+
+<h1>대결 종료된 리스트</h1>
+
+
+<% @whichgame_lol.each do |which| %>
+
+  <% if which.lol_mode == true %>
+    롤<br>
+    <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><%= which.lol_whichgame_my_teamname %> vs <%= which.lol_whichgame_opposing_teamname %></a><br>
+  <% end %>
+<% end %>
+
+
+
+<% @whichgame_fifa.each do |which| %>
+    
+  <% if fifa_mode == true %>
+    피파<br>   
+    <%= which.fifa_whichgame_my_teamname %> vs <%= which.fifa_whichgame_opposing_teamname %><br>
+  <% end %>
+<% end %>
+
+
+<% @whichgame_hearthstone.each do |which| %>
+
+
+   <% if which.hearthstone_mode == true %>
+    하스스톤<br>
+    <%= which.hearthstone_whichgame_my_teamname %> vs <%= which.hearthstone_whichgame_opposing_teamname %><%= which.id %><br>
+   <% end %>
+   
+   
+<% end %>
+
+<script src="/js/bootstrap.min.js"></script>

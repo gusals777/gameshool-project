@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" type="text/css" href="/css/fbstylesheet.css">
+
+<style>
+
+.jumbotron
+{ min-height: 200px;
+  width: 400px;
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .jumbotron2
+{ min-height: 100px;
+  width: 300px;
+  color:black;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  }
+ 
+</style>
+<center>
+<body style="background-image:url('http://cfile22.uf.tistory.com/image/2727675051CB1004241360'); background-size:cover;">
+ <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav navbar-left">
+                    
+                    <li>
+                        <a href="/game_page/main"><font size="3px"><font1>GameSchool</font1></font></a>
+                    </li>
+                    <% if user_signed_in? %>
+                    <li>
+                        <a href="#"><font size="3px"><font1><%= current_user.name %>님</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/edit"><font size="3px"><font1>회원정보수정</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_out"><font size="3px"><font1>로그아웃</font1></font></a>
+                    </li>
+                    <% else %>
+                    <li>
+                        <a href="/users/sign_in"><font size="3px"><font1>로그인</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_up"><font size="3px"><font1>회원가입</font1></font></a>
+                    </li>
+                    <% end %>
+                </ul>
+            </div>
+            
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                
+                   
+                    <li>
+                      
+                          
+                            <li role="presentation">
+                            <% if user_signed_in? %>
+                                <a tabindex="-1" href="/freematch/add_team"><font1><font color="gray" size="4px">팀 등록</font><font1></a>
+                            <% else %>
+                                <a tabindex="-1" href="/freeboard/warning"><font1><font color="gray" size="4px">팀 등록</font></font1></a>
+                            <% end %>
+                            </li>
+                            
+                            <li role="presentation">
+                            <% if user_signed_in? %>
+                                <a role="menuitem" tabindex="-1" href="/freematch/team_list"><font1><font color="gray" size="4px">대전신청</font><font1></a>
+                            <% else %>
+                                <a role="menuitem" tabindex="-1" href="/freeboard/warning"><font1><font color="gray" size="4px">대전신청</font><font1></a>
+                            <% end %>
+                            </li>
+                         
+                    </li>
+                    <li>
+                        <a href="/freeboard/freeboards"><font size="4px"><font1>게시판</font1></font></a>
+                    </li>
+                    <li>
+                        <a href="/freematch/rank" ><font size="4px"><font1>랭킹보기</font1></font></a>
+                    </li>
+                     <li>
+                        <a href="/freematch/daejin" ><font size="4px"><font1>대진표</font1></font></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+ <div class="jumbotron2" style="margin-top:9cm">
+      <form id="form1">
+        <table class="table table-condensed" id="table" style="padding-top:1px; padding-bottom:1px; background:rgba(255,255,255,0.6); align:center">
+        <font1><font size="6px;" color="#59606E"><font1>로그인 하러가기</font1></font></font1>
+        
+          <tr>
+          
+            <th style="text-align: center"><a href="/users/sign_in"><font size="10px">sign_in</font></a> </th>
+            
+          </tr>
+         
+        </table>
+       
+       
+    </div>
+</div>
+</body>
+</center>
+<script src="/js/bootstrap.min.js"></script>

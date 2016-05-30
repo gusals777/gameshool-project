@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  
+  <style>
+  
+
+hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+  </style>
+
+  <title>평택대학교 게임 스쿨에 오신 걸 환영합니다.</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/css/clean-blog.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+ <link rel="stylesheet" type="text/css" href="/css/gamepagestylesheet.css">
+
+</head>
+
+<body style="background-image:url('');">
+ <%=render :partial =>"game_page/fixed_bar" %>
+ 
+<<<<<<< HEAD
+   
+
+    <div class="clearfix"></div>
+
+
+
+
+    <!-- HOME -->
+    <section class="home bg-img" id="home" style="background-image: url('/img/main.jpg')" >
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="home-wrapper">
+                        <div class="main-slider">
+                            <ul class="slides">
+                                <li>
+                                    <h1 class="animated fadeInDown wow" data-wow-delay=".1s">Welcome to GameSchool</h1>
+                                   <br><br><br><h3 class="animated fadeInLeft wow" data-wow-delay=".2s">아래에 자세한 정보를 확인해주세요.<br/> 공지사항, 새로운팀, 오늘의 매치를 확인해주세요.</h3>
+                                    
+                                </li>
+                                <li>
+                                    <h1 class="animated fadeInDown wow" data-wow-delay=".1s">Game School 게임대전 종류</h1>
+                                    <h3 class="animated fadeInLeft wow" data-wow-delay=".2s">리그오브레전드, 피파온라인3, 하스스톤</h3>
+                                 
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HOME -->
+ <!-- FEATURES-1 -->
+    <section class="section bg-gray" id="services">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3 class="text-uppercase font-bold"><font size="6px">GameSchool Services</font></h3>
+                    <div class="title-hr"></div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <br><br><br>
+            <div class="row text-center">
+
+                <div class="col-sm-4 wow fadeInLeft animated">
+                    <div class="services-box">
+                        <div class="icon-box">
+                            <img src="/imgs/TeamInfo이미지.PNG" alt="">
+                        </div>
+
+
+                        <div>
+                            <h2 class="font-bold">팀등록</h2>
+                            <h3 class="text-muted">자신이 원하는 게임의 
+                                                   <br>팀을 등록할수 있습니다.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 wow fadeInUp animated">
+                    <div class="services-box">
+                        <div class="icon-box">
+                            <img src="/imgs/vs.png" alt="">
+                        </div>
+
+
+                        <div>
+                            <h2 class="font-bold">대전신청</h2>
+                            <h3 class="text-muted">현재 등록된 팀을 확인하고 게임대전과
+                                                   대전현황을 볼수 있습니다.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 wow fadeInRight animated">
+                    <div class="services-box">
+                        <div class="icon-box">
+                            <img src="http://cfile27.uf.tistory.com/image/2661AB33538D6B26124FE2" alt="">
+                        </div>
+
+
+                        <div>
+                            <h2 class="font-bold">랭킹제도</h2>
+                            <h3 class="text-muted">게임별 경기수, 승점, 승률, 
+                                                   <br>패배수, 랭킹을 알수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+=======
+ 
+ 
+ 
+ <header class="intro-header" style="background-image: url('/img/main.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div class="site-heading">
+                       
+                      <h1><font1>Welcome To GameSchool</font1></h1>
+                        <hr>
+                        <span class="subheading"><h2><font1>아래의 자세한 정보를 확인해 주세요.</font1></h2></span>
+                      
+                    </div>
+                </div>
+>>>>>>> dlqudgh4885
+            </div>
+        </div>
+<<<<<<< HEAD
+    </section>
+    <!-- END FEATURES-1 -->
+
+
+
+
+    
+
+    <section class="section" id="pricing">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3 class="text-uppercase font-bold zoomIn animated wow"><font size="6px"><font2>GameSchool Notice</font2></font></h3>
+                    <div class="title-hr"></div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <p class="sub-title zoomIn animated wow" data-wow-delay=".2s"> 공지사항이나 새로등록된팀 주요 매치등을 한눈에 볼수 있습니다.
+                                <br/> 아래에서 필요한 내용을 확인해 주세요</p>
+                        </div>
+                    </div>ㄱ
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row">
+
+                        <!-- Pricing Item -->
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <div class="pricing-item animated fadeInLeft wow" data-wow-delay=".3s">
+                                <div class="pricing-item-inner">
+                                    <div class="pricing-wrap">
+                                        <!-- Icon (Simple-line-icons) -->
+                                        <div class="pricing-icon">
+                                          Notice
+                                        </div>
+                                        <!-- Pricing Title -->
+                                        <div class="pricing-title">
+                                         
+                                        </div>
+                                        <!-- Pricing Features -->
+                                        <div class="pricing-features">
+                                            <ul class="sf-list pr-list">
+                                                <li><strong><font color="black" size="3px">1. 12월7일~12월 20일 참가 접수를 받을 예정입니다.</font></strong></li>
+                                                <li><strong><font color="black" size="3px">2. 2016년   1월1일 대회를 시작할 예정입니다.</font></strong> </li>
+                                               <li><strong><font color="black" size="3px">1. 12월7일~12월 20일 참가 접수를 받을 예정입니다.</font></strong></li>
+                                                <li><strong><font color="black" size="3px">2. 2016년   1월1일 대회를 시작할 예정입니다.</font></strong> </li>
+                                                
+                                               
+                                            </ul>
+                                        </div>
+                                       
+                                      
+                                       
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Pricing Item -->
+
+                        <!-- Pricing Item -->
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <div class="pricing-item main animated fadeInLeft wow" data-wow-delay=".5s">
+                                <div class="pricing-item-inner">
+                                    <div class="pricing-wrap">
+                                        <!-- Icon (Simple-line-icons) -->
+                                        <div class="pricing-icon">
+                                          Today Team
+                                        </div>
+                                        <!-- Pricing Title -->
+                                        <div class="pricing-title">
+                                          
+                                        </div>
+                                        <!-- Pricing Features -->
+                                        <div class="pricing-features">
+                                            <ul class="sf-list pr-list">
+                                                
+     
+     
+       
+       
+        
+         
+           <h4> <font2><strong><font color="black">LOL Team</font></strong></font2></h4>
+           <h6><% @teamlists_lol.last(1).each do |t| %><h6>
+              <li><h5><strong><font color="blue"><%= t.lol_team_name %></font></strong></h5></li>
+=======
+    </header>
+  
+<br>
+
+<div class="row" style="margin-top:cm">
+  
+
+  <div class="col-md-102">
+   
+    <div class="thumbnail" style="background-image: url('')" >
+   
+      
+      
+      <div class="row">
+      
+    
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+
+    <!-- Wrapper for slides -->
+  
+      
+     
+    </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+       
+        </h1>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Project One -->
+    
+    
+    <hr class="style-five">
+		<div class="code" style="margin-top: 13px;">
+	
+	
+
+
+
+    <div class="row" style="margin-top:0.5cm">
+      <div class="col-md-5">
+        <center><img class="img-responsive" src="http://yyychild.com/wp-content/uploads/2014/12/%EC%98%A4%EB%A5%B8%EC%AA%BD%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD.jpg" alt="" style="width:200px"></center>
+      </div>
+      <div class="col-md-7">
+        <font1><font size="6px">공지사항</font></font1>
+      <br> <font1><h4>1. 게임스쿨에 오신걸 환영합니다. 원하는 학과와 토너먼트 대회에 참가 할 수 있습니다. </h4> </font1>
+             <font1><h4>2. 이번주 대진매치는  정보통신학과 vs 컴퓨터학과 , 무역학과 vs 미국학과 </h4></font1>
+             <font1><h4>3. 모든경기 대진표 는 12월 3일 업데이트 시작 하도록 하겠습니다. </h4></font1>
+             
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Two -->
+    <div class="row" >
+      <div class="col-md-5">
+        <center><img class="img-responsive" src="/img/team.jpg" alt="" style="width:800px"></center>
+      </div>
+      <div class="col-md-7">
+       <font1><font size="6px">새로운 팀</font></font1>
+        <br> <br>
+        <div class="row">
+          <div class="col-md-4">
+           <h4> <font1>LOL Team</font1></h4>
+            <% @teamlists_lol.last(3).each do |t| %>
+              <h4><%= t.lol_team_name %></h4>
+>>>>>>> dlqudgh4885
+            <% end %>
+          </div>  
+          <div class="col-md-4">
+           <h4> <font1>FIFA Team</font1></h4>
+            <% @teamlists_fifa.last(3).each do |t| %>
+              <h4><%= t.fifa_user_name %></h4>
+            <% end %>
+          </div>
+          
+          <div class="col-md-4">
+           <h4><font1>Hearts Ston Team</font1> </h4>
+            <% @teamlists_hearthstone.last(3).each do |t| %>
+              <h4><%= t.hearthstone_user_name %></h4>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
+    <div class="row">
+      <div class="col-md-5">
+        <center><img class="img-responsive" src="/img/Match.jpg" alt="" style="width:800px"></center>
+      </div>
+      <div class="col-md-7">
+        <font1><font size="6px">오늘의 경기</font></font1>
+        <br> <br>
+        <div class="row">
+          <div class="col-md-4">
+            <h4> <font1>LOL Match</font1></h4>
+            <% @today_lol_matching.each do |which| %>
+              <font size="5px"><font2><%= which.lol_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
+              <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+            <% end %>  
+
+          </div>
+          
+<<<<<<< HEAD
+       
+      
+   
+                                            </ul>
+                                        </div>
+                                      
+                                       
+                                        <!-- Button -->
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Pricing Item -->
+
+
+                        <!-- Pricing Item -->
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <div class="pricing-item animated fadeInLeft wow" data-wow-delay=".7s">
+                                <div class="pricing-item-inner">
+                                    <div class="pricing-wrap">
+                                        <!-- Icon (Simple-line-icons) -->
+                                        <div class="pricing-icon">
+                                           Today Match
+                                        </div>
+                                        <!-- Pricing Title -->
+                                        <div class="pricing-title">
+                                           
+                                        </div>
+                                        <!-- Pricing Features -->
+                                        <div class="pricing-features">
+                                            <ul class="sf-list pr-list">
+                                             
+     
+                                                  
+                                                    
+                                                   
+                                                   
+                                                    
+                                                       <h4> <font1><font1><strong><font color="black">League Of Legend Match</font></strong></font1></h4>
+                                                        <% @today_lol_matching.each do |which| %>
+                                                          <font size="2px" color="orange"><font2><%= which.lol_whichgame_my_teamname %></font2></font>&nbsp; vs &nbsp; <font size="2px"  color="orange"><font2><%= which.lol_whichgame_opposing_teamname %></font2></font>
+                                                          <a href="/freematch/whichgame_info?kind_of_game=lol&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+                                                        <% end %>  
+                                            
+                                                     
+                                                      <br>
+                                                     
+                                                         <h4> <font1> <font1><strong><font color="black"> FIFA Match</font></strong></font1> </h4> 
+                                                        <% @today_fifa_matching.each do |which| %>
+                                                          <font size="2px"  color="blue"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="2px"  color="blue"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
+                                                          <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+                                                        <% end %>
+                                                         <br>
+                                                    
+                                                         <h4>  <font1> <font1><strong><font color="black"> Hearts Ston Match </font></strong></font1> </h4> 
+                                                        <% @today_hearthstone_matching.each do |which| %>
+                                                          <% if which.hearthstone_mode == false %>
+                                                            <font size="2px"  color="brown"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="2px"  color="brown"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
+                                                            <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+                                                          <% end %>
+                                                        <% end %>
+                                                     
+                                                   
+                                                 
+  
+                                            </ul>
+                                        </div>
+                                       
+                                     
+                                       
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Pricing Item -->
+
+                    </div>
+                </div>
+            </div>
+=======
+          <div class="col-md-4">
+             <h4> <font1>FIFA Match</font1> </h4> 
+            <% @today_fifa_matching.each do |which| %>
+              <font size="5px"><font2><%= which.fifa_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.fifa_whichgame_opposing_teamname %></font2></font>
+              <a href="/freematch/whichgame_info?kind_of_game=fifa&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+             <h4>  <font1>Hearts Ston Match</font1> </h4> 
+            <% @today_hearthstone_matching.each do |which| %>
+              <% if which.hearthstone_mode == false %>
+                <font size="5px"><font2> <%= which.hearthstone_whichgame_my_teamname %></font2></font> vs <font size="5px"><font2><%= which.hearthstone_whichgame_opposing_teamname %></font2></font>
+                <a href="/freematch/whichgame_info?kind_of_game=hearthstone&which_id=<%= which.id %>"><button>자세히 보기</button></a><br>
+              <% end %>
+            <% end %>
+          </div>
+>>>>>>> dlqudgh4885
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+<<<<<<< HEAD
+ <!-- SCREENSHOTS -->
+    <section class="section bg-gray" id="works">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3 class="text-uppercase font-bold zoomIn animated wow">팀 활동</h3>
+                    <div class="title-hr"></div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <p class="sub-title zoomIn animated wow" data-wow-delay=".2s">
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+=======
+<hr class="style-five">
+		<div class="code" style="margin-top: 13px;">
+>>>>>>> dlqudgh4885
+
+    
+
+<<<<<<< HEAD
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="imgs/활동.jpg" class="thumb preview-thumb image-popup" title="Screenshot-1">
+                        <img src="/imgs/활동.jpg" width="300px" height="300px" class="thumb-img" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="imgs/활동1.jpg" class="thumb preview-thumb image-popup" title="Screenshot-2">
+                        <img src="/imgs/활동1.jpg" width="300px" height="300px" class="thumb-img" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="imgs/활동2.jpg" class="thumb preview-thumb image-popup" title="Screenshot-3">
+                        <img src="/imgs/활동2.jpg" width="300px" height="300px" class="thumb-img" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="imgs/활동3.jpg" class="thumb preview-thumb image-popup" title="Screenshot-4">
+                        <img src="/imgs/활동3.jpg" width="300px" height="300px"class="thumb-img" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="imgs/활동4.jpg" class="thumb preview-thumb image-popup" title="Screenshot-5">
+                        <img src="/imgs/활동4.jpg" width="300px" height="300px"class="thumb-img" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="imgs/활동5.jpg" class="thumb preview-thumb image-popup" title="Screenshot-6">
+                        <img src="/imgs/활동5.jpg" width="300px" height="300px"class="thumb-img" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+    </section>
+    <!-- END SCREENSHOTS -->
+
+    <!-- TESTIMONIALS -->
+=======
+>>>>>>> dlqudgh4885
+
+        <!-- Footer -->
+        
+        <footer>
+            <div class="row">
+<<<<<<< HEAD
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="zoomIn animated wow" data-wow-delay=".1s">
+                        <img src="/img/평택대.PNG" alt="quote" style="width:120px">
+                        
+                        <div class="clientblock">
+                           
+                            <h4>GameSchool
+                                <br> Made by &amp; PTU-IC</h4>
+                        </div>
+                    </div>
+=======
+                <div class="col-lg-12">
+                    <h4>문의사항 kakao talk:ibh612 / e-mail:plazmapxt@naver.com</h4>
+>>>>>>> dlqudgh4885
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+  </div>
+   
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+<<<<<<< HEAD
+a
+=======
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/clean-blog.min.js"></script>
+>>>>>>> dlqudgh4885
+
+</body>
+
+</html>

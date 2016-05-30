@@ -1,0 +1,670 @@
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/hanna.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+<link rel="stylesheet" type="text/css" href="/css/fmstylesheet.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+.button-0 {
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    border-radius: 10px;
+    font-family: 'Helvetica', cursive;
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;  
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+    /* Animation */
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.button-0:hover, 
+.button-0:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-0:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+
+body {
+              padding:0;
+              margin:0;
+               text-align: left;
+              background-image: url('');
+              width: 100%; 
+              height: 100%; 
+              overflow: hidden; 
+              background-position: 0 0; 
+              background-repeat: no-repeat; 
+              background-attachment: fixed; 
+              background-size: cover;
+              position: relative;
+              overflow-y: auto; 
+          }
+font3{
+          font-family: 'Hanna', serif;
+          font-size:28px;
+      }
+font4{
+    font-family: 'Hanna', serif;
+    font-size:15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  	-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+
+	ul {
+		margin: 30px auto;
+	
+	}
+
+	li2 {
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+
+	@-moz-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-webkit-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-o-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	.round {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 30px;		
+		text-decoration: none;		
+		text-align: center;
+		font-size: 25px;		
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+		letter-spacing: -.065em;
+		font-family: "Hammersmith One", sans-serif;		
+		-webkit-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+		border-radius: 300px;
+		z-index: 1;
+		border-width: 4px;
+		border-style: solid;
+	}
+
+	.round:hover {
+		width: 130%;
+		height: 130%;
+		left: -15%;
+		top: -15%;
+		font-size: 33px;
+		padding-top: 38px;
+		-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		z-index: 2;
+		border-size: 10px;
+		-webkit-transform: rotate(-360deg);
+		-moz-transform: rotate(-360deg);
+		-o-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+
+	a.red {
+		background-color: rgba(239,57,50,1);
+		color: rgba(133,32,28,1);
+		border-color: rgba(133,32,28,.2);
+	}
+
+	a.red:hover {
+		color: rgba(239,57,50,1);
+	}
+
+	a.green {
+		background-color: rgba(1,151,171,1);
+		color: rgba(0,63,71,1);
+		border-color: rgba(0,63,71,.2);
+	}
+
+	a.green:hover {
+		color: rgba(1,151,171,1);
+	}
+
+	a.yellow {
+		background-color: rgba(252,227,1,1);
+		color: rgba(153,38,0,1);
+		border-color: rgba(153,38,0,.2);
+	}
+
+	a.yellow:hover {
+		color: rgba(252,227,1,1);
+	}
+
+	.round span.round {
+		display: block;
+		opacity: 0;
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+		font-size: 1px;
+		border: none;
+		padding: 40% 20% 0 20%;
+		color: #fff;
+	}
+
+	.round span:hover {
+		opacity: .85;
+		font-size: 16px;
+		-webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+	}
+
+	.green span {
+		background: rgba(0,63,71,.7);		
+	}
+
+	.red span {
+		background: rgba(133,32,28,.7);		
+	}
+
+	.yellow span {
+		background: rgba(161,145,0,.7);	
+
+	}
+	
+</style>
+
+<body>
+  <%=render :partial =>"game_page/fixed_bar" %>
+  <header class="intro-header" style="background-image: url('/imgs/boot1.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+             
+            <h1><font1>팀 정보</font1></h1>
+            <hr>
+            <span class="subheading"><font1>현재 팀의 대한 정보들 입니다.</font1></span>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container">
+    <div class="thumbnail"  style="height:12\t00px">
+      <img src="/imgs/TeamInfo이미지.PNG">
+      <div style="padding-top:1px; padding-bottom:1px; background:white; align:center"><br>
+
+        <% if @kind_of_game == "lol" %>
+         
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+           <font2>팀명</font2>&nbsp;&nbsp;&nbsp;<%= @teamlists_lol.lol_team_name %> 
+          <table class="table">
+            <tr >
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @teamlists_lol.leader_name %></th>
+              <th><%= @teamlists_lol.lol_major %></th>
+              <th><%= @teamlists_lol.lol_leader_tear %></th>
+              <th><%= @teamlists_lol.lol_leader_id %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_1 %></th>
+              <th><%= @teamlists_lol.lol_member_major_1 %></th>
+              <th><%= @teamlists_lol.lol_tear_user_1 %></th>
+              <th><%= @teamlists_lol.lol_user_id_1 %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_2 %></th>
+              <th><%= @teamlists_lol.lol_member_major_2 %></th>
+              <th><%= @teamlists_lol.lol_tear_user_2 %></th>
+              <th><%= @teamlists_lol.lol_user_id_2 %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_3 %></th>
+              <th><%= @teamlists_lol.lol_member_major_3 %></th>
+              <th><%= @teamlists_lol.lol_tear_user_3 %></th>
+              <th><%= @teamlists_lol.lol_user_id_3 %></th>
+            </tr>
+            <tr class="info">
+              <th></th>
+              <th>팀원</th>
+              <th><%= @teamlists_lol.lol_member_name_4 %></th>
+              <th><%= @teamlists_lol.lol_member_major_4 %></th>
+              <th><%= @teamlists_lol.lol_tear_user_4 %></th>
+              <th><%= @teamlists_lol.lol_user_id_4 %></th>
+            </tr>
+          </table>
+           </div>
+          <div class="col-md-1"></div>
+          </div>
+          <br>
+          
+          <center><h1><font3>소개</font3></h1> <br>
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+         <div class="thumbnail"  style="height:200px">
+          <font4><%= @teamlists_lol.comment %></font4>
+         </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
+          </center>
+          
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+          
+          
+          <div>
+                    
+            <% if @teamlists_lol.lol_whichgame == false %>
+              <div class="col-md-6" style="text-align:right">
+                <button id="fight_lol" type="button" class="button-0" onClick="this.style.visibility='hidden'"><font2>대결 신청</font2></button><br>
+              </div>
+             
+             
+              <% if @teamlists_lol.lol_current_user_id == current_user.id %>
+                <%= form_tag("/freematch/delete_team", method: "get") do %>
+                  <div class="col-md-6">
+                    <button type="submit" class="button-0"><font2>팀삭제</font2></button>
+                    <input type='hidden' name='teamlist_id' value=<%= @teamlists_lol.id %>>
+                    <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+                  </div>
+                <% end %>
+              <% end %>
+              
+            <% else %>
+             <center>
+              <font1>현재&nbsp;<font color="bluc" size="4px"><%= @teamlists_lol.lol_opposing_team %> 님</font>과 대결중!!!!<br></font1>
+              <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
+            <% end %> 
+             </center>
+           <!-- row div -->
+          </div>
+          
+            </div>
+          <div class="col-md-1"></div>
+          </div>
+          
+          
+            <br><br><br><br><br><br>
+            <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <center>
+             <div class="panel panel-default" style="width:350px">
+      <div class="panel-heading"><font2>대전 신청 List</font2></div><br>
+          <% if @teamlists_lol.lol_whichgame == false %>
+            <% @teamlists_lol.fightsubscriptions.each do |s| %>
+              
+            <div align="left">  &nbsp;팀명 : <a href="/freematch/team_info/<%= s.lol_add_team_name_id %>"><%= s.lol_subscription_team_name %></a>
+                       <% if @teamlists_lol.lol_current_user_id == current_user.id %>
+
+                         <a href="/freematch/matching_success?lol_add_team_name_id=<%=s.lol_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="lol_matching_success" class="btn btn-default" onClick="this.style.visibility='hidden'"><font size="2px">수락</font></button></a><br>
+                      
+
+                       <% end %></div><br>
+            <% end %>           
+          <% end %>
+          
+          
+    </div>
+    </center>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
+          
+          <script>
+            $(document).ready(function(){
+              $("#fight_lol").click(function(){
+                if (<%= @teamlists_lol.lol_current_user_id == current_user.id %>){
+                  alert("본인 팀에 대결 신청하시려고?");
+                }
+                else if (<%= @lol_subscription_user.nil? %>) {
+                  alert("리그 오브 레전드 팀을 등록하고 대결 신청해주세요.");
+                }
+                else if (<%= @lol_subscription_check.nil? == false %>){
+                  alert("이미 대결 신청을 하셨습니다."); 
+                }
+                else if (<%= @teamlists_lol.fightsubscriptions.count >= 3 %>){
+                  alert("더 이상 대결 신청을 할 수 없습니다."); 
+                }
+                else if (<%= @teamlists_lol.lol_whichgame == true %>){
+                  alert("현재 대결 중입니다.");
+                }
+                else{
+                  $.ajax({
+                    data: {
+                      kind_of_game : "<%= @kind_of_game %>",
+                      teamlist_id : <%= @teamlists_lol.id %>
+                    },
+                    url: "/freematch/subscription_write",
+                    success: function(){
+               
+                      alert("대결을 신청하셨습니다.");
+                      location.reload();
+                    }
+                  }); 
+                } 
+              });      
+            });
+          </script>
+        <!-- 롤 대결신청 출력 끝 -->
+          
+        <% elsif @kind_of_game == "fifa" %>
+         <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+          <table class="table">
+            <tr>
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr class="info">
+              <th><%= @kind_of_game %></th>
+              <th>팀장</th>
+              <th><%= @teamlists_fifa.fifa_user_name %></th>
+              <th><%= @teamlists_fifa.fifa_major %></th>
+              <th><%= @teamlists_fifa.tear %></th>
+              <th><%= @teamlists_fifa.game_id %></th>
+            </tr>
+          </table>
+            </div>
+          <div class="col-md-1"></div>
+          </div>
+          <br>
+          <br>
+          <center><h1><font3>소개</font3></h1><br>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+         <div class="thumbnail"  style="height:200px">
+        <font4><%= @teamlists_fifa.comment %></font4>
+         </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
+          </center>
+          <br>
+            
+        <!-- 피파 대결신청 출력 -->   
+      
+        <% if @teamlists_fifa.fifa_whichgame == false %>
+         <div class="col-md-6" style="text-align:right">
+          <button id="fight_fifa" type="button" class="button-0" onClick="this.style.visibility='hidden'"><font2>대결 신청</font2></button><br>
+         </div>
+          <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
+              <%= form_tag("/freematch/delete_team", method: "get") do %>
+                <div class="col-md-6">
+                <button type="submit" type="button" class="button-0"><font2>팀삭제</font2></button>
+                <!--<input type="submit" value="팀삭제">-->
+                <input type='hidden' name='teamlist_id' value=<%= @teamlists_fifa.id %>>
+                <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+                 </div>
+              <% end %>
+          <% end %>   
+        <% else %>
+         <center>
+          <font2>현재<font color="bluc" size="4px"><%= @teamlists_fifa.fifa_opposing_team %> 님</font>과 대결중</font2><br>
+          <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
+        <% end %>
+         </center>
+        <!-- row div -->
+          <br><br><br><br>
+           <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <center>
+             <div class="panel panel-default" style="width:350px">
+      <div class="panel-heading"><font2>대전 신청 List</font2></div><br>
+          <% if @teamlists_fifa.fifa_whichgame == false %>
+            <% @teamlists_fifa.fightsubscription_fifas.each do |s| %>
+            이름 : <a href="/freematch/team_info/<%= s.fifa_add_team_name_id %>"><%= s.fifa_user_name %></a>
+                    <% if @teamlists_fifa.fifa_current_user_id == current_user.id %>
+                       <a href="/freematch/matching_success?fifa_add_team_name_id=<%=s.fifa_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="fifa_matching_success" class="btn btn-default" onClick="this.style.visibility='hidden'">수락</button></a><br>
+                    <% end %><br>
+            <% end %>
+          <% end %>
+            
+            
+             </center>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
+        <!-- 피파 대결신청 출력 끝 -->
+        <script>
+          $(document).ready(function(){
+            $("#fight_fifa").click(function(){
+              
+              if (<%= @teamlists_fifa.fifa_current_user_id == current_user.id %>){
+                alert("본인 팀에 대결 신청하시려고?");
+              }
+              else if (<%= @fifa_subscription_user.nil? %>) {
+                alert("피파 온라인 팀을 등록하고 대결 신청해주세요.");
+              }
+              else if (<%= @fifa_subscription_check.nil? == false %>){
+                alert("이미 대결 신청을 하셨습니다."); 
+              }
+              else if (<%= @teamlists_fifa.fightsubscription_fifas.count >= 3 %>){
+                alert("더 이상 대결 신청을 할 수 없습니다."); 
+              }
+              else if (<%= @teamlists_fifa.fifa_whichgame == true %>){
+                alert("현재 대결 중입니다.");
+              }
+              else{
+                $.ajax({
+                  data: { 
+                    kind_of_game : "<%= @kind_of_game %>",
+                    teamlist_id : <%= @teamlists_fifa.id %>
+                  },
+                  url: "/freematch/subscription_write",
+                  success: function(){
+             
+                    alert("대결을 신청하셨습니다.");
+                    location.reload();
+                  }
+                }); 
+              } 
+            });
+              
+            });
+        </script>  
+        
+          
+        <% else %>
+          
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+          <table class="table">
+            <tr>
+              <th>게임종류</th>
+              <th>분류</th>
+              <th>이름</th>
+              <th>학과</th>
+              <th>계급</th>
+              <th>게임 ID</th>
+            </tr>
+            <tr>
+              <th class="info"><%= @kind_of_game %></th>
+              <th class="info">팀장</th>
+              <th class="info"><%= @teamlists_hearthstone.hearthstone_user_name %></th>
+              <th class="info"><%= @teamlists_hearthstone.hearthstone_major %></th>
+              <th class="info"><%= @teamlists_hearthstone.tear %></th>
+              <th class="info"><%= @teamlists_hearthstone.game_id %></th>
+            </tr>
+          </table>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
+          <br>
+           
+          <center><h1><font3>소개</font3></h1><br>
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+         <div class="thumbnail"  style="height:200px">
+          
+          <font4><%= @teamlists_hearthstone.comment %></font4>
+          </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
+          </center>
+        
+       
+          <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
+           <div class="col-md-6" style="text-align:right">
+            <button id="fight_hearthstone" type="button" class="button-0" onClick="this.style.visibility='hidden'" >대결 신청</button><br>
+          </div>
+            <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
+              <%= form_tag("/freematch/delete_team", method: "get") do %>
+                <div class="col-md-6">
+                 <button type="submit" type="button" class="button-0">팀삭제</button>
+                <input type='hidden' name='teamlist_id' value=<%= @teamlists_hearthstone.id %>>
+                <input type='hidden' name='kind_of_game' value='<%= @kind_of_game %>'>
+                </div>
+              <% end %>
+            <% end %>
+            
+          <% else %>
+          <center>
+          <font2>현재 <font color="bluc" size="4px"> <%= @teamlists_hearthstone.hearthstone_opposing_team %> 님과 대결중</font></font2><br>
+            <a href="/freematch/whichgame?kind_of_game=<%= @kind_of_game %>">대결 정보 보러 가기</a>
+          <% end %>
+          </center>
+          <br><br><br><br><br><br>
+           <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <center><br>
+          <% if @teamlists_hearthstone.hearthstone_whichgame == false %>
+            <% @teamlists_hearthstone.fightsubscription_hearthstones.each do |s| %>
+              이름 : <a href="/freematch/team_info/<%= s.hearthstone_add_team_name_id %>"><%= s.hearthstone_user_name %></a>
+                     <% if @teamlists_hearthstone.hearthstone_current_user_id == current_user.id %>
+                       <a href="/freematch/matching_success?hearthstone_add_team_name_id=<%=s.hearthstone_add_team_name_id%>&kind_of_game=<%=@kind_of_game%>"><button id="hearthstone_matching_success" class="btn btn-default" onClick="this.style.visibility='hidden'">수락</button></a><br>
+                     <% end %><br>
+            <% end %>
+          <% end %>
+          
+           </center>
+          </div>
+          <div class="col-md-1"></div>
+          </div>
+          
+          <script>
+            $(document).ready(function(){
+              $("#fight_hearthstone").click(function(){
+                if (<%= @hearthstone_subscription_user.nil? %>) {
+                  alert("하스스톤 팀을 등록하고 대결 신청해주세요.");
+                }
+                else if (<%= !@hearthstone_subscription_check.nil? %>){
+                  alert("이미 대결 신청을 하셨습니다."); 
+                }
+                else if (<%= @teamlists_hearthstone.fightsubscription_hearthstones.count >= 3 %>){
+                  alert("더 이상 대결 신청을 할 수 없습니다."); 
+                }
+                else if (<%= @teamlists_hearthstone.hearthstone_whichgame == true %>){
+                  alert("현재 대결 중입니다.");
+                }
+                else{
+                  $.ajax({
+                    data: { 
+                      kind_of_game : "<%= @kind_of_game %>",
+                      teamlist_id : <%= @teamlists_hearthstone.id %>
+                    },
+                    url: "/freematch/subscription_write",
+                    success: function(){
+               
+                      alert("대결을 신청하셨습니다.");
+                      location.reload();
+                    }
+                  }); 
+                } 
+              });
+                
+              });
+          </script>   
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+  <ul>
+  <center><li2><a href="/freematch/team_list" class="round green"><font size="3px" color="white">팀 리스트</font><span class="round">팀 리스트로 돌아 갑니다.</span></a></li2></center>
+   <br>
+  </ul> 
+  
+  <script src="/js/bootstrap.min.js"></script>
+  
+</body>
